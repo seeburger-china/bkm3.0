@@ -1,0 +1,628 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>BKM2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/c001e278.favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="styles/extend.css">
+    <link rel="stylesheet" href="styles/bootstrap-switch.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <img class="brand" src="images/8c1ae054.svwlogo.png" alt="Brand">
+            <div class="sysname">需求产能管理系统</div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                    <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                    <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                    <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                    <li class="active"><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search" style="display:none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);">Help</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="inner-page has-sidebar">
+        <div class="sidebar">
+            <h3>Administration</h3>
+            <ul>
+                <li><a href="admin-relevance-control.html">Relevance Control</a></li>
+                <li class="active"><a href="admin-supplier-information.html">General Supplier Information</a></li>
+                <li><a href="admin-tlk-management.html">TLK Management</a></li>
+                <li><a href="admin-bka-status.html">BKA Status</a></li>
+                <li><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
+                <li><a href="admin-session-management.html">Sessions Management</a></li>
+                <li><a href="admin-access-management.html">System Access Management</a></li>
+                <li><a href="admin-dictionary-management.html">System Dictionary Management</a></li>
+                <li><a href="admin-config-management.html">Data Clean-Up Settings</a></li>
+                <li><a href="admin-master-data-management.html">Master Data Management</a></li>
+                <li><a href="admin-task-management.html">Task Management</a></li>
+				<li><a href="admin-system-tag-management.html">System-Wide Tag Management</a></li>
+				
+            </ul>
+        </div>
+        <div class="main admin">
+            <h3>BKA Tag Information</h3>
+            <div class="admin-panel">
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#system-tag-tab" data-toggle="tab">System-Wide Tag</a></li>
+                        <li><a href="#user-tag-tab" data-toggle="tab">User-Defined Tag</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="system-tag-tab">
+                            <div class="search-item">
+                                <span class="title">Tag Name:</span>
+                                <input type="text" class="form-control" value="">
+                            </div>
+                            
+                            <div class="instruction">
+                                <a class="btn btn-primary" href="javascript:void(0);">Search</a>
+								<a href="#admin-sub-supplier-info-modal" data-toggle="modal">Add</a>
+                            </div>
+                            <table data-classes="table table-hover table-condensed" data-toggle="table" data-search="false" data-pagination="false" data-page-size="5">
+                                <thead>
+                                    <tr>
+                                        <th data-valign="middle" data-sortable="true">Tag Name</th>
+                                        <th data-valign="middle" data-sortable="true">Number of BKAs</th>
+                                        <th data-valign="middle" data-sortable="true">Modified By</th>
+                                        <th data-valign="middle" data-align="center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Follow-Up kw21</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw22</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw23</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw24</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw25</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw26</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw27</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>									
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="user-tag-tab">
+                            <div class="search-item">
+                                <span class="title">Tag Name:</span>
+                                <input type="text" class="form-control" value="">
+                            </div>
+                            <div class="instruction">
+                                <a class="btn btn-primary" href="javascript:void(0);">Search</a>
+                            </div>
+                            <table data-classes="table table-hover table-condensed" data-toggle="table" data-search="false" data-pagination="false" data-page-size="5">
+								<thead>
+                                    <tr>
+                                        <th data-valign="middle" data-sortable="true">Tag Name</th>
+                                        <th data-valign="middle" data-sortable="true">Number of BKAs</th>
+                                        <th data-valign="middle" data-sortable="true">Modified By</th>
+                                        <th data-valign="middle" data-align="center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follow-Up kw20</td>
+                                        <td>12</td>
+                                        <td>Alex</td>
+                                        <td>
+											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
+										</td>
+                                    </tr>									
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="modal bka-modal fade" id="supplier-contacts-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">上海新上橡汽车胶管有限公司</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                       <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Suspend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Li Shi</td>
+                                    <td>Lishi@bosch.cn</td>
+                                    <td>+86 21 12345678</td>
+                                    <td> <input type="checkbox" checked  name="mycheckbox" data-size="mini"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Li Shi</td>
+                                    <td>Lishi@bosch.cn</td>
+                                    <td>+86 21 12345678</td>
+                                    <td> <input type="checkbox"  name="mycheckbox" data-size="mini"/></td>
+                                </tr>
+                            </tbody>
+                        </table>                  
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);">cancel</a>
+                    <button type="button" class="btn btn-primary">submit</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="modal fade" id="my-account-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">My Account</h4>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                            <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="profile-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Name</label>
+                                        <div class="col-sm-7">
+                                            Zang Yi
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Email</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            ZangYi@svm.com
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="ZangYi@svm.com"> 
+                                        </div>
+                                        <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a> 
+                                       <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
+                                       <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Phone</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            +86 21 65431234
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="+86 21 65431234"> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Company</label>
+                                        <div class="col-sm-7">
+                                            Shanghai Volkswagen Automotive
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Supplier No</label>
+                                        <div class="col-sm-7">
+                                            --
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Role</label>
+                                        <div class="col-sm-7">
+                                            Buyer
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Language</label>
+                                        <div class="col-sm-7">
+                                            <label for="lang-en">
+                                                <input type="radio" name="language" id="lang-en" checked="checked"> English
+                                            </label>
+                                            <label for="lang-ch">
+                                                <input type="radio" name="language" id="lang-ch"> Chinese
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="notification-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA changed by SVW user:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA sent to rework:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA submitted:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New message:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New  BKM Entwurf demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-6">New  KTB demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New part numbers released:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                     <a href="javascript:void(0);" >Cancel</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="admin-sub-supplier-info-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4  class="modal-title">Sub Supplier Database</h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Supplier Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Registration No.</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Country</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Province/City</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Address</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="new-address"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Post Code</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Tel</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Fax</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">WebSite</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">QM Profile</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Products</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="new-address"></textarea>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Remark</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="new-address"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal">Cancel</a>&nbsp;&nbsp;
+                    <a href="#" class="btn btn-primary">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
+    </div>
+    <script src="scripts/9a737976.vendor.js"></script>
+    <script src="scripts/10ffdb3e.main.js"></script>
+
+     <script src="scripts/bootstrap-switch.js"></script>
+    <script type="">
+    $(function(){  
+      $("[name='mycheckbox']").bootstrapSwitch();
+      
+    });  
+    </script>
+</body>
+
+</html>

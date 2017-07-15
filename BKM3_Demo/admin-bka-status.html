@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>BKM2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/c001e278.favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="styles/extend.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <img class="brand" src="images/8c1ae054.svwlogo.png" alt="Brand">
+            <div class="sysname">需求产能管理系统</div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                    <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                    <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                    <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                    <li class="active"><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search" style="display:none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);">Help</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="inner-page has-sidebar">
+        <div class="sidebar">
+            <h3>Administration</h3>
+            <ul>
+                <li><a href="admin-relevance-control.html">Relevance Control</a></li>
+                <li><a href="admin-supplier-information.html">General Supplier Information</a></li>
+                <li><a href="admin-tlk-management.html">TLK Management</a></li>
+                <li class="active"><a href="admin-bka-status.html">BKA Status</a></li>
+                <li><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
+                <li><a href="admin-session-management.html">Sessions Management</a></li>
+                <li><a href="admin-access-management.html">System Access Management</a></li>
+                <li><a href="admin-dictionary-management.html">System Dictionary Management</a></li>
+                <li><a href="admin-config-management.html">Data Clean-Up Settings</a></li>
+                <li><a href="admin-master-data-management.html">Master Data Management</a></li>
+                <li><a href="admin-task-management.html">Task Management</a></li>
+				<li><a href="admin-system-tag-management.html">System-Wide Tag Management</a></li>
+            </ul>
+        </div>
+        <div class="main admin">
+            <h3>BKA Status</h3>
+            <div class="instruction">
+                <a href="javascript:void(0);" class="btn btn-primary">Apply</a>
+                <span>After applicaiton of new parameters the recalculation of BKA status will take place during the night jobs</span>
+            </div>
+            <div class="admin-panel">
+                <div class="sub-section">
+                    <div class="section-header">Rolling Cumulated Calculation</div>
+                    <div class="option-item">
+                        Number of weeks to be cumulated:
+                         <input type="text" class="form-control  input-xs" value="">   Weeks
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <div class="section-header">BKA Status Flexibility Thresholds</div>
+                    <div class="option-item">
+                        <div class="gauge">Threshold: [<span id="bka-threshold-start">1</span>%,<span id="bka-threshold-end">15</span>%]</div>
+                        <input type="text" id="bka-threshold-slider" data-slider-min="-10" data-slider-max="20" data-slider-step="0.1" data-slider-value="[1,15]" data-slider-tooltip="hide">
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <div class="section-header">Demand Horizon for BKA status calculation</div>
+                    <div class="option-item">
+                        
+                        <div class="option-group">
+                            <input type="radio" checked="checked" name="h-bka-status_1" id="h-bka-status-auto1">
+                            <label for="h-bka-status-auto1">auto</label>
+                            <input type="radio" name="h-bka-status_1" id="h-bka-status-manual">
+                            <label for="h-bka-status-manual">manually</label>
+
+                           <label style="margin-left:20px;"> End KW:</label>
+                        <select class="selectpicker" id="selectpicker1" disabled="disabled">
+                            <option value="">KW20/14</option>
+                            <option value="">KW21/14</option>
+                            <option value="">KW22/14</option>
+                            <option value="">KW23/14</option>
+                            <option value="">KW24/14</option>
+                        </select>
+                        </div>
+                        
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <div class="section-header">Demand Horizon View for Suppliers</div>
+                    <div class="option-item">
+                         <div class="option-group">
+                            <input type="radio" checked="checked" name="h-bka-status_2" id="h-bka-status-auto2">
+                            <label for="h-bka-status-auto1">auto</label>
+                            <input type="radio" name="h-bka-status_2" id="h-bka-status-manua2">
+                            <label for="h-bka-status-manual">manually</label>
+                       <label style="margin-left:20px;"> End KW:</label>
+                        <select class="selectpicker" id="selectpicker2"  disabled="disabled">
+                            <option value="">KW20/14</option>
+                            <option value="">KW21/14</option>
+                            <option value="">KW22/14</option>
+                            <option value="">KW23/14</option>
+                            <option value="">KW24/14</option>
+                        </select>
+                        </div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <div class="section-header">Demand Horizon View for Internal User</div>
+                    <div class="option-item">
+                        <div class="option-group">
+                            <input type="radio" checked="checked" name="h-bka-status_3" id="h-bka-status-auto3">
+                            <label for="h-bka-status-auto1">auto</label>
+                            <input type="radio" name="h-bka-status_3" id="h-bka-status-manua3">
+                            <label for="h-bka-status-manual">manually</label>
+                        
+                      <label style="margin-left:20px;"> End KW:</label>
+                        <select class="selectpicker" id="selectpicker3"  disabled="disabled">
+                            <option value="">KW20/14</option>
+                            <option value="">KW21/14</option>
+                            <option value="">KW22/14</option>
+                            <option value="">KW23/14</option>
+                            <option value="">KW24/14</option>
+                        </select>
+                        </div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- /.modal -->
+    <div class="modal fade" id="my-account-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">My Account</h4>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                            <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="profile-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Name</label>
+                                        <div class="col-sm-7">
+                                            Zang Yi
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Email</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            ZangYi@svm.com
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="ZangYi@svm.com"> 
+                                        </div>
+                                        <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a> 
+                                       <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
+                                       <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Phone</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            +86 21 65431234
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="+86 21 65431234"> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Company</label>
+                                        <div class="col-sm-7">
+                                            Shanghai Volkswagen Automotive
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Supplier No</label>
+                                        <div class="col-sm-7">
+                                            --
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Role</label>
+                                        <div class="col-sm-7">
+                                            Buyer
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Language</label>
+                                        <div class="col-sm-7">
+                                            <label for="lang-en">
+                                                <input type="radio" name="language" id="lang-en" checked="checked"> English
+                                            </label>
+                                            <label for="lang-ch">
+                                                <input type="radio" name="language" id="lang-ch"> Chinese
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="notification-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA changed by SVW user:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA sent to rework:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA submitted:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New message:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New  BKM Entwurf demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b" > Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-6">New  KTB demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New part numbers released:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                     <a href="javascript:void(0);" >Cancel</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="clearfix"></div>
+    </div>
+    <div class="footer">
+        上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
+    </div>
+    <script src="scripts/9a737976.vendor.js"></script>
+    <script src="scripts/10ffdb3e.main.js"></script>
+    <script language="JavaScript">
+　　   $(function(){  
+           
+            $("#h-bka-status-manual").click(function(){
+                 $("#selectpicker1").prop('disabled',false);
+                 $("#selectpicker1").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto1").click(function(){
+                 $("#selectpicker1").attr("disabled","disabled").selectpicker('refresh');    
+            })
+
+            $("#h-bka-status-manua2").click(function(){
+                 $("#selectpicker2").prop('disabled',false);
+                 $("#selectpicker2").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto2").click(function(){
+                 $("#selectpicker2").attr("disabled","disabled").selectpicker('refresh');    
+            })
+
+            $("#h-bka-status-manua3").click(function(){
+                 $("#selectpicker3").prop('disabled',false);
+                 $("#selectpicker3").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto3").click(function(){
+                 $("#selectpicker3").attr("disabled","disabled").selectpicker('refresh');    
+            })
+        });
+　　</script>
+</body>
+
+</html>

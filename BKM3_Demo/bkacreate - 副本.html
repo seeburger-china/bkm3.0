@@ -1,0 +1,1443 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>BKM2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/c001e278.favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="styles/extend.css">
+     <link rel="stylesheet" href="styles/bootstrap-switch.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <img class="brand" src="images/8c1ae054.svwlogo.png" alt="Brand">
+            <div class="sysname">需求产能管理系统</div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                    <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                    <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                    <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                    <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);">Help</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                            <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="inner-page bkacreate">
+        <div id="bka-heading-new" class="bka-heading" style="display:none;">
+            <div class="bka-return">
+            <a href="javascript:void(0);">
+                <i class="fa fa-chevron-left"></i> Start Page
+            </a>
+            </div>
+            <h3>New BKA</h3>
+            <small>&nbsp;</small>
+            <span>YFPO</span>
+        </div>
+        <div id="bka-heading-exist" class="bka-heading red">
+            <div class="bka-return">
+            <a href="index.html">
+                <i class="fa fa-chevron-left"></i> Start Page
+            </a>
+            </div>
+            <h3>HAUPTLAGER YFPO 180 Tiguan/Lamando</h3>
+            <small>BKA000001</small>
+            <span>YFPO</span>
+        </div>
+        <div class="guideline">
+            <!-- Nav tabs -->
+            <div class="nav-area">
+                <ul class="nav nav-tabs" id="wizard-tab">
+                    <li class="active"><a href="#step1">1. Select part numbers <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#step2">2. Enter capacity information <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#step3">3. Add a description <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#step4">4. Enter supply chain information</a></li>
+                </ul>
+                <div class="nav-control">
+                    <a href="javascript:void(0);" id="pre-step">Cancel</a>
+                    <a href="javascript:void(0);" id="next-step" class="btn btn-primary">Next</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="step1">
+                <div class="instruction">
+                    <i class="fa fa-cogs"></i> 
+                    <span id="bka-selected-title">Assign parts to BKA</span>
+                </div>
+                <div class="which-panel">
+                    <h3>What do you want to do?</h3>
+                    <div class="radio">
+                        <label for="op-create">
+                            <input type="radio" name="create-or-edit-bka" id="op-create"> Create a new BKA
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="op-edit">
+                            <input type="radio" name="create-or-edit-bka" id="op-edit" checked="checked"> Assign parts to existing BKA
+                        </label>
+                    </div>
+                </div>
+                <div id="bka-parts-select-panel">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <h3 class="instruction-title">Parts to be assigned(<span id="num-to-be-assigned">5</span>)</h3>
+                            <input type="text" class="table-filter input-sm form-control" placeholder="Filter...">
+                            <table id="sortable-from" class="table sortable" data-toggle="table" >
+                                <thead>
+                                    <tr>
+                                        <th style="width:35px"></th>
+                                        <th>Part Number</th>
+                                        <th>Description</th>
+                                        <th>Plant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width:35px">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>026 105 269 B</td>
+                                        <td>SCHWUNGRAD</td>
+                                        <td>1000(78)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>026 105 561 B</td>
+                                        <td>HAUPTLAGER</td>
+                                        <td>1000(78)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>026 105 591 B</td>
+                                        <td>HAUPTLAGER</td>
+                                        <td>1000(78)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>026 105 635 D</td>
+                                        <td>ANLAUFSCHEIB</td>
+                                        <td>1000(78)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>026 107 301 D</td>
+                                        <td>RECHTECKRING</td>
+                                        <td>1000(78)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="switch-panel">
+                                <a id="add-parts" class="btn btn-primary" href="javascript:void(0);">Add <i class="fa fa-angle-double-right"></i></a>
+                                <a id="remove-parts" class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i> Remove</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <h3 class="instruction-title">Parts already assigned(<span id="num-already-assigned">0</span>)</h3>
+                            <div class="bka-choice-panel">
+                                <select id="existing-bka-select" name="existingBka" class="selectpicker" data-live-search="true">
+                                    <optgroup label="Suggested BKAs(3)">
+                                        <option value="BKA000001">BKA000001</option>
+                                        <option value="BKA000002">BKA000002</option>
+                                        <option value="BKA000003">BKA000003</option>
+                                    </optgroup>
+                                    <optgroup label="Other BKAs(10)">
+                                        <option value="BKA000004">BKA000004</option>
+                                        <option value="BKA000005">BKA000005</option>
+                                        <option value="BKA000006">BKA000006</option>
+                                        <option value="BKA000007">BKA000007</option>
+                                        <option value="BKA000008">BKA000008</option>
+                                        <option value="BKA000009">BKA000009</option>
+                                        <option value="BKA0000010">BKA000010</option>
+                                    </optgroup>
+                                </select>
+                                <span style="display:none;">
+                                    <input type="text" class="table-filter input-sm form-control" placeholder="Filter...">
+                                </span>
+                            </div>
+                            <table id="sortable-to"  class="table sortable" data-toggle="table" data-height="500">
+                                <thead>
+                                    <tr>
+                                        <th style="width:35px">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>Part Number</th>
+                                        <th>Description</th>
+                                        <th>Plant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="tab-pane" id="step2">
+                <div class="instruction"><i class="fa fa-calculator"></i> Enter capacity information</div>
+                <div class="wrapper">
+                    <div class="l-column">
+                        <div class="option-panel">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="s-plant">
+                                <label for="s-plant">plant</label>
+                                <input type="checkbox" id="s-carmodel">
+                                <label for="s-carmodel">car model</label>
+                            </div>
+                            <ul class="parts-list">
+                                <li>
+                                    <a href="javascript:void(0);"><span>026 105 269 B</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                    <a class="child" data-type="plant" href="javascript:void(0);" style="display:none;"><span>Anting</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                    <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                    <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span></a>
+                                </li>
+                                <li><a href="javascript:void(0);"><span>026 105 561 B</span> <i class="fa fa-stop stop-black icon-5" data-toggle="tooltip" data-placement="top"  title="Other Demand"></i></a></li>
+                                <li><a href="javascript:void(0);">026 105 591 B</a></li>
+                                <li><a href="javascript:void(0);">026 105 635 D</a></li>
+                                <li><a href="javascript:void(0);">026 107 301 D</a></li>
+                            </ul>
+                        </div>
+                        <div class="label-group">
+                            <div class="bka-label  bka-label-title">Demand Total</div>
+                            <div class="bka-label-placeholder"></div>
+                            <div class="bka-label  bka-label-title" data-toggle="tooltip" data-placement="top" title="tooltip tooltip tooltip">Normal capacity</div>
+                            <div class="bka-label bka-label-title">Maximal capacity</div>
+                        </div>
+                        <div class="label-group">
+                            <div class="bka-label-placeholder" style="height:2px;"></div>
+                            <div class="bka-label foldable">
+                                <div class="bka-label bka-label-title">Flexibility</div>
+                                <ul>
+                                    <li>Diff. to normal</li>
+                                    <li>Diff. to norm cum.</li>
+                                    <li>Diff. to max</li>
+                                    <li>Roll. cum. max last 4 KW</li>
+                                    <li>Diff. to max cum.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="r-column">
+                        <div class="table-area strong">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="highlight">
+                                        <td>2014</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="plant" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,400</td>
+                                        <td>1,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10,000</td>
+                                        <td>10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,200</td>
+                                        <td>1,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2,400</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr class="highlight">
+                                        <td>14,800</td>
+                                        <td>13,400</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr>
+                                        <td>2,600</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3,400</td>
+                                        <td>2,900</td>
+                                    </tr>
+                                    <tr class="placeholder" style="height:21px"></tr>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="green-bordered">15%</span></td>
+                                        <td><span class="yellow-bordered">10%</span></td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td>280</td>
+                                        <td>1,250</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td>280</td>
+                                        <td>1,250</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td>800</td>
+                                        <td>1,550</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td>300</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td>800</td>
+                                        <td>1,900</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="m-column">
+                        <div class="table-area">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="highlight">
+                                        <td>KW20/14</td>
+                                        <td class="Highlight-KW">KW21/14</td>
+                                        <td>KW22/14</td>
+                                        <td>KW23/14</td>
+                                        <td>KW24/14</td>
+                                        <td>KW25/14</td>
+                                        <td>KW26/14</td>
+                                        <td>KW27/14</td>
+                                        <td>KW28/14</td>
+                                        <td>KW29/14</td>
+                                        <td>KW30/14</td>
+                                        <td>KW31/14</td>
+                                        <td>KW32/14</td>
+                                        <td>KW33/14</td>
+                                        <td>KW34/14</td>
+                                        <td>KW35/14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green" data-toggle="tooltip" data-placement="top" title="SAPMultiPOFound-QuotaOK">330</td>
+                                        <td class="green" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="plant" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr class="highlight">
+                                        <td>1450</td>
+                                        <td>1250</td>
+                                        <td>1200</td>
+                                        <td>1250</td>
+                                        <td>1100</td>
+                                        <td>1500</td>
+                                        <td>1500</td>
+                                        <td>1650</td>
+                                        <td>1650</td>
+                                        <td>1500</td>
+                                        <td>1250</td>
+                                        <td>1500</td>
+                                        <td>1650</td>
+                                        <td>1500</td>
+                                        <td>1250</td>
+                                        <td>1500</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" readonly="readonly" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" readonly="readonly" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                        <td>
+                                            <input type="text" value="1450">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                        <td><a class="auto-calc-btn" href="javascript:void(0);"><i class="fa fa-chevron-circle-right"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>&nbsp;</span></td>
+                                        <td><span class="yellow-bordered">16%</span></td>
+                                        <td><span class="yellow-bordered">37.5%</span></td>
+                                        <td><span class="green-bordered">52%</span></td>
+                                        <td ><span class="green-bordered">90.9%</span></td>
+                                        <td><span class="green-bordered">50%</span></td>
+                                        <td><span class="yellow-bordered">30%</span></td>
+                                        <td><span class="red-bordered">3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -30.3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -33.3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -20%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.1%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                        <td class="red"><span class="red-bordered"> -8%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                         <td><span>&nbsp;</span></td>
+                                        <td>50</td>
+                                        <td>100</td>
+                                        <td>50</td>
+                                        <td>200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-200</td>
+                                        <td>50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-200</td>
+                                        <td>50</td>
+                                        <td class="red">-200</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>100</td>
+                                        <td>0</td>
+                                        <td>50</td>
+                                        <td>250</td>
+                                        <td>50</td>
+                                        <td class="red">-150</td>
+                                        <td class="red">-500</td>
+                                    <td class="red">-850</td>
+                                    <td class="red">-1050</td>
+                                        <td class="red">-1000</td>
+                                        <td class="red">-1200</td>
+                                        <td class="red">-1550</td>
+                                        <td class="red">-1750</td>
+                                        <td class="red">-1700</td>
+                                        <td class="red">-1900</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                         <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>250</td>
+                                        <td>200</td>
+                                        <td>350</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-50</td>
+                                        <td>200</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-50</td>
+                                        <td>200</td>
+                                        <td class="red">-50</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>1000</td>
+                                        <td>750</td>
+                                        <td>450</td>
+                                        <td>50</td>
+                                    <td class="red">-500</td>
+                                    <td class="red">-500</td>
+                                        <td  class="red">-250</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                    </tr>
+                                    <tr data-type="flexibility">
+                                         <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>1000</td>
+                                        <td>950</td>
+                                        <td>900</td>
+                                        <td>700</td>
+                                        <td>500</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>600</td>
+                                        <td>400</td>
+                                        <td>350</td>
+                                        <td>550</td>
+                                        <td>500</td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                 <div class="label-group">
+                    <div class="bka-label bka-label-title">Capacity details</div>
+                    <div class="lead-time-input">
+                        <div class="input-item"><span>shifts / day</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                        <div class="input-item"><span>hours / shift</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                            <div class="input-item"><span>working days / week</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                            <div class="input-item"><span>working days / year</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                        <div class="input-item"><span>Lead time capacity increase</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                        <div class="input-item"><span>Lead time material preparation</span>
+                            <input type="text"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
+                        <div class="input-item"><span>number of tools</span>
+                            <input type="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="step3">
+                <div class="instruction"><i class="fa fa-edit"></i> Enter a BKA description</div>
+                <input type="text" placeholder="[Most frequent Part Name EN] + [Supplier Nick Name EN] + [Vehicle Class Name 1]/[Vehicle Class Name 2]/" class="form-control bka-desc-textarea" value="HAUPTLAGER YFPO 180 Tiguan/Lamando">
+                <div class="tips"> Please follow the rules as below:</div>
+                <ul class="bka-desc-rule-list">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                    <li>Fusce molestie cursus ipsum, nec commodo nisi euismod sed.</li>
+                    <li>Aliquam at lacinia enim. Nunc eu iaculis justo, a luctus enim. Mauris libero erat, malesuada id cursus id.</li>
+                </ul>
+                </textarea>
+            </div>
+
+            <div class="tab-pane" id="step4">
+                <div class="instruction"><i class="fa fa-link"></i> Enter supply chain information</div>
+                <div class="tips">Lorem ipsum dolor sit amet.</div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="control-block">
+                            <select class="selectpicker" data-live-search="true">
+                                <option value="BKA000001">BKA0000001</option>
+                                <option value="BKA000002">BKA0000002</option>
+                                <option value="BKA000003">BKA0000003</option>
+                                <option value="BKA000004">BKA0000004</option>
+                                <option value="BKA000005">BKA0000005</option>
+                                <option value="BKA000006">BKA0000006</option>
+                                <option value="BKA000007">BKA0000007</option>
+                                <option value="BKA000008">BKA0000008</option>
+                                <option value="BKA000009">BKA0000009</option>
+                                <option value="BKA000010">BKA0000010</option>
+                            </select>
+                            <a href="#" class="btn btn-primary">Take Over</a>
+                        </div>
+                        <div class="tree-wrapper">
+                            <div class="tree">
+                                <ul>
+                                    <li class="fixed">
+                                        <div class="tree-panel">
+                                            <div class="tree-panel-heading">
+                                                <span class="marker blue"><i class="fa fa-circle"></i></span>My company
+                                            </div>
+                                            <div class="tree-panel-body">
+                                                <h3 id="com-name">Bosch</h3>
+                                                <div class="info"><i class="fa fa-fw fa-map-marker"></i> <span id="com-city">Shanghai</span></div>
+                                                <div class="info"><i class="fa fa-fw fa-flag"></i> <span id="com-country">China</span></div>
+                                                <div class="info"><i class="fa fa-fw fa-user"></i> Michael</div>
+                                            </div>
+                                        </div>
+                                        <ul class="fixed">
+                                            <li id="tier-start-node">
+                                                <div class="tree-panel">
+                                                    <div class="tree-panel-heading">
+                                                        <span class="marker red"><i class="fa fa-circle"></i></span>Production plant
+                                                        <div class="toolbar">
+                                                            <a class="edit-plant-btn" href="javascript:void(0);" style="display:none;" data-toggle="tooltip" data-placement="left" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                            <a class="add-tier-supplier-btn" href="javascript:void(0);" style="display:none;" data-toggle="tooltip" data-placement="right" title="Click here to add tier supplier"><i class="fa fa-plus-circle"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-panel-body">
+                                                        <div id="plant-info-panel" style="display:none;">
+                                                            <h3 id="plant-name"></h3>
+                                                            <div class="info"><i class="fa fa-fw fa-map-marker"></i> <span id="plant-city"></span></div>
+                                                            <div class="info"><i class="fa fa-fw fa-flag"></i> <span id="plant-country"></span></div>
+                                                        </div>
+                                                        <div class="tree-panel-btn">
+                                                            <a id="save-as-company-btn" href="javascript:void(0);">Save as my company</a>
+                                                            <a id="toggle-select-plant-btn" href="javascript:void(0);" class="btn btn-primary">Select plant</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-body">
+                                <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive" style="width:100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="supplier-choose-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="fa fa-truck"></i> <span>Choose your plant:</span></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="supplier-choose-panel">
+                    <input type="text" class="table-filter input-sm form-control" placeholder="Filter...">
+
+                        <table id="supplier-choose-table" data-toggle="table" data-classes="table table-condensed table-hover" data-click-to-select="true" data-search="false" data-pagination="true" data-page-size="5">
+                            <thead>
+                                <tr>
+                                    <th data-radio="true"></th>
+                                    <th data-field="sno">Registration No.</th>
+                                    <th data-field="name">Name</th>
+                                    <th data-field="city">City</th>
+                                    <th data-field="country">Country</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>A12345</td>
+                                    <td>EVONIC</td>
+                                    <td>Shanghai</td>
+                                    <td>China</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><label for="new-material" class="col-sm-3 control-label" style="padding-left:0px;">Not found?</label>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#add-supplier-modal" data-toggle="modal">Create a new supplier</a></p>
+                        <p>&nbsp;</p>
+                        <p>
+                            <div class="form-group">
+                        <label for="new-material" class="col-sm-3 control-label" style="padding-left:0px; padding-top:5px">Type of Material</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="new-material"></select>
+                        </div>
+                    </div>
+
+                        </p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a id="" href="javascript:void(0);">Cancel</a>
+                    <a id="select-plant-btn" href="javascript:void(0);" class="btn btn-primary" >Save</a>
+                    <a id="select-tier-btn" href="javascript:void(0);" class="btn btn-primary" style="display:none;">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add-supplier-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="fa fa-truck"></i> Create a new supplier</h4>
+                </div>
+
+                <div class="modal-body form-horizontal">
+                    <div class="form-group">
+                        <label for="new-name" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-name" class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="new-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-country" class="col-sm-3 control-label">Country</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="new-country">
+                                <option value="China">China</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group ProvinceCN">
+                        <label for="new-province " class="col-sm-3 control-label">Province</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="new-province">
+                                <option value="Shanghai">Shanghai</option>
+                                <option value="Beijing">Beijing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group Province" style="display:none;">
+                        <label for="new-name" class="col-sm-3 control-label">Province</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="new-name">
+                        </div>
+                    </div>
+                    <div class="form-group CityCN">
+                        <label for="new-city" class="col-sm-3 control-label">City</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="new-city">
+                                <option value="Shanghai">Shanghai</option>
+                                <option value="Beijing">Beijing</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="form-group City" style="display:none;">
+                        <label for="new-name" class="col-sm-3 control-label">City</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="new-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-address" class="col-sm-3 control-label">Address</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="new-address"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-regnr" class="col-sm-3 control-label">Registration No.</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="new-regnr">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <a id="" href="javascript:void(0);">Cancel</a>
+                    <button id="add-supplier-btn" type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+        <!-- /.modal -->
+    <div class="modal fade" id="my-account-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">My Account</h4>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                            <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="profile-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Name</label>
+                                        <div class="col-sm-7">
+                                            Zang Yi
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Email</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            ZangYi@svm.com
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="ZangYi@svm.com"> 
+                                        </div>
+                                        <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a> 
+                                       <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
+                                       <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Phone</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            +86 21 65431234
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="+86 21 65431234"> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Company</label>
+                                        <div class="col-sm-7">
+                                            Shanghai Volkswagen Automotive
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Supplier No</label>
+                                        <div class="col-sm-7">
+                                            --
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Role</label>
+                                        <div class="col-sm-7">
+                                            Buyer
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Language</label>
+                                        <div class="col-sm-7">
+                                            <label for="lang-en">
+                                                <input type="radio" name="language" id="lang-en" checked="checked"> English
+                                            </label>
+                                            <label for="lang-ch">
+                                                <input type="radio" name="language" id="lang-ch"> Chinese
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="notification-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA changed by SVW user:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA sent to rework:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA submitted:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New message:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New  BKM Entwurf demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-6">New  KTB demand data:</label>
+                                        <div class="col-sm-6">
+                                           <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New part numbers released:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                     <a href="javascript:void(0);" >Cancel</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="modal bka-modal fade" id="parts-info-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Information to TLK 5GD 123456A - FLANSCH + CHINESE NAME</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="heading">
+                        <i class="fa fa-user"></i> Buyer
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <div class="bka-label">Name:</div>
+                            <div class="bka-text">Jack</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Commodity:</div>
+                            <div class="bka-text">XCCZX0031</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Department:</div>
+                            <div class="bka-text">CSS</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Email:</div>
+                            <div class="bka-text">qwert@gmail.com</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Phone:</div>
+                            <div class="bka-text">+86 21 12345678</div>
+                        </div>
+                    </div>
+                    <div class="heading">
+                        <i class="fa fa-truck"></i> Supplier
+                    </div>
+                    <div class="content">
+                        <div class="caption">A123456 - Bosch Suzhou</div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Suspend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Li Shi</td>
+                                    <td>Lishi@bosch.cn</td>
+                                    <td>+86 21 12345678</td>
+                                    <td>
+                                        <div class="switch switch-mini">
+                                            <input type="checkbox" checked  name="mycheckbox" data-size="mini"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Li Shi</td>
+                                    <td>Lishi@bosch.cn</td>
+                                    <td>+86 21 12345678</td>
+                                    <td>
+                                        <div class="switch switch-mini">
+                                            <input type="checkbox" name="mycheckbox" data-size="mini"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       
+                    </div>
+                    <div class="heading">
+                        <i class="fa fa-wrench"></i> Technical Information
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <div class="bka-label">Created:</div>
+                            <div class="bka-text">2013-03-12</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Changed:</div>
+                            <div class="bka-text">2014-04-12</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Status:</div>
+                            <div class="bka-text">Activated</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Assigned to BKA:</div>
+                            <div class="bka-text">BKA123456</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Assigned timestamp:</div>
+                            <div class="bka-text">2014-05-12</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Created by:</div>
+                            <div class="bka-text">CSC</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Relevance:</div>
+                            <div class="bka-text">Relevant</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Last relevance rule No.:</div>
+                            <div class="bka-text">1050</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Validity:</div>
+                            <div class="bka-text">Valid</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Earliest valid form:</div>
+                            <div class="bka-text">2013-03-15</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Last valid till:</div>
+                            <div class="bka-text">2099-03-15</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">PID:</div>
+                            <div class="bka-text">180,5GD</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">ZP:</div>
+                            <div class="bka-text">ZP5,ZP7</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Quantity per vehicle:</div>
+                            <div class="bka-text">2</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">PR No.:</div>
+                            <div class="bka-text">0X0+RT1,RT1</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Platform:</div>
+                            <div class="bka-text">MQB A0</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Material group:</div>
+                            <div class="bka-text">345</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Normal Capacity:</div>
+                            <div class="bka-text">300</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Maximal Capacity:</div>
+                            <div class="bka-text">350</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Inbound Type:</div>
+                            <div class="bka-text">JIS,JIT</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Quotation errors:</div>
+                            <div class="bka-text">SAPSinglePOFound-QuotaErr</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="footer">
+        上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
+    </div>
+    <script src="scripts/9a737976.vendor.js"></script>
+    <script src="scripts/10ffdb3e.main.js"></script>
+      <script src="scripts/bootstrap-switch.js"></script>
+    <script type="">
+    $(function(){  
+      $("[name='mycheckbox']").bootstrapSwitch();
+        
+     
+    });  
+    </script>
+</body>
+
+</html>

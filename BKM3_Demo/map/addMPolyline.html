@@ -1,0 +1,130 @@
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+      
+    <html xmlns="http://www.w3.org/1999/xhtml"> 
+      
+    <head> 
+      
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+      
+    <title>添加线</title> 
+      
+     
+      
+   <script type="text/javascript" src="http://10.160.3.120:8084/webapi/auth.json?t=flashmap&v=2.4.1&key ="></script> 
+     
+      
+    <script type="text/javascript"> 
+      
+    var mapObj=null; 
+      
+    function mapInit() { 
+      
+        var mapoption = new MMapOptions(); 
+      
+        mapoption.toolbar = MConstants.ROUND; //设置地图初始化工具条，ROUND:新版圆工具条 
+      
+        mapoption.overviewMap = MConstants.SHOW; //设置鹰眼地图的状态，SHOW:显示，HIDE:隐藏（默认） 
+      
+        mapoption.scale = MConstants.SHOW; //设置地图初始化比例尺状态，SHOW:显示（默认），HIDE:隐藏。 
+      
+        mapoption.zoom = 13;//要加载的地图的缩放级别 
+      
+        mapoption.center = new MLngLat(116.397428,39.90923);//要加载的地图的中心点经纬度坐标 
+      
+        mapoption.language = MConstants.MAP_CN;//设置地图类型，MAP_CN:中文地图（默认），MAP_EN:英文地图 
+      
+        mapoption.fullScreenButton = MConstants.SHOW;//设置是否显示全屏按钮，SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.centerCross = MConstants.SHOW;//设置是否在地图上显示中心十字,SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.toolbarPos=new MPoint(20,20); //设置工具条在地图上的显示位置 
+      
+        mapObj = new MMap("map", mapoption); //地图初始化 
+      
+    } 
+      
+    function addMPolyline(){ 
+      
+        var arr=new Array();//经纬度坐标数组 
+      
+        arr.push(new MLngLat("116.36890411376953 ","39.913423004886866")); 
+      
+        arr.push(new MLngLat("116.38212203979492","39.9011768955094")); 
+      
+        arr.push(new MLngLat("116.38727188110351","39.91250133090293")); 
+      
+        arr.push(new MLngLat("116.39825820922851 ","39.904600759441024")); 
+      
+     
+      
+        var tipOption=new MTipOptions();//添加信息窗口 
+      
+        tipOption.title="信息窗口标题";//信息窗口标题 
+      
+        tipOption.content="信息窗口内容";//信息窗口内容 
+      
+     
+      
+        var linestyle=new MLineStyle();//创建线样式对象 
+      
+        linestyle.thickness=3;//线的粗细度，默认为2 
+      
+        linestyle.color=0x0000ff;//线的颜色，16进制整数，默认为0x005890（蓝色） 
+      
+        linestyle.lineType=MConstants.LINE_DASHED;//线的表现样式，LINE_SOLID，实线（默认），LINE_DASHED，虚线 
+      
+     
+      
+        var lineopt=new MLineOptions();//构造一个名为lineopt的线选项对象 
+      
+        lineopt.lineStyle=linestyle;//设置线的边缘风格 
+      
+        lineopt.tipOption=tipOption;//设置线的信息窗口参数选项 
+      
+        lineopt.canShowTip=true;//设置是否在地图中显示信息窗口，true，可显示（默认）；false，不显示 
+      
+        lineopt.isEditable=false;//设置线是否为可编辑状态，true，可编辑；false，不可编辑（默认） 
+      
+        lineopt.isDimorphic=true;//设置线是否高亮显示，默认为false,即没有高亮显示；true，有高亮显示 
+      
+        lineopt.dimorphicColor=0x00A0FF;//设置第二种状态的颜色，默认为0xFF0000，即红色 
+      
+        var polyline=new MPolyline(arr,lineopt);//通过经纬度坐标数组及参数选项构建多折线对象，arr是经纬度坐档数组 
+      
+        polyline.id="polyline101";//对象编号，也是对象的唯一标识 
+      
+        mapObj.addOverlay(polyline,true);//向地图添加覆盖物 
+      
+    } 
+      
+    </script> 
+      
+    </head> 
+      
+    <body onload="mapInit();"> 
+      
+    <div id="map" style="width:500px;height:400px"></div> 
+      
+    <div> 
+      
+    <table> 
+      
+    <tr> 
+      
+        <td><input type="button" onClick="javascript:addMPolyline();" value="添加多折线"/></td> 
+      
+        <td><input type="button" onClick="javascript:mapObj.removeOverlaysByType(MOverlay.TYPE_POLYLINE);" value="删除多折线"/></td> 
+      
+    </tr> 
+      
+    </table> 
+      
+    <!-- mapObj.removeOverlaysByType(MOverlay.TYPE_POLYLINE) 删除地图上所有的TYPE_POLYLINE对象--> 
+      
+    </div> 
+      
+    </body> 
+      
+    </html>  
+

@@ -1,0 +1,341 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+      
+    <html xmlns="http://www.w3.org/1999/xhtml"> 
+      
+    <head> 
+      
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+      
+    <title>判断一个点是否在区域范围内</title> 
+      
+     
+      
+<script type="text/javascript" src="http://10.160.3.120:8084/webapi/auth.json?t=flashmap&v=2.4.1&key="></script> 
+      
+    <script type="text/javascript"> 
+      
+    var mapObj=null; 
+      
+    function  mapInit() { 
+      
+        var mapoption = new MMapOptions(); 
+      
+        mapoption.toolbar = MConstants.ROUND; //设置地图初始化工具条，ROUND:新版圆工具条 
+      
+        mapoption.toolbarPos=new MPoint(20,20); //设置工具条在地图上的显示位置 
+      
+        mapoption.overviewMap = MConstants.SHOW; //设置鹰眼地图的状态，SHOW:显示，HIDE:隐藏（默认） 
+      
+        mapoption.scale = MConstants.SHOW; //设置地图初始化比例尺状态，SHOW:显示（默认），HIDE:隐藏。 
+      
+        mapoption.zoom = 13;//要加载的地图的缩放级别 
+      
+        mapoption.center = new MLngLat(116.397428,39.90923);//要加载的地图的中心点经纬度坐标 
+      
+        mapoption.language = MConstants.MAP_CN;//设置地图类型，MAP_CN:中文地图（默认），MAP_EN:英文地图 
+      
+        mapoption.fullScreenButton = MConstants.SHOW;//设置是否显示全屏按钮，SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.centerCross = MConstants.SHOW;//设置是否在地图上显示中心十字,SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.requestNum=100;//设置地图切片请求并发数。默认100。 
+      
+        mapObj = new MMap("map", mapoption); //地图初始化 
+      
+    } 
+      
+    var markerLngX;var markerlatY;var areaId; 
+      
+    function mouseMarker(){ 
+      
+        mapObj.removeClosuresListeners(); 
+      
+        mapObj.removeOverlaysByType(MOverlay.TYPE_MARKER); 
+      
+        mapObj.addEventListener(mapObj,MConstants.ADD_OVERLAY,function(){ 
+      
+            var arr = mapObj.getOverlaysByType(MOverlay.TYPE_MARKER); 
+      
+            if(arr.length==0){ 
+      
+                return ; 
+      
+            } 
+      
+            if(arr.length==1){mapObj.setCurrentMouseTool(MConstants.PAN_WHEELZOOM);} 
+      
+            if(arr[0].TYPE==MOverlay.TYPE_MARKER){ 
+      
+                markerLngX=arr[0].lnglat.lngX; 
+      
+                markerlatY=arr[0].lnglat.latY; 
+      
+            } 
+      
+            }); 
+      
+        var markerOption=new MMarkerOptions();//点选项 
+      
+        markerOption.imageUrl="http://code.mapabc.com/images/lan_1.png"; 
+      
+        markerOption.picAgent = false; 
+      
+        markerOption.canShowTip= false; 
+      
+        markerOption.hasShadow=true; 
+      
+        mapObj.setDefaultMarkerOption(markerOption); 
+      
+        mapObj.setCurrentMouseTool(MConstants.ADD_MARKER); 
+      
+    } 
+      
+    function mouseCircle(){ 
+      
+        mapObj.removeOverlayById(areaId); 
+      
+        mapObj.removeClosuresListeners(); 
+      
+        mapObj.addEventListener(mapObj,MConstants.ADD_OVERLAY,function(){ 
+      
+            mapObj.setCurrentMouseTool(MConstants.PAN_WHEELZOOM); 
+      
+            var arr=mapObj.getOverlaysByType(MOverlay.TYPE_CIRCLE); 
+      
+            if(arr.length==0){ 
+      
+                return ; 
+      
+            } 
+      
+            areaId=arr[0].id; 
+      
+            var region = arr[0].bounds.southWest.lngX+","+arr[0].bounds.southWest.latY+","+arr[0].bounds.northEast.lngX+","+arr[0].bounds.northEast.latY; 
+      
+            var regionXY=new Array(); 
+      
+            var arr1 = region.split(","); 
+      
+            for(var i = 0 ;i<arr1.length;i=i+2){ 
+      
+                    var mll =new MLngLat(arr1[i],arr1[i+1]); 
+      
+                    regionXY.push(mll); 
+      
+            } 
+      
+            var poiXY1 = new MLngLat(markerLngX,markerlatY); 
+      
+            var regionXY2=new MLngLats(regionXY); 
+      
+            var mss = new MSpatialSearch(); 
+      
+            var opt = new MSpatialSearchOptions(); 
+      
+            mss.setCallbackFunction(isRegion_CallBack); 
+      
+            mss.isPoiInRegion(MOverlay.TYPE_CIRCLE,poiXY1,regionXY2,opt); 
+      
+        }); 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_CIRCLE); 
+      
+    } 
+      
+    function isRegion_CallBack(data){ 
+      
+        var resultStr=""; 
+      
+     
+      
+        if(data.error_message != null){ 
+      
+            resultStr="查询异常！"+data.error_message; 
+      
+            alert(resultStr); 
+      
+        }else{ 
+      
+        var content = ""; 
+      
+        switch(data.message){ 
+      
+        case 'ok': 
+      
+            var rs = data.Result.split(";"); 
+      
+            if(rs.length==0){ 
+      
+                resultStr+="无结果"; 
+      
+            }else{ 
+      
+                for(var i=0;i<rs.length;i++){ 
+      
+                    resultStr += "判断结果："+getText(rs[i])+"<br />"; 
+      
+                } 
+      
+            } 
+      
+        break; 
+      
+            case 'error': 
+      
+                resultStr= "<div class=\"default\"><div class=\"default_title\">网络忙！请重新尝试！</div><div class=\"d_link\"><div class=\"d_right\"></div><div class=\"suggest\"><strong>建议：</strong><br />如果您刷新页后仍无法显示结果，请过几分钟后再次尝试或者与我们的服务人员联系。<br />Email：service@mapabc.com <br />电话：400 810 0080</div></div></span>错误信息："+data.message+"</div>"; 
+      
+            break; 
+      
+            default: 
+      
+                resultStr= "<div class=\"default\"><div class=\"default_title\">对不起！网络繁忙！请稍后重新尝试！</div><div class=\"d_link\"><div class=\"d_right\"></div><div class=\"suggest\"><strong>建议：</strong><br />如果您刷新页后仍无法显示结果，请过几分钟后再次尝试或者与我们的服务人员联系。<br />Email：service@mapabc.com <br />电话：400 810 0080</div></div></span>错误信息："+data.message+"</div>"; 
+      
+            } 
+      
+        } 
+      
+        document.getElementById("result").innerHTML = resultStr; 
+      
+    } 
+      
+    function getText(param){ 
+      
+        if(param=="INTERIOR"){return "区域内";} 
+      
+        if(param=="EXTERIOR"){return "区域外";} 
+      
+        if(param=="BOUNDARY"){return "区域边界上";} 
+      
+    } 
+      
+    function mouseRectangle(){ 
+      
+        mapObj.removeOverlayById(areaId); 
+      
+        mapObj.removeClosuresListeners(); 
+      
+        mapObj.addEventListener(mapObj,MConstants.ADD_OVERLAY,function(){ 
+      
+            mapObj.setCurrentMouseTool(MConstants.PAN_WHEELZOOM); 
+      
+            var arr=mapObj.getOverlaysByType(MOverlay.TYPE_RECTANGLE); 
+      
+            if(arr.length==0){ 
+      
+                return ; 
+      
+            } 
+      
+            areaId=arr[0].id; 
+      
+            var regionXY=new Array(); 
+      
+            for(var j=0;j<arr[0].lnglatArr.length;j++){ 
+      
+                regionXY.push(new MLngLat(arr[0].lnglatArr[j].lngX,arr[0].lnglatArr[j].latY)); 
+      
+            } 
+      
+            //var mll =new MLngLat(116.3084014,39.9640344); 
+      
+            //var mll1 =new MLngLat(116.4599165,39.8583246); 
+      
+     
+      
+            //regionXY.push(mll);regionXY.push(mll1); 
+      
+            var poiXY1 = new MLngLat(markerLngX,markerlatY); 
+      
+            var regionXY2=new MLngLats(regionXY); 
+      
+            var mss = new MSpatialSearch(); 
+      
+            var option = new MSpatialSearchOptions(); 
+      
+            mss.setCallbackFunction(isRegion_CallBack); 
+      
+            mss.isPoiInRegion(MOverlay.TYPE_RECTANGLE,poiXY1,regionXY2,option); 
+      
+        }); 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_RECTANGLE); 
+      
+    } 
+      
+    function mousePolygon(){ 
+      
+        mapObj.removeOverlayById(areaId); 
+      
+        mapObj.removeClosuresListeners(); 
+      
+        mapObj.addEventListener(mapObj,MConstants.ADD_OVERLAY,function(){ 
+      
+            mapObj.setCurrentMouseTool(MConstants.PAN_WHEELZOOM); 
+      
+            var arr=mapObj.getOverlaysByType(MOverlay.TYPE_POLYGON); 
+      
+            if(arr.length==0){ 
+      
+                return ; 
+      
+            } 
+      
+            areaId=arr[0].id; 
+      
+            var regionXY=new Array(); 
+      
+            for(var j=0;j<arr[0].lnglatArr.length;j++){ 
+      
+                regionXY.push(new MLngLat(arr[0].lnglatArr[j].lngX,arr[0].lnglatArr[j].latY)); 
+      
+            } 
+      
+            var poiXY1 = new MLngLat(markerLngX,markerlatY); 
+      
+            var regionXY2=new MLngLats(regionXY); 
+      
+            var mss = new MSpatialSearch(); 
+      
+            var option = new MSpatialSearchOptions(); 
+      
+            mss.setCallbackFunction(isRegion_CallBack); 
+      
+            mss.isPoiInRegion(MOverlay.TYPE_POLYGON,poiXY1,regionXY2,option); 
+      
+        }); 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_POLYGON); 
+      
+    } 
+      
+    </script> 
+      
+    </head> 
+      
+    <body onload="mapInit();"> 
+      
+    <table width="989"  border="0" cellpadding="0" cellspacing="2" bgcolor="#DDDDDD"> 
+      
+        <tr height="100%"> 
+      
+            <td rowspan="2" style="width:750px;height:600px;"><div id="map" style="height:600px; width:750px"></div></td> 
+      
+            <td style="width:247px;border-left:1px solid #666;" valign="top" > 
+      
+            <div style="padding:5px 0px 0px 5px;font-size:12px;height:290px"> 
+      
+                <div>判断一个点是否在区域范围内<br />先画点：<input type="button" onclick="mouseMarker();" value="鼠标画点"/><br /><br />再画区域范围进行判断：<br /><input type="button" onclick="mouseCircle()" value="鼠标画圆判断" style="width:130px"/><input type="button" onclick="mouseRectangle()" value="鼠标画矩形判断" style="width:130px"/><input type="button" onclick="mousePolygon()" value="鼠标画多边形判断" style="width:130px"/></div> 
+      
+                <div id="result" name="result" style="height:507px;overflow:auto;width:247px;margin-top:5px"></div> 
+      
+           </div></td> 
+      
+       </tr> 
+      
+    </table> 
+      
+    </body> 
+      
+    </html>  
+

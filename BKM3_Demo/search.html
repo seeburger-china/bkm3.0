@@ -1,0 +1,1228 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>BKM2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/c001e278.favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="styles/extend.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <img class="brand" src="images/8c1ae054.svwlogo.png" alt="Brand">
+            <div class="sysname">需求产能管理系统</div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                    <li class="active"><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                    <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                    <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                    <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);">Help</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="inner-page search">
+        <h3>Search Results</h3>
+        <div class="filter-block mt-20">
+            <div class="filter-summary">
+                <div style="float:left;min-width:120px;">
+                <a id="toggleFilter" class="filter " href="javascript:void(0);">Add/Edit Filter 
+                <i class="fa fa-angle-right"></i></a>
+                </div>
+                <div>
+                <input type="text" id="tagsinput" data-role="tagsinput">
+                </div>
+            </div>
+            <div class="folding-panel" style="margin-left:120px;">
+                <div class="filter-section">
+                    <div class="items col-sm-12">
+                        <h3>System wide filter</h3>
+                        <div class="filter-item">
+                            <span class="title">Demand Senario:</span>
+                            <label for="f-senario-bkm">
+                                <input type="radio" name="senario" id="f-senario-bkm" data-filter-type="global" data-label="Senario" value="BKM" checked="checked"> BKM
+                            </label>
+                            <label for="f-senario-ktb">
+                                <input type="radio" name="senario" id="f-senario-ktb" data-filter-type="global" data-label="Senario" value="KTB"> KTB
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Commodity:</span>
+                            <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
+                                <option value="All">All</option>
+                                <option value="CSX">CSX</option>
+                                <option value="CSM">CSM</option>
+                            </select>
+                            <span class="title">Department:</span>
+                            <select class="selectpicker" id="f-dept" data-filter-type="global" data-label="Department">
+                                <option value="All">All</option>
+                                <option value="CSC-1">CSC-1</option>
+                                <option value="CSC-2">CSC-2</option>
+                            </select>
+                            <span class="title">Buyer:</span>
+                            <div class="form-group">
+                                <div class='input-group'>
+                                    <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Supplier:</span>
+                            <div class="form-group">
+                                <div class='input-group'>
+                                    <input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Vehicle Class:</span>
+                            <select class="selectpicker" id="f-vehicle-class" data-filter-type="global" data-label="Vehicle Class">
+                                <option value="All">All</option>
+                                <option value="5GD">5GD</option>
+                                <option value="180">180</option>
+                            </select>
+                            <span class="title">Car Model:</span>
+                            <select class="selectpicker" id="f-carmodel" data-filter-type="global" data-label="Car Model">
+                                <option value="All">All</option>
+                                <option value="New Polo">New Polo</option>
+                                <option value="Lamando">Lamando</option>
+                            </select>
+                            
+                        </div>
+                        <div class="filter-item">
+                           <span class="title">Plant:</span>
+                           <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                                <option value="All">All</option>
+                                <option value="78">1000(78)-Anting</option>
+                                <option value="C2">1001(C2)-Beijing</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Relevance:</span>
+                            <label for="f-rel-all">
+                                <input type="checkbox" name="relevance" id="f-rel-all" data-filter-type="global" data-label="Relevance" value="All"> All
+                            </label>
+                            <label for="f-rel-heavy-item">
+                                <input type="checkbox" name="relevance" id="f-rel-heavy-item" data-filter-type="global" data-label="Relevance" value="Heavy-item" checked="checked"> Heavy item
+                            </label>
+                            <label for="f-rel-relevant">
+                                <input type="checkbox" name="relevance" id="f-rel-relevant" data-filter-type="global" data-label="Relevance" value="Relevant" checked="checked"> Relevant
+                            </label>
+                            <label for="f-rel-irrelevant">
+                                <input type="checkbox" name="relevance" id="f-rel-irrelevant" data-filter-type="global" data-label="Relevance" value="Irrelevant"> Irrelevant
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Validity:</span>
+                            <label for="f-validity-all">
+                                <input type="checkbox" name="validity" id="f-validity-all" data-filter-type="global" data-label="Validity" value="All"> All
+                            </label>
+                            <label for="f-validity-valid">
+                                <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Validity" value="Vaild" checked="checked"> Valid
+                            </label>
+                            <label for="f-validity-invalid">
+                                <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="Validity" value="Invalid"> Invalid
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                           <span class="title">AI Tag:</span>
+                           <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                                <option value="All">All</option>
+                                <option value="78">CRITICAL</option>
+                                <option value="C2">DEMAND</option>
+								<option value="C2">CAPACITY</option>
+								<option value="C2">PARTS</option>
+								<option value="C2">YELLOW</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                           <span class="title">System-wide Tag:</span>
+                           <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                                <option value="All">All</option>
+                                <option value="78">2017 Capatity Survey</option>
+                                <option value="C2">2016 Capatity Survey</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                           <span class="title">User-defined Tag:</span>
+                           <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                                <option value="All">All</option>
+                                <option value="78">Inventory Warning Tag</option>
+                                <option value="C2">Capatity Warning Tag</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Is Have Sub-BKA:</span>
+                            <label for="f-validity-valid">
+                                <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
+                            </label>
+                            <label for="f-validity-invalid">
+                                <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
+                            </label>
+                        </div>						
+                    <div class="clearfix"></div>
+                </div>
+                
+                    </div>
+
+                <div class="filter-section ">
+                    <div class="items col-sm-12">
+                        <h3 class="mp20">Further filter search results</h3>
+                        <div class="filter-item">
+                            <span class="title">BKA Status:</span>
+                            <label for="f-bka-status-red">
+                                <input type="checkbox" name="bka-status" id="f-bka-status-red" data-filter-type="local" data-label="BKA Status" checked="checked" value="Red"> Red(react)
+                            </label>
+                            <label for="f-bka-status-yellow">
+                                <input type="checkbox" name="bka-status" id="f-bka-status-yellow" data-filter-type="local" data-label="BKA Status"  checked="checked" value="Yellow"> Yellow(observe)
+                            </label>
+                            <label for="f-bka-status-green">
+                                <input type="checkbox" name="bka-status" id="f-bka-status-green" data-filter-type="local" data-label="BKA Status"  checked="checked"  value="Green"> Green(keep-up)
+                            </label>
+                            <label for="f-bka-status-gray">
+                                <input type="checkbox" name="bka-status" id="f-bka-status-gray" data-filter-type="local" data-label="BKA Status"  checked="checked" value="Green"> Gray(no demand data)
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">BKA processing Status:</span>
+                            <label for="f-bka-processing-status-confirmed">
+                                <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-confirmed" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Confirmed"> Confirmed
+                            </label>
+                            <label for="f-bka-processing-status-submitted">
+                                <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-submitted" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Submitted"> Submitted
+                            </label>
+                            <label for="f-bka-processing-status-rework">
+                                <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-rework" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Rework-needed"> Rework-needed
+                            </label>
+                            <label for="f-bka-processing-status-update">
+                                <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-update" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Update-needed"> Update-needed
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Sub-supplier:</span>
+                            <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                                <option value="All">All</option>
+                                <option value="nb">410004321-Ningbohuaxiang</option>
+                                <option value="yz">442043256-Yizhenghuifeng</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Date of last edit:</span>
+                            <div class="form-group">
+                                <div class='input-group date' id='filter-datetimepicker-from'>
+                                    <input type='text' class="form-control input-sm" />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                            <div class="form-group">
+                                <div class='input-group date' id='filter-datetimepicker-from'>
+                                    <input type='text' class="form-control input-sm" />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Status Downgrade:</span>
+                            <label for="f-downgrade">
+                                <input type="checkbox" name="downgradebka" id="f-downgrade" data-filter-type="local" data-label="Status downgrade" value="Yes"> Show BKAs with downgraded status only
+                            </label>
+                        </div>
+                        <div class="filter-item">
+                            <span class="title">Demand Type:</span>
+                            <select class="selectpicker" id="f-quotation-error" data-filter-type="local" data-label="Demand Type" >
+                                 <option value="All">All</option>
+                                <option value="01">SAPSinglePOFound-QuotaOK</option>
+                                <option value="02">SAPSinglePOFound-QuotaErr</option>
+                                <option value="03">SAPMultiPOFound-QuotaOK</option>
+                                <option value="04">SAPMultiPOFound-QuotaErr</option>
+                                <option value="05">SAPEXTSinglePOFound-QuotaOK</option>
+
+                                <option value="06">SAPEXTSinglePOFound-QuotaErr</option>
+                                <option value="07">SAPEXTMultiPOFound-QuotaOK</option>
+                                <option value="08">SAPEXTMultiPOFound-QuotaErr</option>
+                                
+                                <option value="11">SAPNotFound-CSCSinglePOFound</option>
+                                <option value="13">SAPNotFound-CSCMultiPOFound</option>
+                                <option value="15">SAPNotFound-CSCExtSinglePOFound</option>
+                                <option value="17">SAPNotFound-CSCExtMultiPOFound</option>
+
+                                <option value="2A">SAPNotFound-TakeSingleBKMTLK</option>
+                                <option value="2B">SAPNotFound-TakeMultiBKMTLK</option>
+                                <option value="2C">NoSAPorBKMTLKFound</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="option-section">
+                    <div class="items col-sm-12">
+                        <a href="javascript:void(0);" class="btn btn-primary btn-toggleFilterApply">Apply</a><a href="javascript:void(0);" >Reset to default</a><a href="javascript:void(0);" class="btn-toggleFilterApply">Save as my personal view</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" id="bka-search-tabs">
+                <li class="active"><a href="#bka-tab" data-toggle="tab">BKAs(4)</a></li>
+                <li><a href="#part-tab" data-toggle="tab">Single parts(1)</a></li>
+				<li><a href="#companies-tab" data-toggle="tab">Companies(4)</a></li>
+				<li><a href="#posts-tab" data-toggle="tab">Posts(1)</a></li>
+            </ul>
+       
+        <div class="search-toolbar col-sm-8 search-toolbar-icon">
+           <ul class="task-list">
+                <li>
+                            <a id="selectToggle" href="javascript:void(0);">
+                                <i class="ion-android-checkbox icon-btn"></i>
+                                <p>Select</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bka-requestUpdate-modal" data-toggle="modal"  class="bka-action">
+                                <i class="ion-refresh icon-btn"></i>
+                                <p>Request data update</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bka-action">
+                                <i class="ion-android-done-all icon-btn"></i>
+                                <p>Mark as read</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bka-action" onclick="downloadReport('6')">
+                                <i class="ion-android-share icon-btn"></i>
+                                <p>Export</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bka-action">
+                                <i class="ion-ios-star icon-btn"></i>
+                                <p>Add to Favorites</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bka-action">
+                                <i class="glyphicon glyphicon-tag"></i>
+                                <p valign="bottom">Tag</p>
+                            </a>
+                        </li>						
+                        <li>
+                            <a href="javascript:void(0);" class="bka-action">
+                                <i class="ion-map icon-btn"></i>
+                                <p>Show Map</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="part-action" style="display:none;" onclick="downloadReport('7')">
+                                <i class="ion-android-share icon-btn"></i>
+                                <p>Export</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bkacreate.html" class="part-action" style="display:none;">
+                                <i class="ion-android-options icon-btn"></i>
+                                <p>Assign to BKA</p>
+                            </a>
+                        </li>
+                    </ul>
+            <!--
+            <a id="selectToggle" href="javascript:void(0);">Select</a>
+            <a href="javascript:void(0);" class="bka-action" onclick="downloadReport('6')">Export</a>
+            <a href="javascript:void(0);" class="bka-action">Add to favorites</a>
+            <a href="javascript:void(0);" class="bka-action">Mark as read</a>
+            <a href="#bka-requestUpdate-modal" data-toggle="modal"  class="bka-action">Request data update</a>
+            <a href="javascript:void(0);" class="part-action" style="display:none;" onclick="downloadReport('7')">Export</a>
+            <a href="/bkacreate.html" class="part-action" style="display:none;">Add to BKAs</a>
+            <a class="pull-right" href="javascript:void(0);">
+                <i class="ion-map"></i>
+            </a>
+            -->
+        </div>
+        <div class="row">
+            <div class="col-sm-8 tab-content" >
+                <div class="tab-pane active " id="bka-tab" role="tabpanel" >
+
+                <table class="bka-table table table-hover " >
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox">
+                            </th>
+                            <th>BKA/Status</th>
+                            <th>Supplier</th>
+                            <th>Buyer</th>
+                            <th>Workflow</th>
+                            <th>Parts</th>
+							<th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="red"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                                <p><small>BKA 808 000KW28/14 (3)</small> <small class="pl15">1%</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                             <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="blue">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                        <li><font color="blue">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>								
+                            </td>							
+                            <td class="icon-cell">
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
+                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
+                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"><span class="badge">3</span></i></span>
+                                 
+                            </td>							
+  
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="red"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                               <p><small>BKA 808 000KW28/14 (3)</small> <small class="pl15">1%</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                             <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="blue">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                        <li><font color="blue">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>								
+                            </td>							
+                            <td class="icon-cell">
+                                 <span class="bka-icon"></span>
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"></span>
+                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"><span class="badge">3</span></span>
+                            </td>
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="yellow"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                                <p><small>BKA 808 000KW28/14 (3)</small>   <small class="red pl15">-4%</small></p>
+                            </td>
+                            
+                            <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                            <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="blue">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                        <li><font color="blue">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>								
+                            </td>							
+                            <td class="icon-cell">
+                               <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
+                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"></span>
+                            </td>
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="yellow"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                                <p><small>BKA 808 000KW28/14 (3)</small>   <small class="pl15">1%</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                             <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="black">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                    </ul>
+                                </div>										
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="black">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>									
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="black">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>									
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 								
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="black">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>								
+                            </td>							
+                            <td class="icon-cell">
+                                 <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
+                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"></span>
+                            </td>
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="green"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                               <p><small>BKA 808 000KW28/14 (3)</small>   <small class="pl15">1%</small></p>
+                            </td>
+                           <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                             <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="blue">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                        <li><font color="blue">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>	
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="black">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>									
+                            </td>							
+                            <td class="icon-cell">
+                               <span class="bka-icon"></i></span>
+                                <span class="bka-icon"></i></span>
+                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
+                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"><span class="badge">3</span></span>
+                            </td>
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="green"></div>
+                                <p>LOREM IPSUM LOREM IPPPSUM</p>
+                                <p><small>BKA 808 000KW28/14 (3)</small>   <small class="pl15">1%</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Buyer Name</p></a>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"><p>Confirmed</p></a>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                             <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
+                            </td>
+                          <td class="has-detail-info">
+                                <a href="javascript:void(0);" class="bka-action">
+									<span class="bka-action"><i class="glyphicon glyphicon-tag"></i></span>
+								</a> 
+								<div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li><font color="blue">AI Tag</font></li>
+                                        <li>CRITICAL</li>
+										<li>YELLOW</li>
+                                        <li><font color="blue">System Tag</font></li>
+                                        <li>FOLLOW-UP2016</li>
+										<li>FOLLOW-UP2017</li>
+										<li>FOLLOW-UP2018</li>
+                                    </ul>
+                                </div>								
+                            </td>							
+                            <td class="icon-cell">
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"></span>
+                               <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"></span>
+                                 
+                                 
+                            </td>
+                            <td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="tab-pane" id="part-tab" role="tabpanel" >
+
+                <table class="bka-table table table-hover" >
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox">
+                            </th>
+                            <th>Part No.</th>
+                            <th>Supplier</th>
+                            <th>Buyer</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>Pleuelstange Roh</p>
+                                <p><small>027105411P ROH</small> </p>
+                            </td>
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <p>Not assigned</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                            <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>THERMOSTAT</p>
+                               <p><small>050121113C</small></p>
+                            </td>
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                            <td>
+                                <p>New</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                            <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>LAGERDECKELF</p>
+                                <p><small>056103459A ROH</small> </p>
+                            </td>
+                            
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                           <td>
+                                <p>Not assigned</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                            <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                       <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>LAGERDECKELF</p>
+                                <p><small>056103459A ROH</small> </p>
+                            </td>
+                            
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                           <td>
+                                <p>Not assigned</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                           <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>LAGERDECKELF</p>
+                                <p><small>056103459A ROH</small> </p>
+                            </td>
+                            
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                           <td>
+                                <p>Not assigned</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                           <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <p>LAGERDECKELF</p>
+                                <p><small>056103459A ROH</small> </p>
+                            </td>
+                            
+                            <td>
+                                <p>Supplier Abbr Name</p>
+                                <p><small>A123456</small></p>
+                            </td>
+                            <td>
+                                <p>Buyers Name</p>
+                                <p><small>CSX</small></p>
+                            </td>
+                           <td>
+                                <p>Not assigned</p>
+                                <p><small>Yesterday</small></p>
+                            </td>
+                           <td class="icon-cell-right">
+                                <a href="/bkacreate.html">Add to BKA...</a>
+                                <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+				<div class="companies-tab" id="bka-tab" role="tabpanel" >
+					Companies (4)
+				</div>
+            </div>
+			
+
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="javascript:void(0);">Mark area</a>
+                        <a href="javascript:void(0);">Clean</a>
+                        <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="map-modal">
+                <div class="modal-dialog modal-dialog-center">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="images/a5f6513c.map.png" alt="Map">
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+ </div>
+             <div class="modal bka-modal fade" id="bka-requestUpdate-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Request data update</h4>
+                </div>
+                <div class="modal-body">
+                    <span class="small pl20">LOREM IPSUM LOREM IPPPSUM LOREM IPSUM LOREM IPPPSUM</span> 
+                    <div class="content">                        
+                        <textarea class="form-control" rows="15"></textarea>                   
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Cancel</button>
+                    <a href="javascript:void(0);">Submit</a>
+                    
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+            <!-- /.modal -->
+        </div>
+
+    <!-- /.modal -->
+    <div class="modal fade" id="my-account-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">My Account</h4>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                            <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="profile-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Name</label>
+                                        <div class="col-sm-7">
+                                            Zang Yi
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Email</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            ZangYi@svm.com
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="ZangYi@svm.com"> 
+                                        </div>
+                                        <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a> 
+                                       <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
+                                       <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Phone</label>
+                                        <div class="col-sm-7 profileDisplay">
+                                            +86 21 65431234
+                                        </div>
+                                        <div class="col-sm-7 profileValue" style="display:none;">
+                                            <input type="text" class="input-xs" value="+86 21 65431234"> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Company</label>
+                                        <div class="col-sm-7">
+                                            Shanghai Volkswagen Automotive
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Supplier No</label>
+                                        <div class="col-sm-7">
+                                            --
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Role</label>
+                                        <div class="col-sm-7">
+                                            Buyer
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4">Language</label>
+                                        <div class="col-sm-7">
+                                            <label for="lang-en">
+                                                <input type="radio" name="language" id="lang-en" checked="checked"> English
+                                            </label>
+                                            <label for="lang-ch">
+                                                <input type="radio" name="language" id="lang-ch"> Chinese
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="notification-tab">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA changed by SVW user:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA sent to rework:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">BKA submitted:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New message:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New  BKM Entwurf demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-6">New  KTB demand data:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
+                                            </label>
+                                        </div>
+                                       <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">New part numbers released:</label>
+                                        <div class="col-sm-6">
+                                            <label for="nf-radio-1a">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
+                                            </label>
+                                            <label for="nf-radio-1b">
+                                                <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
+                                            </label>
+                                        </div>
+                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                     <a href="javascript:void(0);" >Cancel</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    </div>
+    <div class="footer">
+        上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
+    </div>
+    <script src="scripts/9a737976.vendor.js"></script>
+    <script src="scripts/10ffdb3e.main.js"></script>
+    
+</body>
+
+</html>

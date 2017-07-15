@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./styles/bootstrap-3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+        <link rel="stylesheet" href="./styles/ac6cffee.main.css">
+        <link rel="stylesheet" href="./styles/extend.css" />
+        <link rel="stylesheet" href=./fonts/ionicons.svg>
+
+        <script src="./scripts/jquery-3.2.1.min.js" ></script>
+        <script src="./scripts/bootstrap-switch.js" ></script>
+        <script src="./scripts/common.js" ></script>
+
+        <style type="text/css">
+            .right_container{
+                position:absolute;
+                right:40px;
+                top:0px;
+                width:260px;
+                min-height: 640px;
+            }
+            .center_container{
+                position:absolute;
+                top:0px;
+                left:300px;
+                
+            }
+            .center_container .box{
+                width: 100%;
+                margin:0 0 20px 0;
+                height:200px; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="./images/logo.png" />
+            <div class="pagetitle">SAIC-Volkswagen Supplierbook</div>
+        </header>
+        <div class="header">
+            <nav class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                        <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                        <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                        <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                        <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default btnGlobalSearch"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <!-- /input-group -->
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0);">Help</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <!--<div class="navbar">-->
+            <!--<nav class="selectable">-->
+                <!--<a class="selected" href="#">-->
+                    <!--<span class="ion-ios-home-outline"></span>-->
+                <!--</a>-->
+                <!--<a href="search.html">-->
+                    <!--<span class="ion-ios-search-strong"></span>-->
+                <!--</a>-->
+                <!--<a href="history.html">-->
+                    <!--<span class="ion-clock"></span>-->
+                    <!--<span class="badge">4</span>-->
+                <!--</a>-->
+                <!--<a href="report-event-analysis.html">-->
+                    <!--<span class="ion-ios-pie-outline"></span>-->
+                <!--</a>-->
+                <!--<a href="admin-relevance-control.html">-->
+                    <!--<span class="ion-ios-gear-outline"></span>-->
+                <!--</a>-->
+            <!--</nav>-->
+            <!--<div class="searchbox input-group" >-->
+                <!--<input type="text" class="form-control" placeholder="Search for...">-->
+                <!--<span class="input-group-btn">-->
+                    <!--<button class="btn btn-default" type="button">-->
+                        <!--<span class="glyphicon glyphicon-search blue"></span>-->
+                    <!--</button>-->
+                <!--</span>-->
+            <!--</div>-->
+            <!--<div class="pull-right">-->
+                <!--<a href='#'>Help</a>-->
+                <!--<a href='#'>Ma Yanchao</a>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="pagetab selectable">
+            <a class="tab" href="index-new.html">BKM</a>
+            <a class="tab selected" href="suppliernetwork.html">Supplier Network (6)</a>
+            <a class="tab" href="supplychains.html">Supply Chains (48)</a>
+        </div>
+        <div class="filterbtn" style="top:160px;">Filters</div>
+            
+        <div class='main_container'>
+            <div class='left_container'>
+                <div class='box'>
+                    <h4 >Ningbo Huade Automobile</h4>
+                    <p>Lingjianchang</p>
+                    <br>
+                    <p><span class='nb'>32</span> supply chain connections</p>
+                    <p><a href='#'>comlete your network</a></p>
+                    <br>
+                    <h4 style='color:#ea5749;'>Bronze Status</h4>
+                    <p><span class='nb'>6</span> viewed your company profile</p>
+                </div>
+                <div class='box'>
+                    <h5>Company Profile</h5>
+                    <p>Profile infomation</p>
+                </div>
+                
+            </div>
+            <div class='right_container'>
+                <h5 style='text-align: center;'><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
+                <br> 
+                <button type="button" class="btn btn-primary" onclick="showPanel('panel1');">Select</button>
+                <br>
+                <p>not found? <a href="#">Introduce a new one</a></p>
+                <input type="text" class="form-control" id="cname" placeholder="Company Name">
+                <br>
+                <input type="text" class="form-control" id="cname" placeholder="Email Address">
+                <br>
+                <button type="submit" class="btn btn-default" style="float:right;border-color:#538dd5;color:#538dd5;">Invite</button>
+            </div>
+            
+            <div class='center_container'>
+                <div class='box'>
+                    <h5>Company News 1</h5>
+                    <p>News Content</p>
+                </div>
+                <div class='box'>
+                    <h5>Company News 2</h5>
+                    <p>News Content</p>
+                </div>
+                <div class='box'>
+                    <h5>Company News 3</h5>
+                    <p>News Content</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floatpanel" id="panel1">
+            <input type="text" class="form-control" placeholder="Filter..." aria-describedby="basic-addon2">
+            <br>
+            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Registration No.</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456
+              </th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       
+      </tbody>
+    </table>
+            <ul class="pagination" style="margin-left:200px;margin-top:0;">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+            <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
+            <div class="btngroup">
+                <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Save</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            setTimeout(function(){
+                //location.reload();
+            },1000);
+            window.onresize=function(){  
+                 changeWidth();  
+            };
+            function changeWidth(){               
+                var w = document.documentElement.clientWidth;//获取页面可见高度  
+                $(".center_container").width(w-630+'px');
+            }
+            $(function(){
+                changeWidth();
+            });
+        </script>
+    </body>
+</html>

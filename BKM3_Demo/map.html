@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://10.160.3.120:8084/webapi/auth.json?t=flashmap&v=2.4.1&key="></script>
+</head>
+<body>
+<!-- <div id="mapObj" style="width: 1200px; height: 600px"></div> -->
+<script type="text/javascript"> 
+  
+var mapObj=null; 
+  
+function  mapInit() { 
+  
+    var mapoption = new MMapOptions(); 
+  
+    mapoption.toolbar = MConstants.ROUND; //设置地图初始化工具条，ROUND:新版圆工具条 
+  
+    mapoption.toolbarPos=new MPoint(20,20); //设置工具条在地图上的显示位置 
+  
+    mapoption.overviewMap = MConstants.SHOW; //设置鹰眼地图的状态，SHOW:显示，HIDE:隐藏（默认） 
+  
+    mapoption.scale = MConstants.SHOW; //设置地图初始化比例尺状态，SHOW:显示（默认），HIDE:隐藏。 
+  
+    mapoption.zoom = 13;//要加载的地图的缩放级别 
+  
+    mapoption.center = new MLngLat(116.397428,39.90923);//要加载的地图的中心点经纬度坐标 
+  
+    mapoption.language = MConstants.MAP_CN;//设置地图类型，MAP_CN:中文地图（默认），MAP_EN:英文地图 
+  
+    mapoption.fullScreenButton = MConstants.SHOW;//设置是否显示全屏按钮，SHOW:显示（默认），HIDE:隐藏 
+  
+    mapoption.centerCross = MConstants.SHOW;//设置是否在地图上显示中心十字,SHOW:显示（默认），HIDE:隐藏 
+  
+    mapoption.requestNum=100;//设置地图切片请求并发数。默认100。 
+  
+    mapObj = new MMap("map", mapoption); //地图初始化 
+  
+} 
+
+
+  
+function keywordSearch(){ 
+  
+    var keywords = document.getElementById("keyword").value; 
+  
+    var city = document.getElementById("city").value; 
+  
+    var MSearch = new MPoiSearch(); 
+  
+    var opt = new MPoiSearchOptions(); 
+  
+    opt.recordsPerPage = 10;//每页返回数据量，默认为10 
+  
+    opt.pageNum = 1;//当前页数。 
+  
+    opt.dataType = "";//数据类别，该处为分词查询，只需要相关行业关键字即可 
+  
+    opt.dataSources = MConstants.DS_BASE_ENPOI;//数据源，基础+企业地标数据库（默认） 
+  
+    MSearch.setCallbackFunction(keywordSearch_CallBack); 
+  
+    MSearch.poiSearchByKeywords(keywords,city,opt); 
+  
+} 
+  
+var resultCount=10; 
+  
+function keywordSearch_CallBack(data){ 
+  
+    var resultStr=""; 
+  
+    if(data.error_message != null){ 
+  
+        resultStr="查询异常！"+data.error_message; 
+  
+    }else{ 
+  
+    switch(data.message){ 
+  
+        case 'ok': 
+  
+            var marker = new Array(); 
+  
+            if(data.poilist.length==0){ 
+  
+                resultStr = "未查找到任何结果!<br />建议：<br />1.请确保所有字词拼写正确。<br />2.尝试不同的关键字。<br />3.尝试更宽泛的关键字。"; 
+  
+            }else{ 
+  
+                resultCount=data.poilist.length; 
+  
+                for (var i = 0; i < data.poilist.length; i++) { 
+  
+                    resultStr += "<div id='divid"+(i)+"' onmouseover='openMarkerTipById1("+(i)+",this)' onmouseout='onmouseout_MarkerStyle("+(i+1)+",this)' style=\"font-size: 13px;cursor:pointer;padding:2px 0 10px 5px;\">"+(i+1)+"、"+data.poilist[i].name+"<br \/>"; 
+  
+                    resultStr += TipContents(data.poilist[i].type,data.poilist[i].address,data.poilist[i].tel); 
+  
+                    resultStr += "<br />城市："+data.poilist[i].citycode + "<br \/></div>"; 
+  
+                    var markerOption = new MMarkerOptions(); 
+  
+                    markerOption.imageUrl ="http://code.mapabc.com/images/lan_1.png"; 
+  
+                    markerOption.picAgent = false; 
+  
+ 
+  
+                    var tipOption = new MTipOptions(); 
+  
+                    tipOption.title=(i+1) + ". "+ data.poilist[i].name; 
+  
+                    var tipC = "<br />"+TipContents(data.poilist[i].type,data.poilist[i].address,data.poilist[i].tel); 
+  
+                    tipOption.content=tipC;//tip内容 
+  
+                    tipOption.hasShadow=true; 
+  
+                    tipOption.titleFontStyle.name="Arial"; 
+  
+                    tipOption.titleFontStyle.size=12; 
+  
+                    tipOption.titleFontStyle.color= 0x005cb5; 
+  
+                    tipOption.titleFontStyle.bold=true; 
+  
+                    tipOption.contentFontStyle.name="Arial"; 
+  
+                    tipOption.contentFontStyle.size=13; 
+  
+                    tipOption.contentFontStyle.color= 0x000000 ; 
+  
+                    tipOption.contentFontStyle.bold=false; 
+  
+ 
+  
+                    markerOption.tipOption = tipOption; 
+  
+                    markerOption.canShowTip=true; 
+  
+                    markerOption.hasShadow=true; 
+  
+                    var mar = new MMarker(new MLngLat(data.poilist[i].x,data.poilist[i].y),markerOption); 
+  
+                    mar.id=(i); 
+  
+                    marker.push(mar); 
+  
+                } 
+  
+                mapObj.addOverlays(marker,true); 
+  
+                mapObj.addEventListener(mapObj,MConstants.TIP_OPEN,openTip); 
+  
+            } 
+  
+        break; 
+  
+        case 'error': 
+  
+            resultStr= "<div class=\"default\"><div class=\"default_title\">网络忙！请重新尝试！</div><div class=\"d_link\"><div class=\"d_right\"></div><div class=\"suggest\"><strong>建议：</strong><br />如果您刷新页后仍无法显示结果，请过几分钟后再次尝试或者与我们的服务人员联系。<br />Email：service@mapabc.com <br />电话：400 810 0080</div></div></span>错误信息："+data.message+"</div>"; 
+  
+        break; 
+  
+        default: 
+  
+            resultStr= "<div class=\"default\"><div class=\"default_title\">对不起！网络繁忙！请稍后重新尝试！</div><div class=\"d_link\"><div class=\"d_right\"></div><div class=\"suggest\"><strong>建议：</strong><br />如果您刷新页后仍无法显示结果，请过几分钟后再次尝试或者与我们的服务人员联系。<br />Email：service@mapabc.com <br />电话：400 810 0080</div></div></span>错误信息："+data.message+"</div>"; 
+  
+        } 
+  
+    } 
+  
+    document.getElementById("result").innerHTML = resultStr; 
+  
+} 
+  
+function TipContents(type,address,tel){ 
+  
+    if (type == "" || type == "undefined" || type == null || type == " undefined" || typeof type == "undefined") { 
+  
+        type = "暂无"; 
+  
+    } 
+  
+    if (address == "" || address == "undefined" || address == null || address == " undefined" || typeof address == "undefined") { 
+  
+        address = "暂无"; 
+  
+    } 
+  
+    if (tel == "" || tel == "undefined" || tel == null || tel == " undefined" || typeof address == "tel") { 
+  
+        tel = "暂无"; 
+  
+    } 
+  
+    var str ="地址：" + address + "<br>电话：" + tel + " <br>类型："+type; 
+  
+    return str; 
+  
+} 
+  
+function openMarkerTipById1(pointid,thiss){  //根据id打开搜索结果点tip 
+  
+    thiss.style.background='#CFD6E8'; 
+  
+    mapObj.openOverlayTip(pointid); 
+  
+} 
+  
+function onmouseout_MarkerStyle(pointid,thiss) {//鼠标移开后点样式恢复 
+  
+   thiss.style.background=""; 
+  
+} 
+  
+function openTip(param){ 
+  
+    var n = "divid"+(param.overlayId); 
+  
+    for (var i = 0; i < resultCount; ++i){ 
+  
+        var id="divid"+i; 
+  
+        document.getElementById(id).style.background=''; 
+  
+        document.getElementById(id).onmouseout = function(){this.style.backgroundColor='';}; 
+  
+    } 
+  
+    document.getElementById(n).style.background='#CFD6E8'; 
+  
+    document.getElementById(n).onmouseout = function(){this.style.backgroundColor='#CFD6E8';}; 
+  
+} 
+  
+</script> 
+  
+</head> 
+  
+<body onload="mapInit();"> 
+  
+<table width="989"  border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD"> 
+  
+    <tr height="100%"> 
+  
+        <td rowspan="2"><div id="map" style="height:600px; width:750px"></div></td> 
+  
+        <td style="width:247px;border-left:1px solid #666;"><div style="padding:5px 0px 0px 5px;font-size:12px;height:94px;">keyword search<br />city:<input type="text" id="city" name="city" value="021" /><br />keywords<input type="text" id="keyword" name="keyword" value="dongfangmingzhu"/><br /><input type="button" value="search" onclick="keywordSearch()" style="margin-left:100px"/></div></td> 
+  
+    </tr> 
+  
+    <tr> 
+  
+        <td style="width:247px;border-left:1px solid #666;border-top:1px solid #666;"> 
+  
+            <div id="result" name="result" style="height:495px;overflow:auto;width:247px;padding-top:5px;"></div> 
+  
+        </td> 
+  
+    </tr> 
+  
+</table> 
+  
+</body> 
+  
+</html>  

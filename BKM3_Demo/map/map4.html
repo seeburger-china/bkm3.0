@@ -1,0 +1,149 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+      
+    <html xmlns="http://www.w3.org/1999/xhtml"> 
+      
+    <head> 
+      
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+      
+    <title>鼠标绘面、测距相关</title> 
+      
+     
+     <!-- 
+    <script type="text/javascript" src="http://app.mapabc.com/apis?t=flashmap&v=2.4.1&key=b0a7db0b3a30f944a21c3682064dc70ef5b738b062f6479a5eca39725798b1ee300bd8d5de3a4ae3|29e8ed1f7f6a97d8e99fc568cea6a7dc0ccd920856e07c0718b9885faf7551a18141699c81f526d7"></script> 
+    -->
+      
+      <script type="text/javascript" src="http://10.160.3.120:8084/webapi/auth.json?t=flashmap&v=2.4.1&key ="></script> 
+      
+    <script type="text/javascript"> 
+      
+    var mapObj=null; 
+         
+    function  mapInit() { 
+      
+        var mapoption=new MMapOptions(); 
+      
+        mapoption.toolbar=MConstants.ROUND; //设置地图初始化工具条，ROUND:新版圆工具条 
+      
+        mapoption.overviewMap=MConstants.SHOW; //设置鹰眼地图的状态，SHOW:显示，HIDE:隐藏（默认） 
+      
+        mapoption.scale=MConstants.SHOW; //设置地图初始化比例尺状态，SHOW:显示（默认），HIDE:隐藏。 
+      
+        mapoption.zoom=13;//要加载的地图的缩放级别 
+      
+        mapoption.center=new MLngLat(116.397428,39.90923);//要加载的地图的中心点经纬度坐标 
+      
+        mapoption.language=MConstants.MAP_CN;//设置地图类型，MAP_CN:中文地图（默认），MAP_EN:英文地图 
+      
+        mapoption.fullScreenButton=MConstants.SHOW;//设置是否显示全屏按钮，SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.centerCross=MConstants.SHOW;//设置是否在地图上显示中心十字,SHOW:显示（默认），HIDE:隐藏 
+      
+        mapoption.toolbarPos=new MPoint(20,20); //设置工具条在地图上的显示位置 
+      
+        mapObj=new MMap("map", mapoption); //地图初始化 
+      
+    } 
+      
+    function setDefultArea(){ 
+      
+        var tipOption = new MTipOptions(); 
+      
+        tipOption.title="面"; 
+      
+        tipOption.content="这是一个面！"; 
+      
+        var linestyle=new MLineStyle();//创建线样式对象 
+      
+        linestyle.thickness=3;//线的粗细度，默认为2 
+      
+        linestyle.color=0x0000ff;//线的颜色，16进制整数，默认为0x005890（蓝色） 
+      
+        linestyle.alpha=0.5; 
+      
+        var fillstyle=new MFillStyle();//创建填充样式对象 
+      
+        fillstyle.color=0xaad5e4;//面的填充颜色，16进制整数。 
+      
+        fillstyle.alpha=0.8;//填充面的透明度，范围0~1，0为透明，1为不透明（默认） 
+      
+        var areastyle=new MAreaStyle();//创建面样式对象 
+      
+        areastyle.borderStyle=linestyle;//面的边框风格。 
+      
+        areastyle.fillStyle=fillstyle;//面的填充风格。 
+      
+        var fontstyle=new MFontStyle(); 
+      
+        fontstyle.size=14; 
+      
+        fontstyle.color=0xffffff; 
+      
+        fontstyle.bold=false; 
+      
+        var labeloption=new MLabelOptions();//添加标注 
+      
+        labeloption.fontStyle=fontstyle; 
+      
+        labeloption.content="面";//标注的内容 
+      
+        var areaopt = new MAreaOptions();　//构建一个名为areopt的面选项对象。 
+      
+        areaopt.areaStyle=areastyle;//设置面的风格 
+      
+        areaopt.tipOption=tipOption;//设置面的信息窗口参数选项 
+      
+        areaopt.canShowTip=true;//设置面是否显示信息窗口 
+      
+        areaopt.labelOption=labeloption;//设置面的标注选项参数 
+      
+        areaopt.isDimorphic=true;//设置面是否具有二态，默认为false即没有二态,true有二态 
+      
+        areaopt.dimorphicColor=0xFF0000;//设置第二种状态的颜色，默认为0xFF0000，即红色 
+      
+        mapObj.setDefaultAreaOption(areaopt); 
+      
+    } 
+      
+    function addPolygonByMouseTool(){ 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_POLYGON); 
+      
+    } 
+      
+    function addRectangleByMouseTool(){ 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_RECTANGLE); 
+      
+    } 
+      
+    function addCircleByMouseTool(){ 
+      
+        mapObj.setCurrentMouseTool(MConstants.DRAW_CIRCLE); 
+      
+    } 
+      
+     
+      
+    </script> 
+      
+    </head> 
+      
+    <body onload="mapInit();"> 
+      
+    <div id="map" style="width:500px;height:400px"></div> 
+      
+    <input type="button" value="设置默认面样式" onclick="setDefultArea()"> 
+      
+    <input type="button" value="画多边形" onclick="addPolygonByMouseTool()"> 
+      
+    <input type="button" value="画矩形" onclick="addRectangleByMouseTool()"> 
+      
+    <input type="button" value="画圆" onclick="addCircleByMouseTool()"> 
+      
+    <input type="button" value="测面积" onclick="mapObj.setCurrentMouseTool(MConstants.COMPUTE_AREA);"> 
+      
+    </body> 
+      
+    </html>  
+
