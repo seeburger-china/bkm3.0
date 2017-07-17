@@ -834,3 +834,32 @@ body {
     }
 }
 /* #new */
+
+/*seach bkas 页面 */
+.red{
+  color:red;
+}
+
+.blue{
+  color:#538dd5;
+}
+.table-padding-right{
+  padding-right:10px;
+}
+
+/* nav h2 */
+.nav li .nav-tab-title {
+  /*font-size: large;*/
+  margin-left: 80px;
+  padding: 10px 15px;
+  line-height: 1.42857;
+  color: gray;
+}
+
+.red-circle {
+  padding: 1px 3px;
+  background: red;
+  color: white;
+  font-size: small;
+  border-radius: 50%;
+}
