@@ -283,9 +283,11 @@ lead-time-input.bkacreate .lead-time-input {
     float: left;
     height: 40px;
     margin-right: 5px !important;
+    padding-left: 17px;
     width: 7px;
     cursor:pointer;
 }
+
 
 .bka-icon{    
     display:-moz-inline-box; 
@@ -296,7 +298,7 @@ lead-time-input.bkacreate .lead-time-input {
 }
 
 .inner-page.search .table.bka-table tbody > tr td .badge{
-    margin: 0 0 5px 12px !important;
+    margin: 0 0 2px 6px !important;
 }
 
 .icon-cell-right{
@@ -606,6 +608,7 @@ header .logo{
 .red{
     color: #aa3333;
 }
+
 .blue{
     color:#538dd5;
 }
@@ -655,10 +658,16 @@ table{
     background-color:#aa3333 !important;
 }
 .badge-right-top {
-    right: -6px;
-    top: -8px;
-    padding: 2px 2px;
-    font-size: .1em !important;
+    right: -4px;
+    top: 0;
+    padding: 1pt 1pt;
+    font-size: 1pt !important;
+}
+.inner-page.bkaview .sidebar .result-list .icon-bar .badge-right-top {
+  right: -12px;
+  top: -10px;
+  padding: 1pt 1pt;
+  font-size: 1pt !important;
 }
 .badge-blue {
     background: #538dd5 !important;
@@ -676,33 +685,6 @@ table{
 .tiny{
     font-size:11px;
     line-height: 14px;
-}
-
-.treecontainer{
-    width:100%;
-    overflow-x: scroll;
-    display: flex;
-}
-
-
-.treenode .xr,.treenode .xl{
-    position:absolute;
-    width:42px;
-    top:70px;
-    border-top:solid 1px #538dd5;
-}
-.treenode .xr{
-    right:-42px;
-}
-.treenode .xl{
-    left:-42px;
-}
-.treenode .y{
-    position:absolute;
-    width:1px;
-    top:70px;
-    border-left:solid 1px #538dd5;
-    right:-42px;
 }
 .bkalist h5{
     text-align:center;
@@ -789,11 +771,19 @@ body {
         flex: 0;
     }
 }
-/* #new */
+/* # index.new */
+.icon-small{
+  font-size: 14px;
+}
+.ai-tag-small{
+  fontsize:6px;
+  padding:1px 2px;
+  margin: 0 0 2px 6px;
+}
 
 /*seach bkas 页面 */
 .red{
-  color:red;
+  color:#aa3333;
 }
 
 .blue{
@@ -801,6 +791,9 @@ body {
 }
 .table-padding-right{
   padding-right:10px;
+}
+.icon-big{
+  font-size: 20px;
 }
 
 /* nav h2 */
@@ -813,9 +806,57 @@ body {
 }
 
 .red-circle {
-  padding: 1px 3px;
-  background: red;
+  padding: 1px 5px;
+  background:#C0392B;
   color: white;
-  font-size: small;
+  /*font-size: small;*/
   border-radius: 50%;
+}
+.red-circle-sm {
+  font-size: small;
+}
+
+.parent{
+  border-left:7px solid #92d050;
+
+}
+
+.rectgreen{
+  margin-left: 20px;
+}
+
+.rectred{
+  border-left: 7px solid #da9694;
+  padding-left:5px;
+  margin-left:10px;
+
+}
+
+/* table */
+.table-height{
+  height: 30px;
+}
+
+.inline-sm, .inline-lg {
+  float: left;
+}
+.inline-sm {
+  margin-left: 3%;
+  width: 33%;
+}
+.inline-lg {
+  width: 45%;
+}
+/* #table */
+
+.my-hidden {
+  display: none;
+}
+
+/*bkaview*/
+.rectyellow{
+  border-left: 4px solid;
+  padding-left:5px;
+  margin-left:10px;
+  color:yellow;
 }
