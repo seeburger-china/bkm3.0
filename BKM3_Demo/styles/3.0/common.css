@@ -296,3 +296,11 @@ p.tip{
     border-color:#538dd5;
     color:#538dd5;
 }
+.floatpanel .btngroup .btn-default{
+  border-color:white;
+  color:#538dd5;
+}
+.floatpanel .btngroup .btn-default:hover{
+    text-decoration: underline;
+    background-color:white;
+}
