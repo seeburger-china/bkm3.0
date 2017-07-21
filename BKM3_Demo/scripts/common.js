@@ -26,3 +26,17 @@ function hidePanel(){
     $(".floatpanel").hide();
     $(".mask").remove();
 }
+ function hidden(){
+    var tab = document.getElementsByTagName('table')[0];
+    tab.caption.onclick = function(){
+      var trs = tab.rows;
+      for(var i = 0, len = trs.length; i < len; i++){
+        var cell = trs[i].cells[1];
+        if(cell.style.display == 'none'){
+          cell.style.display = '';
+        }else{
+          cell.style.display = 'none';
+        }
+      }
+    }
+  }
