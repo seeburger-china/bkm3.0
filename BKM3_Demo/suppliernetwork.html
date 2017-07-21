@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
         <link rel="stylesheet" href="./styles/ac6cffee.main.css">
         <link rel="stylesheet" href="./styles/extend.css" />
+        <link rel="stylesheet" href="./styles/3.0/common.css" />
         <link rel="stylesheet" href=./fonts/ionicons.svg>
 
         <script src="./scripts/jquery-3.2.1.min.js" ></script>
@@ -150,8 +151,7 @@
                     <p><span class='nb'>32</span> supply chain connections</p>
                     <p><a href='#'>comlete your network</a></p>
                     <br>
-                    <h4 style='color:#ea5749;'>Bronze Status</h4>
-                    <p><span class='nb'>6</span> viewed your company profile</p>
+                    
                 </div>
                 <div class='box'>
                     <h5>Company Profile</h5>
@@ -162,14 +162,18 @@
             <div class='right_container'>
                 <h5 style='text-align: center;'><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
                 <br> 
-                <button type="button" class="btn btn-primary" onclick="showPanel('panel1');">Select</button>
+                <a href="#" onclick="showPanel('panel1');">Select a supplier</a>
+                
+                <br>
                 <br>
                 <p>not found? <a href="#">Introduce a new one</a></p>
+                <br>
+                
                 <input type="text" class="form-control" id="cname" placeholder="Company Name">
                 <br>
                 <input type="text" class="form-control" id="cname" placeholder="Email Address">
                 <br>
-                <button type="submit" class="btn btn-default" style="float:right;border-color:#538dd5;color:#538dd5;">Invite</button>
+                <button type="submit" class="btn btn-primary" style="float:right;">Invite</button>
             </div>
             
                 <div class='center_container'>
@@ -304,8 +308,8 @@
                  changeWidth();  
             };
             function changeWidth(){               
-                var w = document.documentElement.clientWidth;//获取页面可见高度  
-                $(".center_container").width(w-630+'px');
+                var w = $(".main_container").width();  
+                $(".center_container").width(w-620+'px');
             }
             $(function(){
                 changeWidth();
