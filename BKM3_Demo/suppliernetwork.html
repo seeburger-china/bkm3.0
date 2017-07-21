@@ -32,7 +32,25 @@
             .center_container .box{
                 width: 100%;
                 margin:0 0 20px 0;
-                height:200px; 
+                height:auto;
+                min-height: 150px;
+                text-align: left;
+                position:relative;
+            }
+            .center_container .box .date{
+                position:absolute;
+                right:20px;
+                top:10px;
+                color:#999;
+            }
+            .center_container .box h5{
+                margin-bottom:20px;
+                margin-top:10px;
+            }
+            .center_container .box h5 span{
+                display: inline-block;
+                margin-left: 10px;
+                font-weight: normal;
             }
         </style>
     </head>
@@ -154,20 +172,55 @@
                 <button type="submit" class="btn btn-default" style="float:right;border-color:#538dd5;color:#538dd5;">Invite</button>
             </div>
             
-            <div class='center_container'>
+                <div class='center_container'>
                 <div class='box'>
-                    <h5>Company News 1</h5>
-                    <p>News Content</p>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        Yesterday
+                    </div>
+                    <p>Your (in-direct) customer Longcheng Precision Forging has been added into your supply-chain. 
+                        <br><a href="#">See details...</a></p>
                 </div>
                 <div class='box'>
-                    <h5>Company News 2</h5>
-                    <p>News Content</p>
+                    <h5>Yangfei AI <span>announcement</span></h5>
+                    <div class="date">
+                        Monday
+                    </div>
+                    <p>Dear Partners, 
+                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                    <br>Your SAIC-Volkswagen BKM Team
+                    </p>
+                    <p><a href="#">Share</a></p>
                 </div>
                 <div class='box'>
-                    <h5>Company News 3</h5>
-                    <p>News Content</p>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        Last Week
+                    </div>
+                    <p>Your (sub-) supplier Longcheng Precision Forging has been added into your supply-chain
+                        <br><a href="#">See details...</a></p>
+                </div>
+                <div class='box'>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        9 days ago
+                    </div>
+                    <p>Please attaention: Longcheng Precision Forging has added itself into your supply-chain
+                        <br><a href="#">See details...</a></p>
+                </div>
+                <div class='box'>
+                    <h5>SAIC-Volkswagen Automotive Co. <span>announcement</span></h5>
+                    <div class="date">
+                        10 days ago
+                    </div>
+                    <p>Dear Suppliers, 
+                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                    <br>Your SAIC-Volkswagen BKM Team
+                    </p>
+                    <p><a href="#">Share</a></p>
                 </div>
             </div>
+        
         </div>
         
         <div class="floatpanel" id="panel1">
