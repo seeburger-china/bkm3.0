@@ -506,7 +506,7 @@
                 buildTreenode("tree1","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
                 
                 buildTreenode("tree2","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1);
-                buildTreenode("tree2","1st Tier",'Ningbo Huade','Product','Metals','City',2,true,true,'bd_primary');
+                buildTreenode("tree2","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,true,'bd_primary');
 
                 //删除
                 $(".delete").click(function(){
@@ -521,6 +521,11 @@
                     $(this).prepend('<div class="xr"></div>');
                     $(this).prepend('<div class="xl"></div>');
                 });
+                $(".treecontainer").each(function(){
+                    $(this).children(".tree:eq(0)").children('.treenode').children('.xl').remove();
+                    $(this).children(".tree:eq(-1)").children('.treenode').children('.xr').remove();
+                });
+                
                 //竖线
                 $(".treenode:first").each(function(){
                     var ystart = $(this)[0].offsetTop;
