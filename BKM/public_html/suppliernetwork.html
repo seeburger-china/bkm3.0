@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css"  />
+        <script src="./js/bootstrap.min.js" ></script>
+        <script src="./js/jquery-3.2.1.min.js" ></script>
+        <script src="./js/common.js" ></script>
+        <link rel="stylesheet" href="./css/common.css" />
+        <style type="text/css">
+            .right_container{
+                position:absolute;
+                right:40px;
+                top:0px;
+                width:260px;
+                min-height: 640px;
+            }
+            .center_container{
+                position:absolute;
+                top:0px;
+                left:300px;
+                
+            }
+            .center_container .box{
+                width: 100%;
+                margin:0 0 20px 0;
+                height:200px; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="./images/logo.png" />
+            <div class="pagetitle">SAIC-Volkswagen Supplierbook</div>
+        </header>
+        <div class="navbar">
+            <nav class="selectable">
+                <a class="selected" href="#">
+                    <span class="glyphicon glyphicon-th"></span>
+                    StartPage</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-search"></span>
+                    Search</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-time"></span>
+                    History</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-signal"></span>
+                    Reports</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-cog"></span>
+                    Settings</a>
+            </nav>
+            <div class="searchbox input-group" >
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+            <div class="pull-right">
+                <a href='#'>Help</a>
+                <a href='#'>Ma Yanchao</a>
+            </div>
+        </div>
+        <div class="pagetab selectable">
+            <div class="tab"  onclick="location.href='bkm.html'">BKM</div>
+            <div class="tab selected">Supplier Network (6)</div>
+            <div class="tab" onclick="location.href='supplychains.html'">Supply Chains (48)</div>
+        </div>
+        <div class="filterbtn" style="top:160px;">Filters</div>
+            
+        <div class='main_container'>
+            <div class='left_container'>
+                <div class='box'>
+                    <h4 >Ningbo Huade Automobile</h4>
+                    <p>Lingjianchang</p>
+                    <br>
+                    <p><span class='nb'>32</span> supply chain connections</p>
+                    <p><a href='#'>comlete your network</a></p>
+                    <br>
+                    <h4 style='color:#ea5749;'>Bronze Status</h4>
+                    <p><span class='nb'>6</span> viewed your company profile</p>
+                </div>
+                <div class='box'>
+                    <h5>Company Profile</h5>
+                    <p>Profile infomation</p>
+                </div>
+                
+            </div>
+            <div class='right_container'>
+                <h5 style='text-align: center;'><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
+                <br> 
+                <button type="button" class="btn btn-primary" onclick="showPanel('panel1');">Select</button>
+                <br>
+                <p>not found? <a href="#">Introduce a new one</a></p>
+                <input type="text" class="form-control" id="cname" placeholder="Company Name">
+                <br>
+                <input type="text" class="form-control" id="cname" placeholder="Email Address">
+                <br>
+                <button type="submit" class="btn btn-default" style="float:right;border-color:#538dd5;color:#538dd5;">Invite</button>
+            </div>
+            
+            <div class='center_container'>
+                <div class='box'>
+                    <h5>Company News 1</h5>
+                    <p>News Content</p>
+                </div>
+                <div class='box'>
+                    <h5>Company News 2</h5>
+                    <p>News Content</p>
+                </div>
+                <div class='box'>
+                    <h5>Company News 3</h5>
+                    <p>News Content</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floatpanel" id="panel1">
+            <input type="text" class="form-control" placeholder="Filter..." aria-describedby="basic-addon2">
+            <br>
+            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Registration No.</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456
+              </th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       
+      </tbody>
+    </table>
+            <ul class="pagination" style="margin-left:200px;margin-top:0;">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+            <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
+            <div class="btngroup">
+                <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Save</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            setTimeout(function(){
+                //location.reload();
+            },1000);
+            window.onresize=function(){  
+                 changeWidth();  
+            };
+            function changeWidth(){               
+                var w = document.documentElement.clientWidth;//获取页面可见高度  
+                $(".center_container").width(w-630+'px');
+            }
+            $(function(){
+                changeWidth();
+            });
+        </script>
+    </body>
+</html>
