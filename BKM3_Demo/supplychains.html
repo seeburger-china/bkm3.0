@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
         <link rel="stylesheet" href="./styles/ac6cffee.main.css">
         <link rel="stylesheet" href="./styles/extend.css" />
+        
+        <link rel="stylesheet" href="./styles/3.0/common.css" />
         <link rel="stylesheet" href=./fonts/ionicons.svg>
 
         <script src="./scripts/jquery-3.2.1.min.js" ></script>
@@ -23,6 +25,13 @@
             }
             .main_container{
                 margin-left:40px;
+            }
+            .bd_red,.bd_red label{
+                border-color:red;
+            }
+            .bd_primary,.bd_primary p{
+                background-color:#538dd5;
+                color:white;
             }
         </style>
     <body>
@@ -111,8 +120,163 @@
             <a class="tab" href="suppliernetwork.html">Supplier Network (6)</a>
             <a class="tab selected" href="supplychains.html">Supply Chains (48)</a>
         </div>
-        <div class="filterbtn" style="top:160px;">Filters</div>
+       
+        <!-- sear mod begin-->
+        <div class="inner-page search">
+        <div class="filter-block mt-20">
+        <div class="filter-summary">
+            <div style="float:left;min-width:120px;">
+                <a id="toggleFilter" class="filter " href="javascript:void(0);">Add/Edit Filter
+                    <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div>
+                <input type="text" id="tagsinput" data-role="tagsinput">
+            </div>
+        </div>
+        <div class="folding-panel" style="margin-left:120px;">
+            <div class="filter-section">
+                <div class="items col-sm-12">
+                    <h3>System wide filter</h3>
+                    <div class="filter-item">
+                        <span class="title">Demand Senario:</span>
+                        <label for="f-senario-bkm">
+                            <input type="radio" name="senario" id="f-senario-bkm" data-filter-type="global" data-label="Senario" value="BKM" checked="checked"> BKM
+                        </label>
+                        <label for="f-senario-ktb">
+                            <input type="radio" name="senario" id="f-senario-ktb" data-filter-type="global" data-label="Senario" value="KTB"> KTB
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Commodity:</span>
+                        <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
+                            <option value="All">All</option>
+                            <option value="CSX">CSX</option>
+                            <option value="CSM">CSM</option>
+                        </select>
+                        <span class="title">Department:</span>
+                        <select class="selectpicker" id="f-dept" data-filter-type="global" data-label="Department">
+                            <option value="All">All</option>
+                            <option value="CSC-1">CSC-1</option>
+                            <option value="CSC-2">CSC-2</option>
+                        </select>
+                        <span class="title">Buyer:</span>
+                        <div class="form-group">
+                            <div class='input-group'>
+                                <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Supplier:</span>
+                        <div class="form-group">
+                            <div class='input-group'>
+                                <input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Vehicle Class:</span>
+                        <select class="selectpicker" id="f-vehicle-class" data-filter-type="global" data-label="Vehicle Class">
+                            <option value="All">All</option>
+                            <option value="5GD">5GD</option>
+                            <option value="180">180</option>
+                        </select>
+                        <span class="title">Car Model:</span>
+                        <select class="selectpicker" id="f-carmodel" data-filter-type="global" data-label="Car Model">
+                            <option value="All">All</option>
+                            <option value="New Polo">New Polo</option>
+                            <option value="Lamando">Lamando</option>
+                        </select>
 
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Plant:</span>
+                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                            <option value="All">All</option>
+                            <option value="78">1000(78)-Anting</option>
+                            <option value="C2">1001(C2)-Beijing</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Relevance:</span>
+                        <label for="f-rel-all">
+                            <input type="checkbox" name="relevance" id="f-rel-all" data-filter-type="global" data-label="Relevance" value="All"> All
+                        </label>
+                        <label for="f-rel-heavy-item">
+                            <input type="checkbox" name="relevance" id="f-rel-heavy-item" data-filter-type="global" data-label="Relevance" value="Heavy-item" checked="checked"> Heavy item
+                        </label>
+                        <label for="f-rel-relevant">
+                            <input type="checkbox" name="relevance" id="f-rel-relevant" data-filter-type="global" data-label="Relevance" value="Relevant" checked="checked"> Relevant
+                        </label>
+                        <label for="f-rel-irrelevant">
+                            <input type="checkbox" name="relevance" id="f-rel-irrelevant" data-filter-type="global" data-label="Relevance" value="Irrelevant"> Irrelevant
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Validity:</span>
+                        <label for="f-validity-all">
+                            <input type="checkbox" name="validity" id="f-validity-all" data-filter-type="global" data-label="Validity" value="All"> All
+                        </label>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Validity" value="Vaild" checked="checked"> Valid
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="Validity" value="Invalid"> Invalid
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">AI Tag:</span>
+                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                            <option value="All">All</option>
+                            <option value="78">CRITICAL</option>
+                            <option value="C2">DEMAND</option>
+                            <option value="C2">CAPACITY</option>
+                            <option value="C2">PARTS</option>
+                            <option value="C2">YELLOW</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">System-wide Tag:</span>
+                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                            <option value="All">All</option>
+                            <option value="78">2017 Capatity Survey</option>
+                            <option value="C2">2016 Capatity Survey</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">User-defined Tag:</span>
+                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
+                            <option value="All">All</option>
+                            <option value="78">Inventory Warning Tag</option>
+                            <option value="C2">Capatity Warning Tag</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Is Have Sub-BKA:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
+                        </label>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+
+            <div class="option-section">
+                <div class="items col-sm-12">
+                    <a href="javascript:void(0);" class="btn btn-primary btn-toggleFilterApply">Apply</a><a href="javascript:void(0);" >Reset to default</a><a href="javascript:void(0);" class="btn-toggleFilterApply">Save as my personal view</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <!-- sear mod begin-->
+        
+        
         <div class='main_container'>
                     <table class='icontable'>
                         <tr>
@@ -130,7 +294,7 @@
                             </td>
                         </tr>
                     </table>
-            <div class="treecontainer">
+            <div class="treecontainer" id="tree1">
                 <div class="tree">
                     <!--div class="treenode">
                         <label>3rd Tier</label>
@@ -155,6 +319,32 @@
                         <p>Plant: Changsha, Anting</p>
                         <label></label>
                         <h5>Radlarger C</h5>
+                        <p>Part No: 1234567890</p>
+                        <p>Plant: Changsha, Anting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="treecontainer" id="tree2">
+                <div class="tree">
+                    <!--div class="treenode">
+                        <label>3rd Tier</label>
+                        <h5>Supplier name</h5>
+                        <p>Product <b>Product type</b></p>
+                        <p>city</p>
+                        <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
+                    </div-->
+                </div>
+                <div class="tree"></div>
+                <div class="tree"></div>
+                <div class="tree">
+                    <div class="treenode bkalist">
+                        <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+                        <h5>Radlarger A</h5>
+                        <p>Part No: 1234567890</p>
+                        <p>Plant: Changsha, Anting</p>
+                        <label></label>
+                        <h5>Radlarger B</h5>
                         <p>Part No: 1234567890</p>
                         <p>Plant: Changsha, Anting</p>
                     </div>
@@ -292,25 +482,31 @@
         </div>
         <script type="text/javascript">
 
-            function buildTreenode(title,sname,product,ptype,city,layerid){
+            function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div class="treenode">');
+                li.push('<div class="treenode '+sign+' ">');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
                 li.push('<p>'+city+'</p>');
-                li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
-                li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
+                if(hasdel)
+                    li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
+                if(hasadd)
+                    li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
                 li.push('</div>');
-                $(".tree:eq("+layerid+")").append(li.join(''));
+                $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
             }
 
 
             $(function(){
-                buildTreenode("3rd Tier",'Supplier name','Product','Product type','City',0);
-                buildTreenode("3rd Tier",'Supplier name','Product','Product type','City',0);
-                buildTreenode("2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1);
-                buildTreenode("1st Tier",'Ningbo Huade','Product','Metals','City',2);
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0,true,true,'bd_red');
+                buildTreenode("tree1","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,true,true,'bd_primary');
+                buildTreenode("tree1","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
+                
+                buildTreenode("tree2","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1);
+                buildTreenode("tree2","1st Tier",'Ningbo Huade','Product','Metals','City',2,true,true,'bd_primary');
 
                 //删除
                 $(".delete").click(function(){
@@ -334,5 +530,8 @@
                 });
             });
         </script>
+        
+<script src="scripts/9a737976.vendor.js"></script>
+<script src="scripts/10ffdb3e.main.js"></script>
     </body>
 </html>
