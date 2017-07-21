@@ -9,10 +9,16 @@ li{
 ul{
     margin: 0 0;
 }
+
+a{
+    cursor: pointer;
+}
+
 a,a:visited{
     text-decoration:none;
 }
-a:hover{
+
+.main_container a:hover{
     text-decoration: underline;
 }
 h4{
@@ -74,6 +80,7 @@ body{
 }
 .main_container{
     position: relative;
+    margin:0 auto;
 }
 
 .nb{
@@ -148,6 +155,7 @@ table{
 .tiny{
     font-size:11px;
     line-height: 14px;
+    color:#999;
 }
 
 .treecontainer{
@@ -241,6 +249,12 @@ table{
     padding:20px 20px;
     border-radius: 4px;
 }
+.floatpanel h5{
+    font-weight: bold;
+    border-bottom:solid 1px #999;
+    line-height:30px;
+    padding-bottom: 10px;
+}
 .floatpanel .btngroup{
     position: absolute;
     bottom:20px;
@@ -254,6 +268,7 @@ table{
     position:absolute;
     top:10px;
     right:10px;
+    font-size:10px;
 }
 .mask{
     position:fixed;

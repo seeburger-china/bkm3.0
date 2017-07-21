@@ -762,6 +762,15 @@ $(function() {
          $(".part-action").show();
         $(".bka-action").hide();
       }
+      
+      if(id.substring(0, 5)=="#post")
+      {
+          $(".posts-action").show();
+          
+      }
+      else{
+          $(".posts-action").hide();
+      }
     })
     //Start Page React Hover To Show Chart
     //uodate by wangjin 20150617
