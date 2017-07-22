@@ -11,8 +11,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
     <link rel="stylesheet" href="styles/ac6cffee.main.css">
-    <link rel="stylesheet" href="styles/extend.css">
     <link rel="stylesheet" href="styles/3.0/common.css">
+    <link rel="stylesheet" href="styles/extend.css">
         <script src="./scripts/jquery-3.2.1.min.js" ></script>
         <script src="./scripts/common.js" ></script>
     <!--[if lt IE 9]>
@@ -442,7 +442,26 @@
                 <li>
                     <a href="javascript:void(0);" class="bka-action">
                         <i class="ion-ios-pricetag icon-btn"></i>
-                        <p valign="bottom">Tag</p>
+                        <div class="dropdown dropdown-bottom bka-action">
+                            <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Tag <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:;" data-toggle="modal">System Tag</a></li>
+                                <li><a href="javascript:;" data-toggle="modal">User Defined Tag</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="bka-action">
+                        <i class="ion-ios-pricetag-outline icon-btn"></i>
+                        <div class="dropdown dropdown-bottom bka-action">
+                            <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Untag <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:;" data-toggle="modal">System Tag</a></li>
+                                <li><a href="javascript:;" data-toggle="modal">AI Tag</a></li>
+                                <li><a href="javascript:;" data-toggle="modal">User Defined Tag</a></li>
+                            </ul>
+                        </div>
                     </a>
                 </li>
                 <li id="show-map-a">
@@ -956,7 +975,6 @@
                 </div>
 
                 <div class="tab-pane" id="part-tab" role="tabpanel" >
-
                     <table class="bka-table table table-hover col-sm-8" >
                         <thead>
                         <tr>
@@ -1129,6 +1147,18 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="col-sm-4 my-hidden" id="part-tab-map">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="javascript:void(0);">Mark area</a>
+                                <a href="javascript:void(0);">Clean</a>
+                                <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="panel-body">
+                                <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane" id="companies-tab" role="tabpanel" >
                     <ul class="ul_supp">
@@ -1197,18 +1227,7 @@
             </div>
 
 
-                <div class="col-sm-4 my-hidden" id="part-tab-map">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a href="javascript:void(0);">Mark area</a>
-                            <a href="javascript:void(0);">Clean</a>
-                            <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
-                        </div>
-                        <div class="panel-body">
-                            <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
+
                 <div class="modal fade" id="map-modal">
                     <div class="modal-dialog modal-dialog-center">
                         <div class="modal-content">
@@ -1453,6 +1472,7 @@
 </div>
 <script src="scripts/9a737976.vendor.js"></script>
 <script src="scripts/10ffdb3e.main.js"></script>
+<!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <!--<script src=scripts/common.js></script>-->
 </body>
 

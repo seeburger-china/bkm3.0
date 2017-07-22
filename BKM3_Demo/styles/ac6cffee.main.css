@@ -2828,6 +2828,10 @@ tbody.collapse.in {
 
 .dropdown {
   position: relative; }
+.dropdown-bottom {
+  margin-top: 12px;
+  margin-left: -29px;
+}
 
 .dropdown-toggle:focus {
   outline: 0; }
@@ -5279,6 +5283,8 @@ table {
 
 a:hover, a:focus, a:visited {
   color: #538dd5; }
+a.gray, a.gray:hover, a.gray:focus, a.gray:visited {
+  color: #666; }
 
 table th {
   font-size: 11pt; }
@@ -5669,7 +5675,7 @@ input[type="checkbox"] {
       color: #538dd5; }
 
 .inner-page {
-  min-width: 1088px;
+  min-width: 725px;
    *zoom: 1;  
   padding: 0 20px; }
   .inner-page .filter-summary {
@@ -5948,7 +5954,7 @@ input[type="checkbox"] {
         margin: 0 4px; }
       .inner-page.search .table.bka-table tbody > tr td .badge {
         background-color: #c0504d;
-        padding: 2px 4px;
+        padding: 2px 4px 2px 2px;
         width: 1.28571429em;
         margin: 0 4px; }
   .inner-page.search .table.bka-table.table-hover > tbody > tr:hover > td {

@@ -21,7 +21,7 @@ $(function() {
         $("#toggleFilter").find('i').toggleClass('fa-angle-down');
 
         $('#tagsinput').tagsinput('removeAll');
-        
+
         $(".filter-section input").each(function() {
             if (this.tagName === 'SELECT') {
                 //single select
@@ -61,12 +61,12 @@ $(function() {
                             }
                         }
                     });
-                } 
+                }
 
 
                 $(".bootstrap-tagsinput .tag span").each(function() {
                         $(this).attr('data-role',' ');
-                            
+
                         });
         });
 
@@ -106,7 +106,7 @@ $(function() {
         });
     });
 
-    
+
     /*
     $('.filter-item input[type="radio"],.filter-item select:not([multiple])').change(function() {
         var label = $(this).data('label');
@@ -199,7 +199,7 @@ $(function() {
         $(this).find('i').toggleClass('fa-rotate-90');
         $(this).siblings('ul').toggle();
         $('[data-type="flexibility1"]').toggle();
-    });	
+    });
     $('#toggle-capacity').click(function() {
         $(this).find('i').toggleClass('fa-rotate-90');
         $(this).siblings('ul').toggle();
@@ -216,21 +216,21 @@ $(function() {
     var currentTab = 0;
     $('#next-step').click(function() {
 	    if (currentTab === 1) {
-            $("#inventory-step").show();          
+            $("#inventory-step").show();
         } else {
-			$("#inventory-step").hide(); 
-		}		
-		
+			$("#inventory-step").hide();
+		}
+
         if (currentTab === 3) {
             $("#next-step").prop('href', "bkaview.html");
             return;
         }
-        
+
         currentTab++;
         //Update By Wangjin 20150612
         if (currentTab === 3) {
             $("#next-step").html("Submit");
-            
+
         }
         else
         {
@@ -238,19 +238,19 @@ $(function() {
             $("#next-step").prop('href', "javascript:void(0);");
 			//Update By HouYanqiu 20170630
 			if (currentTab === 1) {
-				$("#inventory-step").show();          
+				$("#inventory-step").show();
 			} else {
-				$("#inventory-step").hide(); 
+				$("#inventory-step").hide();
 			}
         }
         if(currentTab >=1){
             $("#pre-step").html("Back");
 			//Update By HouYanqiu 20170630
 			if (currentTab === 1) {
-				$("#inventory-step").show();          
+				$("#inventory-step").show();
 			} else {
-				$("#inventory-step").hide(); 
-			}			
+				$("#inventory-step").hide();
+			}
         }
 
 
@@ -264,20 +264,20 @@ $(function() {
         }
 		//Update By HouYanqiu 20170630
 		if (currentTab === 1) {
-            $("#inventory-step").show();          
+            $("#inventory-step").show();
         } else {
-			$("#inventory-step").hide(); 
+			$("#inventory-step").hide();
 		}
 
 
         currentTab--;
         //Update By Wangjin 20150612
 		if (currentTab === 1) {
-            $("#inventory-step").show();          
+            $("#inventory-step").show();
         } else {
-			$("#inventory-step").hide(); 
-		}		
-        if (currentTab === 0) {            
+			$("#inventory-step").hide();
+		}
+        if (currentTab === 0) {
             $("#pre-step").html("Cancel");
         }
         if(currentTab ===3){
@@ -312,7 +312,7 @@ $(function() {
         $(this).tab('show');
 
         //Update By Wangjin 20150612
-        if (currentTab === 0) {            
+        if (currentTab === 0) {
             $("#pre-step").html("Cancel");
         }
         if(currentTab ===3){
@@ -435,7 +435,7 @@ $(function() {
         });
     //tree view IE8 fix
     $('.tree li .tree-panel:only-child, .tree li:only-child').addClass('only-child');
-    //add supplier 
+    //add supplier
     $('#add-supplier-btn').click(function() {
         var name = $('#new-name').val();
         var city = $('#new-city').val();
@@ -750,7 +750,8 @@ $(function() {
       */
       $(".tab-pane").hide();
       var id= $(this).attr("href");
-      
+      console.log(id)
+
       $(id).show();
       if(id.substring(0, 4)=="#bka")
       {
@@ -762,11 +763,11 @@ $(function() {
          $(".part-action").show();
         $(".bka-action").hide();
       }
-      
+
       if(id.substring(0, 5)=="#post")
       {
           $(".posts-action").show();
-          
+
       }
       else{
           $(".posts-action").hide();
@@ -839,8 +840,8 @@ $(function() {
     $("#byperiod").click(function (e) {
          $(".byperiod").show();
         $(".byweek").hide();
-    }); 
-    
+    });
+
      $("#s-invalid-parts").click(function (e) {
         if($(this).is(':checked'))
         {
@@ -850,9 +851,9 @@ $(function() {
         {
             $(".invalidBKA").hide();
         }
-    }); 
-    
-    
+    });
+
+
 
     //update by wangjin 20150617
     $('.icon-Favority-out').click(function() {
@@ -875,14 +876,14 @@ $(function() {
 
         $("#report-event-analysis-table tbody .day").hide();
         $("#report-event-analysis-table tbody .month").each(function(){
-            $(this).find('i').removeClass('fa-minus-square').addClass('fa-plus-square')    
+            $(this).find('i').removeClass('fa-minus-square').addClass('fa-plus-square')
         });
     });
 
     $('.addManually').on('click', function(e) {
 
         $("#newtlkrow").show();
-        
+
     });
 
     //update by wangjin 20150621
@@ -891,14 +892,14 @@ $(function() {
                 $(".profileValue").show();
                 $(".editAction").show();
                 $(".editEmail").hide();
-            })
+    });
 
-            $("#profile-tab .editAction").click(function(){
-                $(".profileDisplay").show();
-                $(".profileValue").hide();
-                $(".editAction").hide();
-                $(".editEmail").show();
-            })
+    $("#profile-tab .editAction").click(function(){
+        $(".profileDisplay").show();
+        $(".profileValue").hide();
+        $(".editAction").hide();
+        $(".editEmail").show();
+    });
 
 
       $("#new-country").change(function(){
@@ -916,10 +917,72 @@ $(function() {
                 $(".CityCN").hide();
                 $(".City").show();
            }
-                
-            })       
+
+      });
+
+  $('#show-map-a').on('click', function () {
+    var bkaTab = $('#bka-tab');
+    var partTab = $('#part-tab');
+    var activeTab = null;
+    var activeId = null;
+
+    if (bkaTab.hasClass('active')) {
+      activeTab = bkaTab;
+      activeId = '#bka-tab';
+    } else if (partTab.hasClass('active')) {
+      activeTab = partTab;
+      activeId = '#part-tab'
+    }
+    // 隐藏thead
+    var table = activeTab.find('table');
+    table.addClass('inline-lg');
+    table.find('thead tr th').hide();
+    table.find('thead tr th.see-in-map').show();
+    // 隐藏tbody
+    var tbodyTrs = table.find('tbody tr');
+    tbodyTrs.find('td').hide();
+    tbodyTrs.find('td.see-in-map').show();
+
+    // 显示地图
+    $(activeId + '-map').show();
+    // 转化按钮
+    $('#show-map-a').hide();
+    $('#hide-map-a').show();
+  });
+
+  $('#hide-map-a').on('click', function () {
+    var bkaTab = $('#bka-tab');
+    var partTab = $('#part-tab');
+    var activeTab = null;
+    var activeId = null;
+
+    if (bkaTab.hasClass('active')) {
+      activeTab = bkaTab;
+      activeId = '#bka-tab';
+    } else if (partTab.hasClass('active')) {
+      activeTab = partTab;
+      activeId = '#part-tab'
+    }
+    // 隐藏thead
+    var table = activeTab.find('table');
+    table.removeClass('inline-lg');
+    table.find('thead tr th').show();
+    table.find('thead tr th :checkbox').parent().hide();
+    // 隐藏tbody
+    table.find('tbody tr td').show();
+    table.find('tbody tr td :checkbox').parent().hide();
+
+    // 显示地图
+    $(activeId + '-map').hide();
+    // 转化按钮
+    $('#show-map-a').show();
+    $('#hide-map-a').hide();
+  });
+
 
 });
+
+
 
 
 function downloadReport(flag){
@@ -1016,3 +1079,4 @@ function downloadReport(flag){
                 window.location="/template/RelevanceTestReport.xls";
             }
         }
+
