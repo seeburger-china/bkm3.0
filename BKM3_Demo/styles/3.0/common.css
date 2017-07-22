@@ -228,6 +228,13 @@ table{
     border-left:solid 1px #538dd5;
     right:-42px;
 }
+.treenode .yl{
+    position:absolute;
+    width:1px;
+    top:70px;
+    border-left:solid 1px #538dd5;
+    left:-42px;
+}
 .bkalist h5{
     text-align:center;
     color:#538dd5;

@@ -305,8 +305,8 @@
                         </tr>
                     </table>
             <div id="switchpanel" class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn btn-default selected">Edit</button>
-                <button type="button" onclick="location.href='supplychains_view.html'" class="btn btn-default">View</button>
+                <button type="button" onclick="location.href='supplychains.html'" class="btn btn-default ">Edit</button>
+                <button type="button"  class="selected btn btn-default">View</button>
               </div>
             <div class="treecontainer" id="tree1">
                 <div class="tree">
@@ -320,7 +320,18 @@
                     </div-->
                 </div>
                 <div class="tree"></div>
-                <div class="tree"></div>
+                <div class="tree">
+                    <div class="treenode bkalist">
+                        <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+                        <h5>Radlarger A</h5>
+                        <p>Part No: 1234567890</p>
+                        <p>Plant: Changsha, Anting</p>
+                        <label></label>
+                        <h5>Radlarger B</h5>
+                        <p>Part No: 1234567890</p>
+                        <p>Plant: Changsha, Anting</p>
+                    </div>
+                </div>
                 <div class="tree">
                     <div class="treenode bkalist">
                         <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
@@ -338,32 +349,7 @@
                     </div>
                 </div>
             </div>
-            <div class="treecontainer" id="tree2">
-                <div class="tree">
-                    <!--div class="treenode">
-                        <label>3rd Tier</label>
-                        <h5>Supplier name</h5>
-                        <p>Product <b>Product type</b></p>
-                        <p>city</p>
-                        <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
-                        <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
-                    </div-->
-                </div>
-                <div class="tree"></div>
-                <div class="tree"></div>
-                <div class="tree">
-                    <div class="treenode bkalist">
-                        <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
-                        <h5>Radlarger A</h5>
-                        <p>Part No: 1234567890</p>
-                        <p>Plant: Changsha, Anting</p>
-                        <label></label>
-                        <h5>Radlarger B</h5>
-                        <p>Part No: 1234567890</p>
-                        <p>Plant: Changsha, Anting</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="floatpanel" id="panel1">
@@ -498,7 +484,7 @@
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div class="treenode '+sign+' ">');
+                li.push('<div class="treenode '+sign+' " '+(layerid>1?"pos='r'":"")+' >');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
@@ -508,19 +494,18 @@
                 if(hasadd)
                     li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
                 li.push('</div>');
-                $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
+                $("#"+id+">.tree:eq("+layerid+")").prepend(li.join(''));
             }
 
 
             $(function(){
-                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
-                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
-                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0,true,true,'bd_red');
-                buildTreenode("tree1","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,true,true,'bd_primary');
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0,false,false);
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0,false,false);
+                buildTreenode("tree1","3rd Tier",'Supplier name','Product','Metals','City',0,false,false,'bd_red');
+                buildTreenode("tree1","3rd Tier",'Microware','Product','Product type','City',0,false,false);
+                buildTreenode("tree1","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,false,'bd_primary');
                 buildTreenode("tree1","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
                 
-                buildTreenode("tree2","2rd Tier",'Microware','Product','Metals','City',1);
-                buildTreenode("tree2","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',2,false,true,'bd_primary');
                 
                 //删除
                 $(".delete").click(function(){
@@ -541,12 +526,19 @@
                 });
                 
                 //竖线
-                $(".treenode:first").each(function(){
-                    var ystart = $(this)[0].offsetTop;
-                    var yend = $(this).parent().children('.treenode:last')[0].offsetTop;
-                    $(this).prepend('<div class="y" style="height:'+(yend-ystart)+'px;"></div>');
-
+                $(".tree").each(function(){
+                    $(this).children(".treenode:first").each(function(){
+                        
+                        var ystart = $(this)[0].offsetTop;
+                        var yend = $(this).parent().children('.treenode:last')[0].offsetTop;
+                        if($(this).attr('pos')=='r')
+                            $(this).prepend('<div class="yl" style="height:'+(yend-ystart)+'px;"></div>');
+                        else
+                            $(this).prepend('<div class="y" style="height:'+(yend-ystart)+'px;"></div>');
+                    });
                 });
+                
+                
             });
         </script>
         
