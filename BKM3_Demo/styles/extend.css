@@ -317,7 +317,8 @@ lead-time-input.bkacreate .lead-time-input {
 
 
 .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel{
-     padding: 10px 30px;
+    /*position: relative;*/
+  /*padding: 10px 30px;*/
 }
 
 .supplier-choose-panel .bootstrap-table{
@@ -801,9 +802,8 @@ body {
 
 .rectred{
   border-left: 7px solid #da9694;
-  padding-left:5px;
-  margin-left:10px;
-
+  padding-left: 11px;
+  margin-left: 4px;
 }
 
 /* table */
@@ -819,7 +819,7 @@ body {
   width: 33%;
 }
 .inline-lg {
-  width: 45%;
+  width: 40%;
 }
 /* #table */
 
@@ -834,3 +834,4 @@ body {
   margin-left:10px;
   color:yellow;
 }
+

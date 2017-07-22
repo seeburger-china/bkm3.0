@@ -11,8 +11,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
     <link rel="stylesheet" href="styles/ac6cffee.main.css">
-     <link rel="stylesheet" href="styles/extend.css">
-      <link rel="stylesheet" href="styles/bootstrap-switch.css">
+    <link rel="stylesheet" href="styles/extend.css">
+    <link rel="stylesheet" href="styles/bootstrap-switch.css">
+    <link rel="stylesheet" href="styles/bkaview.css">
     <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -80,8 +81,8 @@
                         <a class="blue"><i class="ion-ios-pricetag"></i></a>
                     </div>
 
-					
-                    <div class="result-content red">				
+
+                    <div class="result-content red">
                         <p>LOREM IPSUM LOREM IPSUM</p>
                         <p><small>BKA 808 000</small></p>
                         <p>SUPPLIER NAME <small>A123456</small></p>
@@ -103,7 +104,7 @@
                         <span class="badge">1</span>
                         <!--<a class="bka-icon"><i class="ion-ios-star"></i></a>-->
                         <a class="bka-icon">
-                            <span class="icon-wrap icon-wrap-absolute">
+                            <span class="icon-wrap icon-wrap-absolute right-bottom">
                                 <span class="ion-ios-pricetag blue"></span>
                                 <span class="badge badge-right-top badge-blue">AI</span>
                             </span>
@@ -165,13 +166,23 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="active">
-							<a href="#bka-info-tab" data-toggle="tab"><div class="heading red">ABLAGE TIGUAN</div></a>
-						</li>
-                        <li><a href="#sub-bka-info-tab" data-toggle="tab"><div class="rectyellow"><i class="ion-android-share-alt blue"> Sub-BKAs(1)</i></div></a></li>
-						<li><a href="#supply-chains-tab" data-toggle="tab"><span class="glyphicon glyphicon-paperclip"></span> Supply-Chain</a></li>
-						<li><a href="#history-tab" data-toggle="tab"><i class="ion-ios-clock-outline"></i> History</a></li>
-						<li><a href="#information-tab" data-toggle="tab"><i class="ion-ios-information-outline"></i> Information</a></li>
-                    </ul>		
+                          <a href="#bka-info-tab" data-toggle="tab"><div class="heading red blue">ABLAGE TIGUAN</div></a>
+                        </li>
+                        <li>
+                            <a href="#sub-bka-info-tab" data-toggle="tab">
+                                <div class="rectyellow">
+                                    <i class="ion-android-share-alt blue"></i>
+                                    <select class="form-control form-select">
+                                        <option>Sub-BKAs(1)</option>
+                                        <option>Sub-BKAs(2)</option>
+                                    </select>
+                                </div>
+                            </a>
+                        </li>
+                        <li><a href="#supply-chains-tab" data-toggle="tab"><span class="glyphicon glyphicon-paperclip"></span> Supply-Chain</a></li>
+                        <li><a href="#history-tab" data-toggle="tab"><i class="ion-ios-clock-outline"></i> History</a></li>
+                        <li><a href="#information-tab" data-toggle="tab"><i class="ion-ios-information-outline"></i> Information</a></li>
+                    </ul>
 				</div>
 			</div>
 		<div class="tab-content">
@@ -188,13 +199,14 @@
                 <a  href="#bka-sure-modal" data-toggle="modal" class="pull-right">Reject Approval</a>
             </div>-->
 			<div>
+
 			    <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
                     <option value="0"></option>
                     <option value="Test1">Test2</option>
                     <option value="Test1">Test3</option>
                 </select>
-			<button type="button" class="btn btn-primary:hover">CRITICAL</button>
-			<button type="button" class="btn btn-primary:hover">Follow-Up kw20</button>
+			<button type="button" class="btn btn-primary:hover blue">CRITICAL</button>
+			<button type="button" class="btn btn-primary">Follow-Up kw20</button>
 			</div>
             <div class="toolbar search-toolbar-icon col-md-12" style="margin-top:10px;">
                 <ul class="task-list">
@@ -211,7 +223,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#bka-Suspend-modal" data-toggle="modal"> 
+                            <a href="#bka-Suspend-modal" data-toggle="modal">
                                 <i class="ion-ios-color-wand icon-btn"></i>
                                 <p>Suspend red</p>
                             </a>
@@ -258,9 +270,18 @@
                                 <i class="ion-stats-bars icon-btn"></i>
                                 <p>Add Sub-BKA</p>
                             </a>
-                        </li>						
+                        </li>
                     </ul>
-
+                <div class="control-panel-right">
+                    <div class="control">
+                        <input type="radio" name="senario" id="v-ktb">
+                        <label for="v-ktb">KTB V07 (12/15)</label>
+                    </div>
+                    <div class="control">
+                        <input type="radio" name="senario" checked="checked" id="v-bkm">
+                        <label for="v-bkm">BKM V07 (10/15)</label>
+                    </div>
+                </div>
             </div>
 						 <div class="modal bka-modal fade" id="inventory-data-modal">
 				<div class="modal-dialog">
@@ -275,7 +296,7 @@
 									<div class="bka-text">
 										 <input type="checkbox" name="mycheckbox" data-size="mini" data-on-text="Activated" data-off-text="Deactivated"/>
 									</div>
-								</div>	
+								</div>
 								<br>
 								<div class="item">
 									<div class="bka-label">1.Please enter your current inventory of all parts in this BKA:</div>
@@ -295,14 +316,14 @@
 									<div class="bka-label">2.How long this data should be applied in BKA?</div>
 								</div><br>
 								<div class="item">
-									<button type="button" class="btn btn-primary:hover">1 week</button>
-									<button type="button" class="btn btn-primary:hover">2 weeks</button>&nbsp;
-									<button type="button" class="btn btn-primary:hover">3 weeks</button>&nbsp;
-									<button type="button" class="btn btn-primary">4 weeks</button>&nbsp;
+                    <p class="border-box">1 week</p>
+                    <p class="border-box">2 weeks</p>
+                    <p class="border-box">3 weeks</p>
+                    <p class="border-box blue">4 weeks</p>
 								</div><br>
 								<div class="item">
 									<div class="bka-label">Please update this inventory data before 2017-7-28 23:59:59.</div>
-								</div>		
+								</div>
 						</div>
 						<div class="modal-footer">
 							<a href="javascript:void(0);" >Cancel</a>
@@ -366,19 +387,17 @@
                                 <li>Diff. to max cum.</li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="r-column">
-                    <div class="control-panel">
-                        <div class="control">
-                            <input type="radio" name="senario" id="v-ktb">
-                            <label for="v-ktb">KTB V07 (12/15)</label>
+                    <div class="control-panel control-panel-sm">
+                        <div class="icon-title">
+                            <i class="ion-ios-chatboxes-outline blue icon"></i>
+                            <h4>Status</h4>
                         </div>
-                        <div class="control">
-                            <input type="radio" name="senario" checked="checked" id="v-bkm">
-                            <label for="v-bkm">BKM V07 (10/15)</label>
-                        </div>
+                        <p>Capacity in crease is approved in the BKM Metting on 12/12/2016. Estimated SP KW07/2017</p>
+                        <p class="footer-text">55882 - jin Wei /yesterday</p>
                     </div>
                     <div class="table-area strong">
                         <table class="table">
@@ -442,7 +461,7 @@
                                     <td>1,400</td>
                                     <td>1,700</td>
                                 </tr>
-                                 
+
                                  <tr data-type="other-demand" style="display:none;">
                                      <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -485,7 +504,7 @@
                                     <td>800</td>
                                     <td>1,900</td>
                                 </tr>
-                               
+
                             </tbody>
                         </table>
                     </div>
@@ -500,7 +519,7 @@
                             <span for="s-invalid-parts">show invalid parts</span>
                         </div>
                         <div class="option-group">
-                           
+
                         <label for="byweek">timeframe:&nbsp;&nbsp;&nbsp;</label>
                             <input type="radio" checked="checked" name="timeframe" id="byweek">
                             <label for="byweek">by week</label>
@@ -913,7 +932,7 @@
                                         <td>550</td>
                                         <td>500</td>
                                     </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -948,7 +967,7 @@
                                     <td>300</td>
                                     <td>250</td>
                                 </tr>
-                                
+
                                 <tr class="light" data-type="car" style="display:none">
                                     <td>290</td>
                                     <td>250</td>
@@ -1219,7 +1238,7 @@
                                     <td>250</td>
                                     <td>300</td>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -1228,9 +1247,9 @@
                 <div class="clearfix"></div>
                 <div class="label-group">
                     <div class="bka-Capacity-title">
-                       <div class="bka-label bka-label-title capacity-title"> 
+                       <div class="bka-label bka-label-title capacity-title">
                                 <a id="toggle-capacity" href="javascript:void(0);">Capacity details <i class="fa fa-caret-right"></i></a>
-                            </div>                           
+                            </div>
                             <span >Normal capacity is based on 6.5 days/week, 2 shifts, 10 hours/shift. Last capacity update: 04.04.2015</span>
                     </div>
                     <div class="lead-time-input" data-type="capacity" style="display:none">
@@ -1241,13 +1260,17 @@
                             <div class="input-item"><span>working days / week</span>
                             <input type="text" value="6,5"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                             <div class="input-item"><span>working days / year</span>
-                            <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                            <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                         <div class="input-item"><span>Lead time capacity increase</span>
                             <input type="text" value="50"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                         <div class="input-item"><span>Lead time material preparation</span>
                             <input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
                         <div class="input-item"><span>number of tools</span>
-                            <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                            <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
+                        </div>
+                        <div class="input-item"><span>inventory</span>
+                          <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1404,7 +1427,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                       
+
                     </div>
                     <div class="heading">
                         <i class="fa fa-wrench"></i> Technical Information
@@ -1547,15 +1570,15 @@
                     <h4 class="modal-title">Request data update</h4>
                 </div>
                 <div class="modal-body">
-                    <span class="small pl20">LOREM IPSUM LOREM IPPPSUM LOREM IPSUM LOREM IPPPSUM</span> 
+                    <span class="small pl20">LOREM IPSUM LOREM IPPPSUM LOREM IPSUM LOREM IPPPSUM</span>
                     <div class="content">
-                        <textarea class="form-control" rows="15"></textarea>                   
+                        <textarea class="form-control" rows="15"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Cancel</button>
                     <a href="javascript:void(0);">Submit</a>
-                    
+
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -1572,7 +1595,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-                        <span>Are you sure Suspend red status?</span>             
+                        <span>Are you sure Suspend red status?</span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1594,7 +1617,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-                        <span>Are you sure delete the bka?</span>             
+                        <span>Are you sure delete the bka?</span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1617,7 +1640,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-                        <span>Are you sure ?</span>             
+                        <span>Are you sure ?</span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1628,7 +1651,7 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-    </div>			
+    </div>
         </div>
 		<div role="tabpanel" class="tab-pane" id="sub-bka-info-tab">
             <div class="heading red">
@@ -1646,7 +1669,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#bka-Suspend-modal" data-toggle="modal"> 
+                            <a href="#bka-Suspend-modal" data-toggle="modal">
                                 <i class="ion-ios-color-wand icon-btn"></i>
                                 <p>Suspend red</p>
                             </a>
@@ -1662,8 +1685,18 @@
                                 <i class="ion-android-share icon-btn"></i>
                                 <p>Export</p>
                             </a>
-                        </li>                      
+                        </li>
                     </ul>
+                <div class="control-panel-right">
+                    <div class="control">
+                        <input type="radio" name="senario" id="v-ktb">
+                        <label for="v-ktb">KTB V07 (12/15)</label>
+                    </div>
+                    <div class="control">
+                        <input type="radio" name="senario" checked="checked" id="v-bkm">
+                        <label for="v-bkm">BKM V07 (10/15)</label>
+                    </div>
+                </div>
 
             </div>
             <div class="wrapper col-md-12">
@@ -1719,19 +1752,27 @@
                                 <li>Diff. to max cum.</li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="r-column">
-                    <div class="control-panel">
-                        <div class="control">
-                            <input type="radio" name="senario" id="v-ktb">
-                            <label for="v-ktb">KTB V07 (12/15)</label>
+                    <!--<div class="control-panel">-->
+                        <!--<div class="control">-->
+                            <!--<input type="radio" name="senario" id="v-ktb">-->
+                            <!--<label for="v-ktb">KTB V07 (12/15)</label>-->
+                        <!--</div>-->
+                        <!--<div class="control">-->
+                            <!--<input type="radio" name="senario" checked="checked" id="v-bkm">-->
+                            <!--<label for="v-bkm">BKM V07 (10/15)</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="control-panel-sm">
+                        <div class="icon-title">
+                            <i class="ion-ios-chatboxes-outline blue icon"></i>
+                            <h4>Status</h4>
                         </div>
-                        <div class="control">
-                            <input type="radio" name="senario" checked="checked" id="v-bkm">
-                            <label for="v-bkm">BKM V07 (10/15)</label>
-                        </div>
+                        <p>Capacity in crease is approved in the BKM Metting on 12/12/2016. Estimated SP KW07/2017</p>
+                        <p class="footer-text">55882 - jin Wei /yesterday</p>
                     </div>
                     <div class="table-area strong">
                         <table class="table">
@@ -1795,7 +1836,7 @@
                                     <td>1,400</td>
                                     <td>1,700</td>
                                 </tr>
-                                 
+
                                  <tr data-type="other-demand" style="display:none;">
                                      <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -1838,7 +1879,7 @@
                                     <td>800</td>
                                     <td>1,900</td>
                                 </tr>
-                               
+
                             </tbody>
                         </table>
                     </div>
@@ -1853,7 +1894,7 @@
                             <span for="s-invalid-parts">show invalid parts</span>
                         </div>
                         <div class="option-group">
-                           
+
                         <label for="byweek">timeframe:&nbsp;&nbsp;&nbsp;</label>
                             <input type="radio" checked="checked" name="timeframe" id="byweek">
                             <label for="byweek">by week</label>
@@ -2266,7 +2307,7 @@
                                         <td>550</td>
                                         <td>500</td>
                                     </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -2301,7 +2342,7 @@
                                     <td>300</td>
                                     <td>250</td>
                                 </tr>
-                                
+
                                 <tr class="light" data-type="car" style="display:none">
                                     <td>290</td>
                                     <td>250</td>
@@ -2572,7 +2613,7 @@
                                     <td>250</td>
                                     <td>300</td>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -2581,9 +2622,9 @@
                 <div class="clearfix"></div>
                 <div class="label-group">
                     <div class="bka-Capacity-title">
-                       <div class="bka-label bka-label-title capacity-title"> 
+                       <div class="bka-label bka-label-title capacity-title">
                                 <a id="toggle-capacity1" href="javascript:void(0);">Capacity details <i class="fa fa-caret-right"></i></a>
-                            </div>                           
+                            </div>
                             <span >Normal capacity is based on 6.5 days/week, 2 shifts, 10 hours/shift. Last capacity update: 04.04.2015</span>
                     </div>
                     <div class="lead-time-input" data-type="capacity1" style="display:none">
@@ -2594,25 +2635,31 @@
                             <div class="input-item"><span>working days / week</span>
                             <input type="text" value="6,5"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                             <div class="input-item"><span>working days / year</span>
-                            <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                            <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                         <div class="input-item"><span>Lead time capacity increase</span>
                             <input type="text" value="50"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
                         <div class="input-item"><span>Lead time material preparation</span>
                             <input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
-                        <div class="input-item"><span>number of tools</span>
-                            <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>    
+                        <div class="input-item">
+                          <span>number of tools</span>
+                          <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
+                        </div>
+                      <div class="input-item">
+                        <span>inventory</span>
+                        <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
+                      </div>
                     </div>
                 </div>
             </div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="supply-chains-tab">
-			<img class="brand" src="supplyChain.png" alt="Brand">			
+			<img class="brand" src="supplyChain.png" alt="Brand">
 		</div>
 		<div role="tabpanel" class="tab-pane" id="history-tab">
 <div class="search-toolbar mb-10">
             <a href="javascript:void(0);" class="btn btn-primary" onclick="downloadReport('8')">Export</a>
         </div>
-        
+
         <table class="table table-hover two-row">
             <thead>
                 <tr>
@@ -2732,7 +2779,7 @@
         </table>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="information-tab">
-		<img class="brand" src="bkainfo.png" alt="Brand">	
+		<img class="brand" src="bkainfo.png" alt="Brand">
 		<!--
     <div id="bka-info-modal">
         <div class="modal-dialog">
@@ -2851,13 +2898,13 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-		</div>		
 		</div>
-        <div class="clearfix"></div>				
-				
-			
 		</div>
-        
+        <div class="clearfix"></div>
+
+
+		</div>
+
     <div class="footer">
         上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
     </div>
@@ -2886,20 +2933,21 @@
                         <p>SUPPLIER NAME <small>A123456</small></p>
                     </div>
                 </li>
-                
+
        </ul>
     </div>
+    <script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/9a737976.vendor.js"></script>
     <script src="scripts/10ffdb3e.main.js"></script>
      <script src="scripts/bootstrap-switch.js"></script>
     <script type="">
-    $(function(){  
+    $(function(){
       $("[name='mycheckbox']").bootstrapSwitch();
-        
-      $(window).scroll(function() {  
-          //当内容滚动到底部时加载新的内容  
-          if ($(this).scrollTop() + $(window).height() + 30 >= $(document).height() && $(this).scrollTop() > 30) {  
-              //当前要加载的页码  
+
+      $(window).scroll(function() {
+          //当内容滚动到底部时加载新的内容
+          if ($(this).scrollTop() + $(window).height() + 30 >= $(document).height() && $(this).scrollTop() > 30) {
+              //当前要加载的页码
               if ($('.result-list').children().size() > 30)
               {
                  $("#pullUp").hide();
@@ -2907,16 +2955,16 @@
               }
               $(".scrollIcon").removeClass("pullDownIcon").addClass("pullLoadIcon");
               setTimeout(LoadPage,3000);
-              
-          }  
-      });  
+
+          }
+      });
 
       function LoadPage()
       {
           $(".result-list").append($("#loadPage .result").html());
           $(".scrollIcon").removeClass("pullLoadIcon").addClass("pullDownIcon");
       }
-    });  
+    });
     </script>
 </body>
 

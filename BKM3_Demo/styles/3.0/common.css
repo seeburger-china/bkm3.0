@@ -140,6 +140,9 @@ table{
 .icontable td span.glyphicon{
     font-size:27px;
 }
+.icontable td span.icon-lg{
+     font-size:27px;
+}
 
 .badge{
     position:absolute;

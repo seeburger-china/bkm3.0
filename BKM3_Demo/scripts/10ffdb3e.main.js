@@ -948,6 +948,8 @@ $(function() {
     // 转化按钮
     $('#show-map-a').hide();
     $('#hide-map-a').show();
+
+    $('.only-see-in-map').show();
   });
 
   $('#hide-map-a').on('click', function () {
@@ -977,6 +979,8 @@ $(function() {
     // 转化按钮
     $('#show-map-a').show();
     $('#hide-map-a').hide();
+
+    $('.only-see-in-map').hide();
   });
 
 

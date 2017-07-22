@@ -291,15 +291,15 @@
                     <table class='icontable'>
                         <tr>
                             <td onclick="showPanel('panel1');">
-                                <span class="glyphicon glyphicon-plus"></span><br>
+                                <span class="ion-ios-plus-outline icon-lg"></span><br>
                                 Add new chain
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-share-alt"></span><br>
+                                <span class="ion-forward icon-lg"></span><br>
                                 Export demands
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-map-marker"></span><br>
+                                <span class="ion-map icon-lg"></span><br>
                                 Map
                             </td>
                         </tr>
@@ -504,9 +504,9 @@
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
                 li.push('<p>'+city+'</p>');
                 if(hasdel)
-                    li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
+                    li.push('<a class="delete"><span class="ion-ios-minus-empty icon-lg"></span></a>');
                 if(hasadd)
-                    li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
+                    li.push('<a class="add"><span class="ion-ios-plus-empty icon-lg"></span></a>');
                 li.push('</div>');
                 $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
             }
