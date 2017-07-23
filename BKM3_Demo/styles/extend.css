@@ -632,17 +632,18 @@ table{
     font-size:11px !important;
     background-color:#aa3333 !important;
 }
-.badge-right-top {
-    right: -4px;
-    top: 0;
-    padding: 1pt 1pt;
-    font-size: 1pt !important;
-}
-.inner-page.bkaview .sidebar .result-list .icon-bar .badge-right-top {
+
+.inner-page.bkaview .sidebar .result-list .icon-bar {
   right: -12px;
   top: -10px;
   padding: 1pt 1pt;
   font-size: 1pt !important;
+}
+.badge-right-top {
+    right: 0px;
+    top: 0;
+    padding: 1pt 1pt;
+    font-size:7px !important;
 }
 .badge-blue {
     background: #538dd5 !important;

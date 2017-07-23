@@ -8,6 +8,7 @@ $(function(){
         $(this).append('<a class="close" onclick="hidePanel();"><span class="glyphicon glyphicon-remove"></span></a>');
     });
     
+    
 });
 
 

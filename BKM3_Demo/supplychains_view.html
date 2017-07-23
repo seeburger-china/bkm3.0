@@ -291,15 +291,15 @@
                     <table class='icontable'>
                         <tr>
                             <td onclick="showPanel('panel1');">
-                                <span class="glyphicon glyphicon-plus"></span><br>
+                                <span class="ion-ios-plus-outline icon-lg"></span><br>
                                 Add new chain
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-share-alt"></span><br>
+                                <span class="ion-forward icon-lg"></span><br>
                                 Export demands
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-map-marker"></span><br>
+                                <span class="ion-map icon-lg"></span><br>
                                 Map
                             </td>
                         </tr>
@@ -484,7 +484,7 @@
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div class="treenode '+sign+' " '+(layerid>1?"pos='r'":"")+' >');
+                li.push('<div title="Operator:default user\nDate:2010-01-02 11:22:33" class="treenode '+sign+' " '+(layerid>1?"pos='r'":"")+' >');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
@@ -524,7 +524,7 @@
                     $(this).children(".tree:eq(0)").children('.treenode').children('.xl').remove();
                     $(this).children(".tree:eq(-1)").children('.treenode').children('.xr').remove();
                 });
-                
+                $(".bkalist").children('.xr').remove();
                 //竖线
                 $(".tree").each(function(){
                     $(this).children(".treenode:first").each(function(){

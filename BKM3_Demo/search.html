@@ -23,6 +23,7 @@
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
+        
             .ul_supp{
                 width: 100%;
             }
@@ -405,91 +406,111 @@
             <!--<li><h3 class="nav-tab-title">Search Results</h3></li>-->
         </ul>
 
-        <div class="search-toolbar col-sm-8 search-toolbar-icon">
+        <div class="search-toolbar col-sm-12 search-toolbar-icon">
             <ul class="task-list">
-                <li>
-                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" class="posts-action">
-                        <i class="ion-android-add icon-btn"></i>
-                        <p>Add post</p>
-                    </a>
-                </li>
-                <li>
-                    <a id="selectToggle" href="javascript:void(0);">
+                <li class="bka-action part-action company-action">
+                    <a id="selectToggle" href="javascript:void(0);" >
                         <i class="ion-android-checkbox icon-btn"></i>
                         <p>Select</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#bka-requestUpdate-modal" data-toggle="modal"  class="bka-action">
+                <li class="post-action company-action">
+                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" >
+                        <i class="ion-android-add icon-btn"></i>
+                        <p>Add post</p>
+                    </a>
+                </li>
+                
+                <li   class="bka-action">
+                    <a href="#bka-requestUpdate-modal" data-toggle="modal">
                         <i class="ion-refresh icon-btn"></i>
                         <p>Request data update</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li class="bka-action">
+                    <a href="javascript:void(0);" >
                         <i class="ion-android-done-all icon-btn"></i>
                         <p>Mark as read</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action" onclick="downloadReport('6')">
+                <li class="bka-action">
+                    <a href="javascript:void(0);"  onclick="downloadReport('6')">
                         <i class="ion-android-share icon-btn"></i>
                         <p>Export</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li  class="bka-action">
+                    <a href="javascript:void(0);">
                         <i class="ion-ios-star icon-btn"></i>
                         <p>Add to Favorites</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li  class="bka-action">
+                    <a href="javascript:void(0);">
                         <i class="ion-ios-pricetag icon-btn"></i>
                         <div class="dropdown dropdown-bottom bka-action">
-                            <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Tag <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="javascript:;" data-toggle="modal">System Tag</a></li>
-                                <li><a href="javascript:;" data-toggle="modal">User Defined Tag</a></li>
+                            <a href="#" class="dropdown-toggle gray" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Tag <b class="caret"></b></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <li class="disabled"><a href="#">System Tag</a></li>
+                                <li><a href="#">Tag1</a></li>
+                                <li><a href="#">Tag2</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="disabled"><a href="#">User Tag</a></li>
+                                <li><a href="#">Tag1</a></li>
+                                <li><a href="#">Tag2</a></li>
                             </ul>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a class="bka-action">
+                <li class="bka-action">
+                    <a >
                         <i class="ion-ios-pricetag-outline icon-btn"></i>
                         <div class="dropdown dropdown-bottom bka-action">
                             <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Untag <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="javascript:;" data-toggle="modal">System Tag</a></li>
-                                <li><a href="javascript:;" data-toggle="modal">AI Tag</a></li>
-                                <li><a href="javascript:;" data-toggle="modal">User Defined Tag</a></li>
-                            </ul>
+                            <li class="disabled"><a href="#">System Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">AI Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">User Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li></ul>
                         </div>
                     </a>
                 </li>
-                <li id="show-map-a">
+                
+                <li class="part-action">
+                    <a href="javascript:void(0);"   onclick="downloadReport('7')">
+                        <i class="ion-android-share icon-btn"></i>
+                        <p>Export</p>
+                    </a>
+                </li>
+                <li class="part-action">
+                    <a href="bkacreate.html"  >
+                        <i class="ion-android-options icon-btn"></i>
+                        <p>Assign to BKA</p>
+                    </a>
+                </li>
+                <li  class="company-action">
+                    <a href="#">
+                        <i class="ion-compose icon-btn"></i>
+                        <p>Invite</p>
+                    </a>
+                </li>
+                <li id="show-map-a" class="bka-action part-action company-action">
                     <a href="#">
                         <i class="ion-map icon-btn"></i>
                         <p>Show Map</p>
                     </a>
                 </li>
-                <li id="hide-map-a" class="my-hidden">
+                <li id="hide-map-a" class=" my-hidden">
                     <a href="#">
                         <i class="ion-android-map icon-btn"></i>
                         <p>Hide Map</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="part-action" style="display:none;" onclick="downloadReport('7')">
-                        <i class="ion-android-share icon-btn"></i>
-                        <p>Export</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="bkacreate.html" class="part-action" style="display:none;">
-                        <i class="ion-android-options icon-btn"></i>
-                        <p>Assign to BKA</p>
                     </a>
                 </li>
             </ul>
@@ -1555,6 +1576,15 @@
 <script src="scripts/10ffdb3e.main.js"></script>
 <!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <!--<script src=scripts/common.js></script>-->
+<script>
+$(function(){
+    $(".task-list>li").hide();
+    $(".bka-action").show();
+    $(".dropdown a").click(function(){
+        $(this).parent().children('li').show();
+    });
+});
+</script>
 </body>
 
 </html>

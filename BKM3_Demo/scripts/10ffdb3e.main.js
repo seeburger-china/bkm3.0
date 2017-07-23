@@ -755,23 +755,25 @@ $(function() {
       $(id).show();
       if(id.substring(0, 4)=="#bka")
       {
-        $(".part-action").hide();
+        $(".task-list li").hide();
         $(".bka-action").show();
       }
-      else
+      else if(id.substring(0, 5)=="#part")
       {
+         $(".task-list li").hide();
          $(".part-action").show();
-        $(".bka-action").hide();
       }
-
-      if(id.substring(0, 5)=="#post")
+      else if(id.substring(0, 5)=="#post")
       {
-          $(".posts-action").show();
+          $(".task-list li").hide();
+          $(".post-action").show();
 
       }
       else{
-          $(".posts-action").hide();
+          $(".task-list li").hide();
+          $(".company-action").show();
       }
+      
     })
     //Start Page React Hover To Show Chart
     //uodate by wangjin 20150617
