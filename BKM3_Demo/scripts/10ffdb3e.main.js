@@ -750,18 +750,26 @@ $(function() {
       */
       $(".tab-pane").hide();
       var id= $(this).attr("href");
-      console.log(id)
+      console.log(id);
 
       $(id).show();
       if(id.substring(0, 4)=="#bka")
       {
         $(".task-list li").hide();
         $(".bka-action").show();
+        if($("#bka-tab-map").is(":visible")){
+            $("#show-map-a").hide();
+            $("#hide-map-a").show();
+        }
       }
       else if(id.substring(0, 5)=="#part")
       {
          $(".task-list li").hide();
          $(".part-action").show();
+         if($("#part-tab-map").is(":visible")){
+            $("#show-map-a").hide();
+            $("#hide-map-a").show();
+        }
       }
       else if(id.substring(0, 5)=="#post")
       {
@@ -773,6 +781,9 @@ $(function() {
           $(".task-list li").hide();
           $(".company-action").show();
       }
+      
+      
+      
       
     })
     //Start Page React Hover To Show Chart
