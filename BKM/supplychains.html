@@ -241,15 +241,17 @@
         </div>
         <script type="text/javascript">
             
-            function buildTreenode(title,sname,product,ptype,city,layerid){
+            function buildTreenode(title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div class="treenode">');
+                li.push('<div class="treenode '+sign+' ">');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
                 li.push('<p>'+city+'</p>');
-                li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
-                li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
+                if(hasdel)
+                    li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
+                if(hasadd)
+                    li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
                 li.push('</div>');
                 $(".tree:eq("+layerid+")").append(li.join(''));
             }
@@ -274,6 +276,8 @@
                     $(this).prepend('<div class="xr"></div>');
                     $(this).prepend('<div class="xl"></div>');
                 });
+                $(".tree:eq(0)>.treenode>.xl").remove();
+                $(".tree:eq(-1)>.treenode>.xr").remove();
                 //竖线
                 $(".treenode:first").each(function(){
                     var ystart = $(this)[0].offsetTop;

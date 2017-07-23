@@ -6,14 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="./styles/bootstrap-3.3.7/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+        <link rel="stylesheet" href="./styles/0aa82dc1.vendor.css">
         <link rel="stylesheet" href="./styles/ac6cffee.main.css">
         <link rel="stylesheet" href="./styles/extend.css" />
+        <link rel="stylesheet" href="./styles/3.0/common.css" />
         <link rel="stylesheet" href=./fonts/ionicons.svg>
 
         <script src="./scripts/jquery-3.2.1.min.js" ></script>
         <script src="./scripts/bootstrap-switch.js" ></script>
         <script src="./scripts/common.js" ></script>
+        
 
         <style type="text/css">
             .right_container{
@@ -32,7 +34,25 @@
             .center_container .box{
                 width: 100%;
                 margin:0 0 20px 0;
-                height:200px; 
+                height:auto;
+                min-height: 150px;
+                text-align: left;
+                position:relative;
+            }
+            .center_container .box .date{
+                position:absolute;
+                right:20px;
+                top:10px;
+                color:#999;
+            }
+            .center_container .box h5{
+                margin-bottom:20px;
+                margin-top:10px;
+            }
+            .center_container .box h5 span{
+                display: inline-block;
+                margin-left: 10px;
+                font-weight: normal;
             }
         </style>
     </head>
@@ -121,19 +141,170 @@
             <a class="tab selected" href="suppliernetwork.html">Supplier Network (6)</a>
             <a class="tab" href="supplychains.html">Supply Chains (48)</a>
         </div>
-        <div class="filterbtn" style="top:160px;">Filters</div>
-            
+        <!-- sear mod begin-->
+        <div class="inner-page search">
+        <div class="filter-block mt-20">
+        <div class="filter-summary">
+            <div style="float:left;min-width:120px;">
+                <a id="toggleFilter" class="filter " href="javascript:void(0);">Add/Edit Filter
+                    <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div>
+                <input type="text" id="tagsinput" data-role="tagsinput">
+            </div>
+        </div>
+        <div class="folding-panel" style="margin-left:120px;">
+            <div class="filter-section">
+                <div class="items col-sm-12">
+                    <!--<h3>System wide filter</h3>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Demand Senario:</span>-->
+                        <!--<label for="f-senario-bkm">-->
+                            <!--<input type="radio" name="senario" id="f-senario-bkm" data-filter-type="global" data-label="Senario" value="BKM" checked="checked"> BKM-->
+                        <!--</label>-->
+                        <!--<label for="f-senario-ktb">-->
+                            <!--<input type="radio" name="senario" id="f-senario-ktb" data-filter-type="global" data-label="Senario" value="KTB"> KTB-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Commodity:</span>-->
+                        <!--<select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="CSX">CSX</option>-->
+                            <!--<option value="CSM">CSM</option>-->
+                        <!--</select>-->
+                        <!--<span class="title">Department:</span>-->
+                        <!--<select class="selectpicker" id="f-dept" data-filter-type="global" data-label="Department">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="CSC-1">CSC-1</option>-->
+                            <!--<option value="CSC-2">CSC-2</option>-->
+                        <!--</select>-->
+                        <!--<span class="title">Buyer:</span>-->
+                        <!--<div class="form-group">-->
+                            <!--<div class='input-group'>-->
+                                <!--<input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="filter-item">
+                        <span class="title">BKM Supplier:</span>
+                        <div class="form-group">
+                            <div class='input-group'>
+                                <input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Vehicle Class:</span>-->
+                        <!--<select class="selectpicker" id="f-vehicle-class" data-filter-type="global" data-label="Vehicle Class">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="5GD">5GD</option>-->
+                            <!--<option value="180">180</option>-->
+                        <!--</select>-->
+                        <!--<span class="title">Car Model:</span>-->
+                        <!--<select class="selectpicker" id="f-carmodel" data-filter-type="global" data-label="Car Model">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="New Polo">New Polo</option>-->
+                            <!--<option value="Lamando">Lamando</option>-->
+                        <!--</select>-->
+
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Plant:</span>-->
+                        <!--<select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="78">1000(78)-Anting</option>-->
+                            <!--<option value="C2">1001(C2)-Beijing</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Relevance:</span>-->
+                        <!--<label for="f-rel-all">-->
+                            <!--<input type="checkbox" name="relevance" id="f-rel-all" data-filter-type="global" data-label="Relevance" value="All"> All-->
+                        <!--</label>-->
+                        <!--<label for="f-rel-heavy-item">-->
+                            <!--<input type="checkbox" name="relevance" id="f-rel-heavy-item" data-filter-type="global" data-label="Relevance" value="Heavy-item" checked="checked"> Heavy item-->
+                        <!--</label>-->
+                        <!--<label for="f-rel-relevant">-->
+                            <!--<input type="checkbox" name="relevance" id="f-rel-relevant" data-filter-type="global" data-label="Relevance" value="Relevant" checked="checked"> Relevant-->
+                        <!--</label>-->
+                        <!--<label for="f-rel-irrelevant">-->
+                            <!--<input type="checkbox" name="relevance" id="f-rel-irrelevant" data-filter-type="global" data-label="Relevance" value="Irrelevant"> Irrelevant-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Validity:</span>-->
+                        <!--<label for="f-validity-all">-->
+                            <!--<input type="checkbox" name="validity" id="f-validity-all" data-filter-type="global" data-label="Validity" value="All"> All-->
+                        <!--</label>-->
+                        <!--<label for="f-validity-valid">-->
+                            <!--<input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Validity" value="Vaild" checked="checked"> Valid-->
+                        <!--</label>-->
+                        <!--<label for="f-validity-invalid">-->
+                            <!--<input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="Validity" value="Invalid"> Invalid-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">AI Tag:</span>-->
+                        <!--<select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="78">CRITICAL</option>-->
+                            <!--<option value="C2">DEMAND</option>-->
+                            <!--<option value="C2">CAPACITY</option>-->
+                            <!--<option value="C2">PARTS</option>-->
+                            <!--<option value="C2">YELLOW</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">System-wide Tag:</span>-->
+                        <!--<select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="78">2017 Capatity Survey</option>-->
+                            <!--<option value="C2">2016 Capatity Survey</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">User-defined Tag:</span>-->
+                        <!--<select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">-->
+                            <!--<option value="All">All</option>-->
+                            <!--<option value="78">Inventory Warning Tag</option>-->
+                            <!--<option value="C2">Capatity Warning Tag</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="filter-item">-->
+                        <!--<span class="title">Is Have Sub-BKA:</span>-->
+                        <!--<label for="f-validity-valid">-->
+                            <!--<input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes-->
+                        <!--</label>-->
+                        <!--<label for="f-validity-invalid">-->
+                            <!--<input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+
+            <div class="option-section">
+                <div class="items col-sm-12">
+                    <a href="javascript:void(0);" class="btn btn-primary btn-toggleFilterApply">Apply</a><a href="javascript:void(0);" >Reset to default</a><a href="javascript:void(0);" class="btn-toggleFilterApply">Save as my personal view</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <!-- sear mod begin-->
+        
         <div class='main_container'>
             <div class='left_container'>
                 <div class='box'>
-                    <h4 >Ningbo Huade Automobile</h4>
-                    <p>Lingjianchang</p>
-                    <br>
-                    <p><span class='nb'>32</span> supply chain connections</p>
-                    <p><a href='#'>comlete your network</a></p>
-                    <br>
-                    <h4 style='color:#ea5749;'>Bronze Status</h4>
-                    <p><span class='nb'>6</span> viewed your company profile</p>
+                    <h4 class="leftcontainer-text">Ningbo Huade Automobile</h4>
+                    <p class="left-container-text-sm left-container-margin">Lingjianchang</p>
+                    <p class="left-container-text-sm">32 supply chain connections</p>
+                    <p>
+                        <a href='#' class="left-container-text-sm">comlete your network</a>
+                    </p>
                 </div>
                 <div class='box'>
                     <h5>Company Profile</h5>
@@ -144,30 +315,69 @@
             <div class='right_container'>
                 <h5 style='text-align: center;'><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
                 <br> 
-                <button type="button" class="btn btn-primary" onclick="showPanel('panel1');">Select</button>
+                <a href="#" onclick="showPanel('panel1');">Select a supplier</a>
+                
+                <br>
                 <br>
                 <p>not found? <a href="#">Introduce a new one</a></p>
+                <br>
+                
                 <input type="text" class="form-control" id="cname" placeholder="Company Name">
                 <br>
                 <input type="text" class="form-control" id="cname" placeholder="Email Address">
                 <br>
-                <button type="submit" class="btn btn-default" style="float:right;border-color:#538dd5;color:#538dd5;">Invite</button>
+                <button type="submit" class="btn btn-primary" style="float:right;">Invite</button>
             </div>
             
-            <div class='center_container'>
+                <div class='center_container'>
                 <div class='box'>
-                    <h5>Company News 1</h5>
-                    <p>News Content</p>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        Yesterday
+                    </div>
+                    <p>Your (in-direct) customer Longcheng Precision Forging has been added into your supply-chain. 
+                        <br><a href="#">See details...</a></p>
                 </div>
                 <div class='box'>
-                    <h5>Company News 2</h5>
-                    <p>News Content</p>
+                    <h5>Yangfei AI <span>announcement</span></h5>
+                    <div class="date">
+                        Monday
+                    </div>
+                    <p>Dear Partners, <br>
+                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                    <br><br>Your SAIC-Volkswagen BKM Team
+                    </p>
+                    <p><a href="#">Share</a></p>
                 </div>
                 <div class='box'>
-                    <h5>Company News 3</h5>
-                    <p>News Content</p>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        Last Week
+                    </div>
+                    <p>Your (sub-) supplier Longcheng Precision Forging has been added into your supply-chain
+                        <br><a href="#">See details...</a></p>
+                </div>
+                <div class='box'>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        9 days ago
+                    </div>
+                    <p>Please attaention: Longcheng Precision Forging has added itself into your supply-chain
+                        <br><a href="#">See details...</a></p>
+                </div>
+                <div class='box'>
+                    <h5>SAIC-Volkswagen Automotive Co. <span>announcement</span></h5>
+                    <div class="date">
+                        10 days ago
+                    </div>
+                    <p>Dear Suppliers, <br>
+                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                    <br><br>Your SAIC-Volkswagen BKM Team
+                    </p>
+                    <p><a href="#">Share</a></p>
                 </div>
             </div>
+        
         </div>
         
         <div class="floatpanel" id="panel1">
@@ -251,12 +461,15 @@
                  changeWidth();  
             };
             function changeWidth(){               
-                var w = document.documentElement.clientWidth;//获取页面可见高度  
-                $(".center_container").width(w-630+'px');
+                var w = $(".main_container").width();  
+                $(".center_container").width(w-620+'px');
             }
             $(function(){
                 changeWidth();
             });
         </script>
+        
+<script src="scripts/9a737976.vendor.js"></script>
+<script src="scripts/10ffdb3e.main.js"></script>
     </body>
 </html>

@@ -283,9 +283,11 @@ lead-time-input.bkacreate .lead-time-input {
     float: left;
     height: 40px;
     margin-right: 5px !important;
+    padding-left: 17px;
     width: 7px;
     cursor:pointer;
 }
+
 
 .bka-icon{    
     display:-moz-inline-box; 
@@ -296,7 +298,7 @@ lead-time-input.bkacreate .lead-time-input {
 }
 
 .inner-page.search .table.bka-table tbody > tr td .badge{
-    margin: 0 0 5px 12px !important;
+    margin: 0 0 2px 6px !important;
 }
 
 .icon-cell-right{
@@ -315,7 +317,8 @@ lead-time-input.bkacreate .lead-time-input {
 
 
 .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel{
-     padding: 10px 30px;
+    /*position: relative;*/
+  /*padding: 10px 30px;*/
 }
 
 .supplier-choose-panel .bootstrap-table{
@@ -471,62 +474,30 @@ header .pagetitle{
     text-align: center;
     color:#999;
 }
+/*header .pagetitle-left {*/
+  /*margin-left: 220px;*/
+  /*text-align: left;*/
+/*}*/
+header .pagetitle2 {
+  display: inline-block;
+  margin-left: 220px;
+  line-height: 70px;
+  font-size:21px;
+  color:#999;
+}
 header .logo{
     position:absolute;
     left:40px;
     height:40px;
     top:20px;
 }
+header .logo-left {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 40px;
+  height: 20px;
+}
 
-/*.navbar{*/
-    /*padding-left:25px;*/
-    /*background-color: #f4f7fa;*/
-    /*width:100%;*/
-    /*height:70px;*/
-    /*border-radius: 0;*/
-/*}*/
-/*.navbar nav{*/
-    /*width:50px;*/
-    /*height:107%;*/
-    /*display: flex;*/
-/*}*/
-/*.navbar nav a{*/
-    /*position:relative;*/
-    /*display: block;*/
-    /*margin:0 15px;*/
-    /*color: #538dd5;*/
-    /*padding:15px 15px 0 15px;*/
-    /*text-align: center;*/
-/*}*/
-/*.navbar nav a span{*/
-    /*font-size:24px;*/
-/*}*/
-/*.navbar nav a.selected{*/
-    /*color:#538dd5;*/
-    /*background-color: white;*/
-    /*!*border-bottom:solid 4px #538dd5;*!*/
-    /*position:relative;*/
-    /*top:-1px;*/
-/*}*/
-/*.navbar .searchbox{*/
-    /*position:absolute;*/
-    /*top:20px;*/
-    /*left:50%;*/
-    /*width: 20%;*/
-    /*max-width:300px;*/
-/*}*/
-/*.navbar .pull-right{*/
-    /*position:absolute;*/
-    /*right:40px;*/
-    /*top:0;*/
-    /*line-height: 70px;*/
-    /*color:white;*/
-/*}*/
-/*.navbar .pull-right a{*/
-    /*display: inline-block;*/
-    /*color:white;*/
-    /*margin:0 20px;*/
-/*}*/
 .pagetab{
     display: flex;
     justify-content: center;
@@ -581,7 +552,13 @@ header .logo{
 }
 
 .leftcontainer-text {
-  font-size: 20px;
+  font-size: 18px;
+}
+.left-container-text-sm {
+  font-size: 14px;
+}
+.left-container-margin {
+  margin: 70px 0;
 }
 
 .nb{
@@ -606,6 +583,7 @@ header .logo{
 .red{
     color: #aa3333;
 }
+
 .blue{
     color:#538dd5;
 }
@@ -655,10 +633,16 @@ table{
     background-color:#aa3333 !important;
 }
 .badge-right-top {
-    right: -6px;
-    top: -8px;
-    padding: 2px 2px;
-    font-size: .1em !important;
+    right: -4px;
+    top: 0;
+    padding: 1pt 1pt;
+    font-size: 1pt !important;
+}
+.inner-page.bkaview .sidebar .result-list .icon-bar .badge-right-top {
+  right: -12px;
+  top: -10px;
+  padding: 1pt 1pt;
+  font-size: 1pt !important;
 }
 .badge-blue {
     background: #538dd5 !important;
@@ -676,77 +660,6 @@ table{
 .tiny{
     font-size:11px;
     line-height: 14px;
-}
-
-.treecontainer{
-    width:100%;
-    overflow-x: scroll;
-    display: flex;
-}
-
-.tree{
-    width:200px;
-    margin:0 40px;
-}
-
-.treenode{
-    position:relative;
-    border:solid 1px #538dd5;
-    border-radius: 8px;
-    margin:50px 0;
-}
-
-.treenode label{
-    border-bottom:solid 1px #538dd5;
-    width:100%;
-    line-height:30px;
-    text-align: center;
-}
-.treenode label span.glyphicon{
-    color:#538dd5;
-}
-.treenode p,.treenode h5{
-    padding:0px 15px;
-    margin:4px 0;
-}
-.treenode .add,.treenode .delete{
-    display: block;
-    font-size:21px;
-    line-height:40px;
-    height:40px;
-    width:40px;
-    border-radius:40px;
-    text-align: center;
-    border:solid 1px #538dd5;
-    position:absolute;
-    background-color: white;
-}
-.treenode .delete{
-    top:-25px;
-    right:-25px;
-}
-.treenode .add{
-    left:-30px;
-    top:50px;
-}
-.treenode .xr,.treenode .xl{
-    position:absolute;
-    width:42px;
-    top:70px;
-    border-top:solid 1px #538dd5;
-}
-.treenode .xr{
-    right:-42px;
-}
-.treenode .xl{
-    left:-42px;
-}
-.treenode .y{
-    position:absolute;
-    width:1px;
-    top:70px;
-    border-left:solid 1px #538dd5;
-    right:-42px;
 }
 .bkalist h5{
     text-align:center;
@@ -833,11 +746,19 @@ body {
         flex: 0;
     }
 }
-/* #new */
+/* # index.new */
+.icon-small{
+  font-size: 14px;
+}
+.ai-tag-small{
+  fontsize:6px;
+  padding:1px 2px;
+  margin: 0 0 2px 6px;
+}
 
 /*seach bkas 页面 */
 .red{
-  color:red;
+  color:#aa3333;
 }
 
 .blue{
@@ -845,6 +766,9 @@ body {
 }
 .table-padding-right{
   padding-right:10px;
+}
+.icon-big{
+  font-size: 20px;
 }
 
 /* nav h2 */
@@ -857,9 +781,57 @@ body {
 }
 
 .red-circle {
-  padding: 1px 3px;
-  background: red;
+  padding: 1px 5px;
+  background:#C0392B;
   color: white;
-  font-size: small;
+  /*font-size: small;*/
   border-radius: 50%;
 }
+.red-circle-sm {
+  font-size: small;
+}
+
+.parent{
+  border-left:7px solid #92d050;
+
+}
+
+.rectgreen{
+  margin-left: 20px;
+}
+
+.rectred{
+  border-left: 7px solid #da9694;
+  padding-left: 11px;
+  margin-left: 4px;
+}
+
+/* table */
+.table-height{
+  height: 30px;
+}
+
+.inline-sm, .inline-lg {
+  float: left;
+}
+.inline-sm {
+  margin-left: 3%;
+  width: 33%;
+}
+.inline-lg {
+  width: 40%;
+}
+/* #table */
+
+.my-hidden {
+  display: none;
+}
+
+/*bkaview*/
+.rectyellow{
+  border-left: 4px solid;
+  padding-left:5px;
+  margin-left:10px;
+  color:yellow;
+}
+
