@@ -634,16 +634,21 @@ table{
 }
 
 .inner-page.bkaview .sidebar .result-list .icon-bar {
-  right: -12px;
-  top: -10px;
+  right: 4px;
+  top: -1px;
   padding: 1pt 1pt;
-  font-size: 1pt !important;
+  position:absolute;
 }
 .badge-right-top {
-    right: 0px;
+    right: 4px;
     top: 0;
     padding: 1pt 1pt;
     font-size:7px !important;
+}
+.badge-right-top-bka{
+    right:-16px !important;
+    top:-10px !important;
+    font-size:11px !important;
 }
 .badge-blue {
     background: #538dd5 !important;

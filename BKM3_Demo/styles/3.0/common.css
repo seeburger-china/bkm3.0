@@ -347,3 +347,6 @@ nav.center-align{
 .bootstrap-tagsinput,.bootstrap-tagsinput input{
     background:#fcfcfc !important;
 }
+.icon-lg{
+    background-color: transparent;
+}
