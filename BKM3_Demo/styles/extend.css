@@ -755,7 +755,7 @@ body {
 }
 /* # index.new */
 .icon-small{
-  font-size: 14px;
+  font-size: 16px;
 }
 .ai-tag-small{
   fontsize:6px;
@@ -842,3 +842,10 @@ body {
   color:yellow;
 }
 
+.text-right{
+  margin-left:6px ;
+}
+
+.tag-red{
+  color:#aa3333;
+}

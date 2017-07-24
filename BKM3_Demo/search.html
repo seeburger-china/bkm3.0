@@ -448,16 +448,24 @@
                 <li  class="bka-action">
                     <a href="javascript:void(0);">
                         <i class="ion-ios-pricetag icon-btn"></i>
+                        <!--<div class="dropdown dropdown-bottom bka-action">-->
                         <div class="dropdown dropdown-bottom bka-action">
                             <a href="#" class="dropdown-toggle gray" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Tag <b class="caret"></b></a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                            <!--<ul class="dropdown-menu" aria-labelledby="dropdownMenu3">-->
+                            <ul class="dropdown-menu">
                                 <li class="disabled"><a href="#">System Tag</a></li>
-                                <li><a href="#">Tag1</a></li>
-                                <li><a href="#">Tag2</a></li>
-                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><td>
+                                    <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                    <span class=" text-right">Critical</span>
+                                </td></a></li>
+
+                                <!--<li role="separator" class="divider"></li>-->
                                 <li class="disabled"><a href="#">User Tag</a></li>
-                                <li><a href="#">Tag1</a></li>
-                                <li><a href="#">Tag2</a></li>
+                                <li><a href="#">  <td>
+                                    <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
+                                    Tiguan L Increase</td>
+                                    <td></a></li>
+                                <
                             </ul>
                         </div>
                     </a>
@@ -469,16 +477,75 @@
                             <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Untag <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                             <li class="disabled"><a href="#">System Tag</a></li>
-                            <li><a href="#">Tag1</a></li>
-                            <li><a href="#">Tag2</a></li>
-                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><td>
+                                <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                <span class=" text-right">Critical</span>
+                            </td></a></li>
+                            <!--<li role="separator" class="divider"></li>-->
                             <li class="disabled"><a href="#">AI Tag</a></li>
-                            <li><a href="#">Tag1</a></li>
-                            <li><a href="#">Tag2</a></li>
-                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <td>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                        <span class="badge badge-right-top badge-blue">AI</span>
+                                    </span>
+                                    <span class="text-right">Check Demand</span>
+                                    </td>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <td class="active">
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag tag-red icon icon-small "></span>
+                                        <span class="badge badge-right-top">AI</span>
+                                    </span>
+                                    <span class="text-right">Capacity</span>
+                                    </td>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <td>
+                                        <span class="icon-wrap">
+                                            <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                            <span class="badge badge-right-top badge-blue">AI</span>
+                                        </span>
+                                        <span class="text-right">Parts</span>
+                                    </td>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <td>
+                                        <span class="icon-wrap">
+                                            <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                            <span class="badge badge-right-top badge-blue">AI</span>
+                                        </span>
+                                        <span class="text-right">Yellow</span>
+                                    </td>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <td>
+                                <span class="icon-wrap">
+                                    <span class="ion-ios-pricetag icon icon-small blue"></span>
+                                    <span class="badge badge-right-top badge-blue">AI</span>
+                                </span>
+                                    <span class="text-right">Critical</span>
+                                </td>
+                                </a>
+                            </li>
+
+                            <!--<li role="separator" class="divider"></li>-->
                             <li class="disabled"><a href="#">User Tag</a></li>
-                            <li><a href="#">Tag1</a></li>
-                            <li><a href="#">Tag2</a></li></ul>
+                            <li><a href="#">  <td>
+                                <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
+                                Tiguan L Increase</td>
+                                <td></a></li>
+
                         </div>
                     </a>
                 </li>
@@ -558,7 +625,7 @@
                                 <p>LOREM IPSUM LOREM IPPPSUM </p>
                                 <p><small>BKA 808 000KW28/14 (3)</small> <small class="pl15">1%</small></p>
                             </td>
-                            <td class="see-in-map"><a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a></td>
+                            <td class="see-in-map"><a href="bkaview.html;"><i class="fa fa-chevron-right"></i></a></td>
 
                             <td>
                                 <a href="javascript:void(0);"><p>Supplier Abbr Name</p></a>
@@ -574,8 +641,14 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
-                                <p><i class="ion-ios-pricetag blue icon-lg"></i>&nbsp;
-                                    <i class="ion-ios-pricetag-outline  icon-lg blue"></i>
+                                <p><i class="ion-ios-pricetag blue icon-small"></i><i class="ion-ios-pricetag-outline                                     icon-small blue"></i>
+
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                    <ul>
+                                        <li>Critical</li>
+                                    </ul>
+                                </div>
+
                                 </p>
                                 <div class="detail-info-panel" style="display:none;">
                                     <ul>
@@ -646,7 +719,7 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
-                                <p><i class="ion-ios-pricetag-outline icon-lg blue"></i></p>
+                                <p><i class="ion-ios-pricetag-outline icon-small blue"></i></p>
                                 <div class="detail-info-panel" style="display:none;">
                                     <ul>
                                         <li>5GD XXXX 0001</li>
@@ -718,7 +791,7 @@
                             <td class="has-detail-info ">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
                                 <p><span class="icon-wrap">
-                                    <span class="ion-ios-pricetag icon icon-lg blue"></span>
+                                    <span class="ion-ios-pricetag icon icon-small blue"></span>
                                     <span class="badge badge-right-top badge-blue">AI</span>
                                 </span></p>
                                 <div class="detail-info-panel" style="display:none;">
@@ -792,7 +865,7 @@
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
                                 <p><span class="icon-wrap">
-                                    <span class="ion-ios-pricetag icon icon-lg red"></span>
+                                    <span class="ion-ios-pricetag icon icon-small red"></span>
                                     <span class="badge badge-right-top badge-red">AI</span>
                                 </span>
                                 </p>
@@ -898,14 +971,14 @@
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);" class="a-NoLine">5 Parts</a>
                                 <p>
-                                    <i class="ion-ios-pricetag blue icon-lg"></i>
-                                    <i class="ion-ios-pricetag-outline icon-lg blue"></i>
+                                    <i class="ion-ios-pricetag blue icon-small"></i>
+                                    <i class="ion-ios-pricetag-outline icon-small blue"></i>
                                     <span class="icon-wrap">
-                                        <span class="ion-ios-pricetag icon icon-lg blue"></span>
+                                        <span class="ion-ios-pricetag icon icon-small blue"></span>
                                         <span class="badge badge-right-top badge-blue">AI</span>
                                     </span>
                                     <span class="icon-wrap">
-                                        <span class="ion-ios-pricetag icon icon-lg red"></span>
+                                        <span class="ion-ios-pricetag icon icon-small red"></span>
                                         <span class="badge badge-right-top badge-red">AI</span>
                                     </span>
                                 </p>
@@ -956,7 +1029,7 @@
                                 <a href="javascript:void(0);" class="icon-Favority">
                                     <span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span>
                                 </a>
-                                <span class="bka-icon"><i class="fa ion-calculator fa-fw"></i></span>
+                                <span class="bka-icon"><i class="fa ion-calculator fa-fw blue"></i></span>
                                 <!--<span class="bka-icon"><span class="badge">3</span></span>-->
                             </td>
                             <td class="has-detail-info">
