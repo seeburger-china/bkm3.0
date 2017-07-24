@@ -750,28 +750,41 @@ $(function() {
       */
       $(".tab-pane").hide();
       var id= $(this).attr("href");
-      console.log(id)
+      console.log(id);
 
       $(id).show();
       if(id.substring(0, 4)=="#bka")
       {
-        $(".part-action").hide();
+        $(".task-list li").hide();
         $(".bka-action").show();
+        if($("#bka-tab-map").is(":visible")){
+            $("#show-map-a").hide();
+            $("#hide-map-a").show();
+        }
       }
-      else
+      else if(id.substring(0, 5)=="#part")
       {
+         $(".task-list li").hide();
          $(".part-action").show();
-        $(".bka-action").hide();
+         if($("#part-tab-map").is(":visible")){
+            $("#show-map-a").hide();
+            $("#hide-map-a").show();
+        }
       }
-
-      if(id.substring(0, 5)=="#post")
+      else if(id.substring(0, 5)=="#post")
       {
-          $(".posts-action").show();
+          $(".task-list li").hide();
+          $(".post-action").show();
 
       }
       else{
-          $(".posts-action").hide();
+          $(".task-list li").hide();
+          $(".company-action").show();
       }
+      
+      
+      
+      
     })
     //Start Page React Hover To Show Chart
     //uodate by wangjin 20150617

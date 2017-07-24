@@ -19,6 +19,35 @@
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+        .has-sidebar{
+            position:relative;
+        }
+        .sidebar{
+            position:absolute;
+            top:0 ;
+            left:0;
+        }
+        .result-content{
+            position:relative;
+        }
+        .result-content>p{
+            margin-left:10px;
+        }
+        .secondbar{
+            position:absolute;
+            left:5px;
+            bottom:0px;
+            height:30px;
+            width:7px;
+            z-index: 1000;
+            background-color:#da9694;
+        }
+        .badge-del{
+            color:white !important;
+            background:transparent !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -105,8 +134,7 @@
                         <!--<a class="bka-icon"><i class="ion-ios-star"></i></a>-->
                         <a class="bka-icon">
                             <span class="icon-wrap icon-wrap-absolute right-bottom">
-                                <span class="ion-ios-pricetag blue"></span>
-                                <span class="badge badge-right-top badge-blue">AI</span>
+                                <span class="ion-ios-pricetag blue"></span><span class="badge badge-right-top-bka badge-blue">AI</span>
                             </span>
                         </a>
                       <!--<span class="icon-wrap">-->
@@ -115,6 +143,7 @@
                                 <!--</span>-->
                     </div>
                     <div class="result-content green">
+                        <div class="secondbar red"> </div>
                         <p>LOREM IPSUM LOREM IPSUM</p>
                         <p><small>BKA 808 000</small></p>
                         <p>SUPPLIER NAME <small>A123456</small></p>
@@ -187,7 +216,7 @@
 			</div>
 		<div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="bka-info-tab">
-            <div class="heading red">
+            <div class="heading">
                 <h2>ABLAGE TIGUAN YFPO</h2>
                 <small>BKA00000001</small>
                 <span>YFPO</span>
@@ -200,13 +229,28 @@
             </div>-->
 			<div>
 
-			    <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
-                    <option value="0"></option>
-                    <option value="Test1">Test2</option>
-                    <option value="Test1">Test3</option>
-                </select>
+		
+<div class="dropdown selectpicker" style="display:inline-block">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" data-label="Commodity" aria-haspopup="true" aria-expanded="true">
+    Select a tag
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li class="disabled"><a href="#">System Tag</a></li>
+    <li><a href="#">Tag1</a></li>
+    <li><a href="#">Tag2</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="disabled"><a href="#">AI Tag</a></li>
+    <li><a href="#">Tag1</a></li>
+    <li><a href="#">Tag2</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="disabled"><a href="#">User Tag</a></li>
+    <li><a href="#">Tag1</a></li>
+    <li><a href="#">Tag2</a></li>
+  </ul>
+</div>
 			<button type="button" class="btn btn-primary:hover blue">CRITICAL</button>
-			<button type="button" class="btn btn-primary">Follow-Up kw20</button>
+			<button type="button" class="btn btn-primary btn-tag-filter">Follow-Up kw20 <span class="badge badge-del">X</span></button>
 			</div>
             <div class="toolbar search-toolbar-icon col-md-12" style="margin-top:10px;">
                 <ul class="task-list">
@@ -2936,11 +2980,14 @@
 
        </ul>
     </div>
+    
     <script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/9a737976.vendor.js"></script>
     <script src="scripts/10ffdb3e.main.js"></script>
+    <script src="./scripts/jquery-3.2.1.min.js" ></script>
+    
      <script src="scripts/bootstrap-switch.js"></script>
-    <script type="">
+    <script >
     $(function(){
       $("[name='mycheckbox']").bootstrapSwitch();
 
@@ -2963,7 +3010,11 @@
       {
           $(".result-list").append($("#loadPage .result").html());
           $(".scrollIcon").removeClass("pullLoadIcon").addClass("pullDownIcon");
+          
       }
+      $(".badge-del").click(function(){
+        $(this).parent().remove();
+      });
     });
     </script>
 </body>
