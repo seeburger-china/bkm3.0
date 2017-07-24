@@ -5760,7 +5760,7 @@ input[type="checkbox"] {
   margin-top: -20px;
   padding: 0; }
   .inner-page.has-sidebar .sidebar {
-    width: 250px;
+    width: 260px;
     float: left; }
     .inner-page.has-sidebar .sidebar h3 {
       padding: 20px;
@@ -5781,8 +5781,8 @@ input[type="checkbox"] {
   .inner-page.has-sidebar .main {
     overflow: auto;
     height: 100%;
-    margin-left: 250px;
-    min-width: 1088px;
+    margin-left: 260px;
+    min-width: 988px;
      *zoom: 1; 
     padding: 0 20px;
     border-left: solid 1px #dce6f1; }
