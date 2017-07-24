@@ -5,3 +5,7 @@
 .center-align {
   text-align: center;
 }
+
+.inline-block {
+  display: inline-block;
+}
