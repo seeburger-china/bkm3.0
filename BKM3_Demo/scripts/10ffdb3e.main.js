@@ -922,6 +922,8 @@ $(function() {
 });
 
 
+
+
 function downloadReport(flag){
             if(flag=="1")
             {
@@ -1016,3 +1018,4 @@ function downloadReport(flag){
                 window.location="/template/RelevanceTestReport.xls";
             }
         }
+
