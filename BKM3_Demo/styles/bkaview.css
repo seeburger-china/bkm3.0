@@ -1,0 +1,61 @@
+/* border-box */
+.border-box {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #eeeeee;
+}
+
+.border-box.blue {
+  background: #538dd5;
+  border: 1px solid #538dd5;
+  color: white;
+}
+/* #border-box */
+
+/* icon-title */
+.icon-title {
+}
+.icon-title .icon {
+  font-size: medium;
+}
+.icon-title h4 {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+/* #icon-title */
+
+.footer-text {
+  margin-top: 10px;
+  font-size: small;
+  color: gray;
+}
+
+.control-panel-right {
+  float: right;
+  width: 160px;
+}
+
+.form-select {
+  width: 88%;
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
+  display: inline-block;
+  z-index: 100;
+  color: #538dd5;
+}
+.form-select:hover, .form-select:active, .form-select:visited {
+  border: none;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+.nav > li > a:hover .form-select {
+  background-color: #eee;
+}
+.nav > li.active a:hover .form-select {
+  background-color: #fff;
+}

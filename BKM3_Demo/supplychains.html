@@ -33,6 +33,16 @@
                 background-color:#538dd5;
                 color:white;
             }
+            #switchpanel{
+                position:absolute;
+                top:20px;
+                right:10px;
+            }
+            #switchpanel .selected{
+                border-color:#538dd5;
+                background-color:#538dd5;
+                color:white;
+            }
         </style>
     <body>
 
@@ -281,19 +291,23 @@
                     <table class='icontable'>
                         <tr>
                             <td onclick="showPanel('panel1');">
-                                <span class="glyphicon glyphicon-plus"></span><br>
+                                <span class="ion-ios-plus-outline icon-lg"></span><br>
                                 Add new chain
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-share-alt"></span><br>
+                                <span class="ion-forward icon-lg"></span><br>
                                 Export demands
                             </td>
                             <td>
-                                <span class="glyphicon glyphicon-map-marker"></span><br>
+                                <span class="ion-map icon-lg"></span><br>
                                 Map
                             </td>
                         </tr>
                     </table>
+            <div id="switchpanel" class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-default selected">Edit</button>
+                <button type="button" onclick="location.href='supplychains_view.html'" class="btn btn-default">View</button>
+              </div>
             <div class="treecontainer" id="tree1">
                 <div class="tree">
                     <!--div class="treenode">
@@ -336,7 +350,6 @@
                     </div-->
                 </div>
                 <div class="tree"></div>
-                <div class="tree"></div>
                 <div class="tree">
                     <div class="treenode bkalist">
                         <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
@@ -362,7 +375,7 @@
             <span class="input-group-addon" id="basic-addon2">Check</span>
             </div>
             <br><br>
-            <p class="tip">XXX XXX XXX confirmed</p>
+            <p class="tip">027105411P confirmed</p>
 
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
@@ -379,9 +392,11 @@
                 <option>1</option>
             </select>
             <br><br>
-            <p class="tip">You are making subcomponent machining for SVW part<br>XXX XXX XXX</p>
+            <p class="tip">You are making subcomponent machining for SVW part<br>027105411P</p>
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                <button type="button" class="btn btn-default" onclick="showPanel('panel1');">Back</button>
+                
                 <button type="button" class="btn btn-primary"  onclick="showPanel('panel3');">Next</button>
             </div>
         </div>
@@ -477,22 +492,100 @@
             <p class="tiny"><span class="glyphicon glyphicon-plus blue"></span> Not found? Enter a new customer</p>
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                <button type="button" class="btn btn-default" onclick="showPanel('panel2');">Back</button>
                 <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
             </div>
         </div>
+        <div class="floatpanel" id="panel4">
+            <h5>
+                Select a supplier 
+            </h5>
+            <input type="text" class="form-control" placeholder="Filter..." aria-describedby="basic-addon2">
+            <br>
+            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Registration No.</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456
+              </th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       <tr class="active">
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <th scope="row">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              A123456</th>
+          <td>EVONIC</td>
+          <td>Shanghai</td>
+          <td>China</td>
+        </tr>
+       
+      </tbody>
+    </table>
+            <ul class="pagination" style="margin-left:200px;margin-top:0;">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+            <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
+            <div class="btngroup">
+                <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Add</button>
+            </div>
+        </div>
+        
         <script type="text/javascript">
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div class="treenode '+sign+' ">');
+                li.push('<div title="Operator:default user\nDate:2010-01-02 11:22:33" class="treenode '+sign+' ">');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
                 li.push('<p>'+city+'</p>');
                 if(hasdel)
-                    li.push('<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>');
+                    li.push('<a class="delete"><span class="ion-ios-minus-empty icon-lg"></span></a>');
                 if(hasadd)
-                    li.push('<a class="add"><span class="glyphicon glyphicon-plus"></span></a>');
+                    li.push('<a class="add"><span class="ion-ios-plus-empty icon-lg"></span></a>');
                 li.push('</div>');
                 $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
             }
@@ -505,15 +598,15 @@
                 buildTreenode("tree1","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,true,true,'bd_primary');
                 buildTreenode("tree1","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
                 
-                buildTreenode("tree2","2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1);
-                buildTreenode("tree2","1st Tier",'Ningbo Huade','Product','Metals','City',2,false,true,'bd_primary');
-
+                buildTreenode("tree2","2rd Tier",'Microware','Product','Metals','City',0);
+                buildTreenode("tree2","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
+                
                 //删除
                 $(".delete").click(function(){
                     confirm("确定要删除吗？");
                 });
                 $(".add").click(function(){
-                    //showPanel('panel1');
+                    showPanel('panel4');
                 });
 
                 //横线

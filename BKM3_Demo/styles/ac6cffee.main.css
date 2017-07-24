@@ -2828,6 +2828,10 @@ tbody.collapse.in {
 
 .dropdown {
   position: relative; }
+.dropdown-bottom {
+  margin-top: 12px;
+  margin-left: -29px;
+}
 
 .dropdown-toggle:focus {
   outline: 0; }
@@ -5279,6 +5283,8 @@ table {
 
 a:hover, a:focus, a:visited {
   color: #538dd5; }
+a.gray, a.gray:hover, a.gray:focus, a.gray:visited {
+  color: #666; }
 
 table th {
   font-size: 11pt; }
@@ -5669,7 +5675,7 @@ input[type="checkbox"] {
       color: #538dd5; }
 
 .inner-page {
-  min-width: 1088px;
+  min-width: 725px;
    *zoom: 1;  
   padding: 0 20px; }
   .inner-page .filter-summary {
@@ -5933,6 +5939,10 @@ input[type="checkbox"] {
           background-color: #fff;
           border: solid 1px #dce6f1;
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); }
+      .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel-close {
+        right: -50px;
+        top: -20px;
+      }
       .inner-page.search .table.bka-table tbody > tr td.red {
         color: #da9694; }
       .inner-page.search .table.bka-table tbody > tr td.bl p {
@@ -5948,7 +5958,7 @@ input[type="checkbox"] {
         margin: 0 4px; }
       .inner-page.search .table.bka-table tbody > tr td .badge {
         background-color: #c0504d;
-        padding: 2px 4px;
+        padding: 2px 4px 2px 2px;
         width: 1.28571429em;
         margin: 0 4px; }
   .inner-page.search .table.bka-table.table-hover > tbody > tr:hover > td {
@@ -6084,7 +6094,7 @@ input[type="checkbox"] {
   text-align: center; }
   .inner-page.bkaview .sidebar .result-list .icon-bar span, .inner-page.bkaview .sidebar .result-list .icon-bar i {
     display: block; }
-  .inner-page.bkaview .sidebar .result-list .icon-bar i {
+  .inner-page.bkaview .sidebar .result-list .icon-bar i,   .inner-page.bkaview .sidebar .result-list .icon-bar .right-bottom {
     position: absolute;
     bottom: 16px;
     right: 14px; }
@@ -6237,6 +6247,9 @@ input[type="checkbox"] {
 .inner-page.bkaview .main .control-panel {
   height: 180px;
   padding: 70px 0 70px 20px; }
+.inner-page.bkaview .main .control-panel-sm {
+  padding: 0;
+}
   .inner-page.bkaview .main .control-panel .control {
     margin: 10px 0;
     font-size: 9pt; }

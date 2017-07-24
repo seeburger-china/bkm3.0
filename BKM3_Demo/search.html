@@ -11,16 +11,19 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
     <link rel="stylesheet" href="styles/ac6cffee.main.css">
-    <link rel="stylesheet" href="styles/extend.css">
     <link rel="stylesheet" href="styles/3.0/common.css">
-        <script src="./scripts/jquery-3.2.1.min.js" ></script>
-        <script src="./scripts/common.js" ></script>
+    <link rel="stylesheet" href="styles/extend.css">
+    <link rel="stylesheet" href="styles/search.css">
+
+    <script src="./scripts/jquery-3.2.1.min.js" ></script>
+    <script src="./scripts/common.js" ></script>
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
     <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
+        
             .ul_supp{
                 width: 100%;
             }
@@ -144,6 +147,8 @@
     </nav>
 </div>
 <div class="inner-page search">
+
+    <h3 class="search-title">Search results</h3>
     <!--<h3>Search Results</h3>-->
     <div class="filter-block mt-20">
         <div class="filter-summary">
@@ -398,75 +403,114 @@
             <li><a href="#companies-tab" data-toggle="tab">Companies(4)</a></li>
             <li><a href="#posts-tab" data-toggle="tab">Posts(1)</a></li>
 
-            <li><h3 class="nav-tab-title">Search Results</h3></li>
+            <!--<li><h3 class="nav-tab-title">Search Results</h3></li>-->
         </ul>
 
-        <div class="search-toolbar col-sm-8 search-toolbar-icon">
+        <div class="search-toolbar col-sm-12 search-toolbar-icon">
             <ul class="task-list">
-                <li>
-                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" class="posts-action">
-                        <i class="ion-android-add icon-btn"></i>
-                        <p>Add post</p>
-                    </a>
-                </li>
-                <li>
-                    <a id="selectToggle" href="javascript:void(0);">
+                <li class="bka-action part-action company-action">
+                    <a id="selectToggle" href="javascript:void(0);" >
                         <i class="ion-android-checkbox icon-btn"></i>
                         <p>Select</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#bka-requestUpdate-modal" data-toggle="modal"  class="bka-action">
+                <li class="post-action company-action">
+                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" >
+                        <i class="ion-android-add icon-btn"></i>
+                        <p>Add post</p>
+                    </a>
+                </li>
+                
+                <li   class="bka-action">
+                    <a href="#bka-requestUpdate-modal" data-toggle="modal">
                         <i class="ion-refresh icon-btn"></i>
                         <p>Request data update</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li class="bka-action">
+                    <a href="javascript:void(0);" >
                         <i class="ion-android-done-all icon-btn"></i>
                         <p>Mark as read</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action" onclick="downloadReport('6')">
+                <li class="bka-action">
+                    <a href="javascript:void(0);"  onclick="downloadReport('6')">
                         <i class="ion-android-share icon-btn"></i>
                         <p>Export</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li  class="bka-action">
+                    <a href="javascript:void(0);">
                         <i class="ion-ios-star icon-btn"></i>
                         <p>Add to Favorites</p>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript:void(0);" class="bka-action">
+                <li  class="bka-action">
+                    <a href="javascript:void(0);">
                         <i class="ion-ios-pricetag icon-btn"></i>
-                        <p valign="bottom">Tag</p>
+                        <div class="dropdown dropdown-bottom bka-action">
+                            <a href="#" class="dropdown-toggle gray" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Tag <b class="caret"></b></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <li class="disabled"><a href="#">System Tag</a></li>
+                                <li><a href="#">Tag1</a></li>
+                                <li><a href="#">Tag2</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="disabled"><a href="#">User Tag</a></li>
+                                <li><a href="#">Tag1</a></li>
+                                <li><a href="#">Tag2</a></li>
+                            </ul>
+                        </div>
                     </a>
                 </li>
-                <li id="show-map-a">
+                <li class="bka-action">
+                    <a >
+                        <i class="ion-ios-pricetag-outline icon-btn"></i>
+                        <div class="dropdown dropdown-bottom bka-action">
+                            <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Untag <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li class="disabled"><a href="#">System Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">AI Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">User Tag</a></li>
+                            <li><a href="#">Tag1</a></li>
+                            <li><a href="#">Tag2</a></li></ul>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="part-action">
+                    <a href="javascript:void(0);"   onclick="downloadReport('7')">
+                        <i class="ion-android-share icon-btn"></i>
+                        <p>Export</p>
+                    </a>
+                </li>
+                <li class="part-action">
+                    <a href="bkacreate.html"  >
+                        <i class="ion-android-options icon-btn"></i>
+                        <p>Assign to BKA</p>
+                    </a>
+                </li>
+                <li  class="company-action">
+                    <a href="#">
+                        <i class="ion-compose icon-btn"></i>
+                        <p>Invite</p>
+                    </a>
+                </li>
+                <li id="show-map-a" class="bka-action part-action company-action">
                     <a href="#">
                         <i class="ion-map icon-btn"></i>
                         <p>Show Map</p>
                     </a>
                 </li>
-                <li id="hide-map-a" class="my-hidden">
+                <li id="hide-map-a" class=" my-hidden">
                     <a href="#">
                         <i class="ion-android-map icon-btn"></i>
                         <p>Hide Map</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="part-action" style="display:none;" onclick="downloadReport('7')">
-                        <i class="ion-android-share icon-btn"></i>
-                        <p>Export</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="bkacreate.html" class="part-action" style="display:none;">
-                        <i class="ion-android-options icon-btn"></i>
-                        <p>Assign to BKA</p>
                     </a>
                 </li>
             </ul>
@@ -501,6 +545,7 @@
                             <th style="width: 250px">Demand</th>
                             <th style="width: 150px">Status</th>
                             <th><i class="ion-record"></i></th>
+                            <th class="only-see-in-map my-hidden"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -529,7 +574,9 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
-                                <p><i class="ion-ios-pricetag blue icon-lg"></i>&nbsp;<i class="ion-ios-pricetag-outline  icon-lg blue"></i></p>
+                                <p><i class="ion-ios-pricetag blue icon-lg"></i>&nbsp;
+                                    <i class="ion-ios-pricetag-outline  icon-lg blue"></i>
+                                </p>
                                 <div class="detail-info-panel" style="display:none;">
                                     <ul>
                                         <li>5GD XXXX 0001</li>
@@ -564,7 +611,7 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
-                                <div class="detail-info-panel" style="display:none;">
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
                                     <ul>
                                         <li>BKA status</li>
                                         <li>message</li>
@@ -572,6 +619,7 @@
                                 </div>
                             </td>
                             <td> <span class="red-circle">8</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
                         </tr>
                         <tr>
@@ -632,11 +680,17 @@
                                 <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
                                 <!--<span class="bka-icon"><span class="badge">3</span></span>-->
                             </td>
-                            <td>
-                                <i class="ion-chatboxes blue icon-big"> </i>
-
+                            <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                    <ul>
+                                        <li>BKA status</li>
+                                        <li>message</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td> <span class="red-circle">5</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
                         </tr>
                         <tr>
@@ -701,10 +755,17 @@
                                 <!--<span class="bka-icon">5</span>-->
                             </td>
 
-                            <td>
-                                <i class="ion-chatboxes blue icon-big"> </i>
+                            <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                    <ul>
+                                        <li>BKA status</li>
+                                        <li>message</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td> <span class="red-circle">3</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -797,9 +858,17 @@
                                 <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
                                 <!--<span class="bka-icon"></span>-->
                             </td>
-                            <td>
-                                <i class="ion-chatboxes blue icon-big"></i>
+                            <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                    <ul>
+                                        <li>BKA status</li>
+                                        <li>message</li>
+                                    </ul>
+                                </div>
+                            </td>
                             <td> <span class="red-circle">9</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
                         </tr>
                         <tr>
@@ -828,6 +897,18 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);" class="a-NoLine">5 Parts</a>
+                                <p>
+                                    <i class="ion-ios-pricetag blue icon-lg"></i>
+                                    <i class="ion-ios-pricetag-outline icon-lg blue"></i>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon icon-lg blue"></span>
+                                        <span class="badge badge-right-top badge-blue">AI</span>
+                                    </span>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon icon-lg red"></span>
+                                        <span class="badge badge-right-top badge-red">AI</span>
+                                    </span>
+                                </p>
                                 <div class="detail-info-panel" style="display:none;">
                                     <ul>
                                         <li>5GD XXXX 0001</li>
@@ -866,15 +947,29 @@
                             <!--</div>									-->
                             <!--</td>							-->
                             <td class="icon-cell">
-                                <span class="bka-icon"></span>
-                                <span class="bka-icon"></span>
+                                <!--<span class="bka-icon"></span>-->
+                                <!--<span class="bka-icon"></span>-->
+
+                                <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                                <span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
                                 <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
                                 <a href="javascript:void(0);" class="icon-Favority">
-                                    <span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                    <span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span>
+                                </a>
+                                <span class="bka-icon"><i class="fa ion-calculator fa-fw"></i></span>
                                 <!--<span class="bka-icon"><span class="badge">3</span></span>-->
                             </td>
-                            <td></td>
+                            <td class="has-detail-info">
+                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                    <ul>
+                                        <li>BKA status</li>
+                                        <li>message</li>
+                                    </ul>
+                                </div>
+                            </td>
                             <td> <span class="red-circle">7</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
                         </tr>
                         <tr>
@@ -936,6 +1031,7 @@
                             </td>
                             <td></td>
                             <td> <span class="red-circle">8</span></td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
                         </tr>
                         </tbody>
@@ -954,9 +1050,7 @@
                     </div>
                     <!--<div class="companies-tab" id="bka-tab" role="tabpanel" ></div>-->
                 </div>
-
                 <div class="tab-pane" id="part-tab" role="tabpanel" >
-
                     <table class="bka-table table table-hover col-sm-8" >
                         <thead>
                         <tr>
@@ -968,6 +1062,7 @@
                             <th>Buyer</th>
                             <th>Status</th>
                             <th></th>
+                            <th class="only-see-in-map my-hidden"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -996,6 +1091,7 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -1021,6 +1117,7 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -1048,6 +1145,7 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -1074,6 +1172,7 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -1100,6 +1199,7 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         <tr>
                             <td>
@@ -1126,9 +1226,22 @@
                                 <a href="/bkacreate.html">Add to BKA...</a>
                                 <a href="/bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
+                            <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                         </tr>
                         </tbody>
                     </table>
+                    <div class="col-sm-4 my-hidden" id="part-tab-map">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="javascript:void(0);">Mark area</a>
+                                <a href="javascript:void(0);">Clean</a>
+                                <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="panel-body">
+                                <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane" id="companies-tab" role="tabpanel" >
                     <ul class="ul_supp">
@@ -1194,22 +1307,29 @@
                         </li>
                     </ul>
                 </div>
+
+                <nav aria-label="Page navigation" class="center-align">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-
-                <div class="col-sm-4 my-hidden" id="part-tab-map">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a href="javascript:void(0);">Mark area</a>
-                            <a href="javascript:void(0);">Clean</a>
-                            <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
-                        </div>
-                        <div class="panel-body">
-                            <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="map-modal">
+            <div class="modal fade" id="map-modal">
                     <div class="modal-dialog modal-dialog-center">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -1451,9 +1571,20 @@
 <div class="footer">
     上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
 </div>
+<!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <script src="scripts/9a737976.vendor.js"></script>
 <script src="scripts/10ffdb3e.main.js"></script>
+<!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <!--<script src=scripts/common.js></script>-->
+<script>
+$(function(){
+    $(".task-list>li").hide();
+    $(".bka-action").show();
+    $(".dropdown a").click(function(){
+        $(this).parent().children('li').show();
+    });
+});
+</script>
 </body>
 
 </html>
