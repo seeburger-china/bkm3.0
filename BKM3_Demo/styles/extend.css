@@ -640,15 +640,16 @@ table{
   position:absolute;
 }
 .badge-right-top {
-    right: 4px;
+    right: -6px;
     top: 0;
     padding: 1pt 1pt;
     font-size:7px !important;
 }
 .badge-right-top-bka{
-    right:-16px !important;
-    top:-10px !important;
-    font-size:11px !important;
+    right:-15px !important;
+    top:-5px !important;
+    font-size:1pt !important;
+    padding:1pt 1pt !important;
 }
 .badge-blue {
     background: #538dd5 !important;
