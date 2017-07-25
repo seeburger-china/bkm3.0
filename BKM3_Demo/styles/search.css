@@ -9,3 +9,7 @@
 .inline-block {
   display: inline-block;
 }
+
+.btn-rect {
+  border-radius: 0;
+}
