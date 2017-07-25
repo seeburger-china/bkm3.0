@@ -18,6 +18,17 @@
         <script src="./scripts/common.js" ></script>
 
         <style type="text/css">
+            .dropdown-header{
+                font-weight: bold;
+                color:black;
+            }
+            .dropdown,.dropdown button{
+                width:100%;
+                text-align: left;
+            }
+            .readonly{
+                color:#ccc;
+            }
             .icontable{
                 width:400px;
 
@@ -276,12 +287,41 @@
             <p class="tiny">Step 2 of 3 : Enter a SAIC-Volkswagen part number</p>
             </h5>
             <br><br><br><br>
-            <select style="min-width:400px;">
-                <option>Select product or service type</option>
-                <option>1</option>
-            </select>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="selitem">Select product or service type</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li class="dropdown-header">Components and parts 零部件</li>
+<li><a href="#">Metal parts 金属件</a></li>
+<li><a href="#">Plastic parts 塑料件</a></li>
+<li><a href="#">Electronic components 电子元器件</a></li>
+<li><a href="#">Wire harness 线束</a></li>
+<li><a href="#">Rubber parts 橡胶件</a></li>
+<li><a href="#">others 其他</a></li>
+                  <li role="separator" class="divider"></li>
+<li class="dropdown-header">Material 原材料</li>
+<li><a href="#">Steel 钢材</a></li>
+<li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+<li><a href="#">Plastic 塑料</a></li>
+<li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+<li><a href="#">Chemicals 化学品</a></li>
+                  <li role="separator" class="divider"></li>
+<li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+<li><a href="#">Painting 油漆</a></li>
+<li><a href="#">Coating 电镀或涂层</a></li>
+<li><a href="#">Machining 机加工</a></li>
+<li><a href="#">Welding 焊接</a></li>
+<li><a href="#">Polishing 抛光</a></li>
+<li><a href="#">Others 其他</a></li>
+
+
+                 
+                </ul>
+              </div>
             <br><br>
-            <p class="tip">You are making subcomponent machining for SVW part<br>027105411P</p>
+            <p class="tip">You are making subcomponent <span class="selitem"></span> for SVW part<br>027105411P</p>
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
                 <button type="button" class="btn btn-default" onclick="showPanel('panel1');">Back</button>
@@ -294,16 +334,14 @@
             <p class="tiny">Step 3 of 3 : Enter a SAIC-Volkswagen part number</p>
             </h5>
             <br>
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
-            <span class="input-group-addon" id="basic-addon2">Search</span>
-            </div>
+            <input type="text" class="form-control" placeholder="Filter..." />
             <br>
 
     <table class="table">
       <thead>
         <tr>
-          <th>SupplierNo</th>
+          <th>Registration No</th>
+          <th>Unified social credit code</th>
           <th>Name</th>
           <th>City</th>
           <th>Country</th>
@@ -314,6 +352,7 @@
           <th scope="row">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456</th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -323,6 +362,7 @@
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456
               </th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -331,6 +371,7 @@
           <th scope="row">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456</th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -339,6 +380,7 @@
           <th scope="row">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456</th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -347,6 +389,7 @@
           <th scope="row">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456</th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -355,6 +398,7 @@
           <th scope="row">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               A123456</th>
+          <td>123123123</td>
           <td>EVONIC</td>
           <td>Shanghai</td>
           <td>China</td>
@@ -458,10 +502,30 @@
             <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
-                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Add</button>
+                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
             </div>
         </div>
-        
+        <div class="modal bka-modal fade" id="supplier-Delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Delete supplier</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content">
+                            <span>Are you sure delete the supplier?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href=""  data-dismiss="modal">cancel</a>
+                        <button type="button" class="btn btn-primary"  data-dismiss="modal">confrim</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
         <script type="text/javascript">
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
@@ -472,15 +536,34 @@
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
                 li.push('<p>'+city+'</p>');
                 if(hasdel)
-                    li.push('<a class="delete"><span class="ion-ios-minus-empty icon-lg"></span></a>');
+                    li.push('<a class="delete" href="#supplier-Delete-modal" data-toggle="modal"><span class="ion-ios-minus-empty icon-lg"></span></a>');
                 if(hasadd)
                     li.push('<a class="add"><span class="ion-ios-plus-empty icon-lg"></span></a>');
                 li.push('</div>');
                 $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
             }
 
-
+            var sec=0;
+            function btnTimeout(){
+                sec--;
+                $("#basic-addon2").html("Check ("+sec+"s)");
+                if(sec>0){
+                    setTimeout(btnTimeout,1000);
+                }
+                else{
+                    $("#basic-addon2").html("Check").removeClass("readonly");
+                }
+            }
             $(function(){
+                $("#basic-addon2").click(function(){
+                    if(sec==0){
+                        sec=10;
+                        $(this).addClass("readonly");
+                        btnTimeout();
+                        
+                    }
+                    
+                });
                 buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
                 buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0);
                 buildTreenode("tree1","3rd Tier",'Supplier name','Product','Product type','City',0,true,true,'bd_red');
@@ -491,9 +574,9 @@
                 buildTreenode("tree2","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
                 
                 //删除
-                $(".delete").click(function(){
-                    confirm("确定要删除吗？");
-                });
+                //$(".delete").click(function(){
+                //    confirm("确定要删除吗？");
+                //});
                 $(".add").click(function(){
                     showPanel('panel4');
                 });
@@ -514,6 +597,9 @@
                     var yend = $(this).parent().children('.treenode:last')[0].offsetTop;
                     $(this).prepend('<div class="y" style="height:'+(yend-ystart)+'px;"></div>');
 
+                });
+                $(".dropdown a").click(function(){
+                    $(".selitem").html($(this).html());
                 });
             });
         </script>
