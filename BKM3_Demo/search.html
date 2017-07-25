@@ -29,9 +29,39 @@
             }
             .ul_supp li{
                 margin:10px 0;
-                padding:20px 30px 20px 20px;
-                border:solid 1px #ccc;
+                /*border:solid 1px #ccc;*/
                 position:relative;
+                display: block;
+            }
+            .ul_supp .ul-supp-main {
+                position: relative;
+                border:solid 1px #ccc;
+                padding:20px 30px 20px 20px;
+            }
+            .ul_supp .ul-supp-select {
+                display: none;
+            }
+            .ul_supp.is-select .ul-supp-main, .ul_supp.is-select .ul-supp-select {
+                display: inline-block;
+            }
+            .ul_supp.is-select .ul-supp-main {
+                width: 96%;
+            }
+            .ul-supp-parent {
+                float: left;
+                width: 100%;
+            }
+            .ul-supp-parent.see-in-map {
+                width: 40%;
+            }
+            .ul_supp.see-in-map .ul-supp-main {
+                /*float: left;*/
+                /*display: inline-block;*/
+            }
+            .ul_supp.is-select .ul-supp-select {
+                width: 3%;
+                position: relative;
+                bottom: 15px;
             }
             .ul_supp h5,.ul_supp p,.ul_supp small{
                 margin:5px 10px;
@@ -1161,7 +1191,7 @@
                     <!--<div class="companies-tab" id="bka-tab" role="tabpanel" ></div>-->
                 </div>
                 <div class="tab-pane" id="part-tab" role="tabpanel" >
-                    <table class="bka-table table table-hover col-sm-8" >
+                    <table class="bka-table table table-hover col-sm-6" >
                         <thead>
                         <tr>
                             <th>
@@ -1340,7 +1370,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="col-sm-4 my-hidden" id="part-tab-map">
+                    <div class="col-sm-6 my-hidden" id="part-tab-map">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <a href="javascript:void(0);">Mark area</a>
@@ -1355,22 +1385,46 @@
                 </div>
                 <div class="tab-pane" id="companies-tab" role="tabpanel" >
 
-                    <ul class="ul_supp">
+                    <div class="ul-supp-parent">
+                        <ul class="ul_supp">
+                            <li>
+                                <div class="ul-supp-select">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="ul-supp-main">
+                                    <h5>Benteler Huizhong</h5>
+                                    <p>Automotive components</p>
+                                    <small>10,000 - 50,000 employerees</small>
+                                    <a class="btn_s1 active" >Follow</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ul-supp-select">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="ul-supp-main">
+                                    <h5 class="active">Benteler Huizhong</h5>
+                                    <p>Automotive components</p>
+                                    <small>10,000 - 50,000 employerees</small>
+                                    <a class="btn_s1" >Unfollow</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <li>
-                            <h5>Benteler Huizhong</h5>
-                            <p>Automotive components</p>
-                            <small>10,000 - 50,000 employerees</small>
-                            <a class="btn_s1 active" >Follow</a>
-                        </li>
-                        <li>
 
-                            <h5 class="active">Benteler Huizhong</h5>
-                            <p>Automotive components</p>
-                            <small>10,000 - 50,000 employerees</small>
-                            <a class="btn_s1" >Unfollow</a>
-                        </li>
-                    </ul>
+                    <div class="col-sm-6 my-hidden" id="companies-tab-map">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="javascript:void(0);">Mark area</a>
+                                <a href="javascript:void(0);">Clean</a>
+                                <a href="#map-modal" data-toggle="modal" class="zoom-btn"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="panel-body">
+                                <img src="images/a5f6513c.map.png" alt="Map" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane" id="posts-tab" role="tabpanel" >
                     <ul class="ul_post">
@@ -1667,10 +1721,10 @@
             <textarea class="form-control" rows="7">Make annoucement, tell whats new in your company, add pictures, links</textarea>
             <br>
             <p>Send to:</p>
-            <p>
-                <button type="button" class="btn btn-default">Selected</button>
-                <button type="button" class="btn btn-primary">Search results</button>
-                <button type="button" class="btn btn-default">All followers</button>
+            <p class="add-post-panel-btn-group">
+                <button type="button" class="btn btn-default btn-rect">Selected</button>
+                <button type="button" class="btn btn-primary btn-rect">Search results</button>
+                <button type="button" class="btn btn-default btn-rect">All followers</button>
             </p>
             <br>
             <p>Add attachment:</p>

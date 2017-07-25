@@ -37,7 +37,7 @@ $(function() {
                 $('#tagsinput').tagsinput('add', label + ':' + value);
                 }
             }
-            else  if ($(this).is('[type="radio"]')) {
+            else if ($(this).is('[type="radio"]')) {
                     $(this).each(function() {
                         if ($(this).is(":checked")) {
                             var label = $(this).data('label');
@@ -150,8 +150,19 @@ $(function() {
     $('.bka-table').find('tbody>tr>td:first-child').hide();
     $('#selectToggle').click(function() {
         $(this).toggleClass('active');
-        $('.bka-table').find('thead>tr>th:first-child').toggle();
-        $('.bka-table').find('tbody>tr>td:first-child').toggle();
+        var bkaTab = $('#bka-tab');
+        var companiesTab = $('#companies-tab');
+        if (bkaTab.hasClass('active')) {
+            $('.bka-table').find('thead>tr>th:first-child').toggle();
+            $('.bka-table').find('tbody>tr>td:first-child').toggle();
+        } else if (companiesTab.hasClass('active')) {
+            var ulSupp = $('.ul_supp');
+            if (ulSupp.hasClass('is-select')) {
+                ulSupp.removeClass('is-select');
+            } else {
+                ulSupp.addClass('is-select');
+            }
+        }
     });
     //Choose plant or car model
     $('#s-plant').change(function() {
@@ -936,6 +947,7 @@ $(function() {
   $('#show-map-a').on('click', function () {
     var bkaTab = $('#bka-tab');
     var partTab = $('#part-tab');
+    var companiesTab = $('#companies-tab');
     var activeTab = null;
     var activeId = null;
 
@@ -945,17 +957,23 @@ $(function() {
     } else if (partTab.hasClass('active')) {
       activeTab = partTab;
       activeId = '#part-tab'
+    } else if (companiesTab.hasClass('active')) {
+      activeTab = companiesTab;
+      activeId = '#companies-tab';
     }
-    // 隐藏thead
-    var table = activeTab.find('table');
-    table.addClass('inline-lg');
-    table.find('thead tr th').hide();
-    table.find('thead tr th.see-in-map').show();
-    // 隐藏tbody
-    var tbodyTrs = table.find('tbody tr');
-    tbodyTrs.find('td').hide();
-    tbodyTrs.find('td.see-in-map').show();
-
+    if (activeTab === bkaTab || activeTab === partTab) {
+      // 隐藏thead
+      var table = activeTab.find('table');
+      table.addClass('inline-lg');
+      table.find('thead tr th').hide();
+      table.find('thead tr th.see-in-map').show();
+      // 隐藏tbody
+      var tbodyTrs = table.find('tbody tr');
+      tbodyTrs.find('td').hide();
+      tbodyTrs.find('td.see-in-map').show();
+    } else {
+        $('.ul-supp-parent').addClass('see-in-map');
+    }
     // 显示地图
     $(activeId + '-map').show();
     // 转化按钮
@@ -968,6 +986,7 @@ $(function() {
   $('#hide-map-a').on('click', function () {
     var bkaTab = $('#bka-tab');
     var partTab = $('#part-tab');
+    var companiesTab = $('#companies-tab');
     var activeTab = null;
     var activeId = null;
 
@@ -977,15 +996,22 @@ $(function() {
     } else if (partTab.hasClass('active')) {
       activeTab = partTab;
       activeId = '#part-tab'
+    } else if (companiesTab.hasClass('active')) {
+      activeTab = companiesTab;
+      activeId = '#companies-tab'
     }
-    // 隐藏thead
-    var table = activeTab.find('table');
-    table.removeClass('inline-lg');
-    table.find('thead tr th').show();
-    table.find('thead tr th :checkbox').parent().hide();
-    // 隐藏tbody
-    table.find('tbody tr td').show();
-    table.find('tbody tr td :checkbox').parent().hide();
+    if (companiesTab === activeTab) {
+      $('.ul-supp-parent').removeClass('see-in-map');
+    } else {
+      // 隐藏thead
+      var table = activeTab.find('table');
+      table.removeClass('inline-lg');
+      table.find('thead tr th').show();
+      table.find('thead tr th :checkbox').parent().hide();
+      // 隐藏tbody
+      table.find('tbody tr td').show();
+      table.find('tbody tr td :checkbox').parent().hide();
+    }
 
     // 显示地图
     $(activeId + '-map').hide();
@@ -996,6 +1022,10 @@ $(function() {
     $('.only-see-in-map').hide();
   });
 
+  $('.add-post-panel-btn-group').on('click', 'button', function () {
+      $('.add-post-panel-btn-group .btn-primary').removeClass('btn-primary').addClass('btn-default');
+      $(this).removeClass('btn-default').addClass('btn-primary');
+  })
 
 });
 
