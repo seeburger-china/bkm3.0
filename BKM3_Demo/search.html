@@ -591,8 +591,9 @@
                         <p>Assign to BKA</p>
                     </a>
                 </li>
+                <!--<li  class="company-action">-->
                 <li  class="company-action">
-                    <a href="#">
+                    <a onclick="showPanel('invitepannel');" >
                         <i class="ion-compose icon-btn"></i>
                         <p>Invite</p>
                     </a>
@@ -622,7 +623,37 @@
                 <i class="ion-map"></i>
             </a>
             -->
+            <div class="floatpanel" id="invitepannel">
+                <h5><i class="ion-ios-plus-outline icon-small"></i>  Invite a new partner</h5>
+                <br><br>
+
+                    <!--<div class=" btn-group ">-->
+                        <!--<button type=" button" class="btn btn-default ">Select a comapny</button>-->
+                        <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                            <!--<span class="caret"></span>-->
+                            <!--<span class="sr-only">Toggle Dropdown</span>-->
+                        <!--</button>-->
+                        <!--<ul class=" btn-group-dropdown dropdown-menu">-->
+                            <!--<li><a href="#">company1</a></li>-->
+                            <!--<li><a href="#">company2</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <select class="form-control">
+                </select>
+                <br><br><br>
+                <p>not found?introduce a new one</p>
+                <div>
+                    <input type="text" class="form-control" placeholder="E-mail Address" aria-describedby="basic-addon2">
+                </div>
+                <br><br>
+
+                <div class="btngroup">
+                    <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="showPanel('panel2');">Invite</button>
+                </div>
+            </div>
         </div>
+
         <div class="row">
                         <div class="col-sm-12 tab-content" >
                             <div class="tab-pane active" role="tabpanel" id="bka-tab">
@@ -1735,9 +1766,9 @@
             </div>
     </div>
         
-<div class="footer">
-    上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
-</div>
+<!--<div class="footer">-->
+    <!--上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved-->
+<!--</div>-->
 <!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <script src="scripts/9a737976.vendor.js"></script>
 <script src="scripts/10ffdb3e.main.js"></script>
