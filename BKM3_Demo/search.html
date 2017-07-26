@@ -358,11 +358,64 @@
                     <div class="filter-item">
                         <span class="title">Sub-supplier:</span>
                         <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="All">All</option>
                             <option value="nb">410004321-Ningbohuaxiang</option>
                             <option value="yz">442043256-Yizhenghuifeng</option>
                         </select>
                     </div>
+
+                    <div class="filter-item">
+                        <span class="title">Supplier Provinces:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="01">Beijing</option>
+                            <option value="02">Shanghai</option>
+                            <option value="03">Zhejiang</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <span class="title">Supplier Cities :</span>
+                        <select class="selectpicker" id="f-Supplier-cities" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="01">Beijing</option>
+                            <option value="02">Shanghai</option>
+                            <option value="03">Hangzhou</option>
+                        </select>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <span class="title">component:</span>&nbsp;
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="selitem">Components and parts 零部件</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li class="dropdown-header">Components and parts 零部件</li>
+                            <li><a href="#">Metal parts 金属件</a></li>
+                            <li><a href="#">Plastic parts 塑料件</a></li>
+                            <li><a href="#">Electronic components 电子元器件</a></li>
+                            <li><a href="#">Wire harness 线束</a></li>
+                            <li><a href="#">Rubber parts 橡胶件</a></li>
+                            <li><a href="#">others 其他</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Material 原材料</li>
+                            <li><a href="#">Steel 钢材</a></li>
+                            <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+                            <li><a href="#">Plastic 塑料</a></li>
+                            <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+                            <li><a href="#">Chemicals 化学品</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+                            <li><a href="#">Painting 油漆</a></li>
+                            <li><a href="#">Coating 电镀或涂层</a></li>
+                            <li><a href="#">Machining 机加工</a></li>
+                            <li><a href="#">Welding 焊接</a></li>
+                            <li><a href="#">Polishing 抛光</a></li>
+                            <li><a href="#">Others 其他</a></li>
+                        </ul>
+                    </div>
+
+
+
                     <div class="filter-item">
                         <span class="title">Date of last edit:</span>
                         <div class="form-group">
@@ -639,9 +692,12 @@
                         <!--</ul>-->
                     <!--</div>-->
                 <select class="form-control">
+                    <option>Select a company</option>
+                    <option>company1</option>
+                    <option>company2</option>
                 </select>
                 <br><br><br>
-                <p>not found?introduce a new one</p>
+                <p>not found?<a href="#">Introduce a new one</a></p>
                 <div>
                     <input type="text" class="form-control" placeholder="E-mail Address" aria-describedby="basic-addon2">
                 </div>
@@ -701,12 +757,21 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);" class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
                                 <div>
                                     <div class="inline-block">
                                         <a href="javascript:void(0);">
                                             <i class="ion-ios-pricetag blue icon-small"></i>
                                         </a>
-                                        <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                        <div class=" tag-tooltip detail-info-panel detail-info-panel-close" style="display:none;">
                                             <ul>
                                                 <li>Critical</li>
                                             </ul>
@@ -784,6 +849,15 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
                                 <div>
                                     <a>
                                         <i class="ion-ios-pricetag-outline icon-small blue"></i>
@@ -856,6 +930,15 @@
                             </td>
                             <td class="has-detail-info ">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
                                 <div>
                                     <a>
                                         <span class="icon-wrap">
@@ -932,6 +1015,15 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
                                 <div>
                                     <a>
                                         <span class="icon-wrap">
@@ -1038,6 +1130,15 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);" class="a-NoLine">5 Parts</a>
+                                <div class="detail-info-panel" style="display:none;">
+                                    <ul>
+                                        <li>5GD XXXX 0001</li>
+                                        <li>5GD XXXX 0002</li>
+                                        <li>5GD XXXX 0003</li>
+                                        <li>5GD XXXX 0004</li>
+                                        <li>5GD XXXX 0005</li>
+                                    </ul>
+                                </div>
                                 <div>
                                     <div class="inline-block">
                                         <a>
