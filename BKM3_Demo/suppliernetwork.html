@@ -18,6 +18,9 @@
         
 
         <style type="text/css">
+            select.form-control{
+                background:none;
+            }
             .box i{
                 display: block;
                 color:#149bdf;
@@ -25,10 +28,13 @@
                 float:right;
                 position:absolute;
                 right:10px;
-                bottom:5px;
+                top:10px;
                 font-weight: bold;
             }
-           
+            
+            .box h5{
+                font-weight: bold;
+            }
             .right_container{
                 position:absolute;
                 right:40px;
@@ -53,7 +59,8 @@
             .center_container .box .date{
                 position:absolute;
                 right:20px;
-                top:10px;
+                
+                bottom:5px;
                 color:#999;
             }
             .center_container .box h5{
@@ -323,23 +330,28 @@
                     </p>
                 </div>
                 <div class='box'>
-                    <h5>Company Profile</h5>
+                    <h5>Company Profile <span class="glyphicon glyphicon-edit blue" style="float:right;cursor: pointer"></span></h5>
                     <p>Profile infomation</p>
                 </div>
                 
             </div>
             <div class='right_container'>
-                <h5 style='text-align: center;'><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
+                <h5 style=''><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
                 <br> 
-                <a href="#" onclick="showPanel('panel1');">Select a supplier</a>
+                <select class="form-control">
+                <option>Select a company</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+                <!--a href="#" onclick="showPanel('panel1');">Select a supplier</a-->
                 
                 <br>
                 <br>
                 <p>not found? <a href="#">Introduce a new one</a></p>
                 <br>
                 
-                <input type="text" class="form-control" id="cname" placeholder="Company Name">
-                <br>
                 <input type="text" class="form-control" id="cname" placeholder="Email Address">
                 <br>
                 <button type="submit" class="btn btn-primary" style="float:right;">Invite</button>
@@ -353,8 +365,8 @@
                     </div>
                     <p>Your (in-direct) customer Longcheng Precision Forging has been added into your supply-chain. 
                         <br><a href="#">See details...</a></p>
-                    <i class="ion-arrow-up-c icon "></i>
-                    <i class="ion-android-remove icon" style="bottom:12px;right:9px;"></i>
+                    <i class="ion-arrow-up-c icon already"></i>
+                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>
                     
                 </div>
                 <div class='box'>
