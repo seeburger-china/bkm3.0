@@ -5929,10 +5929,12 @@ input[type="checkbox"] {
         .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel {
           position: absolute;
           padding: 10px;
+
           z-index: 99;
           top: -30px;
           right: -140px;
           min-width: 160px;
+
           max-height: 200px;
           border-radius: 4px;
           overflow-y: auto;

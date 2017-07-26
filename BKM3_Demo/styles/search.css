@@ -17,3 +17,8 @@
 .btn-group-dropdown{
  width:100%;
 }
+
+.tag-tooltip{
+  pading:6px;
+  min-width: 100px;
+}
