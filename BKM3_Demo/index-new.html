@@ -17,11 +17,12 @@
 
         <style type="text/css">
             .box{
-                min-width: 340px !important;
-                width: 340px !important;
-                max-width: 340px !important;
+                min-width: 360px !important;
+                width: 360px !important;
+                max-width: 360px !important;
                 flex-grow: 0;
                 flex-shrink: 0;
+                margin:10px 10px !important;
             }
             .left_container{
                 display: flex;
@@ -34,7 +35,7 @@
             .right_container{
                 position:absolute;
                 right:40px;
-                top:20px;
+                top:10px;
                 width:260px;
                 min-height: 640px;
             }
@@ -603,6 +604,7 @@
 
         <script type="text/javascript">
                $(function(){
+                   $(".tab1").hide();
                    $('#carouselBox').on('slide.bs.carousel', function (event) {
                        $(".tab1,.tab2").show();
                         $("."+event.relatedTarget.id).hide();
