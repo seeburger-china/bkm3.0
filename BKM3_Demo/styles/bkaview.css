@@ -67,3 +67,7 @@
 .block-down{
   margin-top: 130px;
 }
+
+.btn-rect {
+  border-radius: 0;
+}
