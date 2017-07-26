@@ -10,12 +10,19 @@
         <link rel="stylesheet" href="./styles/ac6cffee.main.css">
         <link rel="stylesheet" href="./styles/extend.css" />
         <link rel="stylesheet" href=./fonts/ionicons.svg>
-
+    <a href="index-new.html"></a>
         <script src="./scripts/jquery-3.2.1.min.js" ></script>
         <script src="./scripts/bootstrap-switch.js" ></script>
         <script src="./scripts/common.js" ></script>
 
         <style type="text/css">
+            .box{
+                min-width: 340px !important;
+                width: 340px !important;
+                max-width: 340px !important;
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
             .left_container{
                 display: flex;
                 margin:0 20px;
@@ -264,14 +271,7 @@
                             <option value="C2">Capatity Warning Tag</option>
                         </select>
                     </div>
-                    <div class="filter-item">
-                        <span class="title">Untag:</span>
-                        <select class="selectpicker" data-filter-type="global" data-label="Plant">
-                            <option value="78">AI Tag</option>
-                            <option value="C2">System Tag</option>
-                            <option value="C2">User Defined Tag</option>
-                        </select>
-                    </div>
+                    
                     <div class="filter-item">
                         <span class="title">Is Have Sub-BKA:</span>
                         <label for="f-validity-valid">
@@ -373,6 +373,19 @@
                                 <span class="badge">40</span>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <i class="ion-calculator icon"></i><br>
+                                <a href="#" class="iconname">Inventory Update</a>
+                                <span class="badge">3</span>
+                            </td>
+                            <td>
+                               
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <div class='box'>
@@ -385,26 +398,91 @@
                     
                     <img src='./images/chart2.png' />
                 </div>
+                
                 <div class='box'>
-                    <h4><span class='glyphicon glyphicon-blackboard blue'></span> Suppliers Statistics</h4>
-                    <br>
-                    <table class='left_title_table'>
-                        <tr>
-                            <td colspan="2">Nominated</td>
-                        </tr>
-                        <tr>
-                            <td>Profiles</td>
-                            <td>650</td>
-                        </tr>
-                        <tr>
-                            <td>Users</td>
-                            <td>1300</td>
-                        </tr>
-                        <tr>
-                            <td>Activity last 30 days</td>
-                            <td>600</td>
-                        </tr>
-                    </table>
+                    <div id="carouselBox" class="carousel slide" data-ride="carousel">
+                        
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active" id="tab1">
+                            <h4><span class="ion-monitor icon  icon-small blue"></span>
+                    Direct Suppliers Statistics</h4>
+                            <br>
+                            <table class='left_title_table'>
+                                <tr>
+                                    <td colspan="2">Nominated</td>
+                                </tr>
+                                <tr>
+                                    <td>Profiles</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>Users</td>
+                                    <td>1300</td>
+                                </tr>
+                                <tr>
+                                    <td>Activity last 30 days</td>
+                                    <td>600</td>
+                                </tr>
+                            </table>
+                          </div>
+                          <div class="item" id="tab2">
+                            <h4><span class="ion-monitor icon  icon-small blue"></span>Indirect Suppliers Statistics</h4>
+                            <br>
+                            <table class='left_title_table'>
+                                <tr>
+                                    <td colspan="2">Nominated</td>
+                                </tr>
+                                <tr>
+                                    <td>Profiles</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>Users</td>
+                                    <td>1300</td>
+                                </tr>
+                                <tr>
+                                    <td>Activity last 30 days</td>
+                                    <td>600</td>
+                                </tr>
+                            </table>
+                            
+                          </div>
+                          
+                        </div>
+                     
+                    <a  href="#carouselBox" role="button" data-slide-to="1" class="tab2">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     </a>
+                        
+                    <a  href="#carouselBox" role="button" data-slide-to="0" class="tab1">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     </a>
+                    </div>
+                    
+                </div>
+                <div class="box">
+                        <h4><span class="ion-android-share-alt icon  icon-small blue"></span>
+                        Supply Chains Filling</h4>
+                            <br>
+                            <table class='left_title_table'>
+                                <tr>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Supply Chains Filling</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td>BKA With Supply Chains</td>
+                                    <td>108</td>
+                                </tr>
+                                <tr>
+                                    <td>Total BKAs</td>
+                                    <td>120</td>
+                                </tr>
+                            </table>
                 </div>
             </div>
             <div class='right_container'>
@@ -495,7 +573,13 @@
             </div>
         </div>
         <script type="text/javascript">
-
+               $(function(){
+                   $('#carouselBox').on('slide.bs.carousel', function (event) {
+                       $(".tab1,.tab2").show();
+                        $("."+event.relatedTarget.id).hide();
+                    });
+               });
+               
         </script>
         
 <script src="scripts/9a737976.vendor.js"></script>
