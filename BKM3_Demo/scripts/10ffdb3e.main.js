@@ -971,6 +971,7 @@ $(function() {
       var tbodyTrs = table.find('tbody tr');
       tbodyTrs.find('td').hide();
       tbodyTrs.find('td.see-in-map').show();
+      $(activeId + ' .only-see-in-map').show();
     } else {
         $('.ul-supp-parent').addClass('see-in-map');
     }
@@ -979,8 +980,6 @@ $(function() {
     // 转化按钮
     $('#show-map-a').hide();
     $('#hide-map-a').show();
-
-    $('.only-see-in-map').show();
   });
 
   $('#hide-map-a').on('click', function () {
@@ -1011,6 +1010,7 @@ $(function() {
       // 隐藏tbody
       table.find('tbody tr td').show();
       table.find('tbody tr td :checkbox').parent().hide();
+      $(activeId + ' .only-see-in-map').hide();
     }
 
     // 显示地图
@@ -1019,7 +1019,6 @@ $(function() {
     $('#show-map-a').show();
     $('#hide-map-a').hide();
 
-    $('.only-see-in-map').hide();
   });
 
   $('.add-post-panel-btn-group').on('click', 'button', function () {
