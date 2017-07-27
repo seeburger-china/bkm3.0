@@ -345,7 +345,7 @@
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
                 var li = new Array();
-                li.push('<div title="Operator:default user\nDate:2010-01-02 11:22:33" class="treenode '+sign+' " '+(layerid>1?"pos='r'":"")+' >');
+                li.push('<div title="CreateBy:62472\nCreateDate:2017-07-22 11:22:33" class="treenode '+sign+' " '+(layerid>1?"pos='r'":"")+' >');
                 li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
                 li.push('<h5>'+sname+'</h5>');
                 li.push('<p>'+product+': <b>'+ptype+'</b></p>');
@@ -366,6 +366,8 @@
                 buildTreenode("tree1","Supplier",'Microware','Product','Product type','City',0,false,false);
                 buildTreenode("tree1","My Company",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,false,'bd_primary');
                 buildTreenode("tree1","Customer",'Ningbo Huade','Product','Metals','City',2,false,false);
+				buildTreenode("tree1","Customer",'Ningbo Huade','Product','Metals','City',2,false,false);
+				buildTreenode("tree1","Customer",'Ningbo Huade','Product','Metals','City',2,false,false);
                 
                 
                 //删除
