@@ -355,64 +355,7 @@
                             <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-update" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Update-needed"> Update-needed
                         </label>
                     </div>
-                    <div class="filter-item">
-                        <span class="title">Sub-supplier:</span>
-                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="nb">410004321-Ningbohuaxiang</option>
-                            <option value="yz">442043256-Yizhenghuifeng</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-item">
-                        <span class="title">Supplier Provinces:</span>
-                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="01">Beijing</option>
-                            <option value="02">Shanghai</option>
-                            <option value="03">Zhejiang</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-item">
-                        <span class="title">Supplier Cities :</span>
-                        <select class="selectpicker" id="f-Supplier-cities" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="01">Beijing</option>
-                            <option value="02">Shanghai</option>
-                            <option value="03">Hangzhou</option>
-                        </select>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <span class="title">component:</span>&nbsp;
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span class="selitem">Components and parts 零部件</span>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li class="dropdown-header">Components and parts 零部件</li>
-                            <li><a href="#">Metal parts 金属件</a></li>
-                            <li><a href="#">Plastic parts 塑料件</a></li>
-                            <li><a href="#">Electronic components 电子元器件</a></li>
-                            <li><a href="#">Wire harness 线束</a></li>
-                            <li><a href="#">Rubber parts 橡胶件</a></li>
-                            <li><a href="#">others 其他</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Material 原材料</li>
-                            <li><a href="#">Steel 钢材</a></li>
-                            <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
-                            <li><a href="#">Plastic 塑料</a></li>
-                            <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
-                            <li><a href="#">Chemicals 化学品</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
-                            <li><a href="#">Painting 油漆</a></li>
-                            <li><a href="#">Coating 电镀或涂层</a></li>
-                            <li><a href="#">Machining 机加工</a></li>
-                            <li><a href="#">Welding 焊接</a></li>
-                            <li><a href="#">Polishing 抛光</a></li>
-                            <li><a href="#">Others 其他</a></li>
-                        </ul>
-                    </div>
+                  
 
 
 
@@ -467,6 +410,69 @@
 
                         </select>
                     </div>
+					<div class="filter-item">
+                        <span class="title">Country:</span>
+                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="nb"></option>
+                            <option value="yz">China</option>
+							<option value="yz">Aland</option>
+                        </select>
+                        <span class="title">City:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Changzhou,Jiangsu</option>
+                            <option value="02">Suzhou,Jiangsu</option>
+                            <option value="03">Wuxi,Jiangsu</option>
+                        </select>	
+                        <span class="title">N-Tier Supplier:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Chenhua electrical fittings CO.,Ltd</option>
+                            <option value="02">Shanghai  HuiLiang  Forging  Co.,Ltd</option>
+                            <option value="03">Shanghai nanhui rubber products factory</option>
+                        </select>							
+                    </div>
+
+                    <div class="filter-item">
+                        <span class="title">City:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Changzhou,Jiangsu</option>
+                            <option value="02">Suzhou,Jiangsu</option>
+                            <option value="03">Wuxi,Jiangsu</option>
+                        </select>
+                    </div>
+                    <div class="dropdown">
+                        <span class="title">component:</span>&nbsp;
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="selitem">Components and parts 零部件</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li class="dropdown-header">Components and parts 零部件</li>
+                            <li><a href="#">Metal parts 金属件</a></li>
+                            <li><a href="#">Plastic parts 塑料件</a></li>
+                            <li><a href="#">Electronic components 电子元器件</a></li>
+                            <li><a href="#">Wire harness 线束</a></li>
+                            <li><a href="#">Rubber parts 橡胶件</a></li>
+                            <li><a href="#">others 其他</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Material 原材料</li>
+                            <li><a href="#">Steel 钢材</a></li>
+                            <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+                            <li><a href="#">Plastic 塑料</a></li>
+                            <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+                            <li><a href="#">Chemicals 化学品</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+                            <li><a href="#">Painting 油漆</a></li>
+                            <li><a href="#">Coating 电镀或涂层</a></li>
+                            <li><a href="#">Machining 机加工</a></li>
+                            <li><a href="#">Welding 焊接</a></li>
+                            <li><a href="#">Polishing 抛光</a></li>
+                            <li><a href="#">Others 其他</a></li>
+                        </ul>
+                    </div>					
                 </div>
                 <div class="clearfix"></div>
             </div>
