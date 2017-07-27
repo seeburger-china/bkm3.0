@@ -444,11 +444,11 @@
                             <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> BKA/TLK
                         </label>
                         <label for="f-validity-invalid">
-                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No Match
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> NO MATCH
                         </label>
                     </div>   
 					<div class="filter-item">
-                        <span class="title">Break Point Week:</span>
+                        <span class="title">Break Point In:</span>
                         <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
                             <option value="nb"></option>
                             <option value="yz">KW01/17</option>
@@ -465,6 +465,12 @@
 							<option value="yz">KW04/17</option>
 							<option value="yz">KW05/17</option>
                         </select>							
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Notifications:</span>
+                        <label for="f-downgrade">
+                            <input type="checkbox" name="downgradebka" id="f-downgrade" data-filter-type="local" data-label="Status downgrade" value="Yes"> Yes
+                        </label>
                     </div>					
                 </div>
                 <div class="clearfix"></div>
@@ -582,7 +588,7 @@
                                         <span class="ion-ios-pricetag tag-red icon icon-small "></span>
                                         <span class="badge badge-right-top">AI</span>
                                     </span>
-                                    <span class="text-right">Capacity</span>
+                                    <span class="text-right">Critical</span>
                                     </td>
                                 </a>
                             </li>
@@ -615,7 +621,7 @@
                                     <span class="ion-ios-pricetag icon icon-small blue"></span>
                                     <span class="badge badge-right-top badge-blue">AI</span>
                                 </span>
-                                    <span class="text-right">Critical</span>
+                                    <span class="text-right">Capacity</span>
                                 </td>
                                 </a>
                             </li>
@@ -1221,13 +1227,18 @@
                                 <!--<span class="bka-icon"></span>-->
                                 <!--<span class="bka-icon"></span>-->
 
-                                <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
-                                <span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
+                                
+								<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">BKA/TLK</span>
+								<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">NO MATCH</span>
+								<i class="ion-stats-bars  fa-fw blue"></i>
+                                <!--<span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>-->
+								<span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
                                 <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
                                 <a href="javascript:void(0);" class="icon-Favority">
                                     <span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span>
                                 </a>
                                 <span class="bka-icon"><i class="fa ion-calculator fa-fw blue"></i></span>
+								
                                 <!--<span class="bka-icon"><span class="badge">3</span></span>-->
                             </td>
                             <td class="has-detail-info">
