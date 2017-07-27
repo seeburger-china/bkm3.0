@@ -25,7 +25,7 @@
                 font-weight: bold;
                 color:black;
             }
-            .dropdown,.dropup,.dropdown button,.dropup button{
+            .box .dropdown,.dropup,.box .dropdown button,.dropup button{
                 width:100%;
                 text-align: left;
             }
@@ -157,137 +157,22 @@
                 <input type="text" id="tagsinput" data-role="tagsinput">
             </div>
         </div>
-        <div class="folding-panel" style="margin-left:120px;">
+    <div class="folding-panel" style="margin-left:120px;">
             <div class="filter-section">
                 <div class="items col-sm-12">
-                    <h3>System wide filter</h3>
-                    <div class="filter-item">
-                        <span class="title">Demand Senario:</span>
-                        <label for="f-senario-bkm">
-                            <input type="radio" name="senario" id="f-senario-bkm" data-filter-type="global" data-label="Senario" value="BKM" checked="checked"> BKM
-                        </label>
-                        <label for="f-senario-ktb">
-                            <input type="radio" name="senario" id="f-senario-ktb" data-filter-type="global" data-label="Senario" value="KTB"> KTB
-                        </label>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Commodity:</span>
-                        <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
-                            <option value="All">All</option>
-                            <option value="CSX">CSX</option>
-                            <option value="CSM">CSM</option>
-                        </select>
-                        <span class="title">Department:</span>
-                        <select class="selectpicker" id="f-dept" data-filter-type="global" data-label="Department">
-                            <option value="All">All</option>
-                            <option value="CSC-1">CSC-1</option>
-                            <option value="CSC-2">CSC-2</option>
-                        </select>
-                        <span class="title">Buyer:</span>
-                        <div class="form-group">
-                            <div class='input-group'>
-                                <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Supplier:</span>
-                        <div class="form-group">
-                            <div class='input-group'>
-                                <input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Vehicle Class:</span>
-                        <select class="selectpicker" id="f-vehicle-class" data-filter-type="global" data-label="Vehicle Class">
-                            <option value="All">All</option>
-                            <option value="5GD">5GD</option>
-                            <option value="180">180</option>
-                        </select>
-                        <span class="title">Car Model:</span>
-                        <select class="selectpicker" id="f-carmodel" data-filter-type="global" data-label="Car Model">
-                            <option value="All">All</option>
-                            <option value="New Polo">New Polo</option>
-                            <option value="Lamando">Lamando</option>
-                        </select>
-
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Plant:</span>
-                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
-                            <option value="All">All</option>
-                            <option value="78">1000(78)-Anting</option>
-                            <option value="C2">1001(C2)-Beijing</option>
-                        </select>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Relevance:</span>
-                        <label for="f-rel-all">
-                            <input type="checkbox" name="relevance" id="f-rel-all" data-filter-type="global" data-label="Relevance" value="All"> All
-                        </label>
-                        <label for="f-rel-heavy-item">
-                            <input type="checkbox" name="relevance" id="f-rel-heavy-item" data-filter-type="global" data-label="Relevance" value="Heavy-item" checked="checked"> Heavy item
-                        </label>
-                        <label for="f-rel-relevant">
-                            <input type="checkbox" name="relevance" id="f-rel-relevant" data-filter-type="global" data-label="Relevance" value="Relevant" checked="checked"> Relevant
-                        </label>
-                        <label for="f-rel-irrelevant">
-                            <input type="checkbox" name="relevance" id="f-rel-irrelevant" data-filter-type="global" data-label="Relevance" value="Irrelevant"> Irrelevant
-                        </label>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Validity:</span>
-                        <label for="f-validity-all">
-                            <input type="checkbox" name="validity" id="f-validity-all" data-filter-type="global" data-label="Validity" value="All"> All
-                        </label>
-                        <label for="f-validity-valid">
-                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Validity" value="Vaild" checked="checked"> Valid
-                        </label>
-                        <label for="f-validity-invalid">
-                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="Validity" value="Invalid"> Invalid
-                        </label>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">AI Tag:</span>
-                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
-                            <option value="All">All</option>
-                            <option value="78">CRITICAL</option>
-                            <option value="C2">DEMAND</option>
-                            <option value="C2">CAPACITY</option>
-                            <option value="C2">PARTS</option>
-                            <option value="C2">YELLOW</option>
-                        </select>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">System-wide Tag:</span>
-                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
-                            <option value="All">All</option>
-                            <option value="78">2017 Capatity Survey</option>
-                            <option value="C2">2016 Capatity Survey</option>
-                        </select>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">User-defined Tag:</span>
-                        <select class="selectpicker" id="f-plant" data-filter-type="global" data-label="Plant">
-                            <option value="All">All</option>
-                            <option value="78">Inventory Warning Tag</option>
-                            <option value="C2">Capatity Warning Tag</option>
-                        </select>
-                    </div>
-                    <div class="filter-item">
-                        <span class="title">Is Have Sub-BKA:</span>
-                        <label for="f-validity-valid">
-                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
-                        </label>
-                        <label for="f-validity-invalid">
-                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
+                  <div class="filter-item">
+                    <span class="title">BKM Supplier:</span>
+                    <!--<div class="form-group">-->
+                    <!--<div class='input-group'>-->
+                    <!--<input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <select class="selectpicker" id="f-supplier" data-filter-type="global" data-label="Vehicle Supplier">
+                      <option value="All">supplier1</option>
+                      <option value="5GD">supplier2</option>
+                      <option value="180">supplier3</option>
+                    </select>
+                  </div>
 
             <div class="option-section">
                 <div class="items col-sm-12">
@@ -297,6 +182,8 @@
             </div>
         </div>
     </div>
+        </div>
+        </div>
         </div>
         <!-- sear mod begin-->
         
@@ -673,7 +560,88 @@
               </li>
             </ul>
             <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
+            <br><br><br><br><br>
+            <form>
+                            <div class="form-group">
+                              <label for="applyto">Apply to other supply chains?</label>
+                              <br><br>
+                              <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Select supply chains</span>
+                                  <span class="caret"></span>
+                                </button>
+                                <ul  class="dropdown-menu bkadropdown" aria-labelledby="dropdownMenu2">
+                                    <li class="ctree1"><div  class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree2"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1B
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree3"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1C
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree4"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 2A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree5"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 2B
+                                        </label>
+                                    </div></li>
+                                    
+                                </ul>
+                              </div>
             
+                            </div>
+                            <div class="form-group">
+                              <label for="material">Type of Material</label>
+                              <br><br>
+                            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="selitem">Select product or service type</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li class="dropdown-header">Components and parts 零部件</li>
+<li><a href="#">Metal parts 金属件</a></li>
+<li><a href="#">Plastic parts 塑料件</a></li>
+<li><a href="#">Electronic components 电子元器件</a></li>
+<li><a href="#">Wire harness 线束</a></li>
+<li><a href="#">Rubber parts 橡胶件</a></li>
+<li><a href="#">others 其他</a></li>
+                  <li role="separator" class="divider"></li>
+<li class="dropdown-header">Material 原材料</li>
+<li><a href="#">Steel 钢材</a></li>
+<li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+<li><a href="#">Plastic 塑料</a></li>
+<li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+<li><a href="#">Chemicals 化学品</a></li>
+                  <li role="separator" class="divider"></li>
+<li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+<li><a href="#">Painting 油漆</a></li>
+<li><a href="#">Coating 电镀或涂层</a></li>
+<li><a href="#">Machining 机加工</a></li>
+<li><a href="#">Welding 焊接</a></li>
+<li><a href="#">Polishing 抛光</a></li>
+<li><a href="#">Others 其他</a></li>
+
+
+                 
+                </ul>
+              </div>
+            
+                            </div>
+                           
+                           
+                        </form>
             <div class="btngroup">
                 <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
                 <button type="button" class="btn btn-primary btn_applyto"  onclick="$('.mask').click()">Submit</button>
@@ -690,6 +658,53 @@
                         <div class="content">
                         <span>Are you sure delete the supplier?</span>
                         </div>
+                        <div class="divide">&nbsp;</div>
+                        <div class="content">
+                        <form>
+                            <div class="form-group">
+                              <label for="applyto">Apply to other supply chains?</label>
+                              <br><br>
+                              <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Select supply chains</span>
+                                  <span class="caret"></span>
+                                </button>
+                                <ul  class="dropdown-menu bkadropdown" aria-labelledby="dropdownMenu2">
+                                    <li class="ctree1"><div  class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree2"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1B
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree3"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 1C
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree4"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 2A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree5"><div class="checkbox">
+                                        <label>
+                                          <input type="checkbox"> Radlarger 2B
+                                        </label>
+                                    </div></li>
+                                    
+                                </ul>
+                              </div>
+            
+                            </div>
+                            
+                           
+                        </form>
+                        </div>
+                        
                     </div>
                     <div class="modal-footer">
                         <a href=""  data-dismiss="modal">Cancel</a>
@@ -700,6 +715,7 @@
             </div>
             <!-- /.modal-dialog -->
         </div>
+        <!--
         <div class="modal bka-modal fade" id="supplier-Apply-modal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -801,7 +817,7 @@
             </div>
             <!-- /.modal-dialog -->
         </div>
-        
+        -->
         <script type="text/javascript">
 
             function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
@@ -915,7 +931,7 @@
                 });
                 
                 $(".btn_applyto").click(function(){
-                    $('#supplier-Apply-modal').modal();
+                    //$('#supplier-Apply-modal').modal();
                 });
             });
         </script>
