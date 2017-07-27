@@ -17,11 +17,12 @@
 
         <style type="text/css">
             .box{
-                min-width: 340px !important;
-                width: 340px !important;
-                max-width: 340px !important;
+                min-width: 360px !important;
+                width: 360px !important;
+                max-width: 360px !important;
                 flex-grow: 0;
                 flex-shrink: 0;
+                margin:10px 10px !important;
             }
             .left_container{
                 display: flex;
@@ -34,7 +35,7 @@
             .right_container{
                 position:absolute;
                 right:40px;
-                top:20px;
+                top:10px;
                 width:260px;
                 min-height: 640px;
             }
@@ -300,7 +301,7 @@
         <div class='main_container'>
             <div class='left_container'>
                 <div class='box '>
-                    <h4 class="leftcontainer-text">Ningbo Huade Automobile</h4>
+                    <h4 class="leftcontainer-text"><span class="ion-ios-home icon  icon-small blue"></span> Ningbo Huade Automobile</h4>
                     <p class="left-container-text-sm left-container-margin">Lingjianchang</p>
                     <p class="left-container-text-sm">32 supply chain connections</p>
                     <p>
@@ -558,7 +559,8 @@
                         </tr>
                     </table>
                 <br>
-                <h5>User defined<span class="ion-edit icon-pencil icon-margin"></span></h5>
+                <h5>User defined<a href="#edit-tag" data-toggle="modal">
+                        <span class="ion-edit icon-pencil icon-margin"></span></a></h5>
                     <table class='left_title_table'>
                         <tr>
                             <td>
@@ -572,8 +574,37 @@
                     </table>
             </div>
         </div>
+        
+        <div class="modal bka-modal fade" id="edit-tag">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Update User Defined Tag</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                              <label for="inputtag" class="col-sm-2 control-label">Tag name</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="inputtag" placeholder="" value="follow-up 20">
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href=""  data-dismiss="modal">Cancel</a>
+                        <button type="button" class="btn btn-primary"  data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
         <script type="text/javascript">
                $(function(){
+                   $(".tab1").hide();
                    $('#carouselBox').on('slide.bs.carousel', function (event) {
                        $(".tab1,.tab2").show();
                         $("."+event.relatedTarget.id).hide();
