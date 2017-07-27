@@ -1026,6 +1026,10 @@ $(function() {
       $(this).removeClass('btn-default').addClass('btn-primary');
   })
 
+  $('#sub-bka-select').on('change', function () {
+    $('#sub-bka-title').text($(this).val())
+  })
+
 });
 
 

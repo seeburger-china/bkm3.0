@@ -5933,7 +5933,7 @@ input[type="checkbox"] {
           z-index: 99;
           top: -30px;
           right: -140px;
-          min-width: 160px;
+          min-width: 100px;
 
           max-height: 200px;
           border-radius: 4px;
@@ -5944,6 +5944,10 @@ input[type="checkbox"] {
       .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel-close {
         right: -50px;
         top: -20px;
+      }
+      .inner-page.search .table.bka-table tbody > tr td.has-detail-info .detail-info-panel-medium-close {
+        right: -150px;
+        top: -40px;
       }
       .inner-page.search .table.bka-table tbody > tr td.red {
         color: #da9694; }

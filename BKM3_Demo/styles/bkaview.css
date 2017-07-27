@@ -38,7 +38,8 @@
 }
 
 .form-select {
-  width: 88%;
+  padding: 0;
+  width: 86%;
   border: none;
   text-decoration: none;
   box-shadow: none;

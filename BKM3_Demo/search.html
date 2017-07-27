@@ -23,7 +23,7 @@
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-        
+
             .ul_supp{
                 width: 100%;
             }
@@ -382,36 +382,38 @@
                     </div>
 
 
-                    <div class="dropdown">
-                        <span class="title">component:</span>&nbsp;
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span class="selitem">Components and parts 零部件</span>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li class="dropdown-header">Components and parts 零部件</li>
-                            <li><a href="#">Metal parts 金属件</a></li>
-                            <li><a href="#">Plastic parts 塑料件</a></li>
-                            <li><a href="#">Electronic components 电子元器件</a></li>
-                            <li><a href="#">Wire harness 线束</a></li>
-                            <li><a href="#">Rubber parts 橡胶件</a></li>
-                            <li><a href="#">others 其他</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Material 原材料</li>
-                            <li><a href="#">Steel 钢材</a></li>
-                            <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
-                            <li><a href="#">Plastic 塑料</a></li>
-                            <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
-                            <li><a href="#">Chemicals 化学品</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
-                            <li><a href="#">Painting 油漆</a></li>
-                            <li><a href="#">Coating 电镀或涂层</a></li>
-                            <li><a href="#">Machining 机加工</a></li>
-                            <li><a href="#">Welding 焊接</a></li>
-                            <li><a href="#">Polishing 抛光</a></li>
-                            <li><a href="#">Others 其他</a></li>
-                        </ul>
+                    <div class="filter-item">
+                        <div class="dropdown">
+                            <span class="title">Component:</span>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="selitem">Components and parts 零部件</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li class="dropdown-header">Components and parts 零部件</li>
+                                <li><a href="#">Metal parts 金属件</a></li>
+                                <li><a href="#">Plastic parts 塑料件</a></li>
+                                <li><a href="#">Electronic components 电子元器件</a></li>
+                                <li><a href="#">Wire harness 线束</a></li>
+                                <li><a href="#">Rubber parts 橡胶件</a></li>
+                                <li><a href="#">others 其他</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Material 原材料</li>
+                                <li><a href="#">Steel 钢材</a></li>
+                                <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+                                <li><a href="#">Plastic 塑料</a></li>
+                                <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+                                <li><a href="#">Chemicals 化学品</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+                                <li><a href="#">Painting 油漆</a></li>
+                                <li><a href="#">Coating 电镀或涂层</a></li>
+                                <li><a href="#">Machining 机加工</a></li>
+                                <li><a href="#">Welding 焊接</a></li>
+                                <li><a href="#">Polishing 抛光</a></li>
+                                <li><a href="#">Others 其他</a></li>
+                            </ul>
+                        </div>
                     </div>
 
 
@@ -503,7 +505,7 @@
                         <p>Add post</p>
                     </a>
                 </li>
-                
+
                 <li   class="bka-action">
                     <a href="#bka-requestUpdate-modal" data-toggle="modal">
                         <i class="ion-refresh icon-btn"></i>
@@ -631,7 +633,7 @@
                         </div>
                     </a>
                 </li>
-                
+
                 <li class="part-action">
                     <a href="javascript:void(0);"   onclick="downloadReport('7')">
                         <i class="ion-android-share icon-btn"></i>
@@ -771,7 +773,7 @@
                                         <a href="javascript:void(0);">
                                             <i class="ion-ios-pricetag blue icon-small"></i>
                                         </a>
-                                        <div class=" tag-tooltip detail-info-panel detail-info-panel-close" style="display:none;">
+                                        <div class="tag-tooltip detail-info-panel" style="display:none;">
                                             <ul>
                                                 <li>Critical</li>
                                             </ul>
@@ -782,7 +784,7 @@
                                             <i class="ion-ios-pricetag-outline icon-small blue"></i>
                                         </a>
 
-                                        <div class="detail-info-panel" style="display:none;">
+                                        <div class="detail-info-panel detail-info-panel-medium-close" style="display:none;">
                                             <ul>
                                                 <li>Tiguan L Increase</li>
                                             </ul>
@@ -814,7 +816,7 @@
                             </td>
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
-                                <div class="detail-info-panel detail-info-panel-close" style="display:none;">
+                                <div class="detail-info-panel detail-info-panel-medium-close" style="display:none;">
                                     <ul>
                                         <li>BKA status</li>
                                         <li>message</li>
@@ -1565,7 +1567,7 @@
                             <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
                             <small>written by Bian Yunzhou</small>
                             <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
                             <br>Your SAIC-Volkswagen BKM Team
                             <br>
                             </p>
@@ -1576,7 +1578,7 @@
                             <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
                             <small>written by Bian Yunzhou</small>
                             <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
                             <br>Your SAIC-Volkswagen BKM Team
                             <br>
                             </p>
@@ -1587,7 +1589,7 @@
                             <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
                             <small>written by Bian Yunzhou</small>
                             <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
                             <br>Your SAIC-Volkswagen BKM Team
                             <br>
                             </p>
@@ -1598,7 +1600,7 @@
                             <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
                             <small>written by Bian Yunzhou</small>
                             <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
                             <br>Your SAIC-Volkswagen BKM Team
                             <br>
                             </p>
@@ -1866,7 +1868,7 @@
                 <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
             </div>
     </div>
-        
+
 <!--<div class="footer">-->
     <!--上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved-->
 <!--</div>-->
