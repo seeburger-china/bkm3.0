@@ -77,3 +77,24 @@
   font-size: 14px;
 }
 
+
+.row {
+  margin: 5px 0;
+}
+.row .ceil-center {
+  margin-top: 5px;
+}
+
+.input-no-radius {
+  border-radius: 0;
+}
+
+.switch-button .btn.btn-primary {
+  padding: 6px 12px;;
+}
+.switch-button .btn {
+  border-radius: 0;
+}
+.switch-button.center {
+  text-align: center;
+}
