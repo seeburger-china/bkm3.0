@@ -522,12 +522,12 @@
                         <p>Select</p>
                     </a>
                 </li>
-                <li class="post-action company-action">
-                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" >
-                        <i class="ion-android-add icon-btn"></i>
-                        <p>Add post</p>
-                    </a>
-                </li>
+                <!--<li class="post-action company-action">-->
+                    <!--<a id="addPost" href="#" onclick="showPanel('addpostpanel');" >-->
+                        <!--<i class="ion-android-add icon-btn"></i>-->
+                        <!--<p>Add post</p>-->
+                    <!--</a>-->
+                <!--</li>-->
 
                 <li   class="bka-action">
                     <a href="#bka-requestUpdate-modal" data-toggle="modal">
@@ -652,10 +652,31 @@
                                 <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
                                 Tiguan L Increase</td>
                                 <td></a></li>
-
+                            </ul>
                         </div>
                     </a>
                 </li>
+
+                <li  class="bka-action">
+                    <a data-toggle="modal" data-target="#virtualbkaModal">
+                        <i class="ion-ios-plus icon-btn blue"></i>
+                        <p>Virtual BKA</p>
+                    </a>
+                </li>
+
+                <div class="modal fade" id="virtualbkaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p>BkA00000017 ABLAGE TIGUAN YFPO VW316</p>
+                    <p>BkA000000128 ABLAGE TIGUAN YFPO VW316</p>
+                    <p>BkA000000236 ABLAGE TIGUAN YFPO VW316</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 <li class="part-action">
                     <a href="javascript:void(0);"   onclick="downloadReport('7')">
@@ -1896,6 +1917,8 @@
                 <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
             </div>
     </div>
+
+
 
 <!--<div class="footer">-->
     <!--上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved-->
