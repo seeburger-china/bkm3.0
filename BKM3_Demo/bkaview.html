@@ -107,7 +107,7 @@
             <li>
                 <div class="icon-bar">
                     <span class="badge">1</span>
-                    <a class="blue"><i class="ion-ios-pricetag"></i></a>
+                    <!--<a class="blue"><i class="ion-ios-pricetag"></i></a>-->
                 </div>
 
 
@@ -278,11 +278,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" onclick="downloadReport('17')">
+                                <a data-toggle="modal" data-target="#bka-export-modal" >
                                     <i class="ion-android-share icon-btn"></i>
                                     <p>Export</p>
                                 </a>
                             </li>
+
                             <li>
                                 <a href="#comment-modal" data-toggle="modal">
                                     <i class="ion-android-chat icon-btn"></i>
@@ -1258,9 +1259,6 @@
                                 <div class="input-item"><span>Lead time material preparation</span>
                                     <input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
                                 <div class="input-item"><span>number of tools</span>
-                                    <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
-                                </div>
-                                <div class="input-item"><span>inventory</span>
                                     <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
                                 </div>
                             </div>
@@ -2259,10 +2257,6 @@
                                     <span>number of tools</span>
                                     <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
                                 </div>
-                                <div class="input-item">
-                                    <span>inventory</span>
-                                    <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -2539,6 +2533,7 @@
                         <!--</div>-->
                         <br>
                         <div class="item">
+
                             <div class="bka-label">1.Please enter your current inventory of all parts in this BKA:</div>
                             <div>
                                 <div class="row">
@@ -2607,6 +2602,8 @@
                                         <input class="form-control">
                                     </div>
                                 </div>
+
+
                             </div>
 
                         </div><br>

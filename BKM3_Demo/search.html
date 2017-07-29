@@ -309,7 +309,7 @@
                         </select>
                     </div>
                     <div class="filter-item">
-                        <span class="title">Is Have Sub-BKA:</span>
+                        <span class="title">Contain Sub-BKA:</span>
                         <label for="f-validity-valid">
                             <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
                         </label>
@@ -355,69 +355,6 @@
                             <input type="checkbox" name="bka-processing-status" id="f-bka-processing-status-update" data-filter-type="local" data-label="BKA Processing Status"  checked="checked"  value="Update-needed"> Update-needed
                         </label>
                     </div>
-                    <div class="filter-item">
-                        <span class="title">Sub-supplier:</span>
-                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="nb">410004321-Ningbohuaxiang</option>
-                            <option value="yz">442043256-Yizhenghuifeng</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-item">
-                        <span class="title">Supplier Provinces:</span>
-                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="01">Beijing</option>
-                            <option value="02">Shanghai</option>
-                            <option value="03">Zhejiang</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-item">
-                        <span class="title">Supplier Cities :</span>
-                        <select class="selectpicker" id="f-Supplier-cities" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="01">Beijing</option>
-                            <option value="02">Shanghai</option>
-                            <option value="03">Hangzhou</option>
-                        </select>
-                    </div>
-
-
-                    <div class="filter-item">
-                        <div class="dropdown">
-                            <span class="title">Component:</span>
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <span class="selitem">Components and parts 零部件</span>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li class="dropdown-header">Components and parts 零部件</li>
-                                <li><a href="#">Metal parts 金属件</a></li>
-                                <li><a href="#">Plastic parts 塑料件</a></li>
-                                <li><a href="#">Electronic components 电子元器件</a></li>
-                                <li><a href="#">Wire harness 线束</a></li>
-                                <li><a href="#">Rubber parts 橡胶件</a></li>
-                                <li><a href="#">others 其他</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Material 原材料</li>
-                                <li><a href="#">Steel 钢材</a></li>
-                                <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
-                                <li><a href="#">Plastic 塑料</a></li>
-                                <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
-                                <li><a href="#">Chemicals 化学品</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
-                                <li><a href="#">Painting 油漆</a></li>
-                                <li><a href="#">Coating 电镀或涂层</a></li>
-                                <li><a href="#">Machining 机加工</a></li>
-                                <li><a href="#">Welding 焊接</a></li>
-                                <li><a href="#">Polishing 抛光</a></li>
-                                <li><a href="#">Others 其他</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
                     <div class="filter-item">
                         <span class="title">Date of last edit:</span>
                         <div class="form-group">
@@ -469,6 +406,92 @@
 
                         </select>
                     </div>
+					<div class="filter-item">
+                        <span class="title">Country:</span>
+                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="nb"></option>
+                            <option value="yz">China</option>
+							<option value="yz">Aland</option>
+                        </select>
+                        <span class="title">City:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Changzhou,Jiangsu</option>
+                            <option value="02">Suzhou,Jiangsu</option>
+                            <option value="03">Wuxi,Jiangsu</option>
+                        </select>	
+                        <span class="title">n-Tier Supplier:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Chenhua electrical fittings CO.,Ltd</option>
+                            <option value="02">Shanghai  HuiLiang  Forging  Co.,Ltd</option>
+                            <option value="03">Shanghai nanhui rubber products factory</option>
+                        </select>							
+                    </div>
+
+                    <div class="filter-item">
+                        <span class="title">Type of Material:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Metal parts 金属件</option>
+                            <option value="02">Plastic parts 塑料件</option>
+                            <option value="03">Wire harness 线束</option>
+                        </select>
+                    </div>
+                     <div class="filter-item">
+                        <span class="title">Other Demand:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> BKA/TLK
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> NO MATCH
+                        </label>
+                    </div>   
+					<div class="filter-item">
+                        <span class="title">Break Point In:</span>
+                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="nb"></option>
+                            <option value="yz">KW01/17</option>
+							<option value="yz">KW02/17</option>
+							<option value="yz">KW03/17</option>
+							<option value="yz">KW04/17</option>
+							<option value="yz">KW05/17</option>
+                        </select><span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="yz">KW01/17</option>
+							<option value="yz">KW02/17</option>
+							<option value="yz">KW03/17</option>
+							<option value="yz">KW04/17</option>
+							<option value="yz">KW05/17</option>
+                        </select>							
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Notifications:</span>
+                        <label for="f-downgrade">
+                            <input type="checkbox" name="downgradebka" id="f-downgrade" data-filter-type="local" data-label="Status downgrade" value="Yes"> Yes
+                        </label>
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Capacity increasing period (week):</span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+						</div>
+                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Part lead time (week):</span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+						</div>
+                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                    </div>						
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -499,12 +522,13 @@
                         <p>Select</p>
                     </a>
                 </li>
-                <li class="company-action">
-                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" >
-                        <i class="ion-android-add icon-btn"></i>
-                        <p>Add post</p>
-                    </a>
-                </li>
+
+                <!--<li class="post-action company-action">-->
+                    <!--<a id="addPost" href="#" onclick="showPanel('addpostpanel');" >-->
+                        <!--<i class="ion-android-add icon-btn"></i>-->
+                        <!--<p>Add post</p>-->
+                    <!--</a>-->
+                <!--</li>-->
 
                 <li   class="bka-action">
                     <a href="#bka-requestUpdate-modal" data-toggle="modal">
@@ -585,7 +609,7 @@
                                         <span class="ion-ios-pricetag tag-red icon icon-small "></span>
                                         <span class="badge badge-right-top">AI</span>
                                     </span>
-                                    <span class="text-right">Capacity</span>
+                                    <span class="text-right">Critical</span>
                                     </td>
                                 </a>
                             </li>
@@ -618,7 +642,7 @@
                                     <span class="ion-ios-pricetag icon icon-small blue"></span>
                                     <span class="badge badge-right-top badge-blue">AI</span>
                                 </span>
-                                    <span class="text-right">Critical</span>
+                                    <span class="text-right">Capacity</span>
                                 </td>
                                 </a>
                             </li>
@@ -629,10 +653,38 @@
                                 <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
                                 Tiguan L Increase</td>
                                 <td></a></li>
-
+                            </ul>
                         </div>
                     </a>
                 </li>
+
+                <li  class="bka-action">
+                    <a data-toggle="modal" data-target="#virtualbkaModal">
+                        <i class="ion-ios-plus icon-btn blue"></i>
+                        <p>Virtual BKA</p>
+                    </a>
+                </li>
+
+                <div class="modal fade" id="virtualbkaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Virtual BKA</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p><span class="blue"><u>X</u></span><span class="black">  BkA000000017 ABLAGE TIGUAN                                     YFPO VW316</span></p>
+                                <p><span class="blue"><u>X</u></span><span class="black">  BkA000000128 ABLAGE TIGUAN                                     YFPO VW316</span></p>
+                                <p><span class="blue"><u>X</u></span><span class="black">  BkA000000236 ABLAGE TIGUAN                                     YFPO VW316</span></p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="blue">Clean List</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Show Virtual BKA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <li class="part-action">
                     <a href="javascript:void(0);"   onclick="downloadReport('7')">
@@ -727,7 +779,7 @@
                                         <th style="width: 100px">Buyer</th>
                                         <th style="width: 100px">Workflow</th>
                                         <th style="width: 110px">Parts</th>
-                                        <th style="width: 240px">Demand</th>
+                                        <th style="width: 240px">Flag</th>
                                         <th style="width: 150px">Status</th>
                                         <th><i class="ion-record"></i></th>
                                         <th class="only-see-in-map my-hidden"></th>
@@ -808,14 +860,42 @@
                             <!--</ul>-->
                             <!--</div>								-->
                             <!--</td>							-->
-                            <td class="icon-cell">
+                            <td class="has-detail-info icon-cell ">
                                 <span class="bka-icon"></span>
-                                <span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
-                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
-                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"></span>
+                                <span class="bka-icon"></span>
+
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-bolt-outline fa-fw black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Quotation Error</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>-->
+                                <!--<a href="javascript:void(0);"  ><span class="bka-icon"><i                                            class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>-->
                             </td>
+
                             <td class="has-detail-info">
-                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue                                            icon-big"></i></a>
                                 <div class="detail-info-panel detail-info-panel-medium-close" style="display:none;">
                                     <ul>
                                         <li>BKA status</li>
@@ -888,11 +968,24 @@
                             <!--</ul>-->
                             <!--</div>								-->
                             <!--</td>							-->
-                            <td class="icon-cell">
+                            <td class="has-detail-info icon-cell">
                                 <span class="bka-icon"></span>
                                 <span class="bka-icon"></span>
                                 <span class="bka-icon"></span>
-                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
+                                <span class="bka-icon"></span>
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>-->
                                 <!--<span class="bka-icon"><span class="badge">3</span></span>-->
                             </td>
                             <td class="has-detail-info">
@@ -971,12 +1064,49 @@
                             <!--</ul>-->
                             <!--</div>								-->
                             <!--</td>							-->
-                            <td class="icon-cell">
-                                <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                            <td class="has-detail-info icon-cell">
                                 <span class="bka-icon"></span>
-                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
-                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
-                                <!--<span class="bka-icon">5</span>-->
+                                <!--<span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="ion-ios-checkmark-outline black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Downgrade</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <span class="bka-icon"></span>
+                                <!--<span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-bolt-outline fa-fw black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Quotation Error</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </td>
 
                             <td class="has-detail-info">
@@ -1086,15 +1216,55 @@
                             <!--</ul>-->
                             <!--</div>								-->
                             <!--</td>							-->
-                            <td class="icon-cell">
-                                <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                            <td class="has-detail-info icon-cell">
                                 <span class="bka-icon"></span>
-                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
-                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
-                                <!--<span class="bka-icon"></span>-->
+                                <!--<span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="ion-ios-checkmark-outline black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Downgrade</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <span class="bka-icon"></span>
+                                <!--<span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-bolt-outline fa-fw black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Quotation Error</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);"class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </td>
+
                             <td class="has-detail-info">
-                                <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
+                                <a href="javascript:void(0);" class="a-NoLine">
+                                    <i class="ion-chatboxes blue icon-big"></i>
+                                </a>
                                 <div class="detail-info-panel detail-info-panel-close" style="display:none;">
                                     <ul>
                                         <li>BKA status</li>
@@ -1102,6 +1272,7 @@
                                     </ul>
                                 </div>
                             </td>
+
                             <td> <span class="red-circle">9</span></td>
                             <td class="only-see-in-map my-hidden"><span class="ion-ios-location icon-lg blue"></span></td>
                             <!--<td><a href="/bkaview.html"><i class="fa fa-chevron-right"></i></a></td>-->
@@ -1220,19 +1391,85 @@
                             <!--</ul>-->
                             <!--</div>									-->
                             <!--</td>							-->
-                            <td class="icon-cell">
+                            <td class="has-detail-info icon-cell">
                                 <!--<span class="bka-icon"></span>-->
                                 <!--<span class="bka-icon"></span>-->
 
-                                <span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>
+                                
+								<!--<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">BKA/TLK</span>-->
+								<!--<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">NO MATCH</span>-->
+                                <!--<span class="bka-icon"><i class="ion-stats-bars  fa-fw blue"></i></span>-->
+                                <div class=" inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="ion-stats-bars  fa-fw blue"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Sub-BKA</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<span class="bka-icon"><i class="ion-ios-checkmark-outline "></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="ion-ios-checkmark-outline black"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Downgrade</li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
-                                <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>
-                                <a href="javascript:void(0);" class="icon-Favority">
-                                    <span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span>
-                                </a>
-                                <span class="bka-icon"><i class="fa ion-calculator fa-fw blue"></i></span>
-                                <!--<span class="bka-icon"><span class="badge">3</span></span>-->
+                                <!--<span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-bolt-outline fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Quotation Error</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--<a href="javascript:void(0);" class="icon-Favority">-->
+                                    <!--<span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star                                                  fa-fw"></i></span>-->
+                                <!--</a>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);" class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star                                                                           fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<span class="bka-icon"><i class="fa ion-calculator fa-fw blue"></i></span>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);" class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-calculator fa-fw blue"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Inventory</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </td>
+
                             <td class="has-detail-info">
                                 <a href="javascript:void(0);"  class="a-NoLine"> <i class="ion-chatboxes blue icon-big"></i></a>
                                 <div class="detail-info-panel detail-info-panel-close" style="display:none;">
@@ -1296,12 +1533,24 @@
                             <!--</ul>-->
                             <!--</div>								-->
                             <!--</td>							-->
-                            <td class="icon-cell">
+                            <td class="has-detail-info icon-cell">
                                 <span class="bka-icon"></span>
                                 <span class="bka-icon"></span>
                                 <span class="bka-icon"></span>
-                                <a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>
-                                <!--<span class="bka-icon"></span>-->
+                                <span class="bka-icon"></span>
+                                <!--<a href="javascript:void(0);" class="icon-Favority"><span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star fa-fw"></i></span></a>-->
+                                <div class="inline-block">
+                                    <a href="javascript:void(0);" class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-ios-star-outline ion-ios-star                                                                           fa-fw"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Favorite</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </td>
                             <td></td>
                             <td> <span class="red-circle">8</span></td>
@@ -1335,7 +1584,7 @@
                             <th>Supplier</th>
                             <th>Buyer</th>
                             <th>Status</th>
-                            <th></th>
+                            <th class="see-in-map"></th>
                             <th class="only-see-in-map my-hidden"></th>
                         </tr>
                         </thead>
@@ -1361,7 +1610,7 @@
                                 <p>Not assigned</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class="see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1387,7 +1636,7 @@
                                 <p>New</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class=" see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1415,7 +1664,7 @@
                                 <p>Not assigned</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class=" see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1442,7 +1691,7 @@
                                 <p>Not assigned</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class=" see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1469,7 +1718,7 @@
                                 <p>Not assigned</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class="see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1496,7 +1745,7 @@
                                 <p>Not assigned</p>
                                 <p><small>Yesterday</small></p>
                             </td>
-                            <td class="icon-cell-right">
+                            <td class="see-in-map icon-cell-right">
                                 <a href="bkacreate.html">Add to BKA...</a>
                                 <a href="bkacreate.html"><i class="fa fa-chevron-right"></i></a>
                             </td>
@@ -1868,6 +2117,8 @@
                 <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
             </div>
     </div>
+
+
 
 <!--<div class="footer">-->
     <!--上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved-->

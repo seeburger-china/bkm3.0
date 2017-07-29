@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./styles/0aa82dc1.vendor.css">
         <link rel="stylesheet" href="./styles/ac6cffee.main.css">
         <link rel="stylesheet" href="./styles/extend.css" />
+        
         <link rel="stylesheet" href="./styles/3.0/common.css" />
         <link rel="stylesheet" href=./fonts/ionicons.svg>
 
@@ -31,7 +32,14 @@
                 top:10px;
                 font-weight: bold;
             }
-            
+            .box.warning{
+                padding-left: 40px;
+            }
+            i.ion-android-warning{
+                top:40%;
+                left:10px;
+                color:red;
+            }
             .box h5{
                 font-weight: bold;
             }
@@ -212,9 +220,10 @@
                             <!--</div>-->
                         <!--</div>-->
                       <select class="selectpicker" id="f-supplier" data-filter-type="global" data-label="Vehicle Supplier">
-                        <option value="All">supplier1</option>
-                        <option value="5GD">supplier2</option>
-                        <option value="180">supplier3</option>
+							<option value="01"></option>
+                            <option value="01">Chenhua electrical fittings CO.,Ltd</option>
+                            <option value="02">Shanghai  HuiLiang  Forging  Co.,Ltd</option>
+                            <option value="03">Shanghai nanhui rubber products factory</option>
                       </select>
                     </div>
                     <!--<div class="filter-item">-->
@@ -348,9 +357,6 @@
                 <!--a href="#" onclick="showPanel('panel1');">Select a supplier</a-->
                 
                 <br>
-                <br>
-                <p>not found? <a href="#">Introduce a new one</a></p>
-                <br>
                 
                 <input type="text" class="form-control" id="cname" placeholder="Email Address">
                 <br>
@@ -358,17 +364,6 @@
             </div>
             
                 <div class='center_container'>
-                <div class='box'>
-                    <h5>Your Supply-chain Update</h5>
-                    <div class="date">
-                        Yesterday
-                    </div>
-                    <p>Your (in-direct) customer Longcheng Precision Forging has been added into your supply-chain. 
-                        <br><a href="#">See details...</a></p>
-                    <i class="ion-arrow-up-c icon already"></i>
-                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>
-                    
-                </div>
                 <div class='box'>
                     <h5>Yangfei AI <span>announcement</span></h5>
                     <div class="date">
@@ -379,9 +374,24 @@
                     <br><br>Your SAIC-Volkswagen BKM Team
                     </p>
                     <p><a href="#">Share</a></p>
-                    <i class="ion-arrow-up-c icon "></i>
-                </div>
+                    <i class="ion-arrow-up-c icon already"></i>
+                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>
+                </div>				
                 <div class='box'>
+                    <h5>Your Supply-chain Update</h5>
+                    <div class="date">
+                        Yesterday
+                    </div>
+                    <p>Your (in-direct) customer Longcheng Precision Forging has been added into your supply-chain. 
+                        <br><a href="#">See details...</a></p>
+						<i class="ion-arrow-up-c icon "></i>
+                    
+                </div>
+
+
+                <div class='box'>
+
+                <div class='box warning'>
                     <h5>Your Supply-chain Update</h5>
                     <div class="date">
                         Last Week
@@ -389,6 +399,8 @@
                     <p>Your (sub-) supplier Longcheng Precision Forging has been added into your supply-chain
                         <br><a href="#">See details...</a></p>
                     <i class="ion-arrow-up-c icon "></i>
+                    <i class="ion-android-warning icon "></i>
+                    
                 </div>
                 <div class='box'>
                     <h5>Your Supply-chain Update</h5>

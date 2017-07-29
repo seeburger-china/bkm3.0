@@ -88,13 +88,13 @@
             </ul>
         </div>
         <div class="main admin">
-            <h3>BKA Tag Information</h3>
+            <h3>BKA Tags Information</h3>
             <div class="admin-panel">
                 <div role="tabpanel">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="active"><a href="#system-tag-tab" data-toggle="tab">System-Wide Tag</a></li>
-                        <li><a href="#user-tag-tab" data-toggle="tab">User-Defined Tag</a></li>
+                        <!--<li><a href="#user-tag-tab" data-toggle="tab">User-Defined Tag</a></li>-->
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
@@ -106,7 +106,7 @@
                             
                             <div class="instruction">
                                 <a class="btn btn-primary" href="javascript:void(0);">Search</a>
-								<a href="#admin-sub-supplier-info-modal" data-toggle="modal">Add</a>
+								<a href="#add-tag-info-modal" data-toggle="modal">Add</a>
                             </div>
                             <table data-classes="table table-hover table-condensed" data-toggle="table" data-search="false" data-pagination="false" data-page-size="5">
                                 <thead>
@@ -123,7 +123,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -132,7 +132,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -141,7 +141,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -150,7 +150,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -159,7 +159,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -168,7 +168,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -177,7 +177,7 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>
@@ -186,106 +186,14 @@
                                         <td>12</td>
                                         <td>Alex</td>
                                         <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
+											<a href="#update-tag-info-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
 											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
 										</td>
                                     </tr>									
                                 </tbody>
                             </table>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="user-tag-tab">
-                            <div class="search-item">
-                                <span class="title">Tag Name:</span>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="instruction">
-                                <a class="btn btn-primary" href="javascript:void(0);">Search</a>
-                            </div>
-                            <table data-classes="table table-hover table-condensed" data-toggle="table" data-search="false" data-pagination="false" data-page-size="5">
-								<thead>
-                                    <tr>
-                                        <th data-valign="middle" data-sortable="true">Tag Name</th>
-                                        <th data-valign="middle" data-sortable="true">Number of BKAs</th>
-                                        <th data-valign="middle" data-sortable="true">Modified By</th>
-                                        <th data-valign="middle" data-align="center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                     <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Follow-Up kw20</td>
-                                        <td>12</td>
-                                        <td>Alex</td>
-                                        <td>
-											<a href="#supplier-contacts-modal" data-toggle="modal"><i class="fa fa-pencil"></i></a>
-											<a href="javascript:void(0);" title="Delete"><i class="fa fa-trash-o"></i></a>
-										</td>
-                                    </tr>									
-                                </tbody>
-                            </table>
-                        </div>
+ 
                     </div>
                 </div>
             </div>
@@ -515,90 +423,18 @@
         <!-- /.modal-dialog -->
     </div>
 
-    <div class="modal fade" id="admin-sub-supplier-info-modal">
+    <div class="modal fade" id="add-tag-info-modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4  class="modal-title">Sub Supplier Database</h4>
+                    <h4  class="modal-title">Add System Wide Tag</h4>
                 </div>
                 <div class="modal-body form-horizontal">
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Supplier Name</label>
+                        <label class="col-sm-3 control-label">Tag Name</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control">
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Registration No.</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Country</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Province/City</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Address</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" id="new-address"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Post Code</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Tel</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Fax</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Email</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">WebSite</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">QM Profile</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control input-sm">
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Products</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" id="new-address"></textarea>
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Remark</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" id="new-address"></textarea>
                         </div>
                     </div>
                 </div>
@@ -609,6 +445,29 @@
             </div>
         </div>
     </div>
+     <div class="modal fade" id="update-tag-info-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4  class="modal-title">Update System Wide Tag</h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Tag Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" value="follow-up 20">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal">Cancel</a>&nbsp;&nbsp;
+                    <a href="#" class="btn btn-primary">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>	   
+    </div>	
     </div>
     <div class="footer">
         上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved

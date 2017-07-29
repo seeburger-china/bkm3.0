@@ -8,7 +8,6 @@
 
 .inline-block {
   display: inline-block;
-  position: relative;
 }
 
 .btn-rect {
@@ -22,4 +21,8 @@
 .tag-tooltip{
   pading:6px;
   min-width: 100px;
+}
+
+.black{
+  color:black;
 }
