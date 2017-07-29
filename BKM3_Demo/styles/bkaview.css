@@ -107,5 +107,17 @@
 }
 .switch-button.center {
   text-align: center;
+}
 
+.right {
+  float: right;
+}
+
+.icon-bar.extend {
+  height: 100%;
+}
+.icon-bar-bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
