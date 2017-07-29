@@ -149,19 +149,20 @@ $(function() {
     $('.bka-table').find('thead>tr>th:first-child').hide();
     $('.bka-table').find('tbody>tr>td:first-child').hide();
     $('#selectToggle').click(function() {
+        console.log('click select')
         $(this).toggleClass('active');
         var bkaTab = $('#bka-tab');
         var companiesTab = $('#companies-tab');
-        if (bkaTab.hasClass('active')) {
+      if (companiesTab.hasClass('active')) {
+        var ulSupp = $('.ul_supp');
+        if (ulSupp.hasClass('is-select')) {
+          ulSupp.removeClass('is-select');
+        } else {
+          ulSupp.addClass('is-select');
+        }
+      } else {
             $('.bka-table').find('thead>tr>th:first-child').toggle();
             $('.bka-table').find('tbody>tr>td:first-child').toggle();
-        } else if (companiesTab.hasClass('active')) {
-            var ulSupp = $('.ul_supp');
-            if (ulSupp.hasClass('is-select')) {
-                ulSupp.removeClass('is-select');
-            } else {
-                ulSupp.addClass('is-select');
-            }
         }
     });
     //Choose plant or car model
