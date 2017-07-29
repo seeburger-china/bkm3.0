@@ -1,0 +1,1181 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>BKM2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/c001e278.favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="styles/extend.css">
+    <link rel="stylesheet" href="styles/bootstrap-switch.css">
+    <link rel="stylesheet" href="styles/bkaview.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .has-sidebar{
+            position:relative;
+        }
+        .sidebar{
+            position:absolute;
+            top:0 ;
+            left:0;
+        }
+        .result-content{
+            position:relative;
+        }
+        .result-content>p{
+            margin-left:10px;
+        }
+        .secondbar{
+            position:absolute;
+            left:5px;
+            bottom:0px;
+            height:30px;
+            width:7px;
+            z-index: 1000;
+            background-color:#da9694;
+        }
+        .badge-del{
+            color:white !important;
+            background:transparent !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <div class="top-bar">
+        <img class="brand" src="images/8c1ae054.svwlogo.png" alt="Brand">
+        <div class="sysname">需求产能管理系统</div>
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                <li class="active"><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- /input-group -->
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0);">Help</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>
+<div class="inner-page bkaview">
+
+    <div class="main">
+        <div class="modal-body">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="bka-info-tab">
+                    <div class="heading green">
+                        <h2 class="blue head-down" >ABLAGE TIGUAN</h2>
+                        <small>BKA00000001</small>
+                    </div>
+                    <hr>
+                    <div class="toolbar search-toolbar-icon col-md-12" style="margin-top:10px;">
+                        <ul class="task-list">
+                            <li>
+                                <a data-toggle="modal" data-target="#bka-export-modal" >
+                                    <i class="ion-android-share icon-btn"></i>
+                                    <p>Export</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="control-panel-right">
+                            <div class="control">
+                                <input type="radio" name="senario" id="v-ktb">
+                                <label for="v-ktb">KTB V07 (12/15)</label>
+                            </div>
+                            <div class="control">
+                                <input type="radio" name="senario" checked="checked" id="v-bkm">
+                                <label for="v-bkm">BKM V07 (10/15)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper col-md-12">
+                        <div class="l-column">
+                            <div class="legend-group">
+                                <div class="legend"><span class="square yellow"></span>Total demand</div>
+                                <div class="legend"><span class="square blue"></span>Normal capacity</div>
+                                <div class="legend"><span class="square white"></span>Maximal capacity</div>
+                            </div>
+                            <div class="option-label">Demand view options</div>
+                            <div class="option-panel">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="s-plant">
+                                    <label for="s-plant">plant</label>
+                                    <input type="checkbox" id="s-carmodel">
+                                    <label for="s-carmodel">car model</label>
+                                </div>
+                                <ul class="parts-list">
+                                    <li>
+                                        <a href="javascript:void(0);"><span>026 105 269 B</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                        <a class="child" data-type="plant" href="javascript:void(0);" style="display:none;"><span>Anting</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                        <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                        <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span></a>
+                                    </li>
+                                    <li><a href="javascript:void(0);"><span>026 105 561 B</span> <i class="fa fa-stop stop-black icon-5" data-toggle="tooltip" data-placement="top"  title="Other Demand"></i></a></li>
+                                    <li><a href="javascript:void(0);">026 105 591 B</a></li>
+                                    <li><a href="javascript:void(0);">026 105 635 D</a></li>
+                                    <li><a href="javascript:void(0);">026 107 301 D</a></li>
+                                    <li class="invalidBKA" style="display:none"><a href="javascript:void(0); bka-silver" >026 107 322 E</a></li>
+                                </ul>
+                            </div>
+                            <div class="label-group">
+                                <div class="bka-label bka-label-title" data-toggle="tooltip" data-placement="top" title="KTB V07-12/15">Demand Total</div>
+                                <div class="bka-label foldable"  ><a href="javascript:void(0);" class="bka-label-title" id="toggle-other-demand">Other Demand <i class="fa fa-caret-right"></i></a>
+                                    <ul style="display:none;">
+                                        <li><a href="javascript:void(0);">026 105 591 B</a></li>
+                                        <li>BKA800800</li>
+                                        <li><a href="javascript:void(0);">026 105 635 D</a></li>
+                                        <li>BKA800800</li>
+                                        <li><div class="bka-label">Other Demand Total</div></li>
+                                    </ul>
+                                </div>
+                                <div class="bka-label bka-label-title">Normal capacity</div>
+                                <div class="bka-label bka-label-title">Maximal capacity</div>
+                            </div>
+                            <div class="label-group">
+                                <div class="bka-label foldable "><a id="toggle-flexibility" class="bka-label-title" href="javascript:void(0);">Flexibility <i class="fa fa-caret-right"></i></a>
+                                    <ul style="display:none;">
+                                        <li>Diff. to normal</li>
+                                        <li>Diff. to norm cum.</li>
+                                        <li>Diff. to max</li>
+                                        <li>Roll. cum. max last X KW</li>
+                                        <li>Diff. to max cum.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="r-column">
+                            <div class="control-panel control-panel-sm">
+                            </div>
+                            <div class="table-area strong">
+                                <table class="table">
+                                    <tbody>
+                                    <tr class="highlight">
+                                        <td>2014</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="plant" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none;">
+                                        <td>1,200</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,400</td>
+                                        <td>1,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10,000</td>
+                                        <td>10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,200</td>
+                                        <td>1,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2,400</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr class="invalidBKA bka-silver"  style="display:none;">
+                                        <td>2,400</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr class="highlight">
+                                        <td>14,800</td>
+                                        <td>13,400</td>
+                                    </tr>
+                                    <tr class="empty">
+                                    </tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>4,000</td>
+                                        <td>4,200</td>
+                                    </tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>1,400</td>
+                                        <td>1,700</td>
+                                    </tr>
+
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>2,400</td>
+                                        <td>2,700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2,600</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3,400</td>
+                                        <td>2,900</td>
+                                    </tr>
+                                    <tr class="placeholder">
+                                    </tr>
+                                    <tr>
+                                        <td ><span class="green-bordered">15%</span></td>
+                                        <td><span class="yellow-bordered">10%</span></td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>280</td>
+                                        <td>1,250</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>280</td>
+                                        <td>1,250</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>800</td>
+                                        <td>1,550</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>300</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>800</td>
+                                        <td>1,900</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m-column">
+                            <div class="chart-area">
+                                <img src="images/1bbce465.chart.png">
+                            </div>
+                            <div class="option-fixed">
+                                <div class="option-group">
+                                    <input type="checkbox" id="s-invalid-parts">
+                                    <span for="s-invalid-parts">show invalid parts</span>
+                                </div>
+                                <div class="option-group">
+
+                                    <label for="byweek">timeframe:&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="radio" checked="checked" name="timeframe" id="byweek">
+                                    <label for="byweek">by week</label>
+                                    <input type="radio" name="timeframe" id="byperiod">
+                                    <label for="byperiod">by period</label>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="table-area byweek">
+                                <table class="table">
+                                    <tbody>
+                                    <tr class="highlight">
+                                        <td>KW20/14</td>
+                                        <td class="Highlight-KW">KW21/14</td>
+                                        <td>KW22/14</td>
+                                        <td>KW23/14</td>
+                                        <td>KW24/14</td>
+                                        <td>KW25/14</td>
+                                        <td>KW26/14</td>
+                                        <td>KW27/14</td>
+                                        <td>KW28/14</td>
+                                        <td>KW29/14</td>
+                                        <td>KW30/14</td>
+                                        <td>KW31/14</td>
+                                        <td>KW32/14</td>
+                                        <td>KW33/14</td>
+                                        <td>KW34/14</td>
+                                        <td>KW35/14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green" data-toggle="tooltip" data-placement="top" title="SAPMultiPOFound-QuotaOK">330</td>
+                                        <td class="green" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="plant" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td class="green">330</td>
+                                        <td class="green">300</td>
+                                        <td class="green">250</td>
+                                        <td class="green">300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="invalidBKA bka-silver"  style="display:none;">
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr class="highlight">
+                                        <td>1450</td>
+                                        <td>1250</td>
+                                        <td>1200</td>
+                                        <td>1250</td>
+                                        <td>1100</td>
+                                        <td>1500</td>
+                                        <td>1500</td>
+                                        <td>1650</td>
+                                        <td>1650</td>
+                                        <td>1500</td>
+                                        <td>1250</td>
+                                        <td>1500</td>
+                                        <td>1650</td>
+                                        <td>1500</td>
+                                        <td>1250</td>
+                                        <td>1500</td>
+                                    </tr>
+                                    <tr class="empty"></tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="empty" data-type="other-demand" style="display:none;"></tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="empty" data-type="other-demand" style="display:none;"></tr>
+                                    <tr class="highlight" data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr>
+                                        <td><span>&nbsp;</span></td>
+                                        <td><span class="yellow-bordered">16%</span></td>
+                                        <td><span class="yellow-bordered">37.5%</span></td>
+                                        <td><span class="green-bordered">52%</span></td>
+                                        <td ><span class="green-bordered">90.9%</span></td>
+                                        <td><span class="green-bordered">50%</span></td>
+                                        <td><span class="yellow-bordered">30%</span></td>
+                                        <td><span class="red-bordered">3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -30.3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -33.3%</span></td>
+                                        <td class="red"><span class="red-bordered"> -20%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.1%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                        <td class="red"><span class="red-bordered"> -8%</span></td>
+                                        <td class="red"><span class="red-bordered"> -6.7%</span></td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>50</td>
+                                        <td>100</td>
+                                        <td>50</td>
+                                        <td>200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-200</td>
+                                        <td>50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-350</td>
+                                        <td class="red">-200</td>
+                                        <td>50</td>
+                                        <td class="red">-200</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>100</td>
+                                        <td>0</td>
+                                        <td>50</td>
+                                        <td>250</td>
+                                        <td>50</td>
+                                        <td class="red">-150</td>
+                                        <td class="red">-500</td>
+                                        <td class="red">-850</td>
+                                        <td class="red">-1050</td>
+                                        <td class="red">-1000</td>
+                                        <td class="red">-1200</td>
+                                        <td class="red">-1550</td>
+                                        <td class="red">-1750</td>
+                                        <td class="red">-1700</td>
+                                        <td class="red">-1900</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>250</td>
+                                        <td>200</td>
+                                        <td>350</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-50</td>
+                                        <td>200</td>
+                                        <td class="red">-50</td>
+                                        <td class="red">-200</td>
+                                        <td class="red">-50</td>
+                                        <td>200</td>
+                                        <td class="red">-50</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>1000</td>
+                                        <td>750</td>
+                                        <td>450</td>
+                                        <td>50</td>
+                                        <td class="red">-500</td>
+                                        <td class="red">-500</td>
+                                        <td  class="red">-250</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                        <td class="red">-100</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td><span>&nbsp;</span></td>
+                                        <td>200</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>1000</td>
+                                        <td>950</td>
+                                        <td>900</td>
+                                        <td>700</td>
+                                        <td>500</td>
+                                        <td>450</td>
+                                        <td>650</td>
+                                        <td>600</td>
+                                        <td>400</td>
+                                        <td>350</td>
+                                        <td>550</td>
+                                        <td>500</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-area byperiod" style="display:none;">
+                                <table class="table">
+                                    <tbody>
+                                    <tr class="highlight">
+                                        <td class="Highlight-KW">May/14</td>
+                                        <td>Jun/14</td>
+                                        <td>July/14</td>
+                                        <td>Aug/14</td>
+                                        <td>Sep/14</td>
+                                        <td>Oct/14</td>
+                                        <td>Nov/14</td>
+                                        <td>Dec/14</td>
+                                        <td>Jan/15</td>
+                                        <td>Feb/15</td>
+                                        <td>Mar/15</td>
+                                        <td>Apr/15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="light" data-type="car" style="display:none">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="invalidBKA bka-silver"  style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr class="highlight">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="empty"></tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="highlight" data-type="other-demand" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr class="placeholder"></tr>
+                                    <tr>
+                                        <td><span class="yellow-bordered">2%</span></td>
+                                        <td><span class="yellow-bordered">2%</span></td>
+                                        <td><span class="yellow-bordered">13%</span></td>
+                                        <td ><span class="green-bordered">16%</span></td>
+                                        <td ><span class="green-bordered">21%</span></td>
+                                        <td><span class="yellow-bordered">14%</span></td>
+                                        <td><span class="yellow-bordered">10%</span></td>
+                                        <td class="red"><span class="red-bordered">-3%</span></td>
+                                        <td class="red"><span class="red-bordered">-18%</span></td>
+                                        <td class="red"><span class="red-bordered">-6%</span></td>
+                                        <td><span class="yellow-bordered">2%</span></td>
+                                        <td><span class="yellow-bordered">2%</span></td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr data-type="flexibility" style="display:none;">
+                                        <td>290</td>
+                                        <td>250</td>
+                                        <td>240</td>
+                                        <td>250</td>
+                                        <td>220</td>
+                                        <td>300</td>
+                                        <td>300</td>
+                                        <td>330</td>
+                                        <td>330</td>
+                                        <td>300</td>
+                                        <td>250</td>
+                                        <td>300</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <div class="label-group">
+                            <div class="bka-Capacity-title">
+                                <div class="bka-label bka-label-title capacity-title">
+                                    <a id="toggle-capacity" href="javascript:void(0);">Capacity details <i class="fa fa-caret-right"></i></a>
+                                </div>
+                                <span >Normal capacity is based on 6.5 days/week, 2 shifts, 10 hours/shift. Last capacity update: 04.04.2015</span>
+                            </div>
+                            <div class="lead-time-input" data-type="capacity" style="display:none">
+                                <div class="input-item"><span>shifts / day</span>
+                                    <input type="text" value="2" readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                                <div class="input-item"><span>hours / shift</span>
+                                    <input type="text" value="10"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                                <div class="input-item"><span>working days / week</span>
+                                    <input type="text" value="6,5"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                                <div class="input-item"><span>working days / year</span>
+                                    <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                                <div class="input-item"><span>Lead time capacity increase</span>
+                                    <input type="text" value="50"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
+                                <div class="input-item"><span>Lead time material preparation</span>
+                                    <input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
+                                <div class="input-item"><span>number of tools</span>
+                                    <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-group">
+        <div class="modal bka-modal fade" id="bka-export-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Export</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="heading">Show demand data by:</div>
+                        <div class="content">
+                            <div class="radio">
+                                <label for="ex-parts">
+                                    <input type="radio" name="export-option" id="ex-parts">Parts
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="ex-models">
+                                    <input type="radio" name="export-option" id="ex-models">Models
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="ex-plants">
+                                    <input type="radio" name="export-option" id="ex-plants">Plants
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Export</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+</div>
+
+<div class="footer">
+    上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved
+</div>
+
+<div style="display:none;" id="loadPage">
+    <ul class="result">
+        <li>
+            <div class="icon-bar">
+                <span class="badge">1</span>
+                <a class="bka-icon"><i class="ion-ios-star"></i></a>
+            </div>
+            <div class="result-content red">
+                <p>LOREM IPSUM LOREM IPSUM</p>
+                <p><small>BKA 808 000</small></p>
+                <p>SUPPLIER NAME <small>A123456</small></p>
+            </div>
+        </li>
+        <li>
+            <div class="icon-bar">
+                <span class="badge">1</span>
+                <a class="bka-icon"><i class="ion-ios-star"></i></a>
+            </div>
+            <div class="result-content yellow">
+                <p>LOREM IPSUM LOREM IPSUM</p>
+                <p><small>BKA 808 000</small></p>
+                <p>SUPPLIER NAME <small>A123456</small></p>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<script src="scripts/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="scripts/9a737976.vendor.js"></script>
+<script src="scripts/10ffdb3e.main.js"></script>
+
+<script src="scripts/bootstrap-switch.js"></script>
+<script >
+  $(function(){
+    $("[name='mycheckbox']").bootstrapSwitch();
+
+    $(window).scroll(function() {
+      //当内容滚动到底部时加载新的内容
+      if ($(this).scrollTop() + $(window).height() + 30 >= $(document).height() && $(this).scrollTop() > 30) {
+        //当前要加载的页码
+        if ($('.result-list').children().size() > 30)
+        {
+          $("#pullUp").hide();
+          return;
+        }
+        $(".scrollIcon").removeClass("pullDownIcon").addClass("pullLoadIcon");
+        setTimeout(LoadPage,3000);
+
+      }
+    });
+
+    function LoadPage()
+    {
+      $(".result-list").append($("#loadPage .result").html());
+      $(".scrollIcon").removeClass("pullLoadIcon").addClass("pullDownIcon");
+
+    }
+    $(".badge-del").click(function(){
+      $(this).parent().remove();
+    });
+  });
+</script>
+</body>
+
+</html>
