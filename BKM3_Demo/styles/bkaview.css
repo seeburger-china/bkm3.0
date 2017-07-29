@@ -76,3 +76,15 @@
   font-size: 14px;
 }
 
+.tag-right{
+  padding-left:30px;
+}
+
+.rect-gray{
+  idth:20px;
+  height:12px;
+  font-size:5pt;
+  padding:1px  0 0;
+  background-color:#808080;
+  color: #FFFFFF;
+}
