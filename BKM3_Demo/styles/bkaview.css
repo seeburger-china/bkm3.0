@@ -80,11 +80,32 @@
   padding-left:30px;
 }
 
-.rect-gray{
-  idth:20px;
-  height:12px;
-  font-size:5pt;
-  padding:1px  0 0;
-  background-color:#808080;
-  color: #FFFFFF;
+/*.rect-gray {*/
+  /*idth: 20px;*/
+  /*height: 12px;*/
+  /*font-size: 5pt;*/
+  /*padding: 1px 0 0;*/
+  /*background-color: #808080;*/
+  /*color: #FFFFFF;*/
+/*}*/
+.row {
+  margin: 5px 0;
+}
+.row .ceil-center {
+  margin-top: 5px;
+}
+
+.input-no-radius {
+  border-radius: 0;
+}
+
+.switch-button .btn.btn-primary {
+  padding: 6px 12px;;
+}
+.switch-button .btn {
+  border-radius: 0;
+}
+.switch-button.center {
+  text-align: center;
+
 }
