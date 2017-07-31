@@ -208,7 +208,7 @@
                 <div class="tree">
                     
                 </div>
-               
+                <div class="tree"></div>
             </div>
             
         </div>
@@ -366,6 +366,8 @@
                 buildTreenode("tree1","Supplier",'Microware','Product','Product type','City',0,false,false);
                 buildTreenode("tree1","My Company",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,false,'bd_primary');
                 buildTreenode("tree1","Customer",'Ningbo Huade','Product','Metals','City',2,false,false);
+                buildTreenode("tree1","Customer1",'Ningbo Huade','Product','Metals','City',2,false,false);
+                buildTreenode("tree1","Customer2",'Ningbo Huade','Product','Metals','City',3,false,false);
                 
                 
                 //删除
@@ -385,7 +387,7 @@
                     $(this).children(".tree:eq(0)").children('.treenode').children('.xl').remove();
                     $(this).children(".tree:eq(-1)").children('.treenode').children('.xr').remove();
                 });
-                $(".bkalist").children('.xr').remove();
+                $(".tree:eq(-2)").children('.treenode:eq(-1)').children('.xr').remove();
                 //竖线
                 $(".tree").each(function(){
                     $(this).children(".treenode:first").each(function(){
