@@ -883,3 +883,8 @@ body {
 .switch-button.center {
   text-align: center;
 }
+
+/* btn-rect */
+.btn-rect {
+  border-radius: 0;
+}
