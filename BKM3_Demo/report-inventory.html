@@ -70,179 +70,121 @@
         <div class="sidebar">
             <h3>Reports</h3>
             <ul>
-                <li class="active"><a href="report-event-analysis.html" >Event Analysis</a></li>
+                <li><a href="report-event-analysis.html">Event Analysis</a></li>
                 <li><a href="report-excel-report.html">Excel Report</a></li>
                 <li><a href="report-demand-report.html">Demand Report</a></li>
-				<li><a href="report-inventory.html">Inventory Report</a></li>
+				<li class="active"><a href="report-inventory.html">Inventory Report</a></li>
             </ul>
         </div>
         <div class="main admin">
-            <h3>Event Analysis</h3>
-            <div class="instruction">
-                 <div class="search-item">
-                <span class="title">User:</span>
+            <h3>Inventory Report</h3>
+             <div class="search-item">
+                <span class="title">Part:</span>
                 <input type="text" class="form-control" value="">
                 <span class="title">Supplier:</span>
                 <input type="text" class="form-control" value="">
+                <span class="title">Plant:</span>
+                <select class="selectpicker" id="f-commodity" data-filter-type="global" data-label="Commodity">
+                                <option value="All">All</option>
+                                <option value="78">78</option>
+                                <option value="C6">C6</option>
+                </select>
              </div>
              <div class="search-item">
-                <span class="title">Date From:</span>
-                <input type="text" class="form-control" value="">
-                <span  class="title">Date To:</span>
-                 <input type="text" class="form-control" value="">
+                    <span class="title">Valid Date:</span>
+                    <input type='text' class="form-control input-sm" />                                 
+                    <span class="title">&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                     <input type='text' class="form-control input-sm" />
+             </div>			 
+             <div class="search-item">
+                    <span class="title">Date added:</span>
+                    <input type='text' class="form-control input-sm" />                                 
+                    <span class="title">&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                     <input type='text' class="form-control input-sm" />
              </div>
-                
-            </div>
             <div class="instruction">
                 <a href="javascript:void(0);" class="btn btn-primary">Search</a>
-                <a href="javascript:void(0);" class="" onclick="downloadReport('9')" >Export</a> 
-                <a href="javascript:void(0);" class="btn-expand" >Expand</a> 
-                <a href="javascript:void(0);" class="btn-collapse">Collapse</a>
+                <a href="javascript:void(0);" onclick="downloadReport('16')">Export</a>
             </div>
             <div class="admin-panel">
-                <table id="report-event-analysis-table" data-classes="table table-hover table-condensed table-collapsed" data-toggle="table">
+                <table data-classes="table table-hover table-condensed" data-toggle="table" data-search="false">
                     <thead>
                         <tr>
-                            <th data-valign="middle">Date</th>
-                            <th data-valign="middle">LoginInt</th>
-                            <th data-valign="middle">LoginExt</th>
-                            <th data-valign="middle">Created</th>
-                            <th data-valign="middle">Submitted</th>
-                            <th data-valign="middle">ReqUpd</th>
-                            <th data-valign="middle">Cnfrm</th>
-                            <th data-valign="middle">CapaChg</th>
-                            <th data-valign="middle">PartChg</th>
-                            <th data-valign="middle">SupChn</th>
-                            <th data-valign="middle">PartChgA</th>
-                            <th data-valign="middle">MsgSent</th>
-                            <th data-valign="middle">BKA Del.</th>
-                            <th data-valign="middle">Approve</th>
-                            <th data-valign="middle">Reject</th>
+							<th data-valign="middle">Supplier</th>
+							<th data-valign="middle">Plant</th>
+                            <th data-valign="middle">Part No-Name</th>
+                            <th data-valign="middle">Quantity</th>
+							<th data-valign="middle">Valid Date</th>
+							<th data-valign="middle">Date added</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="month">
+                        <!--
+                        <tr id="newtlkrow" style="display:none;">
+                            <td><i class="fa fa-check"></i></td>
+                            <td> <input type="text" value=""> </td>
                             <td>
-                                <p><a href="javascript:void(0);"><i class="fa fa-plus-square"></i></a> 2014/12</p>
+                                <select class="selectpicker">
+                                    <option value="0"> </option>
+                                    <option value="1">A12345-Fuyao</option>
+                                    <option value="2">A12345-Fuyao</option>
+                                </select>
                             </td>
-                            <td>340</td>
-                            <td>340</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
+                            <td><input type="text" value="" style="width:30px;"> </td>
+                            <td>BKM V07(xx/14)</td>
+                            <td>2014/21/07</td>
+                            <td><select class="selectpicker" style="width:60px;">
+                                    <option value="0"> New </option>
+                                    <option value="1">activated</option>
+                                    <option value="2">suspended</option>
+                                    <option value="2">expired</option>
+                                </select></td>
+                            <td>valid</td>
+                            <td><select class="selectpicker">
+                                    <option value="0">InRelevant</option>
+                                    <option value="1">Relevant</option>
+                                    <option value="2">Heavy Item</option>
+                                </select></td>
+                            <td>No</td>
+                            <td></td>
+                            <td>CSM</td>
+                            <td>Zang,Li</td>
                         </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/12/01</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
+                        -->
+                        <tr>
+							<td>10039</td>
+							<td>(1000)78</td>
+                            <td>5GD 123 456 H - FLANSCH</td>
+                            <td>200</td>
+                            <td>2014/21/07</td>
+							<td>2014/21/07</td>
                         </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/12/02</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
+                        <tr>
+							<td>10039</td>
+							<td>(1000)78</td>
+                            <td>5GD 123 456 H - FLANSCH</td>
+                            <td>200</td>
+                            <td>2014/21/07</td>
+							<td>2014/21/07</td>
                         </tr>
-                        <tr class="month">
-                            <td>
-                                <p><a href=""><i class="fa fa-plus-square"></i></a> 2014/11</p>
-                            </td>
-                            <td>340</td>
-                            <td>340</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
+                        <tr>
+							<td>10039</td>
+							<td>(1000)78</td>
+                            <td>5GD 123 456 H - FLANSCH</td>
+                            <td>200</td>
+                            <td>2014/21/07</td>
+							<td>2014/21/07</td>
                         </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/11/01</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/11/02</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <!-- /.modal -->
-        <!-- /.modal -->
+
+
+
+  
+
+            <!-- /.modal -->
     <div class="modal fade" id="my-account-modal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -419,6 +361,8 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
+    </div>
+        <div class="clearfix"></div>
     </div>
     <div class="footer">
         上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved

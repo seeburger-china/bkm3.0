@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>BKM3.0</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -178,7 +178,7 @@
             <div>
                 <input type="text" id="tagsinput" data-role="tagsinput">
             </div>
-        </div>
+
         <div class="folding-panel" style="margin-left:120px;">
             <div class="filter-section">
                 <div class="items col-sm-12">
@@ -323,6 +323,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
+
         </div>
     </div>
         </div>
@@ -364,18 +365,44 @@
             </div>
             
                 <div class='center_container'>
+                <div >
+             <ul class="task-list">
+                <li class="company-action">
+                    <a id="1addPost" href="#" onclick="showPanel('addpostpanel');" >
+                        <i class="ion-android-add icon-btn"></i>
+                        <p>Add post</p>
+                    </a>
+                </li>
+			</ul>	                    
+                </div>					
                 <div class='box'>
-                    <h5>Yangfei AI <span>announcement</span></h5>
+                    <h5>SAIC-Volkswagen Automotive Co. <span>announcement</span></h5>
                     <div class="date">
-                        Monday
+                        12 days ago
                     </div>
+                    <p>Dear Suppliers, <br>
+                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
+                    <br><br>Your SAIC-Volkswagen BKM Team
+                    </p>
+                    <p><a href="#">Share</a></p>
+                    <!--<i class="ion-arrow-up-c icon already"></i>
+                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>  -->   
+                </div>				
+                <div class='box'>
+                    <h5>Yanfeng AI <span>announcement</span></h5>
+                    <div class="date">
+                        10 days ago
+                    </div><br><br>
                     <p>Dear Partners, <br>
                     <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
                     <br><br>Your SAIC-Volkswagen BKM Team
                     </p>
                     <p><a href="#">Share</a></p>
-                    <i class="ion-arrow-up-c icon already"></i>
-                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>
+					<br><br>
+					<div>
+                    <i class="ion-arrow-up-c icon already"></i>					
+                    <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>&nbsp;&nbsp;&nbsp;
+					</div>
                 </div>				
                 <div class='box'>
                     <h5>Your Supply-chain Update</h5>
@@ -387,8 +414,6 @@
 						<i class="ion-arrow-up-c icon "></i>
                     
                 </div>
-
-
                 <div class='box'>
 
                 <div class='box warning'>
@@ -398,6 +423,7 @@
                     </div>
                     <p>Your (sub-) supplier Longcheng Precision Forging has been added into your supply-chain
                         <br><a href="#">See details...</a></p>
+
                     <i class="ion-arrow-up-c icon "></i>
                     <i class="ion-android-warning icon "></i>
                     
@@ -405,24 +431,13 @@
                 <div class='box'>
                     <h5>Your Supply-chain Update</h5>
                     <div class="date">
-                        9 days ago
+                        Yesterday
                     </div>
                     <p>Please attaention: Longcheng Precision Forging has added itself into your supply-chain
                         <br><a href="#">See details...</a></p>
                     <i class="ion-arrow-up-c icon "></i>
                 </div>
-                <div class='box'>
-                    <h5>SAIC-Volkswagen Automotive Co. <span>announcement</span></h5>
-                    <div class="date">
-                        10 days ago
-                    </div>
-                    <p>Dear Suppliers, <br>
-                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017. 
-                    <br><br>Your SAIC-Volkswagen BKM Team
-                    </p>
-                    <p><a href="#">Share</a></p>
-                    <i class="ion-arrow-up-c icon "></i>
-                </div>
+
             </div>
         
         </div>
@@ -503,6 +518,27 @@
                 <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Save</button>
             </div>
         </div>
+<div id="addpostpanel" class="floatpanel">
+    <h5>Add post</h5>
+    <textarea class="form-control" rows="7">Make annoucement, tell whats new in your company, add pictures, links</textarea>
+    <br>
+    <p>Send to:</p>
+    <p class="add-post-panel-btn-group">
+        <!--<button type="button" class="btn btn-default btn-rect" disabled="true">Selected</button>-->
+        <button type="button" class="btn btn-primary btn-rect">All followers</button>
+        <!--<button type="button" class="btn btn-default btn-rect">All followers</button>-->
+    </p>
+    <br>
+    <p>Add attachment:</p>
+    <p><a href="#">Browse...</a></p>
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
+    </div>
+</div>		
+    <div class="footer">
+        上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved
+    </div>		
         <script type="text/javascript">
             setTimeout(function(){
                 //location.reload();

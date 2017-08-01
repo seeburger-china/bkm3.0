@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BKM2.0</title>
+    <title>BKM3.0</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,109 +24,123 @@
     <![endif]-->
     <style type="text/css">
 
-            .ul_supp{
-                width: 100%;
-            }
-            .ul_supp li{
-                margin:10px 0;
-                /*border:solid 1px #ccc;*/
-                position:relative;
-                display: block;
-            }
-            .ul_supp .ul-supp-main {
-                position: relative;
-                border:solid 1px #ccc;
-                padding:20px 30px 20px 20px;
-            }
-            .ul_supp .ul-supp-select {
-                display: none;
-            }
-            .ul_supp.is-select .ul-supp-main, .ul_supp.is-select .ul-supp-select {
-                display: inline-block;
-            }
-            .ul_supp.is-select .ul-supp-main {
-                width: 96%;
-            }
-            .ul-supp-parent {
-                float: left;
-                width: 100%;
-            }
-            .ul-supp-parent.see-in-map {
-                width: 40%;
-            }
-            .ul_supp.see-in-map .ul-supp-main {
-                /*float: left;*/
-                /*display: inline-block;*/
-            }
-            .ul_supp.is-select .ul-supp-select {
-                width: 3%;
-                position: relative;
-                bottom: 15px;
-            }
-            .ul_supp h5,.ul_supp p,.ul_supp small{
-                margin:5px 10px;
-                padding:0 0;
-            }
-            .ul_supp .btn_s1{
-                position:absolute;
-                right:20px;
-                top:50%;
-                margin-top:-20px;
-            }
-            .ul_supp h5{
-                font-size:17px;
-            }
-            .ul_supp h5.active{
-                color:#538dd5;
-            }
-            .ul_supp small{
-                color:#ccc;
-            }
-            .ul_supp img{
-                border:solid 1px #ccc;
-                position: absolute;
-                height:80px;
-                width:80px;
-                left:20px;
-                top:50%;
-                margin-top:-40px;
-            }
-            .ul_post{
-                width: 100%;
-            }
-            .ul_post li{
-                margin:10px 0;
-                padding:20px 20px;
-                border:solid 1px #ccc;
-                position:relative;
-            }
-            .ul_post h5,.ul_post p,.ul_post small,.ul_post a{
-                display: block;
-                margin:5px 5px;
-                padding:0 0;
-            }
-            .ul_post h5>span{
-                color:#538dd5;
-            }
-            .ul_post small{
-                color:#999
-            }
-            .ul_post p{
-                margin:20px 5px;
-            }
-            .ul_post .date{
-                position:absolute;
-                top:20px;
-                right:20px;
-                color:#999;
-            }
-            #addpostpanel{
-                padding-left:40px;
-            }
-            .posts-action{
-                display: none;
-            }
-        </style>
+        .ul_supp{
+            width: 100%;
+        }
+        .ul_supp li{
+            margin:10px 0;
+            /*border:solid 1px #ccc;*/
+            position:relative;
+            display: block;
+        }
+        .ul_supp .ul-supp-main {
+            position: relative;
+            border:solid 1px #ccc;
+            padding:20px 30px 20px 20px;
+        }
+        .ul_supp .ul-supp-select {
+            display: none;
+        }
+        .ul_supp.is-select .ul-supp-main, .ul_supp.is-select .ul-supp-select {
+            display: inline-block;
+        }
+        .ul_supp.is-select .ul-supp-main {
+            width: 96%;
+        }
+        .ul-supp-parent {
+            float: left;
+            width: 100%;
+        }
+        .ul-supp-parent.see-in-map {
+            width: 40%;
+        }
+        .ul_supp.see-in-map .ul-supp-main {
+            /*float: left;*/
+            /*display: inline-block;*/
+        }
+        .ul_supp.is-select .ul-supp-select {
+            width: 3%;
+            position: relative;
+            bottom: 15px;
+        }
+        .ul_supp h5,.ul_supp p,.ul_supp small{
+            margin:5px 10px;
+            padding:0 0;
+        }
+        .ul_supp .btn_s1{
+            position:absolute;
+            right:20px;
+            top:50%;
+            margin-top:-20px;
+        }
+        .ul_supp h5{
+            font-size:17px;
+        }
+        .ul_supp h5.active{
+            color:#538dd5;
+        }
+        .ul_supp small{
+            color:#ccc;
+        }
+        .ul_supp img{
+            border:solid 1px #ccc;
+            position: absolute;
+            height:80px;
+            width:80px;
+            left:20px;
+            top:50%;
+            margin-top:-40px;
+        }
+        .ul_post{
+            width: 100%;
+        }
+        .ul_post li {
+            position: relative;
+        }
+        .ul_post .up-post-select {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+        }
+        .ul_post li .up-post-main{
+            margin: 10px 0;
+            padding: 20px 20px;
+            border:solid 1px #ccc;
+            position:relative;
+        }
+        .ul_post.is-select .up-post-select {
+            display: block;
+        }
+        .ul_post.is-select li .up-post-main {
+            margin: 10px 0 10px 40px;
+        }
+        .ul_post h5,.ul_post p,.ul_post small,.ul_post a{
+            display: block;
+            margin:5px 5px;
+            padding:0 0;
+        }
+        .ul_post h5>span{
+            color:#538dd5;
+        }
+        .ul_post small{
+            color:#999
+        }
+        .ul_post p{
+            margin:20px 5px;
+        }
+        .ul_post .date{
+            position:absolute;
+            top:20px;
+            right:20px;
+            color:#999;
+        }
+        #addpostpanel{
+            padding-left:40px;
+        }
+        .posts-action{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -317,6 +331,24 @@
                             <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
                         </label>
                     </div>
+                    <div class="filter-item">
+                        <span class="title">Inventory Activated:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Activated
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> Deactivated
+                        </label>
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Inventory Need Update:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
+                        </label>
+                    </div>						
                     <div class="clearfix"></div>
                 </div>
 
@@ -406,6 +438,79 @@
 
                         </select>
                     </div>
+                     <div class="filter-item">
+                    <div class="filter-item">
+                        <span class="title">Other Demand:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> BKA/TLK
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> NO MATCH
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Break Point In:</span>
+                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="nb"></option>
+                            <option value="yz">KW01/17</option>
+                            <option value="yz">KW02/17</option>
+                            <option value="yz">KW03/17</option>
+                            <option value="yz">KW04/17</option>
+                            <option value="yz">KW05/17</option>
+                        </select><span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="01"></option>
+                            <option value="yz">KW01/17</option>
+                            <option value="yz">KW02/17</option>
+                            <option value="yz">KW03/17</option>
+                            <option value="yz">KW04/17</option>
+                            <option value="yz">KW05/17</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Notifications:</span>
+                        <label for="f-downgrade">
+                            <input type="checkbox" name="downgradebka" id="f-downgrade" data-filter-type="local" data-label="Status downgrade" value="Yes"> Yes
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Capacity increasing period (week):</span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <span class="title">Part lead time (week):</span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
+                        <div class="form-group">
+                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
+                        </div>
+                    </div>	 		
+                    <div class="filter-item">
+                        <span class="title">Nominated Supplier:</span>
+                        <label for="f-validity-valid">
+                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> Yes
+                        </label>
+                        <label for="f-validity-invalid">
+                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> No
+                        </label>
+                    </div>	
+                    <div class="filter-item">
+                        <span class="title">Type of Material:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Metal parts 金属件</option>
+                            <option value="02">Plastic parts 塑料件</option>
+                            <option value="03">Wire harness 线束</option>
+                        </select>
+                    </div>						
 					<div class="filter-item">
                         <span class="title">Country:</span>
                         <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
@@ -428,70 +533,7 @@
                             <option value="03">Shanghai nanhui rubber products factory</option>
                         </select>							
                     </div>
-
-                    <div class="filter-item">
-                        <span class="title">Type of Material:</span>
-                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
-							<option value="01"></option>
-                            <option value="01">Metal parts 金属件</option>
-                            <option value="02">Plastic parts 塑料件</option>
-                            <option value="03">Wire harness 线束</option>
-                        </select>
                     </div>
-                     <div class="filter-item">
-                        <span class="title">Other Demand:</span>
-                        <label for="f-validity-valid">
-                            <input type="checkbox" name="validity" id="f-validity-valid" data-filter-type="global" data-label="Yes" value="Yes"> BKA/TLK
-                        </label>
-                        <label for="f-validity-invalid">
-                            <input type="checkbox" name="validity" id="f-validity-invalid" data-filter-type="global" data-label="No" value="No"> NO MATCH
-                        </label>
-                    </div>   
-					<div class="filter-item">
-                        <span class="title">Break Point In:</span>
-                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
-                            <option value="nb"></option>
-                            <option value="yz">KW01/17</option>
-							<option value="yz">KW02/17</option>
-							<option value="yz">KW03/17</option>
-							<option value="yz">KW04/17</option>
-							<option value="yz">KW05/17</option>
-                        </select><span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
-                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
-							<option value="01"></option>
-                            <option value="yz">KW01/17</option>
-							<option value="yz">KW02/17</option>
-							<option value="yz">KW03/17</option>
-							<option value="yz">KW04/17</option>
-							<option value="yz">KW05/17</option>
-                        </select>							
-                    </div>	
-                    <div class="filter-item">
-                        <span class="title">Notifications:</span>
-                        <label for="f-downgrade">
-                            <input type="checkbox" name="downgradebka" id="f-downgrade" data-filter-type="local" data-label="Status downgrade" value="Yes"> Yes
-                        </label>
-                    </div>	
-                    <div class="filter-item">
-                        <span class="title">Capacity increasing period (week):</span>
-                        <div class="form-group">
-                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
-						</div>
-                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
-                        <div class="form-group">
-                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
-                        </div>
-                    </div>	
-                    <div class="filter-item">
-                        <span class="title">Part lead time (week):</span>
-                        <div class="form-group">
-                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
-						</div>
-                        <span>&nbsp;&nbsp;-&nbsp;&nbsp; </span>
-                        <div class="form-group">
-                            <input type='text' class="form-control input-sm" id="f-buyer" data-filter-type="global" data-label="Buyer"/>
-                        </div>
-                    </div>						
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -516,19 +558,19 @@
 
         <div class="search-toolbar col-sm-12 search-toolbar-icon">
             <ul class="task-list">
-                <li class="bka-action part-action company-action">
+                <li class="bka-action part-action company-action post-action">
                     <a id="selectToggle" href="javascript:void(0);" >
                         <i class="ion-android-checkbox icon-btn"></i>
                         <p>Select</p>
                     </a>
                 </li>
 
-                <!--<li class="post-action company-action">-->
-                    <!--<a id="addPost" href="#" onclick="showPanel('addpostpanel');" >-->
-                        <!--<i class="ion-android-add icon-btn"></i>-->
-                        <!--<p>Add post</p>-->
-                    <!--</a>-->
-                <!--</li>-->
+                <li class="company-action">
+                    <a id="addPost" href="#" onclick="showPanel('addpostpanel');" >
+                        <i class="ion-android-add icon-btn"></i>
+                        <p>Add post</p>
+                    </a>
+                </li>
 
                 <li   class="bka-action">
                     <a href="#bka-requestUpdate-modal" data-toggle="modal">
@@ -542,7 +584,7 @@
                         <p>Mark as read</p>
                     </a>
                 </li>
-                <li class="bka-action">
+                <li class="bka-action company-action">
                     <a href="javascript:void(0);"  onclick="downloadReport('6')">
                         <i class="ion-android-share icon-btn"></i>
                         <p>Export</p>
@@ -552,6 +594,12 @@
                     <a href="javascript:void(0);">
                         <i class="ion-ios-star icon-btn"></i>
                         <p>Add to Favorites</p>
+                    </a>
+                </li>
+                <li  class="post-action">
+                    <a href="javascript:void(0);">
+                        <i class="ion-trash-a icon-btn"></i>
+                        <p>Delete</p>
                     </a>
                 </li>
                 <li  class="bka-action">
@@ -584,75 +632,75 @@
                         <div class="dropdown dropdown-bottom bka-action">
                             <a href="javascript:void(0);" class="dropdown-toggle gray" data-toggle="dropdown">Untag <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                            <li class="disabled"><a href="#">System Tag</a></li>
-                            <li><a href="#"><td>
-                                <span class="ion-ios-pricetag icon  icon-small blue"></span>
-                                <span class=" text-right">Critical</span>
-                            </td></a></li>
-                            <!--<li role="separator" class="divider"></li>-->
-                            <li class="disabled"><a href="#">AI Tag</a></li>
-                            <li>
-                                <a href="#">
-                                    <td>
+                                <li class="disabled"><a href="#">System Tag</a></li>
+                                <li><a href="#"><td>
+                                    <span class="ion-ios-pricetag icon  icon-small blue"></span>
+                                    <span class=" text-right">Critical</span>
+                                </td></a></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                                <li class="disabled"><a href="#">AI Tag</a></li>
+                                <li>
+                                    <a href="#">
+                                        <td>
                                     <span class="icon-wrap">
                                         <span class="ion-ios-pricetag icon  icon-small blue"></span>
                                         <span class="badge badge-right-top badge-blue">AI</span>
                                     </span>
-                                    <span class="text-right">Check Demand</span>
-                                    </td>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <td class="active">
+                                            <span class="text-right">Check Demand</span>
+                                        </td>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <td class="active">
                                     <span class="icon-wrap">
                                         <span class="ion-ios-pricetag tag-red icon icon-small "></span>
                                         <span class="badge badge-right-top">AI</span>
                                     </span>
-                                    <span class="text-right">Critical</span>
-                                    </td>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <td>
+                                            <span class="text-right">Critical</span>
+                                        </td>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <td>
                                         <span class="icon-wrap">
                                             <span class="ion-ios-pricetag icon  icon-small blue"></span>
                                             <span class="badge badge-right-top badge-blue">AI</span>
                                         </span>
-                                        <span class="text-right">Parts</span>
-                                    </td>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <td>
+                                            <span class="text-right">Parts</span>
+                                        </td>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <td>
                                         <span class="icon-wrap">
                                             <span class="ion-ios-pricetag icon  icon-small blue"></span>
                                             <span class="badge badge-right-top badge-blue">AI</span>
                                         </span>
-                                        <span class="text-right">Yellow</span>
-                                    </td>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                <td>
+                                            <span class="text-right">Yellow</span>
+                                        </td>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <td>
                                 <span class="icon-wrap">
                                     <span class="ion-ios-pricetag icon icon-small blue"></span>
                                     <span class="badge badge-right-top badge-blue">AI</span>
                                 </span>
-                                    <span class="text-right">Capacity</span>
-                                </td>
-                                </a>
-                            </li>
+                                            <span class="text-right">Capacity</span>
+                                        </td>
+                                    </a>
+                                </li>
 
-                            <!--<li role="separator" class="divider"></li>-->
-                            <li class="disabled"><a href="#">User Tag</a></li>
-                            <li><a href="#">  <td>
-                                <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
-                                Tiguan L Increase</td>
-                                <td></a></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                                <li class="disabled"><a href="#">User Tag</a></li>
+                                <li><a href="#">  <td>
+                                    <span class="ion-ios-pricetag-outline  icon-small icon blue"></span>
+                                    Tiguan L Increase</td>
+                                    <td></a></li>
                             </ul>
                         </div>
                     </a>
@@ -734,17 +782,17 @@
                 <h5><i class="ion-ios-plus-outline icon-small"></i>  Invite a new partner</h5>
                 <br><br>
 
-                    <!--<div class=" btn-group ">-->
-                        <!--<button type=" button" class="btn btn-default ">Select a comapny</button>-->
-                        <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                            <!--<span class="caret"></span>-->
-                            <!--<span class="sr-only">Toggle Dropdown</span>-->
-                        <!--</button>-->
-                        <!--<ul class=" btn-group-dropdown dropdown-menu">-->
-                            <!--<li><a href="#">company1</a></li>-->
-                            <!--<li><a href="#">company2</a></li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
+                <!--<div class=" btn-group ">-->
+                <!--<button type=" button" class="btn btn-default ">Select a comapny</button>-->
+                <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--<span class="caret"></span>-->
+                <!--<span class="sr-only">Toggle Dropdown</span>-->
+                <!--</button>-->
+                <!--<ul class=" btn-group-dropdown dropdown-menu">-->
+                <!--<li><a href="#">company1</a></li>-->
+                <!--<li><a href="#">company2</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
                 <select class="form-control">
                     <option>Select a company</option>
                     <option>company1</option>
@@ -765,26 +813,26 @@
         </div>
 
         <div class="row">
-                        <div class="col-sm-12 tab-content" >
-                            <div class="tab-pane active" role="tabpanel" id="bka-tab">
-                                <table style="height:500px" class="bka-table table table-hover" id="bka-tab-table">
-                                    <thead>
-                                    <tr>
-                                        <th>
-                                            <input type="checkbox">
-                                        </th>
-                                        <th style="width: 280px" class="see-in-map">BKA/Status</th>
-                                        <th style="width: 80px" class="see-in-map"></th>
-                                        <th style="width: 100px">Supplier</th>
-                                        <th style="width: 100px">Buyer</th>
-                                        <th style="width: 100px">Workflow</th>
-                                        <th style="width: 110px">Parts</th>
-                                        <th style="width: 240px">Flag</th>
-                                        <th style="width: 150px">Status</th>
-                                        <th><i class="ion-record"></i></th>
-                                        <th class="only-see-in-map my-hidden"></th>
-                                    </tr>
-                                    </thead>
+            <div class="col-sm-12 tab-content" >
+                <div class="tab-pane active" role="tabpanel" id="bka-tab">
+                    <table style="height:500px" class="bka-table table table-hover" id="bka-tab-table">
+                        <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox">
+                            </th>
+                            <th style="width: 280px" class="see-in-map">BKA/Status</th>
+                            <th style="width: 80px" class="see-in-map"></th>
+                            <th style="width: 100px">Supplier</th>
+                            <th style="width: 100px">Buyer</th>
+                            <th style="width: 100px">Workflow</th>
+                            <th style="width: 110px">Parts</th>
+                            <th style="width: 240px">Flag</th>
+                            <th style="width: 150px">Status</th>
+                            <th><i class="ion-record"></i></th>
+                            <th class="only-see-in-map my-hidden"></th>
+                        </tr>
+                        </thead>
                         <tbody>
                         <tr>
                             <td>
@@ -1391,9 +1439,9 @@
                                 <!--<span class="bka-icon"></span>-->
                                 <!--<span class="bka-icon"></span>-->
 
-                                
-								<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">BKA/TLK</span>
-								<span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">NO MATCH</span><br>
+
+                                <span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">BKA/TLK</span>
+                                <span style="width:35px;height:12px; font-size:8pt;padding: 1px 0 0; background-color: #808080;  color: #FFFFFF;">NO MATCH</span><br>
                                 <!--<span class="bka-icon"><i class="ion-stats-bars  fa-fw blue"></i></span>-->
                                 <div class=" inline-block">
                                     <a href="javascript:void(0);">
@@ -1423,9 +1471,21 @@
                                 <!--<span class="bka-icon"><i class="fa ion-ios-more-outline fa-fw"></i></span>
                                 <span class="bka-icon"><i class="fa ion-ios-bolt-outline fa-fw"></i></span>-->
                                 <div class="inline-block">
+                                    <a href="javascript:void(0);" class="icon-Favority">
+                                    <span class="bka-icon">
+                                        <i class="fa ion-calculator fa-fw blue"></i>
+                                    </span>
+                                    </a>
+                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
+                                        <ul>
+                                            <li>Inventory</li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+								<div class="inline-block">
                                     <a href="javascript:void(0);">
                                     <span class="bka-icon">
-                                        <i class="fa ion-ios-bolt-outline fa-fw"></i>
+                                        <i class="fa ion-ios-bolt-outline fa-fw black"></i>
                                     </span>
                                     </a>
                                     <div class="tag-tooltip detail-info-panel" style="display:none;">
@@ -1436,7 +1496,7 @@
                                 </div>
 
                                 <!--<a href="javascript:void(0);" class="icon-Favority">-->
-                                    <!--<span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star                                                  fa-fw"></i></span>-->
+                                <!--<span class="bka-icon"><i class="fa ion-ios-star-outline ion-ios-star                                                  fa-fw"></i></span>-->
                                 <!--</a>-->
                                 <div class="inline-block">
                                     <a href="javascript:void(0);" class="icon-Favority">
@@ -1451,18 +1511,7 @@
                                     </div>
                                 </div>
                                 <!--<span class="bka-icon"><i class="fa ion-calculator fa-fw blue"></i></span>-->
-                                <div class="inline-block">
-                                    <a href="javascript:void(0);" class="icon-Favority">
-                                    <span class="bka-icon">
-                                        <i class="fa ion-calculator fa-fw blue"></i>
-                                    </span>
-                                    </a>
-                                    <div class="tag-tooltip detail-info-panel" style="display:none;">
-                                        <ul>
-                                            <li>Inventory</li>
-                                        </ul>
-                                    </div>
-                                </div>
+
 
                             </td>
 
@@ -1770,12 +1819,16 @@
                                 <div class="ul-supp-select">
                                     <input type="checkbox">
                                 </div>
-								
+
                                 <div class="ul-supp-main">
-                                    <h5>Benteler Huizhong</h5>
+                                    <h5 class="active">Benteler Huizhong</h5>
                                     <p>Automotive components</p>
                                     <small>10,000 - 50,000 employerees</small>
-                                    <a class="btn_s1 active" >Follow</a>
+
+                                    <i class="ion-ios-flag-outline blue icon-btn btn-s1-center"></i>
+
+                                    <p class="hint btn-s1-hint">未关注</p>
+                                    <a class="btn_s1 active">Follow</a>
                                 </div>
                             </li>
                             <li>
@@ -1783,9 +1836,11 @@
                                     <input type="checkbox">
                                 </div>
                                 <div class="ul-supp-main">
-                                    <h5 class="active">Benteler Huizhong</h5>
+                                    <h5 class="active">Shanghai  HuiLiang</h5>
                                     <p>Automotive components</p>
-                                    <small>10,000 - 50,000 employerees</small>
+                                    <small>1,000 - 3,000 employerees</small>
+
+                                    <p class="hint btn-s1-hint">已关注</p>
                                     <a class="btn_s1" >Unfollow</a>
                                 </div>
                             </li>
@@ -1809,334 +1864,355 @@
                 <div class="tab-pane" id="posts-tab" role="tabpanel" >
                     <ul class="ul_post">
                         <li>
-                            <div class="date">Monday</div>
-                            <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
-                            <small>written by Bian Yunzhou</small>
-                            <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
-                            <br>Your SAIC-Volkswagen BKM Team
-                            <br>
-                            </p>
-                            <a href="#">a Letter from director of purchasing.pdf</a>
+                            <div class="up-post-select my-hidden">
+                                <input type="checkbox">
+                            </div>
+                            <div class="up-post-main">
+                                <div class="date">Monday</div>
+                                <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
+                                <small>written by Bian Yunzhou</small>
+                                <p>Dear Suppliers,
+                                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
+                                    <br>Your SAIC-Volkswagen BKM Team
+                                    <br>
+                                </p>
+                                <a href="#">a Letter from director of purchasing.pdf</a>
+                            </div>
                         </li>
                         <li>
-                            <div class="date">Monday</div>
-                            <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
-                            <small>written by Bian Yunzhou</small>
-                            <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
-                            <br>Your SAIC-Volkswagen BKM Team
-                            <br>
-                            </p>
-                            <a href="#">a Letter from director of purchasing.pdf</a>
+                            <div class="up-post-select my-hidden">
+                                <input type="checkbox">
+                            </div>
+                            <div class="up-post-main">
+                                <div class="date">Monday</div>
+                                <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
+                                <small>written by Bian Yunzhou</small>
+                                <p>Dear Suppliers,
+                                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
+                                    <br>Your SAIC-Volkswagen BKM Team
+                                    <br>
+                                </p>
+                                <a href="#">a Letter from director of purchasing.pdf</a>
+                            </div>
                         </li>
                         <li>
-                            <div class="date">Monday</div>
-                            <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
-                            <small>written by Bian Yunzhou</small>
-                            <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
-                            <br>Your SAIC-Volkswagen BKM Team
-                            <br>
-                            </p>
-                            <a href="#">a Letter from director of purchasing.pdf</a>
+                            <div class="up-post-select my-hidden">
+                                <input type="checkbox">
+                            </div>
+                            <div class="up-post-main">
+                                <div class="date">Monday</div>
+                                <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
+                                <small>written by Bian Yunzhou</small>
+                                <p>Dear Suppliers,
+                                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
+                                    <br>Your SAIC-Volkswagen BKM Team
+                                    <br>
+                                </p>
+                                <a href="#">a Letter from director of purchasing.pdf</a>
+                            </div>
                         </li>
                         <li>
-                            <div class="date">Monday</div>
-                            <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
-                            <small>written by Bian Yunzhou</small>
-                            <p>Dear Suppliers,
-                            <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
-                            <br>Your SAIC-Volkswagen BKM Team
-                            <br>
-                            </p>
-                            <a href="#">a Letter from director of purchasing.pdf</a>
+                            <div class="up-post-select my-hidden">
+                                <input type="checkbox">
+                            </div>
+                            <div class="up-post-main">
+                                <div class="date">Monday</div>
+                                <h5><span>SAIC-Volkswagen Automotive Co.</span> announcement</h5>
+                                <small>written by Bian Yunzhou</small>
+                                <p>Dear Suppliers,
+                                    <br>our company is facing a high market demand for Tiguan L. Please pay your immediate attention to new BKM program and check all your BKAs since the demand has been increased for Q3/2017.
+                                    <br>Your SAIC-Volkswagen BKM Team
+                                    <br>
+                                </p>
+                                <a href="#">a Letter from director of purchasing.pdf</a>
+                            </div>
+
                         </li>
                     </ul>
                 </div>
 
                 <!--<nav aria-label="Page navigation" class="center-align">-->
-                    <!--<ul class="pagination">-->
-                        <!--<li>-->
-                            <!--<a href="#" aria-label="Previous">-->
-                                <!--<span aria-hidden="true">&laquo;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li><a href="#">1</a></li>-->
-                        <!--<li><a href="#">2</a></li>-->
-                        <!--<li class="active"><a href="#">3</a></li>-->
-                        <!--<li><a href="#">4</a></li>-->
-                        <!--<li><a href="#">5</a></li>-->
-                        <!--<li>-->
-                            <!--<a href="#" aria-label="Next">-->
-                                <!--<span aria-hidden="true">&raquo;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
+                <!--<ul class="pagination">-->
+                <!--<li>-->
+                <!--<a href="#" aria-label="Previous">-->
+                <!--<span aria-hidden="true">&laquo;</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href="#">1</a></li>-->
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li class="active"><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <!--<li>-->
+                <!--<a href="#" aria-label="Next">-->
+                <!--<span aria-hidden="true">&raquo;</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
                 <!--</nav>-->
-                <a href="#top" data-spy="scroll" data-target="body">
+                <a href="#top" data-spy="scroll" data-target="body" class="right">
                     <i class="chevron-up-center ion-chevron-up  blue"></i>
                     <p class="blue">顶部</p>
                 </a>
             </div>
 
             <div class="modal fade" id="map-modal">
-                    <div class="modal-dialog modal-dialog-center">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="images/a5f6513c.map.png" alt="Map">
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-            </div>
-
-
-        </div>
-        <div class="modal bka-modal fade" id="bka-requestUpdate-modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Request data update</h4>
-                    </div>
-                    <div class="modal-body">
-                        <span class="small pl20">LOREM IPSUM LOREM IPPPSUM LOREM IPSUM LOREM IPPPSUM</span>
-                        <div class="content">
-                            <textarea class="form-control" rows="15"></textarea>
+                <div class="modal-dialog modal-dialog-center">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="images/a5f6513c.map.png" alt="Map">
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Cancel</button>
-                        <a href="javascript:void(0);">Submit</a>
-
-                    </div>
+                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-content -->
+                <!-- /.modal-dialog -->
             </div>
-            <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal -->
+
+
     </div>
-
-    <!-- /.modal -->
-    <div class="modal fade" id="my-account-modal">
+    <div class="modal bka-modal fade" id="bka-requestUpdate-modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">My Account</h4>
+                    <h4 class="modal-title">Request data update</h4>
                 </div>
                 <div class="modal-body">
-                    <div role="tabpanel">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
-                            <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="profile-tab">
-                                <div class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Name</label>
-                                        <div class="col-sm-7">
-                                            Zang Yi
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Email</label>
-                                        <div class="col-sm-7 profileDisplay">
-                                            ZangYi@svm.com
-                                        </div>
-                                        <div class="col-sm-7 profileValue" style="display:none;">
-                                            <input type="text" class="input-xs" value="ZangYi@svm.com">
-                                        </div>
-                                        <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a>
-                                        <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
-                                        <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Phone</label>
-                                        <div class="col-sm-7 profileDisplay">
-                                            +86 21 65431234
-                                        </div>
-                                        <div class="col-sm-7 profileValue" style="display:none;">
-                                            <input type="text" class="input-xs" value="+86 21 65431234">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Company</label>
-                                        <div class="col-sm-7">
-                                            Shanghai Volkswagen Automotive
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Supplier No</label>
-                                        <div class="col-sm-7">
-                                            --
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Role</label>
-                                        <div class="col-sm-7">
-                                            Buyer
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4">Language</label>
-                                        <div class="col-sm-7">
-                                            <label for="lang-en">
-                                                <input type="radio" name="language" id="lang-en" checked="checked"> English
-                                            </label>
-                                            <label for="lang-ch">
-                                                <input type="radio" name="language" id="lang-ch"> Chinese
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="notification-tab">
-                                <div class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-6">BKA changed by SVW user:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">BKA sent to rework:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">BKA submitted:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">New message:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">New  BKM Entwurf demand data:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">New  KTB demand data:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-6">New part numbers released:</label>
-                                        <div class="col-sm-6">
-                                            <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
-                                            </label>
-                                            <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
-                                            </label>
-                                        </div>
-                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <span class="small pl20">LOREM IPSUM LOREM IPPPSUM LOREM IPSUM LOREM IPPPSUM</span>
+                    <div class="content">
+                        <textarea class="form-control" rows="15"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="javascript:void(0);" >Cancel</a>
-                    <button type="button" class="btn btn-primary">Apply</button>
+                    <button type="button" class="btn btn-primary">Cancel</button>
+                    <a href="javascript:void(0);">Submit</a>
+
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
     </div>
+    <!-- /.modal -->
 </div>
-    <div id="addpostpanel" class="floatpanel">
-        <h5>Add post</h5>
-            <textarea class="form-control" rows="7">Make annoucement, tell whats new in your company, add pictures, links</textarea>
-            <br>
-            <p>Send to:</p>
-            <p class="add-post-panel-btn-group">
-                <button type="button" class="btn btn-default btn-rect">Selected</button>
-                <button type="button" class="btn btn-primary btn-rect">Search results</button>
-                <button type="button" class="btn btn-default btn-rect">All followers</button>
-            </p>
-            <br>
-            <p>Add attachment:</p>
-            <p><a href="#">Browse...</a></p>
-             <div class="btngroup">
-                <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
-                <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
+
+<!-- /.modal -->
+<div class="modal fade" id="my-account-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">My Account</h4>
             </div>
+            <div class="modal-body">
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                        <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="profile-tab">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-4">Name</label>
+                                    <div class="col-sm-7">
+                                        Zang Yi
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Email</label>
+                                    <div class="col-sm-7 profileDisplay">
+                                        ZangYi@svm.com
+                                    </div>
+                                    <div class="col-sm-7 profileValue" style="display:none;">
+                                        <input type="text" class="input-xs" value="ZangYi@svm.com">
+                                    </div>
+                                    <a href="#" class="editEmail"><i class="fa fa-pencil"></i></a>
+                                    <a href="#" class="editConfirm editAction" style="display:none;"><i class="ion-checkmark"></i></a> &nbsp;&nbsp;
+                                    <a href="#" class="editCancel editAction gray" style="display:none;"><i class="ion-close"></i></a>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Phone</label>
+                                    <div class="col-sm-7 profileDisplay">
+                                        +86 21 65431234
+                                    </div>
+                                    <div class="col-sm-7 profileValue" style="display:none;">
+                                        <input type="text" class="input-xs" value="+86 21 65431234">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Company</label>
+                                    <div class="col-sm-7">
+                                        Shanghai Volkswagen Automotive
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Supplier No</label>
+                                    <div class="col-sm-7">
+                                        --
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Role</label>
+                                    <div class="col-sm-7">
+                                        Buyer
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Language</label>
+                                    <div class="col-sm-7">
+                                        <label for="lang-en">
+                                            <input type="radio" name="language" id="lang-en" checked="checked"> English
+                                        </label>
+                                        <label for="lang-ch">
+                                            <input type="radio" name="language" id="lang-ch"> Chinese
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="notification-tab">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-6">BKA changed by SVW user:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-1" id="nf-radio-1a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-1" id="nf-radio-1b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">BKA sent to rework:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-2" id="nf-radio-2a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-2" id="nf-radio-2b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">BKA submitted:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-3" id="nf-radio-3a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-3" id="nf-radio-3b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">New message:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-4" id="nf-radio-4a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-4" id="nf-radio-4b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">New  BKM Entwurf demand data:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">New  KTB demand data:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-6">New part numbers released:</label>
+                                    <div class="col-sm-6">
+                                        <label for="nf-radio-1a">
+                                            <input type="radio" name="nf-radio-6" id="nf-radio-6a" checked="checked"> Enabled
+                                        </label>
+                                        <label for="nf-radio-1b">
+                                            <input type="radio" name="nf-radio-6" id="nf-radio-6b"> Disabled
+                                        </label>
+                                    </div>
+                                    <div class="help-text">Lorem ipsum dolor sit amet.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" >Cancel</a>
+                <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
+</div>
+</div>
+<div id="addpostpanel" class="floatpanel">
+    <h5>Add post</h5>
+    <textarea class="form-control" rows="7">Make annoucement, tell whats new in your company, add pictures, links</textarea>
+    <br>
+    <p>Send to:</p>
+    <p class="add-post-panel-btn-group">
+        <button type="button" class="btn btn-default btn-rect">Selected</button>
+        <button type="button" class="btn btn-primary btn-rect">Search results</button>
+        <button type="button" class="btn btn-default btn-rect">All followers</button>
+    </p>
+    <br>
+    <p>Add attachment:</p>
+    <p><a href="#">Browse...</a></p>
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
+    </div>
+</div>
 
 
 
-<!--<div class="footer">-->
-    <!--上海大众汽车有限公司版权所有 Copyright @ 2007 SHANGHAI VOLKSWAGEN All Rights Reserved-->
-<!--</div>-->
+    <div class="footer">
+        上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved
+    </div>
 <!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <script src="scripts/9a737976.vendor.js"></script>
 <script src="scripts/10ffdb3e.main.js"></script>
 <!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <!--<script src=scripts/common.js></script>-->
 <script>
-$(function(){
+  $(function(){
     $(".task-list>li").hide();
     $(".bka-action").show();
     $(".dropdown a").click(function(){
-        $(this).parent().children('li').show();
+      $(this).parent().children('li').show();
     });
-});
+  });
 </script>
 </body>
 

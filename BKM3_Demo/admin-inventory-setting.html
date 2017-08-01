@@ -41,8 +41,8 @@
                     <li><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
                     <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
                     <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
-                    <li class="active"><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
-                    <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+                    <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                    <li class="active"><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
                 </ul>
                 <form class="navbar-form navbar-left" role="search" style="display:none;">
                     <div class="input-group">
@@ -68,180 +68,51 @@
     </div>
     <div class="inner-page has-sidebar">
         <div class="sidebar">
-            <h3>Reports</h3>
+            <h3>Administration</h3>
             <ul>
-                <li class="active"><a href="report-event-analysis.html" >Event Analysis</a></li>
-                <li><a href="report-excel-report.html">Excel Report</a></li>
-                <li><a href="report-demand-report.html">Demand Report</a></li>
-				<li><a href="report-inventory.html">Inventory Report</a></li>
+                <li><a href="admin-relevance-control.html">Relevance Control</a></li>
+                <li><a href="admin-supplier-information.html">General Supplier Information</a></li>
+                <li><a href="admin-tlk-management.html">TLK Management</a></li>
+                <li ><a href="admin-bka-status.html">BKA Status</a></li>
+                <li><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
+                <li><a href="admin-session-management.html">Sessions Management</a></li>
+                <li><a href="admin-access-management.html">System Access Management</a></li>
+                <li><a href="admin-dictionary-management.html">System Dictionary Management</a></li>
+                <li><a href="admin-config-management.html">Data Clean-Up Settings</a></li>
+                <li><a href="admin-master-data-management.html">Master Data Management</a></li>
+                <li><a href="admin-task-management.html">Task Management</a></li>
+				<li><a href="admin-system-tag-management.html">System-Wide Tag Management</a></li>
+				<li class="active"><a href="admin-inventory-setting.html">Inventory Setting</a></li>
+				
             </ul>
         </div>
         <div class="main admin">
-            <h3>Event Analysis</h3>
+            <h3>Inventory Setting</h3>
             <div class="instruction">
-                 <div class="search-item">
-                <span class="title">User:</span>
-                <input type="text" class="form-control" value="">
-                <span class="title">Supplier:</span>
-                <input type="text" class="form-control" value="">
-             </div>
-             <div class="search-item">
-                <span class="title">Date From:</span>
-                <input type="text" class="form-control" value="">
-                <span  class="title">Date To:</span>
-                 <input type="text" class="form-control" value="">
-             </div>
-                
-            </div>
-            <div class="instruction">
-                <a href="javascript:void(0);" class="btn btn-primary">Search</a>
-                <a href="javascript:void(0);" class="" onclick="downloadReport('9')" >Export</a> 
-                <a href="javascript:void(0);" class="btn-expand" >Expand</a> 
-                <a href="javascript:void(0);" class="btn-collapse">Collapse</a>
+                <a href="javascript:void(0);" class="btn btn-primary">Apply</a>
+                <span>After applicaiton of new config the recalculation will take place during the night jobs</span>
             </div>
             <div class="admin-panel">
-                <table id="report-event-analysis-table" data-classes="table table-hover table-condensed table-collapsed" data-toggle="table">
-                    <thead>
-                        <tr>
-                            <th data-valign="middle">Date</th>
-                            <th data-valign="middle">LoginInt</th>
-                            <th data-valign="middle">LoginExt</th>
-                            <th data-valign="middle">Created</th>
-                            <th data-valign="middle">Submitted</th>
-                            <th data-valign="middle">ReqUpd</th>
-                            <th data-valign="middle">Cnfrm</th>
-                            <th data-valign="middle">CapaChg</th>
-                            <th data-valign="middle">PartChg</th>
-                            <th data-valign="middle">SupChn</th>
-                            <th data-valign="middle">PartChgA</th>
-                            <th data-valign="middle">MsgSent</th>
-                            <th data-valign="middle">BKA Del.</th>
-                            <th data-valign="middle">Approve</th>
-                            <th data-valign="middle">Reject</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="month">
-                            <td>
-                                <p><a href="javascript:void(0);"><i class="fa fa-plus-square"></i></a> 2014/12</p>
-                            </td>
-                            <td>340</td>
-                            <td>340</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/12/01</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/12/02</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="month">
-                            <td>
-                                <p><a href=""><i class="fa fa-plus-square"></i></a> 2014/11</p>
-                            </td>
-                            <td>340</td>
-                            <td>340</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/11/01</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                        <tr class="day">
-                            <td>
-                                <p>2014/11/02</p>
-                            </td>
-                            <td>170</td>
-                            <td>170</td>
-                            <td>1</td>
-                            <td>6</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="sub-section">
+                    <div class="section-header">Inventory data expire days alarm</div>
+                    <div class="option-item">
+                        Inventory that will expire within&nbsp;
+                         <input type="text" class="form-control  input-xs" value="">  &nbsp; days.
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>     
+
+                <div class="sub-section">
+                    <div class="section-header">Inventory valid week:</div>
+                    <div class="option-item">
+                        The inventory data imported from the interface, valid for&nbsp;
+                         <input type="text" class="form-control  input-xs" value="">  &nbsp; weeks.
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>                      
             </div>
         </div>
-        <div class="clearfix"></div>
     </div>
-    <!-- /.modal -->
         <!-- /.modal -->
     <div class="modal fade" id="my-account-modal">
         <div class="modal-dialog">
@@ -370,7 +241,7 @@
                                         </div>
                                         <div class="help-text">Lorem ipsum dolor sit amet.</div>
                                     </div>
-                                   <div class="form-group">
+                                    <div class="form-group">
                                         <label class="col-sm-6">New  BKM Entwurf demand data:</label>
                                         <div class="col-sm-6">
                                             <label for="nf-radio-1a">
@@ -419,6 +290,8 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
+    </div>
+    <div class="clearfix"></div>
     </div>
     <div class="footer">
         上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved
