@@ -19,8 +19,11 @@
   <body>
      <header>
           <nav>
-              <a href="javascript:window.history.go(-1)"><i class="ion-ios-arrow-back icon"></i></a>
+              <a href="javascript:window.history.go(-1)" class="pull-left"><i class="ion-ios-arrow-back icon"></i></a>
               <a href="index.html"><i class="ion-ios-home icon"></i></a>
+              <div class="right">
+              <a href="#" onclick="$(this).tooltip('show')" data-toggle="tooltip" data-placement="bottom" title="上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved"><i class="ion-ios-information icon"></i></a>
+              </div>
           </nav>
       </header>
       <div class="content">
@@ -347,9 +350,6 @@
       <div class="content">
         <button class="btn btn-primary btn-block" type="submit">Apply</button>
       </div>
-      
-      <footer>
-          上海大众汽车有限公司 版权所有 <br> SHANGHAI VOLKSWAGEN All Rights Reserved
-      </footer>
+     
   </body>
 </html>
