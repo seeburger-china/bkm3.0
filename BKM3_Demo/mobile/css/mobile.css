@@ -30,6 +30,36 @@ h5{
     text-align: left;
     margin:5px 10px;
 }
+header{
+    height:50px;
+    background-image:url(../images/mb.png);
+    background-size: cover;
+}
+
+header nav {
+    position: absolute;
+    top:5px;
+    right:10px;
+}
+
+header nav i{
+    font-size:27px;
+    display: inline-block;
+    margin:0 5px;
+}
+
+.content{
+    margin:10px 10px;
+}
+
+.icon-wrap{
+    display: inline-block;
+    position:relative;
+}
+.icon-wrap .badge{
+    position:absolute;
+    display: none;
+}
 /* grid */
 
 .grid .item{
@@ -80,6 +110,15 @@ h5{
     border-left:solid 8px #337ab7;
 }
 
+/* ctable */
+
+.ctable .row{
+    margin: 10px auto;
+    color:#999;
+}
+.ctable .row>div{
+    padding:5px 5px;
+}
 
 /* color */
 

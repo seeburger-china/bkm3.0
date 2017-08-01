@@ -15,11 +15,15 @@
         h5,h6{
             text-align: center;
         }
+        
     </style>
   </head>
   <body>
-      <header>
-          <img src="./images/mb.png" />
+       <header>
+          <nav>
+              <a href="javascript:window.history.go(-1)"><i class="ion-ios-arrow-back icon"></i></a>
+              <a href="index.html"><i class="ion-ios-home icon"></i></a>
+          </nav>
       </header>
       
       <div class="searchbox input-group" >
@@ -36,6 +40,11 @@
       <div class="container-fluid grid">
           <div class="row">
               <div class=" left col-xs-12">
+                                  <div class="lng bd_green pull-left">
+                                    <div class="sublng bd_yellow">
+
+                                    </div>
+                                  </div>
                 <h5>ABLAGE TIGUAN YFPO VW316</h5>
                 <h6>BKA 717 000</h6>
                 <button type="button" class="btn btn-primary btn-xs">CRIMINAL</button>
@@ -68,29 +77,37 @@
                       <thead>
                       <th>Part No</th>
                       <th>Plant</th>
-                      <th>CarModel</th>
+                      <th>CarInfo</th>
                       </thead>
                       <tbody>
                           <tr>
                               <td>5ND 123 456 A<br>组合尾灯总成</td>
                               <td>1000(78)<br>Shanghai</td>
-                              <td>New Lavida</td>
+                              <td>
+                                  New Lavida(120)<br>
+                                  <small>096-底盘-,制动-变速-</small>
+                              </td>
                           </tr>
                           <tr>
                               <td>5ND 123 456 A<br>组合尾灯总成</td>
                               <td>1000(78)<br>Shanghai</td>
-                              <td>New Lavida</td>
+                              <td>
+                                  New Lavida(120)<br>
+                                  <small>096-底盘-,制动-变速-</small>
+                              </td>
                           </tr>
                           <tr>
                               <td>5ND 123 456 A<br>组合尾灯总成</td>
                               <td>1000(78)<br>Shanghai</td>
-                              <td>New Lavida</td>
+                              <td>
+                                  New Lavida(120)<br>
+                                  <small>096-底盘-,制动-变速-</small>
+                              </td>
                           </tr>
                       </tbody>
                   </table>
               </div>
           </div>
-     
           <div class="row">
                <div class=" left col-xs-12">
                   BKA Status <span class="icon ion-arrow-down-b"></span>
@@ -104,6 +121,37 @@
                   </table>
                </div>
           </div>
+          <div class="row">
+              <div class=" left col-xs-12">
+                  <br>
+                  Other Demand <span class="icon ion-arrow-down-b"></span>
+                  <table class="table table-condensed">
+                      <thead>
+                      <th>Part No</th>
+                      <th>Plant</th>
+                      <th>Supplier</th>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>5ND 123 456 A</td>
+                              <td>1000(78)<br>Shanghai</td>
+                              <td>10039</td>
+                          </tr>
+                          <tr>
+                              <td>5ND 123 456 A</td>
+                              <td>1000(78)<br>Shanghai</td>
+                              <td>10039</td>
+                          </tr>
+                          <tr>
+                              <td>5ND 123 456 A</td>
+                              <td>1000(78)<br>Shanghai</td>
+                              <td>10039</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          
           <div class="row">
                 <div class=" left col-xs-12">
                     Capacity Details <span class="icon ion-arrow-down-b"></span><br>
@@ -144,17 +192,84 @@
                 </div>
                
           </div>
-          <div class="row" style="text-align: center;">
-            <!--<div class="col-xs-6"><button type="button" class="btn btn-primary btn-sm">Edit</button></div>-->
-            <div class="col-xs-6"><button type="button" class="btn btn-primary btn-sm">Rejtct</button></div>
+      </div>
+      
+      <div class="container-fluid grid" style="border-top:solid 1px #eee;">
+          <div class="row">
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-close-circled icon"></i><br>
+                    Reject<br>&nbsp;
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-refresh icon"></i><br>
+                    Request<br>Update
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-ios-color-wand icon"></i><br>
+                    Suspend<br>Red
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-trash-a icon"></i><br>
+                    Delete<br>&nbsp;
+                </a>
+              </div>
+          </div>
+          <div class="row">
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-forward icon"></i><br>
+                    Export<br>&nbsp;
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-ios-clock icon"></i><br>
+                    History<br>&nbsp;
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-android-chat icon"></i><br>
+                    Messages<br>&nbsp;
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-ios-star-outline icon"></i><br>
+                    Favorites<br>&nbsp;
+                </a>
+              </div>
+          </div>
+          <div class="row">
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-information-circled icon"></i><br>
+                    Infomation<br>&nbsp;
+                </a>
+              </div>
+              <div class="item col-xs-3">
+                <a href="#">
+                    <i class="ion-android-share-alt icon"></i><br>
+                    Supply<br>Chain
+                </a>
+              </div>
+              
           </div>
       </div>
       
+      
       <p>
-           <a href="#">
+           <a href="filter_2.html">
               Filter Setting
            </a>
-           <a href="#">
+           <a href="myaccount.html">
                <span class="pull-right">My Account</span>
            </a>
           
