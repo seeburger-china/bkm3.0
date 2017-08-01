@@ -888,3 +888,11 @@ body {
 .btn-rect {
   border-radius: 0;
 }
+
+/* heading small */
+.inner-page.bkaview .main .heading small.inline {
+  display: inline-block;
+  margin-top: 6px; }
+.inner-page.bkaview .main .heading.auto-height {
+  height: auto;
+}

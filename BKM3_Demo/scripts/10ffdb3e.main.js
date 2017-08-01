@@ -206,6 +206,11 @@ $(function() {
     });
 
     //foldable labels
+    $('.bka-label-select').on('click', function () {
+        $(this).find('i').toggleClass('fa-rotate-90');
+        $(this).siblings('ul').toggle();
+        $('[data-type="' + $(this).attr('target-data-type') + '"]').toggle();
+    });
     $('#toggle-other-demand').click(function() {
         $(this).find('i').toggleClass('fa-rotate-90');
         $(this).siblings('ul').toggle();
