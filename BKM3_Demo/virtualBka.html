@@ -145,21 +145,30 @@
                                 </div>
                                 <ul class="parts-list">
                                     <li>
-                                        <a href="javascript:void(0);"><span>026 105 269 B</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
+                                        <a href="javascript:void(0);"><span>10039 - 5ND 123 456 A </span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
                                         <a class="child" data-type="plant" href="javascript:void(0);" style="display:none;"><span>Anting</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
                                         <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span><i class="fa fa-circle green icon-5" data-toggle="tooltip" data-placement="top" data-html="true" title="<div style='text-align:left;'>SAPMultiPOFound-QuotaOK<br>SAPEXTMultiPOFound-QuotaErr </div>"></i></a>
                                         <a class="child indented" data-type="car" href="javascript:void(0);" style="display:none;"><span>TiGuan FL</span></a>
                                     </li>
-                                    <li><a href="javascript:void(0);"><span>026 105 561 B</span> <i class="fa fa-stop stop-black icon-5" data-toggle="tooltip" data-placement="top"  title="Other Demand"></i></a></li>
-                                    <li><a href="javascript:void(0);">026 105 591 B</a></li>
-                                    <li><a href="javascript:void(0);">026 105 635 D</a></li>
-                                    <li><a href="javascript:void(0);">026 107 301 D</a></li>
+                                    <li><a href="javascript:void(0);"><span>10039 - 5ND 123 456 B</span> <i class="fa fa-stop stop-black icon-5" data-toggle="tooltip" data-placement="top"  title="Other Demand"></i></a></li>
+                                    <li><a href="javascript:void(0);">10023 - 5ND 123 456 C</a></li>
+                                    <li><a href="javascript:void(0);">10023 - 5ND 123 456 D</a></li>
+                                    <li><a href="javascript:void(0);">10023 - 5ND 123 456 E</a></li>
                                     <li class="invalidBKA" style="display:none"><a href="javascript:void(0); bka-silver" >026 107 322 E</a></li>
                                 </ul>
                             </div>
                             <div class="label-group">
                                 <div class="bka-label bka-label-title" data-toggle="tooltip" data-placement="top" title="KTB V07-12/15">Demand Total</div>
-                                <div class="bka-label foldable"  ><a href="javascript:void(0);" class="bka-label-title" id="toggle-other-demand">Other Demand <i class="fa fa-caret-right"></i></a>
+                                <div class="bka-label foldable"  ><a href="javascript:void(0);" class="bka-label-title" id=" toggle-other-demand">Other Demand <i class="fa fa-caret-right"></i></a>
+                                <ul style="display:none;">
+                                    <li><a href="javascript:void(0);">026 105 591 B</a></li>
+                                    <li>BKA800800</li>
+                                    <li><a href="javascript:void(0);">026 105 635 D</a></li>
+                                    <li>BKA800800</li>
+                                    <li><div class="bka-label">Other Demand Total</div></li>
+                                </ul>
+                            </div>
+                                <div class="bka-label foldable"  ><a href="javascript:void(0);" class="bka-label-title" id="toggle-normal-capacity">Normal capacity <i class="fa fa-caret-right"></i></a>
                                     <ul style="display:none;">
                                         <li><a href="javascript:void(0);">026 105 591 B</a></li>
                                         <li>BKA800800</li>
@@ -168,8 +177,8 @@
                                         <li><div class="bka-label">Other Demand Total</div></li>
                                     </ul>
                                 </div>
-                                <div class="bka-label bka-label-title">Normal capacity</div>
-                                <div class="bka-label bka-label-title">Maximal capacity</div>
+                                <!--<div class="bka-label bka-label-title">Normal capacity</div>-->
+                                <!--<div class="bka-label bka-label-title">Maximal capacity</div>-->
                             </div>
                             <div class="label-group">
                                 <div class="bka-label foldable "><a id="toggle-flexibility" class="bka-label-title" href="javascript:void(0);">Flexibility <i class="fa fa-caret-right"></i></a>
@@ -1032,38 +1041,38 @@
                             </div>
                         </div>
 
-                        <div class="clearfix"></div>
-                        <div class="label-group">
-                            <div class="bka-Capacity-title">
-                                <div class="bka-label bka-label-title capacity-title">
-                                    <a id="toggle-capacity" href="javascript:void(0);">Capacity details <i class="fa fa-caret-right"></i></a>
-                                </div>
-                                <span >Normal capacity is based on 6.5 days/week, 2 shifts, 10 hours/shift. Last capacity update: 04.04.2015</span>
-                            </div>
-                            <div class="lead-time-input" data-type="capacity" style="display:none">
-                                <div class="input-item"><span>shifts / day</span>
-                                    <input type="text" value="2" readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
-                                <div class="input-item"><span>hours / shift</span>
-                                    <input type="text" value="10"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
-                                <div class="input-item"><span>working days / week</span>
-                                    <input type="text" value="6,5"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
-                                <div class="input-item"><span>working days / year</span>
-                                    <input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
-                                <div class="input-item"><span>Lead time capacity increase</span>
-                                    <input type="text" value="50"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>
-                                <div class="input-item"><span>Lead time material preparation</span>
-                                    <input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>
-                                <div class="input-item"><span>number of tools</span>
-                                    <input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <!--<div class="clearfix"></div>-->
+                        <!--<div class="label-group">-->
+                            <!--<div class="bka-Capacity-title">-->
+                                <!--<div class="bka-label bka-label-title capacity-title">-->
+                                    <!--<a id="toggle-capacity" href="javascript:void(0);">Capacity details <i class="fa fa-caret-right"></i></a>-->
+                                <!--</div>-->
+                                <!--<span >Normal capacity is based on 6.5 days/week, 2 shifts, 10 hours/shift. Last capacity update: 04.04.2015</span>-->
+                            <!--</div>-->
+                            <!--<div class="lead-time-input" data-type="capacity" style="display:none">-->
+                                <!--<div class="input-item"><span>shifts / day</span>-->
+                                    <!--<input type="text" value="2" readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>-->
+                                <!--<div class="input-item"><span>hours / shift</span>-->
+                                    <!--<input type="text" value="10"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>-->
+                                <!--<div class="input-item"><span>working days / week</span>-->
+                                    <!--<input type="text" value="6,5"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>-->
+                                <!--<div class="input-item"><span>working days / year</span>-->
+                                    <!--<input type="text" value="300"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>-->
+                                <!--<div class="input-item"><span>Lead time capacity increase</span>-->
+                                    <!--<input type="text" value="50"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed. </div>-->
+                                <!--<div class="input-item"><span>Lead time material preparation</span>-->
+                                    <!--<input type="text" value="12"  readonly="readonly"> Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</div>-->
+                                <!--<div class="input-item"><span>number of tools</span>-->
+                                    <!--<input type="text" value="2"  readonly="readonly"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie cursus ipsum, nec commodo nisi euismod sed.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
-                </div>
-            </div>
-        </div>
-    </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="modal-group">
         <div class="modal bka-modal fade" id="bka-export-modal">
