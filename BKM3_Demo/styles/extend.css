@@ -896,3 +896,10 @@ body {
 .inner-page.bkaview .main .heading.auto-height {
   height: auto;
 }
+
+/* modal */
+.modal-right-bottom {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
