@@ -149,18 +149,27 @@ $(function() {
     $('.bka-table').find('thead>tr>th:first-child').hide();
     $('.bka-table').find('tbody>tr>td:first-child').hide();
     $('#selectToggle').click(function() {
-        console.log('click select')
         $(this).toggleClass('active');
         var bkaTab = $('#bka-tab');
         var companiesTab = $('#companies-tab');
-      if (companiesTab.hasClass('active')) {
-        var ulSupp = $('.ul_supp');
-        if (ulSupp.hasClass('is-select')) {
-          ulSupp.removeClass('is-select');
+        var postsTab = $('#posts-tab');
+        if (companiesTab.hasClass('active')) {
+            var ulSupp = $('.ul_supp');
+            if (ulSupp.hasClass('is-select')) {
+              ulSupp.removeClass('is-select');
+            } else {
+              ulSupp.addClass('is-select');
+            }
+        } else if (postsTab.hasClass('active')) {
+            console.log('in post')
+            var ulPost = $('.ul_post');
+            if (ulPost.hasClass('is-select')) {
+                console.log('ssss')
+                ulPost.removeClass('is-select');
+            } else {
+                ulPost.addClass('is-select');
+            }
         } else {
-          ulSupp.addClass('is-select');
-        }
-      } else {
             $('.bka-table').find('thead>tr>th:first-child').toggle();
             $('.bka-table').find('tbody>tr>td:first-child').toggle();
         }
@@ -793,10 +802,10 @@ $(function() {
           $(".task-list li").hide();
           $(".company-action").show();
       }
-      
-      
-      
-      
+
+
+
+
     })
     //Start Page React Hover To Show Chart
     //uodate by wangjin 20150617
@@ -949,6 +958,7 @@ $(function() {
     var bkaTab = $('#bka-tab');
     var partTab = $('#part-tab');
     var companiesTab = $('#companies-tab');
+    // var postsTab = $('#posts-tab');
     var activeTab = null;
     var activeId = null;
 
@@ -961,6 +971,7 @@ $(function() {
     } else if (companiesTab.hasClass('active')) {
       activeTab = companiesTab;
       activeId = '#companies-tab';
+      $('.ul-supp-parent').addClass('see-in-map');
     }
     if (activeTab === bkaTab || activeTab === partTab) {
       // 隐藏thead
@@ -974,7 +985,6 @@ $(function() {
       tbodyTrs.find('td.see-in-map').show();
       $(activeId + ' .only-see-in-map').show();
     } else {
-        $('.ul-supp-parent').addClass('see-in-map');
     }
     // 显示地图
     $(activeId + '-map').show();

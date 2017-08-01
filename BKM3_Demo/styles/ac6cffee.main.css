@@ -6447,6 +6447,8 @@ right connector from last child*/
       margin-top: 6px; }
     .bkacreate .bka-heading.red {
       border-left: solid 7px #da9694; }
+    .bkacreate .bka-heading.red-border {
+      border-left: solid 7px #da9694; }
     .bkacreate .bka-heading.yellow {
       border-left: solid 7px #ffff65; }
     .bkacreate .bka-heading.green {
