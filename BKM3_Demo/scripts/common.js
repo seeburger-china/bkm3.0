@@ -17,7 +17,9 @@ $(function(){
     })
 
   $('.top-window').on('click', function () {
+      console.log('in top')
     $(document.body).animate({'scrollTop': 0}, 500)
+      console.log('after top')
   })
     
 });

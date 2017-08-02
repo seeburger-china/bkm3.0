@@ -91,6 +91,9 @@
     .text-strong{
       font-weight: 800;
     }
+    .icon-delete{
+      margin-right: 35px;
+    }
   </style>
 </head>
 <body>
@@ -550,7 +553,7 @@
         <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>  -->
       </div>
       <div class='box'>
-        <h5>Yanfeng AI <span>announcement</span></h5>
+        <h5>Yanfeng AI <span>announcement</span> <i class="ion-close-circled icon-delete" data-toggle="modal" data-target="#deleteconfirmModal"></i></h5>
         <div class="date">
           10 days ago
         </div><br><br>
@@ -561,6 +564,7 @@
         <p><a href="#">Share</a></p>
         <br><br>
         <div>
+
           <i class="ion-arrow-up-c icon already"></i>
           <i class="ion-android-remove icon already" style="top:2px;right:9px;"></i>&nbsp;&nbsp;&nbsp;
         </div>
@@ -699,6 +703,24 @@
     </div>
     <div class="footer">
       上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteconfirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Confirm</h4>
+      </div>
+      <div class="modal-body">
+        确认删除？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Delete</button>
+      </div>
     </div>
   </div>
 </div>

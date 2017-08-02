@@ -872,7 +872,12 @@ body {
   top: 50%;
   margin-top: -10px;
 }
-
+.btn-share-right{
+    position: absolute;
+    right: 150px;
+    top: 40%;
+    margin-top: -10px;
+}
 /* switch-btn */
 .switch-button .btn.btn-primary {
   padding: 6px 12px;;
