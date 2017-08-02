@@ -7,7 +7,14 @@ $(function(){
     $(".floatpanel").each(function(){
         $(this).append('<a class="close" onclick="hidePanel();"><span class="glyphicon glyphicon-remove"></span></a>');
     });
-    
+
+    $('.btn-group').on('click', function () {
+      if ($(this).hasClass('open')) {
+        $(this).removeClass('open')
+      } else {
+        $(this).addClass('open')
+      }
+    })
     
 });
 
