@@ -2051,10 +2051,32 @@
                 <!--</li>-->
                 <!--</ul>-->
                 <!--</nav>-->
-                <a href="#top" data-spy="scroll" data-target="body" class="right">
-                    <i class="chevron-up-center ion-chevron-up  blue"></i>
-                    <p class="blue">顶部</p>
-                </a>
+                <ul class="fix-right-bottom task-list">
+                    <li class="all-action">
+                        <a class="top-window">
+                            <i class="ion-arrow-up-a icon-btn blue"></i>
+                            <p>Top</p>
+                        </a>
+                    </li>
+                    <li class="bka-action">
+                        <a data-toggle="modal" data-target="#virtualbkaModal">
+                            <i class="ion-ios-plus icon-btn blue"></i>
+                            <p>Virtual BKA</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <!--<a href="#top" data-spy="scroll" data-target="body" class="right">-->
+                    <!--<i class="chevron-up-center ion-chevron-up  blue"></i>-->
+                    <!--<p class="blue">顶部</p>-->
+                <!--</a>-->
+
+                <!--<li  class="bka-action">-->
+                    <!--<a data-toggle="modal" data-target="#virtualbkaModal">-->
+                        <!--<i class="ion-ios-plus icon-btn blue"></i>-->
+                        <!--<p>Virtual BKA</p>-->
+                    <!--</a>-->
+                <!--</li>-->
             </div>
 
             <div class="modal fade" id="map-modal">
@@ -2310,6 +2332,7 @@
   $(function(){
     $(".task-list>li").hide();
     $(".bka-action").show();
+    $(".all-action").show();
     $(".dropdown a").click(function(){
       $(this).parent().children('li').show();
     });

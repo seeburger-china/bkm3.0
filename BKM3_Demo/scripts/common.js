@@ -15,6 +15,10 @@ $(function(){
         $(this).addClass('open')
       }
     })
+
+  $('.top-window').on('click', function () {
+    $(document.body).animate({'scrollTop': 0}, 500)
+  })
     
 });
 

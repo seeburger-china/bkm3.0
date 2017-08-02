@@ -813,6 +813,7 @@ $(function() {
           $(".task-list li").hide();
           $(".company-action").show();
       }
+      $(".all-action").show();
 
 
 
