@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BKM</title>
+    <link href="../styles/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/mobile.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="../fonts/ionicons.svg">
+    <script src="../scripts/jquery-3.2.1.min.js" ></script>
+    <script src="../styles/bootstrap-3.3.7/js/bootstrap.min.js" ></script>
+    <style type="text/css">
+       
+        
+    </style>
+  </head>
+  <body>
+     <header>
+          <nav>
+              <a href="javascript:window.history.go(-1)" class="pull-left"><i class="ion-ios-arrow-back icon"></i></a>
+              <a href="index.html"><i class="ion-ios-home icon"></i></a>
+              <div class="right">
+              <a href="#" onclick="$(this).tooltip('show')" data-toggle="tooltip" data-placement="bottom" title="上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved"><i class="ion-ios-information icon"></i></a>
+              </div>
+          </nav>
+      </header>
+      <div class="content">
+        <h4>System wide filter</h4>
+        <br>
+         <form>
+            <div class="form-group">
+              <label for="demandSenario">Demand Senario:</label>
+              <div>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> BKM
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> KTB
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="commodity">Commodity:</label>
+              <select class="form-control" id="commodity" name="commodity">
+                <option>ALL</option>
+                <option>CSX</option>
+                <option>CSM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="department">Department:</label>
+              <select class="form-control" id="department" name="department">
+                <option>ALL</option>
+                <option>CSC-1</option>
+                <option>CSC-2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="buyer">Buyer:</label>
+              <input type="text" class="form-control" placeholder="" id="buyer" name="buyer">
+            </div>
+            <div class="form-group">
+              <label for="supplier">Supplier</label>
+              <input type="text" class="form-control" placeholder="" id="supplier" name="supplier">
+            </div>
+            <div class="form-group">
+              <label for="vehicleClass">Vehicle Class:</label>
+              <select class="form-control" id="vehicleClass" name="vehicleClass">
+                <option>ALL</option>
+                <option>5GD</option>
+                <option>180</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="carModel">Car Model:</label>
+              <select class="form-control" id="carModel" name="carModel">
+                <option>ALL</option>
+                <option>New Polo</option>
+                <option>Lamando</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="plant">Plant</label>
+              <select class="form-control" id="plant" name="plant">
+                <option>ALL</option>
+                <option>1000(78)-Anting</option>
+                <option>1001(C2)-Beijing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="relevance">Relevance:</label>
+              <div>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> All
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2" checked="checked"> Heavy item
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3" checked="checked"> Relevant
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox4" value="option1"> Irrelevant
+                  </label>
+                  
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="validity">Validity:</label>
+              <div>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> All
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2" checked="checked"> Valid
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox4" value="option1"> Invalid
+                  </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="aiTag">AI Tag:</label>
+              <select class="form-control" id="aiTag" name="aiTag">
+                <option>ALL</option>
+                <option>CRITICAL</option>
+                <option>DEMAND</option>
+                <option>CAPACITY</option>
+                <option>PARTS</option>
+                <option>YELLOW</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sysTag">System-wide Tag:</label>
+              <select class="form-control" id="sysTag" name="sysTag">
+                <option>ALL</option>
+                <option>2017 Capacity Survey</option>
+                <option>2016 Capacity Survey</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="userTag">User-Defined Tag:</label>
+              <select class="form-control" id="userTag" name="userTag">
+                <option>ALL</option>
+                <option>Inventory Warning Tag</option>
+                <option>Capatity Warning Tag</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contain">Contain Sub-BKA</label>
+              <div>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1" checked="checked"> Yes
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2" checked="checked"> No
+                  </label>
+              </div>
+            </div>
+          </form>
+      </div>
+      <br>
+      <div class="content">
+        <button class="btn btn-primary btn-block" type="submit">Apply</button>
+      </div>
+      
+     
+  </body>
+</html>

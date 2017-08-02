@@ -2,6 +2,9 @@
 body,p,div,a{
     font-size:14px;
 }
+body{
+    padding-bottom:40px;
+}
 
 img{
     display: block;
@@ -13,11 +16,15 @@ i{
 }
 
 footer{
-    text-align: center;
     font-size:11px;
     color:#ccc;
-    margin-top:20px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:10px 10px;
+    left:0;
 }
+
 .searchbox{
     margin:10px 10px;
 }
@@ -29,6 +36,45 @@ p{
 h5{
     text-align: left;
     margin:5px 10px;
+}
+header{
+    height:50px;
+    background-image:url(../images/mb.png);
+    background-size: auto 60% ;
+    background-repeat: no-repeat;
+    background-position-x: 60px;
+    background-position-y: 10px;
+    border-bottom: solid 1px #eee;
+}
+
+header nav {
+    width:100%;
+    position: absolute;
+    top:5px;
+    left:0px;
+}
+
+header nav i{
+    font-size:27px;
+    display: inline-block;
+    margin:0 0 0 10px;
+}
+header nav .right{
+    position:absolute;
+    right:10px;
+    top:0px;
+}
+.content{
+    margin:10px 10px;
+}
+
+.icon-wrap{
+    display: inline-block;
+    position:relative;
+}
+.icon-wrap .badge{
+    position:absolute;
+    display: none;
 }
 /* grid */
 
@@ -63,6 +109,10 @@ h5{
     background-color:#aa3333;
 }
 
+.badge-trans{
+    background-color:transparent !important;
+    color:#337ab7;
+}
 .grid .lng{
     width:50px;
     height:30px;
@@ -80,6 +130,15 @@ h5{
     border-left:solid 8px #337ab7;
 }
 
+/* ctable */
+
+.ctable .row{
+    margin: 10px auto;
+    color:#999;
+}
+.ctable .row>div{
+    padding:5px 5px;
+}
 
 /* color */
 
@@ -100,7 +159,7 @@ small{
     color:#92d050 !important;
 }
 .red{
-    color:#da9694 !important;
+    color:#aa3333 !important;
 }
 .badge{
     background-color:#aa3333;

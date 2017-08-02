@@ -21,11 +21,23 @@
         .lng{
             width:20px !important;
         }
+        .blue{
+            color:#538dd5 !important;
+        }
+        .redtag{
+            color:#aa3333 !important;
+        }
     </style>
   </head>
   <body>
       <header>
-          <img src="./images/mb.png" />
+          <nav>
+              <a href="javascript:window.history.go(-1)" class="pull-left"><i class="ion-ios-arrow-back icon"></i></a>
+              <a href="index.html"><i class="ion-ios-home icon"></i></a>
+              <div class="right">
+              <a href="#" onclick="$(this).tooltip('show')" data-toggle="tooltip" data-placement="bottom" title="上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved"><i class="ion-ios-information icon"></i></a>
+              </div>
+          </nav>
       </header>
       
       <div class="searchbox input-group" >
@@ -38,8 +50,7 @@
       </div>
       
       
-      
-      <div class="container-fluid grid">
+      <div class="container-fluid grid" onclick="location.href='bka.html'">
           <div class="row">
               <div class="col-xs-12">
                   <table class="table table-condensed">
@@ -64,6 +75,18 @@
                                   Idle <span class="badge pull-right">1</span><br>
                                   <span class="green">+ 5%</span> <br>
                                   5 Parts
+                                  <div>
+                                    <i class="ion-ios-pricetag blue icon-small"></i>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon icon-small blue"></span>
+                                        <span class="badge badge-right-top badge-blue">AI</span>
+                                    </span>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon icon-small redtag"></span>
+                                        <span class="badge badge-right-top badge-red">AI</span>
+                                    </span>
+                                    <i class="ion-ios-pricetag-outline icon-small blue"></i>
+                                  </div>
                                   </td>
                           </tr>
                           <tr>
@@ -82,6 +105,10 @@
                                   Idle <br>
                                   <span  class="green">+ 5%</span> <br>
                                   5 Parts
+                                  <div>
+                                    <i class="ion-ios-pricetag blue icon-small"></i>
+                                    <i class="ion-ios-pricetag-outline icon-small blue"></i>
+                                  </div>
                                   </td>
                           </tr>
                           
@@ -103,6 +130,13 @@
                                   Idle <span class="badge pull-right">1</span><br>
                                   <span  class="red">- 4%</span> <br>
                                   5 Parts
+                                  <div>
+                                    <span class="icon-wrap">
+                                        <span class="ion-ios-pricetag icon icon-small redtag"></span>
+                                        <span class="badge badge-right-top badge-red">AI</span>
+                                    </span>
+                                    <i class="ion-ios-pricetag-outline icon-small blue"></i>
+                                  </div>
                                   </td>
                           </tr>
                           
@@ -121,6 +155,9 @@
                                   Idle <span class="badge pull-right">2</span><br>
                                   <span  class="green">+ 9%</span> <br>
                                   5 Parts
+                                  <div>
+                                    <i class="ion-ios-pricetag blue icon-small"></i>
+                                  </div>
                                   </td>
                           </tr>
                       </tbody>
@@ -129,18 +166,14 @@
           </div>
       </div>
       
-      <p>
-           <a href="#">
-              Filter Setting
-           </a>
-           <a href="#">
-               <span class="pull-right">My Account</span>
-           </a>
-          
-      </p>
       
       <footer>
-          上海大众汽车有限公司 版权所有 <br> SHANGHAI VOLKSWAGEN All Rights Reserved
+          <a href="filter_1.html">
+              Filter Setting
+           </a>
+           <a href="myaccount.html">
+               <span class="pull-right">My Account</span>
+           </a>
       </footer>
   </body>
 </html>

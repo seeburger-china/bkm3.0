@@ -80,6 +80,9 @@
                 margin-left: 10px;
                 font-weight: normal;
             }
+            .text-strong{
+                font-weight: 800;
+            }
         </style>
     </head>
     <body>
@@ -340,11 +343,152 @@
                     </p>
                 </div>
                 <div class='box'>
-                    <h5>Company Profile <span class="glyphicon glyphicon-edit blue" style="float:right;cursor: pointer"></span></h5>
-                    <p>Profile infomation</p>
+                    <h5>Company Profile <a href="#company-profile-modal" data-toggle="modal" class="zoom-btn"><span class="glyphicon glyphicon-edit blue" style="float:right;cursor: pointer"></span></a></h5>
+                    <p>
+					<br>
+                        <div class="item">
+                    <div align="left"><span class="text-strong" color="black"  data-toggle="tooltip" data-placement="top" title="Supplier Name(CN)">Name(CN)</span>:&nbsp;&nbsp;联合汽车电子</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong" color="black" data-toggle="tooltip" data-placement="top" title="Supplier Name(EN)">Name(EN)</span>:&nbsp;&nbsp;United Automotive Electronic</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong" color="black" data-toggle="tooltip" data-placement="top" title="Registration No.">No.</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;330282000031500</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong"color="black" data-toggle="tooltip" data-placement="top" title="Unified social credit code">Credit Code</span>:</div>
+
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong" color="black">DUNS</span>:&nbsp;&nbsp;&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong"color="black">Country</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;China</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong"color="black" data-toggle="tooltip" data-placement="top" title="Province/City">City</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shanghai/Pudong</div>
+                        </div>
+                        <div class="item">
+                            <div align="left"><span class="text-strong"color="black">Address</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No 555 Rongqiao Rd</div>
+                        </div>
+                       	
+            <!-- /.modal-content -->
+ 					
+					</p>
                 </div>
                 
             </div>
+<div class="modal bka-modal fade" id="company-profile-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Company Profile</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <div class="item">
+                            <div class="bka-label">Supplier Name(CN):</div>
+                            <div class="bka-text">联合汽车电子有限公司</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Supplier Name(EN):</div>
+                            <div class="bka-text">United Automotive Electronic System Co., Ltd.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Registration No.:</div>
+                            <div class="bka-text">
+                                330282000031500
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Unified social credit code:</div>
+                            <div class="bka-text">&nbsp;         
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">DUNS:</div>
+                            <div class="bka-text">&nbsp;
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Country:</div>
+                            <div class="bka-text">China
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Province/City:</div>
+                            <div class="bka-text">Shanghai/Pudong
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Address:</div>
+                            <div class="bka-text">
+								No 555 Rongqiao Rd
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Post Code:</div>
+                            <div class="bka-text"><input type="text" class="input-xs" value="200041">
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Enterprise Type:</div>
+                            <div class="bka-text">
+							<select style="width:160px">
+                                <option value="CSC-1">JV</option>
+                            </select>
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Enterprise Scale:</div>
+                            <div class="bka-text"><input type="text" class="input-xs" value="5000">
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Registered Capital:</div>
+                            <!--<div class="bka-text"><input type="text" class="input-xs" value="">-->
+                            <div class="bka-text">
+                                <select style="width:160px">
+                                    <option value="CSC-1">Shanghai</option>
+                                    <option value="CSC-1">Hangzhou</option>
+                                </select>
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Procuct Type:</div>
+                            <div class="bka-text">
+							<select style="width:160px">
+                                <option value="CSC-1">发动机电喷系统</option>
+                            </select>
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Main Factory:</div>
+                            <div class="bka-text"><input type="text" class="input-xs" value="UAES">
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Qualification and Certification:</div>
+                            <div class="bka-text">
+								<select style="width:160px">
+                                <option value="CSC-1">OHSAS18001</option>
+                            </select>
+                            </div>
+                        </div>							
+                    </div>
+                  <div class="modal-footer">
+                    <a href="javascript:void(0);" >Cancel</a>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>    
+                                     
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>			
             <div class='right_container'>
                 <h5 style=''><span class="glyphicon glyphicon-plus blue"></span> Invite a new Partner</h5>
                 <br> 

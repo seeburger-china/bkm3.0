@@ -237,6 +237,12 @@ $(function() {
         $(this).siblings('ul').toggle();
         $('[data-type="capacity1"]').toggle();
     });
+    $('#toggle-max-capacity').click(function() {
+        $(this).find('i').toggleClass('fa-rotate-90');
+        $(this).siblings('ul').toggle();
+        $('[data-type="max-capacity"]').toggle();
+    });	
+	
     //wizard
     var $wizard = $('#wizard-tab');
     var currentTab = 0;
