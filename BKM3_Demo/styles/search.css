@@ -43,3 +43,8 @@
   border: 1px solid beige;
   text-align: center;
 }
+
+/* body-no-fade */
+body.body-no-fade .modal-backdrop {
+  opacity: 0!important;
+}

@@ -2059,7 +2059,7 @@
                         </a>
                     </li>
                     <li class="bka-action">
-                        <a data-toggle="modal" data-target="#virtualbkaModal">
+                        <a data-toggle="modal" data-target="#virtualbkaModal" id="virtualbkaModalBtn">
                             <i class="ion-ios-plus icon-btn blue"></i>
                             <p>Virtual BKA</p>
                         </a>
@@ -2336,6 +2336,13 @@
     $(".dropdown a").click(function(){
       $(this).parent().children('li').show();
     });
+
+    $('#virtualbkaModal').on('show.bs.modal', function () {
+      $(document.body).addClass('body-no-fade')
+    })
+    $('#virtualbkaModal').on('hidden.bs.modal', function () {
+        $(document.body).removeClass('body-no-fade')
+    })
   });
 </script>
 </body>
