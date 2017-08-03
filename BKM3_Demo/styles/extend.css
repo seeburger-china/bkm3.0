@@ -864,7 +864,9 @@ body {
   position: absolute;
   right: 40px;
   top: 10%;
-  margin-top: -20px;
+  /*margin-top: -10px;  */
+    margin-bottom:20px ;
+    margin-right: 50px;
 }
 .btn-s1-center {
   position: absolute;
@@ -876,7 +878,8 @@ body {
     position: absolute;
     right: 150px;
     top: 40%;
-    margin-top: -10px;
+    margin-top: 0;
+    margin-right: 60px;
 }
 /* switch-btn */
 .switch-button .btn.btn-primary {
