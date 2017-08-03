@@ -43,13 +43,13 @@
   border: 1px solid beige;
   text-align: center;
 }
-<<<<<<< HEAD
 
 /* body-no-fade */
 body.body-no-fade .modal-backdrop {
-  opacity: 0!important;
-=======
-.btn-star{
+  opacity: 0 !important;
+}
+
+/* btn-star */
+.btn-star {
   margin-left: 40px;
->>>>>>> 4b4697d7ab9bea583be6855d94fa6b86bc382c57
 }

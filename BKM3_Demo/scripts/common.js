@@ -17,8 +17,6 @@ $(function(){
     })
 
   $('.top-window').on('click', function () {
-<<<<<<< HEAD
-    // $(document.body).animate({'scrollTop': 0}, 500)
     if (document.body.scrollTop) {
       document.body.scrollTop = 0
     }
@@ -28,11 +26,10 @@ $(function(){
     if (window.pageYOffset) {
       window.pageYOffset = 0
     }
-=======
-      console.log('in top')
-    $(document.body).animate({'scrollTop': 0}, 500)
-      console.log('after top')
->>>>>>> 4b4697d7ab9bea583be6855d94fa6b86bc382c57
+  })
+
+  $('.modal-mouseleave').on('mouseleave', function () {
+    $(this).parent().modal('hide')
   })
     
 });
