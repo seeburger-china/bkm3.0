@@ -17,14 +17,23 @@ i{
 
 footer{
     font-size:11px;
-    color:#ccc;
+    color:white;
     position:fixed;
     bottom:0;
     width:100%;
     padding:10px 10px;
     left:0;
+    background-color: #337ab7;
 }
-
+footer a{
+    color:white;
+}
+a.una{
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+}
 .searchbox{
     margin:10px 10px;
 }
@@ -140,6 +149,22 @@ header nav .right{
     padding:5px 5px;
 }
 
+/* chattable */
+.chattable .row{
+    width:90%;
+    border:solid 1px #dce6f1;
+    margin:20px 0;
+    padding:5px 0px;
+    border-radius: 4px;
+}
+.chattable .row.right{
+    background-color:#b7e846;
+    float:right;
+}
+.chattable .row span{
+    display: block;
+    text-align: right;
+}
 /* color */
 
 .bd_red{
