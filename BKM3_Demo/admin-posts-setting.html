@@ -73,8 +73,8 @@
                 <li><a href="admin-relevance-control.html">Relevance Control</a></li>
                 <li><a href="admin-supplier-information.html">General Supplier Information</a></li>
                 <li><a href="admin-tlk-management.html">TLK Management</a></li>
-                <li><a href="admin-bka-status.html">BKA Status</a></li>
-                <li class="active"><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
+                <li ><a href="admin-bka-status.html">BKA Status</a></li>
+                <li><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
                 <li><a href="admin-session-management.html">Sessions Management</a></li>
                 <li><a href="admin-access-management.html">System Access Management</a></li>
                 <li><a href="admin-dictionary-management.html">System Dictionary Management</a></li>
@@ -83,17 +83,31 @@
                 <li><a href="admin-task-management.html">Task Management</a></li>
 				<li><a href="admin-system-tag-management.html">System-Wide Tag Management</a></li>
 				<li><a href="admin-inventory-setting.html">Inventory Setting</a></li>
-				<li><a href="admin-posts-setting.html">Posts Setting</a></li>
+				<li class="active"><a href="admin-posts-setting.html">Posts Setting</a></li>
 				
             </ul>
         </div>
         <div class="main admin">
-            <h3>Demand Quotation Settings </h3>
+            <h3>Posts Function Setting</h3>
             <div class="instruction">
                 <a href="javascript:void(0);" class="btn btn-primary">Apply</a>
-                <span>After applicaiton of new parameters the recalculation of BKA status will take place during the night jobs</span>
             </div>
-
+            <div class="admin-panel">
+                <div class="sub-section">
+                    <div class="section-header">Posts Function Status</div>
+                    <div class="option-item">
+                        
+                        <div class="option-group">
+                            <input type="radio" checked="checked" name="h-bka-status_1" id="h-bka-status-auto1">
+                            <label for="h-bka-status-auto1">Open</label>
+                            <input type="radio" name="h-bka-status_1" id="h-bka-status-manual">
+                            <label for="h-bka-status-manual">Close</label>
+                        </div>
+                        
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>                        
+            </div>
         </div>
     </div>
         <!-- /.modal -->
