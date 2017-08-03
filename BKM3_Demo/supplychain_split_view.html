@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+</html>
+<html>
+<head>
+    <title>BKM3.0</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/bootstrap-3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles/0aa82dc1.vendor.css">
+    <link rel="stylesheet" href="./styles/ac6cffee.main.css">
+    <link rel="stylesheet" href="./styles/extend.css" />
+
+    <link rel="stylesheet" href="./styles/3.0/common.css" />
+    <link rel="stylesheet" href=./fonts/ionicons.svg>
+
+    <script src="./scripts/jquery-3.2.1.min.js" ></script>
+    <script src="./scripts/bootstrap-switch.js" ></script>
+    <script src="./scripts/common.js" ></script>
+
+    <style type="text/css">
+        div.checkbox{
+            padding-left:10px;
+        }
+        .dropdown-header{
+            font-weight: bold;
+            color:black;
+        }
+        .box .dropdown,.dropup,.box .dropdown button,.dropup button{
+            width:100%;
+            text-align: left;
+        }
+        .readonly{
+            color:#ccc;
+        }
+        .icontable{
+            width:400px;
+
+            text-align: center;
+        }
+        .main_container{
+            margin-left:40px;
+        }
+        .bd_red,.bd_red label{
+            border-color:red;
+        }
+        .bd_primary,.bd_primary p{
+            background-color:#538dd5;
+            color:white;
+        }
+        #switchpanel{
+            position:absolute;
+            top:20px;
+            right:10px;
+        }
+        #switchpanel .selected{
+            border-color:#538dd5;
+            background-color:#538dd5;
+            color:white;
+        }
+    </style>
+<body>
+
+<header>
+    <img class="logo" src="./images/logo.png" />
+    <div class="pagetitle">SAIC-Volkswagen Supplierbook</div>
+</header>
+<div class="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index-new.html"><i class="ion-ios-home-outline"></i></a></li>
+                <li><a href="search.html"><i class="ion-ios-search"></i></a></li>
+                <li><a href="history.html"><i class="ion-ios-clock-outline"></i></a></li>
+                <li><a href="report-event-analysis.html"><i class="ion-ios-pie-outline"></i></a></li>
+                <li><a href="admin-relevance-control.html"><i class="ion-ios-settings"></i></a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default btnGlobalSearch"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- /input-group -->
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0);">Help</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Jeff Hanneman <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#my-account-modal" data-toggle="modal">My Account</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>
+<!--<div class="navbar">-->
+<!--<nav class="selectable">-->
+<!--<a class="selected" href="#">-->
+<!--<span class="ion-ios-home-outline"></span>-->
+<!--</a>-->
+<!--<a href="search.html">-->
+<!--<span class="ion-ios-search-strong"></span>-->
+<!--</a>-->
+<!--<a href="history.html">-->
+<!--<span class="ion-clock"></span>-->
+<!--<span class="badge">4</span>-->
+<!--</a>-->
+<!--<a href="report-event-analysis.html">-->
+<!--<span class="ion-ios-pie-outline"></span>-->
+<!--</a>-->
+<!--<a href="admin-relevance-control.html">-->
+<!--<span class="ion-ios-gear-outline"></span>-->
+<!--</a>-->
+<!--</nav>-->
+<!--<div class="searchbox input-group" >-->
+<!--<input type="text" class="form-control" placeholder="Search for...">-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-default" type="button">-->
+<!--<span class="glyphicon glyphicon-search blue"></span>-->
+<!--</button>-->
+<!--</span>-->
+<!--</div>-->
+<!--<div class="pull-right">-->
+<!--<a href='#'>Help</a>-->
+<!--<a href='#'>Ma Yanchao</a>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="pagetab selectable">
+    <a class="tab" href="index-new.html">BKM</a>
+    <a class="tab" href="suppliernetwork.html">Supplier Network (6)</a>
+    <a class="tab selected" href="supplychains.html">Supply Chains (48)</a>
+</div>
+
+<!-- sear mod begin-->
+<div class="inner-page search">
+    <div class="filter-block mt-20">
+        <div class="filter-summary">
+            <div style="float:left;min-width:120px;">
+                <a id="toggleFilter" class="filter " href="javascript:void(0);">Add/Edit Filter
+                    <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div>
+                <input type="text" id="tagsinput" data-role="tagsinput">
+            </div>
+        </div>
+        <div class="folding-panel" style="margin-left:120px;">
+            <div class="filter-section">
+                <div class="items col-sm-12">
+                    <div class="filter-item">
+                        <span class="title">BKM Supplier:</span>
+                        <!--<div class="form-group">-->
+                        <!--<div class='input-group'>-->
+                        <!--<input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <select class="selectpicker" id="f-supplier" data-filter-type="global" data-label="Vehicle Supplier">
+                            <option value="All">supplier1</option>
+                            <option value="5GD">supplier2</option>
+                            <option value="180">supplier3</option>
+                        </select>
+                    </div>
+
+                    <div class="option-section">
+                        <div class="items col-sm-12">
+                            <a href="javascript:void(0);" class="btn btn-primary btn-toggleFilterApply">Apply</a><a href="javascript:void(0);" >Reset to default</a><a href="javascript:void(0);" class="btn-toggleFilterApply">Save as my personal view</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- sear mod begin-->
+
+
+<div class='main_container'>
+    <table class='icontable'>
+        <tr>
+            <td onclick="showPanel('panel1');">
+                <span class="ion-ios-plus-outline icon-lg"></span><br>
+                Add new chain
+            </td>
+            <td>
+                <span class="ion-forward icon-lg"></span><br>
+                Export demands
+            </td>
+            <td>
+                <span class="ion-map icon-lg"></span><br>
+                Map
+            </td>
+        </tr>
+    </table>
+    <div id="switchpanel" class="btn-group btn-group-sm" role="group">
+        <button type="button" class="btn btn-default selected">Edit</button>
+        <button type="button" onclick="location.href='supplychains_view.html'" class="btn btn-default">View</button>
+    </div>
+    <div class="treecontainer" id="tree1">
+        <div class="tree">
+            <!--div class="treenode">
+                <label>3rd Tier</label>
+                <h5>Supplier name</h5>
+                <p>Product <b>Product type</b></p>
+                <p>city</p>
+                <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
+            </div-->
+        </div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree">
+            <div class="treenode bkalist">
+                <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+                <h5>Radlarger 1A</h5>
+                <p>Part No: 1234567890</p>
+                <p>Plant: Changsha, Anting</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="treecontainer" id="tree2">
+        <div class="tree">
+            <!--div class="treenode">
+                <label>3rd Tier</label>
+                <h5>Supplier name</h5>
+                <p>Product <b>Product type</b></p>
+                <p>city</p>
+                <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
+            </div-->
+        </div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree">
+            <div class="treenode bkalist">
+                <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+
+                <h5>Radlarger 1B</h5>
+                <p>Part No: 1234567890</p>
+                <p>Plant: Changsha, Anting</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="treecontainer" id="tree3">
+        <div class="tree">
+            <!--div class="treenode">
+                <label>3rd Tier</label>
+                <h5>Supplier name</h5>
+                <p>Product <b>Product type</b></p>
+                <p>city</p>
+                <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
+            </div-->
+        </div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree">
+            <div class="treenode bkalist">
+                <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+
+                <h5>Radlarger 1C</h5>
+                <p>Part No: 1234567890</p>
+                <p>Plant: Changsha, Anting</p>
+            </div>
+        </div>
+    </div>
+    <!--<div class="treecontainer" id="tree4">-->
+        <!--<div class="tree">-->
+            <!--&lt;!&ndash;div class="treenode">-->
+                <!--<label>3rd Tier</label>-->
+                <!--<h5>Supplier name</h5>-->
+                <!--<p>Product <b>Product type</b></p>-->
+                <!--<p>city</p>-->
+                <!--<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>-->
+                <!--<a class="add"><span class="glyphicon glyphicon-plus"></span></a>-->
+            <!--</div&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="tree"></div>-->
+        <!--<div class="tree">-->
+            <!--<div class="treenode bkalist">-->
+                <!--<label><span class="glyphicon glyphicon-signal"></span> BKA List</label>-->
+                <!--<h5>Radlarger 2A</h5>-->
+                <!--<p>Part No: 1234567890</p>-->
+                <!--<p>Plant: Changsha, Anting</p>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="treecontainer" id="tree5">-->
+        <!--<div class="tree">-->
+            <!--&lt;!&ndash;div class="treenode">-->
+                <!--<label>3rd Tier</label>-->
+                <!--<h5>Supplier name</h5>-->
+                <!--<p>Product <b>Product type</b></p>-->
+                <!--<p>city</p>-->
+                <!--<a class="delete"><span class="glyphicon glyphicon-remove"></span></a>-->
+                <!--<a class="add"><span class="glyphicon glyphicon-plus"></span></a>-->
+            <!--</div&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="tree"></div>-->
+        <!--<div class="tree">-->
+            <!--<div class="treenode bkalist">-->
+                <!--<label><span class="glyphicon glyphicon-signal"></span> BKA List</label>-->
+
+                <!--<h5>Radlarger 2B</h5>-->
+                <!--<p>Part No: 1234567890</p>-->
+                <!--<p>Plant: Changsha, Anting</p>-->
+            <!--</div>-->
+        <!--</div>--> <!--</div>-->
+    <!--</div>
+   -->
+    <div class="treecontainer" id="tree4">
+        <div class="tree">
+            <!--div class="treenode">
+                <label>3rd Tier</label>
+                <h5>Supplier name</h5>
+                <p>Product <b>Product type</b></p>
+                <p>city</p>
+                <a class="delete"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="add"><span class="glyphicon glyphicon-plus"></span></a>
+            </div-->
+        </div>
+        <div class="tree"></div>
+        <div class="tree">
+            <div class="treenode bkalist">
+                <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+                <h5>Radlarger A</h5>
+                <p>Part No: 1234567890</p>
+                <p>Plant: Changsha, Anting</p>
+                <label></label>
+                <h5>Radlarger B</h5>
+                <p>Part No: 1234567890</p>
+                <p>Plant: Changsha, Anting</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="floatpanel" id="panel1">
+    <h5>Add new chain
+        <p class="tiny">Step 1 of 3 : Enter a SAIC-Volkswagen part number</p>
+    </h5>
+    <br><br><br><br>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter a SAIC-Volkswagen part number" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">Check</span>
+    </div>
+    <br><br>
+    <p class="tip">027105411P confirmed</p>
+
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="showPanel('panel2');">Next</button>
+    </div>
+</div>
+<div class="floatpanel" id="panel2">
+    <h5>Add new chain
+        <p class="tiny">Step 2 of 3 : Enter a SAIC-Volkswagen part number</p>
+    </h5>
+    <br><br><br><br>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="selitem">Select product or service type</span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header">Components and parts 零部件</li>
+            <li><a href="#">Metal parts 金属件</a></li>
+            <li><a href="#">Plastic parts 塑料件</a></li>
+            <li><a href="#">Electronic components 电子元器件</a></li>
+            <li><a href="#">Wire harness 线束</a></li>
+            <li><a href="#">Rubber parts 橡胶件</a></li>
+            <li><a href="#">others 其他</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Material 原材料</li>
+            <li><a href="#">Steel 钢材</a></li>
+            <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+            <li><a href="#">Plastic 塑料</a></li>
+            <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+            <li><a href="#">Chemicals 化学品</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+            <li><a href="#">Painting 油漆</a></li>
+            <li><a href="#">Coating 电镀或涂层</a></li>
+            <li><a href="#">Machining 机加工</a></li>
+            <li><a href="#">Welding 焊接</a></li>
+            <li><a href="#">Polishing 抛光</a></li>
+            <li><a href="#">Others 其他</a></li>
+
+
+
+        </ul>
+    </div>
+    <br><br>
+    <p class="tip">You are making subcomponent <span class="selitem"></span> for SVW part<br>027105411P</p>
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-default" onclick="showPanel('panel1');">Back</button>
+
+        <button type="button" class="btn btn-primary"  onclick="showPanel('panel3');">Next</button>
+    </div>
+</div>
+<div class="floatpanel" id="panel3">
+    <h5>Add new chain
+        <p class="tiny">Step 3 of 3 : Enter a SAIC-Volkswagen part number</p>
+    </h5>
+    <br>
+    <input type="text" class="form-control" placeholder="Filter..." >
+    <br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Registration No</th>
+            <th>Unified social credit code</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456
+            </th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr class="active">
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr class="active">
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>123123123</td>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        </tbody>
+    </table>
+    <ul class="pagination" style="margin-left:200px;margin-top:0;">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+    <p class="tiny"><span class="glyphicon glyphicon-plus blue"></span> Not found? Enter a new customer</p>
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-default" onclick="showPanel('panel2');">Back</button>
+        <button type="button" class="btn btn-primary"  onclick="$('.mask').click()">Submit</button>
+    </div>
+</div>
+<div class="floatpanel" id="panel4">
+    <h5>
+        Select a supplier
+    </h5>
+    <input type="text" class="form-control" placeholder="Filter..." aria-describedby="basic-addon2">
+    <br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Registration No.</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456
+            </th>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr class="active">
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                A123456</th>
+            <td>EVONIC</td>
+            <td>Shanghai</td>
+            <td>China</td>
+        </tr>
+
+        </tbody>
+    </table>
+    <ul class="pagination" style="margin-left:200px;margin-top:0;">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+    <p class="tiny" style="margin-top:-50px;">Showing 1 to 10 of 949 rows</p>
+    <br><br><br><br><br>
+    <form>
+        <div class="form-group">
+            <label for="applyto">Apply to other supply chains?</label>
+            <br><br>
+            <div class="btn-group">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Select supply chains</span>
+                    <span class="caret"></span>
+                </button>
+                <ul  class="dropdown-menu bkadropdown" aria-labelledby="dropdownMenu2">
+                    <li class="ctree1"><div  class="checkbox">
+                        <label>
+                            <input type="checkbox"> Radlarger 1A
+                        </label>
+                    </div></li>
+                    <li class="ctree2"><div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Radlarger 1B
+                        </label>
+                    </div></li>
+                    <li class="ctree3"><div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Radlarger 1C
+                        </label>
+                    </div></li>
+                    <li class="ctree4"><div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Radlarger 2A
+                        </label>
+                    </div></li>
+                    <li class="ctree5"><div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Radlarger 2B
+                        </label>
+                    </div></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="material">Type of Material</label>
+            <br><br>
+            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="selitem">Select product or service type</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li class="dropdown-header">Components and parts 零部件</li>
+                    <li><a href="#">Metal parts 金属件</a></li>
+                    <li><a href="#">Plastic parts 塑料件</a></li>
+                    <li><a href="#">Electronic components 电子元器件</a></li>
+                    <li><a href="#">Wire harness 线束</a></li>
+                    <li><a href="#">Rubber parts 橡胶件</a></li>
+                    <li><a href="#">others 其他</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Material 原材料</li>
+                    <li><a href="#">Steel 钢材</a></li>
+                    <li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+                    <li><a href="#">Plastic 塑料</a></li>
+                    <li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+                    <li><a href="#">Chemicals 化学品</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+                    <li><a href="#">Painting 油漆</a></li>
+                    <li><a href="#">Coating 电镀或涂层</a></li>
+                    <li><a href="#">Machining 机加工</a></li>
+                    <li><a href="#">Welding 焊接</a></li>
+                    <li><a href="#">Polishing 抛光</a></li>
+                    <li><a href="#">Others 其他</a></li>
+
+
+
+                </ul>
+            </div>
+
+        </div>
+
+
+    </form>
+    <div class="btngroup">
+        <button type="button" class="btn btn-default" onclick="$('.mask').click()">Cancel</button>
+        <button type="button" class="btn btn-primary btn_applyto"  onclick="$('.mask').click()">Submit</button>
+    </div>
+</div>
+<div class="modal bka-modal fade" id="supplier-Delete-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete supplier</h4>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <span>Are you sure delete the supplier?</span>
+                </div>
+                <div class="divide">&nbsp;</div>
+                <div class="content">
+                    <form>
+                        <div class="form-group">
+                            <label for="applyto">Apply to other supply chains?</label>
+                            <br><br>
+                            <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>Select supply chains</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul  class="dropdown-menu bkadropdown" aria-labelledby="dropdownMenu2">
+                                    <li class="ctree1"><div  class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Radlarger 1A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree2"><div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Radlarger 1B
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree3"><div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Radlarger 1C
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree4"><div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Radlarger 2A
+                                        </label>
+                                    </div></li>
+                                    <li class="ctree5"><div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Radlarger 2B
+                                        </label>
+                                    </div></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href=""  data-dismiss="modal">Cancel</a>
+                <button type="button" class="btn btn-primary btn_applyto"  data-dismiss="modal">Confrim</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--
+<div class="modal bka-modal fade" id="supplier-Apply-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Apply to other supply chains</h4>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                <form>
+                    <div class="form-group">
+                      <label for="applyto">Apply to other supply chains?</label>
+                      <br>
+                      <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Select supply chains</span>
+                          <span class="caret"></span>
+                        </button>
+                        <ul  class="dropdown-menu bkadropdown" aria-labelledby="dropdownMenu2">
+                            <li class="ctree1"><div  class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Radlarger 1A
+                                </label>
+                            </div></li>
+                            <li class="ctree2"><div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Radlarger 1B
+                                </label>
+                            </div></li>
+                            <li class="ctree3"><div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Radlarger 1C
+                                </label>
+                            </div></li>
+                            <li class="ctree4"><div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Radlarger 2A
+                                </label>
+                            </div></li>
+                            <li class="ctree5"><div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> Radlarger 2B
+                                </label>
+                            </div></li>
+
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="material">Type of Material</label>
+                    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="selitem">Select product or service type</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li class="dropdown-header">Components and parts 零部件</li>
+<li><a href="#">Metal parts 金属件</a></li>
+<li><a href="#">Plastic parts 塑料件</a></li>
+<li><a href="#">Electronic components 电子元器件</a></li>
+<li><a href="#">Wire harness 线束</a></li>
+<li><a href="#">Rubber parts 橡胶件</a></li>
+<li><a href="#">others 其他</a></li>
+          <li role="separator" class="divider"></li>
+<li class="dropdown-header">Material 原材料</li>
+<li><a href="#">Steel 钢材</a></li>
+<li><a href="#">Other metal except steel 除钢材外的其他金属材料</a></li>
+<li><a href="#">Plastic 塑料</a></li>
+<li><a href="#">Other non-metal except plastic 除塑料外的其他非金属材料</a></li>
+<li><a href="#">Chemicals 化学品</a></li>
+          <li role="separator" class="divider"></li>
+<li class="dropdown-header">Outsourcing production process 委外加工生产</li>
+<li><a href="#">Painting 油漆</a></li>
+<li><a href="#">Coating 电镀或涂层</a></li>
+<li><a href="#">Machining 机加工</a></li>
+<li><a href="#">Welding 焊接</a></li>
+<li><a href="#">Polishing 抛光</a></li>
+<li><a href="#">Others 其他</a></li>
+
+
+
+        </ul>
+      </div>
+
+                    </div>
+
+
+                </form>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href=""  data-dismiss="modal">Cancel</a>
+                <button type="button" class="btn btn-primary"  data-dismiss="modal">Confrim</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+<div class="footer">
+    上汽大众汽车有限公司版权所有 Copyright @ 2017 SAIC VOLKSWAGEN All Rights Reserved
+</div>
+-->
+<script type="text/javascript">
+
+    function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
+        var li = new Array();
+        li.push('<div treeid="'+id+'" title="Operator:default user\nDate:2010-01-02 11:22:33" class="treenode '+sign+' ">');
+        li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
+        li.push('<h5>'+sname+'</h5>');
+        li.push('<p>'+product+': <b>'+ptype+'</b></p>');
+        li.push('<p>'+city+'</p>');
+        if(hasdel)
+            li.push('<a class="delete" href="#supplier-Delete-modal" data-toggle="modal"><span class="ion-ios-minus-empty icon-lg"></span></a>');
+        if(hasadd)
+            li.push('<a class="add"><span class="ion-ios-plus-empty icon-lg"></span></a>');
+        li.push('</div>');
+        $("#"+id+">.tree:eq("+layerid+")").append(li.join(''));
+    }
+    var sec=0;
+    function btnTimeout(){
+        sec--;
+        $("#basic-addon2").html("Check ("+sec+"s)");
+        if(sec>0){
+            setTimeout(btnTimeout,1000);
+        }
+        else{
+            $("#basic-addon2").html("Check").removeClass("readonly");
+        }
+    }
+    $(function(){
+        $("#basic-addon2").click(function(){
+            if(sec==0){
+                sec=10;
+                $(this).addClass("readonly");
+                btnTimeout();
+
+            }
+
+        });
+        $(".dropdown a,.dropup a").click(function(){
+            $(".selitem").html($(this).html());
+        });
+
+        var i=0;
+        for(i=1;i<=3;i++){
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0);
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0);
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0,true,true,'bd_red');
+            buildTreenode("tree"+i,"2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,true,true,'bd_primary');
+            buildTreenode("tree"+i,"1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
+
+        }
+
+        buildTreenode("tree4","2rd Tier",'Microware','Product','Metals','City',0);
+        buildTreenode("tree4","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
+        buildTreenode("tree5","2rd Tier",'Microware','Product','Metals','City',0);
+        buildTreenode("tree5","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
+
+        //删除
+        $(".delete,.add").click(function(){
+            var treeid = $(this).parent('div').attr('treeid');
+            $(".bkadropdown li").hide();
+            switch(treeid){
+                case "tree1":
+                    $(".bkadropdown li.ctree2").show();
+                    $(".bkadropdown li.ctree3").show();
+                    break;
+                case "tree2":
+                    $(".bkadropdown li.ctree1").show();
+                    $(".bkadropdown li.ctree3").show();
+                    break;
+                case "tree3":
+                    $(".bkadropdown li.ctree2").show();
+                    $(".bkadropdown li.ctree1").show();
+                    break;
+                case "tree4":
+                    $(".bkadropdown li.ctree5").show();
+                    break;
+                case "tree5":
+                    $(".bkadropdown li.ctree4").show();
+                    break;
+
+            }
+
+        });
+        $(".add").click(function(){
+            showPanel('panel4');
+        });
+
+        //横线
+        $(".treenode").each(function(){
+            $(this).prepend('<div class="xr"></div>');
+            $(this).prepend('<div class="xl"></div>');
+        });
+        $(".treecontainer").each(function(){
+            $(this).children(".tree:eq(0)").children('.treenode').children('.xl').remove();
+            $(this).children(".tree:eq(-1)").children('.treenode').children('.xr').remove();
+        });
+
+        //竖线
+        $(".tree").each(function(){
+            $(this).children(".treenode:first").each(function(){
+                var ystart = $(this)[0].offsetTop;
+                var yend = $(this).parent().children('.treenode:last')[0].offsetTop;
+                $(this).prepend('<div class="y" style="height:'+(yend-ystart)+'px;"></div>');
+
+            });
+        });
+
+        $(".bkadropdown li").click(function(e){
+            e.cancelBubble = true;
+            e.stopPropagation();
+        });
+
+        $(".btn_applyto").click(function(){
+            //$('#supplier-Apply-modal').modal();
+        });
+    });
+</script>
+
+<script src="scripts/9a737976.vendor.js"></script>
+<script src="scripts/10ffdb3e.main.js"></script>
+</body>
+</html>
