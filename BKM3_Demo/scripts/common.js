@@ -17,9 +17,19 @@ $(function(){
     })
 
   $('.top-window').on('click', function () {
-      console.log('in top')
-    $(document.body).animate({'scrollTop': 0}, 500)
-      console.log('after top')
+    if (document.body.scrollTop) {
+      document.body.scrollTop = 0
+    }
+    if (document.documentElement.scrollTop) {
+      document.documentElement.scrollTop = 0
+    }
+    if (window.pageYOffset) {
+      window.pageYOffset = 0
+    }
+  })
+
+  $('.modal-mouseleave').on('mouseleave', function () {
+    $(this).parent().modal('hide')
   })
     
 });

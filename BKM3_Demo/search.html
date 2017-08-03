@@ -714,7 +714,7 @@
                 </li>
 
                 <div class="modal fade" id="virtualbkaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog modal-right-bottom" role="document">
+                    <div class="modal-dialog modal-right-bottom modal-mouseleave" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -2060,7 +2060,7 @@
                         </a>
                     </li>
                     <li class="bka-action">
-                        <a data-toggle="modal" data-target="#virtualbkaModal">
+                        <a data-toggle="modal" data-target="#virtualbkaModal" id="virtualbkaModalBtn">
                             <i class="ion-ios-plus icon-btn blue"></i>
                             <p>Virtual BKA</p>
                         </a>
@@ -2337,6 +2337,13 @@
     $(".dropdown a").click(function(){
       $(this).parent().children('li').show();
     });
+
+    $('#virtualbkaModal').on('show.bs.modal', function () {
+      $(document.body).addClass('body-no-fade')
+    })
+    $('#virtualbkaModal').on('hidden.bs.modal', function () {
+        $(document.body).removeClass('body-no-fade')
+    })
   });
 </script>
 </body>
