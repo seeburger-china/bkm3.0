@@ -164,20 +164,28 @@
         <div class="folding-panel" style="margin-left:120px;">
             <div class="filter-section">
                 <div class="items col-sm-12">
-                  <div class="filter-item">
-                    <span class="title">BKM Supplier:</span>
-                    <!--<div class="form-group">-->
-                    <!--<div class='input-group'>-->
-                    <!--<input type='text' class="form-control input-sm" id="f-supplier" data-filter-type="global" data-label="Supplier" />-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <select class="selectpicker" id="f-supplier" data-filter-type="global" data-label="Vehicle Supplier">
+					<div class="filter-item">
+                        <span class="title">Country:</span>
+                        <select class="selectpicker" id="f-sub-supplier" data-filter-type="local" data-label="Sub-supplier">
+                            <option value="nb"></option>
+                            <option value="yz">China</option>
+							<option value="yz">Aland</option>
+                        </select>
+                        <span class="title">City:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
+							<option value="01"></option>
+                            <option value="01">Changzhou,Jiangsu</option>
+                            <option value="02">Suzhou,Jiangsu</option>
+                            <option value="03">Wuxi,Jiangsu</option>
+                        </select>	
+                        <span class="title">n-Tier Supplier:</span>
+                        <select class="selectpicker" id="f-Supplier-Provinces" data-filter-type="local" data-label="Sub-supplier">
 							<option value="01"></option>
                             <option value="01">Chenhua electrical fittings CO.,Ltd</option>
                             <option value="02">Shanghai  HuiLiang  Forging  Co.,Ltd</option>
                             <option value="03">Shanghai nanhui rubber products factory</option>
-                    </select>
-                  </div>
+                        </select>							
+                    </div>
 
             <div class="option-section">
                 <div class="items col-sm-12">
@@ -206,10 +214,10 @@
                                 <span class="ion-map icon-lg"></span><br>
                                 Map
                             </td>
-                            <td onclick="location.href='supplychains_split.html'">
+                           <!-- <td onclick="location.href='supplychains_split.html'">
                                 <span class="ion-shuffle icon-lg"></span><br>
                                 Split
-                            </td>
+                            </td>-->
                         </tr>
                     </table>
             <div id="switchpanel" class="btn-group btn-group-sm" role="group">
@@ -264,7 +272,8 @@
                 <div class="tree"></div>
                 <div class="tree">
                     <div class="treenode bkalist">
-                        <label><span class="glyphicon glyphicon-signal"></span> BKA List</label>
+                        <!--<label><span class="glyphicon glyphicon-signal"></span> BKA List</label>-->
+						<label><span class="glyphicon glyphicon-signal icon-signal"></span> BKA List<a href="supplychain_split_view.html"><i class="ion-shuffle blue icon-shuffle"></i></a></label>
                         <h5>Radlarger A</h5>
                         <p>Part No: 1234567890</p>
                         <p>Plant: Changsha, Anting</p>
