@@ -861,6 +861,7 @@ body {
 
 /* btn-s1 */
 .btn-s1-hint {
+  color:#ccc;
   position: absolute;
   right: 40px;
   top: 10%;
