@@ -855,13 +855,14 @@
 -->
 <script type="text/javascript">
 
-    function buildTreenode(id,title,sname,product,ptype,city,layerid,hasdel=true,hasadd=true,sign=""){
+    function buildTreenode(id,title,sname,product,ptype,city,address,layerid,hasdel=true,hasadd=true,sign=""){
         var li = new Array();
         li.push('<div treeid="'+id+'" title="Operator:default user\nDate:2010-01-02 11:22:33" class="treenode '+sign+' ">');
         li.push('<label><span class="glyphicon glyphicon-map-marker"></span> '+title+'</label>');
         li.push('<h5>'+sname+'</h5>');
         li.push('<p>'+product+': <b>'+ptype+'</b></p>');
         li.push('<p>'+city+'</p>');
+		li.push('<p>'+address+'</p>');
         if(hasdel)
             li.push('<a class="delete" href="#supplier-Delete-modal" data-toggle="modal"><span class="ion-ios-minus-empty icon-lg"></span></a>');
         if(hasadd)
@@ -896,18 +897,18 @@
 
         var i=0;
         for(i=1;i<=3;i++){
-            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0);
-            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0);
-            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','City',0,true,true,'bd_red');
-            buildTreenode("tree"+i,"2rd Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,true,true,'bd_primary');
-            buildTreenode("tree"+i,"1st Tier",'Ningbo Huade','Product','Metals','City',2,false,false);
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','Jiading, Shanghai, China','No 111 yuanguo Road',0);
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','Jiading, Shanghai, China','No 111 yuanguo Road',0);
+            buildTreenode("tree"+i,"3rd Tier",'Supplier name','Product','Product type','Jiading, Shanghai, China','No 111 yuanguo Road',0,true,true,'bd_red');
+            buildTreenode("tree"+i,"2rd Tier",'Longcheng Precision Forging','Product','Welding','Jiading, Shanghai, China','No 111 yuanguo Road',1,true,true,'bd_primary');
+            buildTreenode("tree"+i,"1st Tier",'Ningbo Huade','Product','Metals','Jiading, Shanghai, China','No 111 yuanguo Road',2,false,false);
 
         }
 
         buildTreenode("tree4","2rd Tier",'Microware','Product','Metals','City',0);
-        buildTreenode("tree4","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
+        buildTreenode("tree4","1st Tier",'Longcheng Precision Forging','Product','Welding','Jiading, Shanghai, China','No 111 yuanguo Road',1,false,true,'bd_primary');
         buildTreenode("tree5","2rd Tier",'Microware','Product','Metals','City',0);
-        buildTreenode("tree5","1st Tier",'Longcheng Precision Forging','Process','Welding','Changzhou',1,false,true,'bd_primary');
+        buildTreenode("tree5","1st Tier",'Longcheng Precision Forging','Product','Welding','Jiading, Shanghai, China','No 111 yuanguo Road',1,false,true,'bd_primary');
 
         //删除
         $(".delete,.add").click(function(){
