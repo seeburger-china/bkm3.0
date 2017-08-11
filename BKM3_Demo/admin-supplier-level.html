@@ -74,7 +74,7 @@
                 <li><a href="admin-supplier-information.html">General Supplier Information</a></li>
                 <li><a href="admin-tlk-management.html">TLK Management</a></li>
                 <li><a href="admin-bka-status.html">BKA Status</a></li>
-                <li class="active"><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
+                <li><a href="admin-demand-quotation-setting.html">Demand Quotation Setting</a></li>
                 <li><a href="admin-session-management.html">Sessions Management</a></li>
                 <li><a href="admin-access-management.html">System Access Management</a></li>
                 <li><a href="admin-dictionary-management.html">System Dictionary Management</a></li>
@@ -84,17 +84,41 @@
 				<li><a href="admin-system-tag-management.html">System-Wide Tag Management</a></li>
 				<li><a href="admin-inventory-setting.html">Inventory Setting</a></li>
 				<li><a href="admin-posts-setting.html">Posts Setting</a></li>
-				<li><a href="admin-supplier-level.html">Supplier Level Setting</a></li>
-				
+				<li class="active"><a href="admin-supplier-level.html">Supplier Level Setting</a></li>
             </ul>
         </div>
         <div class="main admin">
-            <h3>Demand Quotation Settings </h3>
+            <h3>Supplier Level Setting</h3>
             <div class="instruction">
                 <a href="javascript:void(0);" class="btn btn-primary">Apply</a>
                 <span>After applicaiton of new parameters the recalculation of BKA status will take place during the night jobs</span>
             </div>
-
+            <div class="admin-panel">
+                <div class="sub-section">
+                    <div class="section-header">BKA With Supply Chains</div>
+                    <div class="option-item">
+                        <div class="gauge">Threshold: [<span id="bka-threshold-start">0</span>,<span id="bka-threshold-end">10</span>]</div>
+                        <input type="text" id="bka-threshold-slider" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="[0,10]" data-slider-tooltip="hide">
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <div class="section-header">Activity last 30 days</div>
+                    <div class="option-item">
+                        <div class="gauge">Threshold: [<span id="bka-threshold-start1">0</span>,<span id="bka-threshold-end1">5</span>]</div>
+                        <input type="text" id="bka-threshold-slider1" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="[0,5]" data-slider-tooltip="hide">
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>				
+                <div class="sub-section">
+                    <div class="section-header">Company profile maintenance integrity rate </div>
+                    <div class="option-item">
+                        <div class="gauge">Threshold: [<span id="bka-threshold-start2">0</span>%,<span id="bka-threshold-end2">100</span>%]</div>
+                        <input type="text" id="bka-threshold-slider2" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="[0,100]" data-slider-tooltip="hide">
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
         <!-- /.modal -->
@@ -109,7 +133,7 @@
                     <div role="tabpanel">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profie</a></li>
+                            <li class="active"><a href="#profile-tab" data-toggle="tab">Profile</a></li>
                             <li><a href="#notification-tab" data-toggle="tab">Notifications</a></li>
                         </ul>
                         <!-- Tab panes -->
@@ -232,7 +256,7 @@
                                                 <input type="radio" name="nf-radio-5" id="nf-radio-5a" checked="checked"> Enabled
                                             </label>
                                             <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b"> Disabled
+                                                <input type="radio" name="nf-radio-5" id="nf-radio-5b" > Disabled
                                             </label>
                                         </div>
                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
@@ -241,10 +265,10 @@
                                         <label class="col-sm-6">New  KTB demand data:</label>
                                         <div class="col-sm-6">
                                             <label for="nf-radio-1a">
-                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" > Enabled
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7a" checked="checked"> Enabled
                                             </label>
                                             <label for="nf-radio-1b">
-                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b" checked="checked"> Disabled
+                                                <input type="radio" name="nf-radio-7" id="nf-radio-7b"> Disabled
                                             </label>
                                         </div>
                                        <div class="help-text">Lorem ipsum dolor sit amet.</div>
@@ -282,6 +306,37 @@
     </div>
     <script src="scripts/9a737976.vendor.js"></script>
     <script src="scripts/10ffdb3e.main.js"></script>
+    <script language="JavaScript">
+　　   $(function(){  
+           
+            $("#h-bka-status-manual").click(function(){
+                 $("#selectpicker1").prop('disabled',false);
+                 $("#selectpicker1").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto1").click(function(){
+                 $("#selectpicker1").attr("disabled","disabled").selectpicker('refresh');    
+            })
+
+            $("#h-bka-status-manua2").click(function(){
+                 $("#selectpicker2").prop('disabled',false);
+                 $("#selectpicker2").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto2").click(function(){
+                 $("#selectpicker2").attr("disabled","disabled").selectpicker('refresh');    
+            })
+
+            $("#h-bka-status-manua3").click(function(){
+                 $("#selectpicker3").prop('disabled',false);
+                 $("#selectpicker3").selectpicker('refresh');  
+            })
+
+            $("#h-bka-status-auto3").click(function(){
+                 $("#selectpicker3").attr("disabled","disabled").selectpicker('refresh');    
+            })
+        });
+　　</script>
 </body>
 
 </html>

@@ -621,6 +621,17 @@ $(function() {
         $('#bka-threshold-start').html(e.value[0]);
         $('#bka-threshold-end').html(e.value[1]);
     });
+	//change by HouYanqiu
+	$('#bka-threshold-slider1').slider();
+    $('#bka-threshold-slider1').on('slide', function(e) {
+        $('#bka-threshold-start1').html(e.value[0]);
+        $('#bka-threshold-end1').html(e.value[1]);
+    });
+	$('#bka-threshold-slider2').slider();
+    $('#bka-threshold-slider2').on('slide', function(e) {
+        $('#bka-threshold-start2').html(e.value[0]);
+        $('#bka-threshold-end2').html(e.value[1]);
+    });
     //Change role modal trigger
     $('#admin-user-list-table tbody tr td:last-child a').on('click', function() {
         $('#user-info-modal').modal('show');
