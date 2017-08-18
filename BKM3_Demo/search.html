@@ -18,7 +18,6 @@
     <script src="./scripts/jquery-3.2.1.min.js" ></script>
     <script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="./scripts/common.js" ></script>
-
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/es5-shim/4.1.4/es5-shim.min.js"></script>
     <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -1878,144 +1877,120 @@
                         </ul>
                     </div>
 					
-   <div class="modal bka-modal fade" id="company-profile-modal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Company Profile</h4>
+  <div class="modal bka-modal fade" id="company-profile-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Company Profile</h4>
+                </div>
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#all-tab1" data-toggle="tab">Huizhong</a></li>
+                                <li ><a href="#internal-tab1" data-toggle="tab">Changsha Huizhong</a></li>
+                            </ul>	
+				<div class="tab-content">							
+                <div class="modal-body" role="tabpanel"  id="all-tab1">
+                    <div class="content">
+					
+                        <div class="item">
+                            <div class="bka-label">Supplier Name(CN):</div>
+                            <div class="bka-text">联合汽车电子有限公司</div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Supplier Name(EN):</div>
+                            <div class="bka-text">United Automotive Electronic System Co., Ltd.
                             </div>
-                            <div role="tabpanel">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#all-tab1" data-toggle="tab">Huizhong</a></li>
-                                    <li ><a href="#internal-tab1" data-toggle="tab">Changsha Huizhong</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="modal-body" role="tabpanel"  id="all-tab1">
-                                        <div class="content">
-                                            <div class="item">
-                                                <div class="bka-label">Supplier Name(CN):</div>
-                                                <div class="bka-text">联合汽车电子有限公司</div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Supplier Name(EN):</div>
-                                                <div class="bka-text">United Automotive Electronic System Co., Ltd.
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                                <div class="bka-text"><p><i class="ion-ribbon-a blue"></i>&nbsp;&nbsp;Advanced Level</p>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Registration No.:</div>
-                                                <div class="bka-text">
-                                                    330282000031500
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Unified social credit code:</div>
-                                                <div class="bka-text">&nbsp;
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">DUNS:</div>
-                                                <div class="bka-text">&nbsp;
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Country:</div>
-                                                <div class="bka-text">China
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Province/City:</div>
-                                                <div class="bka-text">Shanghai/Pudong
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Address:</div>
-                                                <div class="bka-text">
-                                                    No 555 Rongqiao Rd
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Post Code:</div>
-                                                <div class="bka-text"><input type="text" class="input-xs" value="200041">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Enterprise Type:</div>
-                                                <div class="bka-text">
-                                                    <select style="width:160px">
-                                                        <option value="CSC-1">JV</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Enterprise Scale:</div>
-                                                <div class="bka-text"><input type="text" class="input-xs" value="5000">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Registered Capital:</div>
-                                                <!--<div class="bka-text"><input type="text" class="input-xs" value="">-->
-                                                <div class="bka-text">
-                                                    <select style="width:160px">
-                                                        <option value="CSC-1">Shanghai</option>
-                                                        <option value="CSC-1">Hangzhou</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Procuct Type:</div>
-                                                <div class="bka-text">
-                                                    <select class="multiple-select" multiple="multiple">
-                                                        <option value="CSC-1">发动机电喷系统1</option>
-                                                        <option value="CSC-2">发动机电喷系统2</option>
-                                                        <option value="CSC-3">发动机电喷系统3</option>
-                                                        <option value="CSC-4">发动机电喷系统4</option>
-                                                    </select>
-                                                    <!--<select style="width:160px">-->
-                                                    <!--<option value="CSC-1">发动机电喷系统</option>-->
-                                                    <!--</select>-->
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Main Factory:</div>
-                                                <div class="bka-text"><input type="text" class="input-xs" value="UAES">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="bka-label">Qualification and Certification:</div>
-                                                <div class="bka-text">
-                                                    <select class="multiple-select" multiple="multiple">
-                                                        <option value="CSC-1">OHSAS18001</option>
-                                                        <option value="CSC-2">OHSAS18002</option>
-                                                        <option value="CSC-3">OHSAS18003</option>
-                                                        <option value="CSC-4">OHSAS18004</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a href="javascript:void(0);" >Cancel</a>
-                                            <button type="button" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                    <div class="modal-body" role="tabpanel"  id="internal-tab1">
-                                        <div class="content">
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <!-- /.modal-content -->
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="bka-text"><p><i class="ion-ribbon-a blue"></i>&nbsp;&nbsp;Advanced Level</p>
                             </div>
-                            <!-- /.modal-dialog -->
-                        </div>		    </div>	    </div>
-
+                        </div>						
+						
+                        <div class="item">
+                            <div class="bka-label">Registration No.:</div>
+                            <div class="bka-text">
+                                330282000031500
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Unified social credit code:</div>
+                            <div class="bka-text">&nbsp;         
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">DUNS:</div>
+                            <div class="bka-text">&nbsp;
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Country:</div>
+                            <div class="bka-text">China
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Province/City:</div>
+                            <div class="bka-text">Shanghai/Pudong
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Address:</div>
+                            <div class="bka-text">No 555 Rongqiao Rd
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="bka-label">Post Code:</div>
+                            <div class="bka-text">200041
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Enterprise Type:</div>
+                            <div class="bka-text">PR
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Enterprise Scale:</div>
+                            <div class="bka-text">5000
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Registered Capital:</div>
+                            <div class="bka-text">JV
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Procuct Type:</div>
+                            <div class="bka-text">发动机电喷系统
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Main Factory:</div>
+                            <div class="bka-text">UAES
+                            </div>
+                        </div>	
+                        <div class="item">
+                            <div class="bka-label">Qualification and Certification:</div>
+                            <div class="bka-text">OHSAS18001
+                            </div>
+                        </div>							
+                    </div>
+      
+                                     
+                </div>
+               <div class="modal-body" role="tabpanel"  id="internal-tab1">
+                    <div class="content">					
+                    </div>
+      
+                                     
+                </div>				
+            </div>
+            <!-- /.modal-content -->
+		</div>
+        <!-- /.modal-dialog -->
+    </div>		    </div>	    </div>			
+					
 
 
                     <div class="col-sm-6 my-hidden" id="companies-tab-map">
@@ -2395,7 +2370,7 @@
 <!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <script src="scripts/9a737976.vendor.js"></script>
 <script src="scripts/10ffdb3e.main.js"></script>
-<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="styles/bootstrap-3.3.7/js/bootstrap.min.js"></script>-->
 <!--<script src=scripts/common.js></script>-->
 <script>
   $(function(){
