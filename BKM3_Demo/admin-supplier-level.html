@@ -95,29 +95,69 @@
             </div>
             <div class="admin-panel">
                 <div class="sub-section">
-                    <div class="section-header">BKA With Supply Chains</div>
-                    <div class="option-item">
-                        <div class="gauge">Threshold: [<span id="bka-threshold-start">0</span>,<span id="bka-threshold-end">10</span>]</div>
-                        <input type="text" id="bka-threshold-slider" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="[0,10]" data-slider-tooltip="hide">
+                    <div class="section-header">Primary Level Setting</div>
+                    <div class="option-item">Company profile maintenance integrity rate:&nbsp; 
+                        <div class="gauge">X  < <input type="text" class="form-control  input-xs" value="80">%</div>
                         <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                    </div>
+                    </div>					
                 </div>
                 <div class="sub-section">
-                    <div class="section-header">Activity last 30 days</div>
-                    <div class="option-item">
-                        <div class="gauge">Threshold: [<span id="bka-threshold-start1">0</span>,<span id="bka-threshold-end1">5</span>]</div>
-                        <input type="text" id="bka-threshold-slider1" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="[0,5]" data-slider-tooltip="hide">
+					<div class="section-header">Intermediate Level Setting</div>
+                    <div class="option-item">BKA with supply chains quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="1">&nbsp;
+							<= &nbsp;X &nbsp; < 
+							<input type="text" class="form-control  input-xs" value="10">
+						</div>
                         <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
                     </div>
+                    <div class="option-item">Activity last 30 days operation quantity:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="1">&nbsp;
+							<=  &nbsp;X &nbsp; <  
+							<input type="text" class="form-control  input-xs" value="5">
+						</div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="option-item">Company profile maintenance integrity rate:&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="80">%
+							<= X  < 
+							<input type="text" class="form-control  input-xs" value="100">%
+						</div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>					
                 </div>				
-                <div class="sub-section">
-                    <div class="section-header">Company profile maintenance integrity rate </div>
-                    <div class="option-item">
-                        <div class="gauge">Threshold: [<span id="bka-threshold-start2">0</span>%,<span id="bka-threshold-end2">100</span>%]</div>
-                        <input type="text" id="bka-threshold-slider2" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="[0,100]" data-slider-tooltip="hide">
+               <div class="sub-section">
+					<div class="section-header">Advanced Level Setting</div>
+                    <div class="option-item">BKA with supply chains quantity:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="10">
+							<= X  
+						</div>
                         <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
                     </div>
-                </div>
+                    <div class="option-item">Activity last 30 days operation quantity:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="5">
+							<= X
+						</div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="option-item">Company profile maintenance integrity rate:&nbsp;&nbsp;
+                        <div class="gauge">
+							<input type="text" class="form-control  input-xs" value="100">% = X
+						</div>
+                        <div class="help-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>						
+                </div>	
             </div>
         </div>
     </div>
